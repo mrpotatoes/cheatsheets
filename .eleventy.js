@@ -81,6 +81,7 @@ module.exports = function(eleventyConfig) {
     });
 
     return {
+        pathPrefix: '/1loc',
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
         templateFormats: [
