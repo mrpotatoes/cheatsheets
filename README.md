@@ -45,7 +45,7 @@ Start here: https://www.11ty.dev/docs/plugins/
 - https://www.npmjs.com/package/eleventy-plugin-unfurl
 - https://pagefind.app/
   + https://rknight.me/using-pagefind-with-eleventy-for-search/
-  + https://github.com/rknightuk/eleventy-pagefind-demo/  + 
+  + https://github.com/rknightuk/eleventy-pagefind-demo/
 - https://github.com/KittyGiraudel/eleventy-plugin-footnotes
 - https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/
 
