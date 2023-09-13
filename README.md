@@ -49,3 +49,14 @@ Start here: https://www.11ty.dev/docs/plugins/
 - https://github.com/KittyGiraudel/eleventy-plugin-footnotes
 - https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/
 
+## Deployment stuff
+I wanna deploy to a specific server not GH pages. Here are some links to look into so I don't need a custom script.
+
+- https://gist.github.com/nichtich/5290675
+- https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions
+- https://github.com/actions/starter-workflows/blob/main/deployments/google.yml
+- https://github.com/marketplace/actions/scp-deploy-action
+- https://github.com/marketplace/actions/ssh-scp-deploy
+- https://github.com/appleboy/scp-action
+- https://stackoverflow.com/questions/60253093/how-do-i-scp-repo-files-using-github-actions
+- 
