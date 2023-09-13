@@ -2,12 +2,15 @@ const fs = require('fs');
 const markdownIt = require('markdown-it');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const htmlmin = require('html-minifier');
+const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
     // Copy the `img` and `css` folders to the output
     eleventyConfig.addPassthroughCopy('assets');
+    eleventyConfig.addPassthroughCopy('styles');
 
     eleventyConfig.addPlugin(syntaxHighlight);
+    eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
     let markdownLibrary = markdownIt({
         html: true,
@@ -69,18 +72,23 @@ module.exports = function(eleventyConfig) {
         return categories;
     });
 
-    eleventyConfig.addTransform('minify-html', function(content) {
-        if (this.outputPath && this.outputPath.endsWith('.html')) {
-            return htmlmin.minify(content, {
-                useShortDoctype: true,
-                removeComments: true,
-                collapseWhitespace: true
-            });
-        }    
-        return content;
-    });
+    // eleventyConfig.addTransform('minify-html', function(content) {
+    //     if (this.outputPath && this.outputPath.endsWith('.html')) {
+    //         return htmlmin.minify(content, {
+    //             useShortDoctype: true,
+    //             removeComments: true,
+    //             collapseWhitespace: true
+    //         });
+    //     }    
+    //     return content;
+    // });
+
+    console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+    console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')
+    // process.exit()
 
     return {
+        // pathPrefix: (process.env.NODE_ENV == 'production' ? '/1loc' : '/'),
         pathPrefix: '/1loc',
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
