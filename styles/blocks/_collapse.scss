@@ -1,0 +1,18 @@
+.collapse {
+  background-color: #c2c3ee;
+  border: none;
+  outline: none;
+  font-size: 25px;
+  display: block;
+  cursor: pointer;
+}
+  
+.active,
+.collapse:hover {
+  background-color: #6366f1;
+}
+  
+.text {
+  background-color: #e1ffc2;
+  font-size: 20px;
+}

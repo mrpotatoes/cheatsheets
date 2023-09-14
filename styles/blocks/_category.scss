@@ -6,7 +6,8 @@
     font-size: var(--category__name-font-size);
 }
 .category__posts {
-    display: grid;
+    // display: grid;
+    display: none;
     grid-template-columns: repeat(var(--category__post-num-columns), 1fr);
     column-gap: 1rem;
     row-gap: 1rem;
@@ -16,7 +17,7 @@
     border-radius: 9999px;
     color: #fff;
     display: block;
-    padding: 0.5rem 1rem;
+    padding: 5px;
     text-align: center;
     text-decoration: none;
     margin: 1rem auto;

@@ -6,17 +6,23 @@ const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
 
 module.exports = function(eleventyConfig) {
     // Copy the `img` and `css` folders to the output
-    eleventyConfig.addPassthroughCopy('assets');
-    eleventyConfig.addPassthroughCopy('styles');
+    eleventyConfig.addPassthroughCopy('./assets');
+    eleventyConfig.addPassthroughCopy('./styles');
 
     eleventyConfig.addPlugin(syntaxHighlight);
     eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
 
-    let markdownLibrary = markdownIt({
+    eleventyConfig.addFilter("debugger", (...args) => {
+        console.log('\n-- DEBUGGER -------------------------------------')
+        console.log(...args)
+        console.log('-------------------------------------------------\n')
+        debugger;
+    });
+    
+    eleventyConfig.setLibrary('md', markdownIt({
         html: true,
         linkify: true
-    });
-    eleventyConfig.setLibrary('md', markdownLibrary);
+    }));
 
     // Get the first `n` elements of a collection.
     eleventyConfig.addFilter("head", (array, n) => {
@@ -83,13 +89,15 @@ module.exports = function(eleventyConfig) {
     //     return content;
     // });
 
-    console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-    console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')
+    // console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+    // console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')
     // process.exit()
 
+    // const pathPrefix = process.env.NODE_ENV == 'production' ? '/1loc' : '/'
+
     return {
-        // pathPrefix: (process.env.NODE_ENV == 'production' ? '/1loc' : '/'),
         pathPrefix: '/1loc',
+        // pathPrefix,
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
         templateFormats: [

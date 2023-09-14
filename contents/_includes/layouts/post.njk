@@ -7,8 +7,10 @@ layout: layouts/base.njk
 <div class="container">
     <div class="header">
         <div class="header__breadcrumb">
-            <a class="header__link" href="/">/1-loc</a>
-            <a class="header__link" href="/{{ category | slug }}">/{{ category }}</a>
+            <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+            {# <a class="header__link" href="/{{ category | slug }}">/{{ category }}</a> #}
+            <span>{{ category }}</span>&nbsp;>&nbsp;
+            <span>{{ title }}</span>
         </div>
     </div>
     <div class="post">
