@@ -24,6 +24,6 @@ addOrdinal(1); // '1st'
 addOrdinal(2); // '2nd'
 addOrdinal(3); // '3rd'
 addOrdinal(11); // '11th'
-addOrdinal(12); // '13th'
+addOrdinal(12); // '12th'
 addOrdinal(13); // '13th'
 ```

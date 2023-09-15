@@ -1,20 +1,45 @@
 ---
 layout: layouts/base.njk
+pagination:
+  data: collections.groupByCategories
+  size: 6
+  alias: posts
 ---
 {% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.sortByTitle | getNextCollectionItem(page) %}
 
+{# <ol>
+{% for post in posts %}
+    {{ post | debugger }}
+  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+{% endfor %}
+</ol> #}
+
+<ul>
+   {% for name, item in collections %}
+      <li>{{ name }}</li>
+   {% endfor %}
+</ul>
+
+<pre>{{ collections.groupByCategories[title].length | dumpy }}</pre>
+
 <div class="container">
     <div class="header">
-        <a class="header__link" href="/">/1-loc</a>
+        <div class="header__breadcrumb">
+            <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+            <span>{{ title | titlecase }}</span>
+        </div>
     </div>
+
     <div class="category">
         <h1 class="category__name">{{ title }}</h1>
-        <div class="category__posts">
+        <div class="category__posts2">
             {%- for post in collections.groupByCategories[title] -%}
-            <div class="card__item">
-                <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
-            </div>
+                <div class="content">
+                    <div class="card__item">
+                        <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
+                    </div>
+                </div>
             {%- endfor -%}
         </div>
     </div>

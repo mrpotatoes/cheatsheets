@@ -8,8 +8,7 @@ layout: layouts/base.njk
     <div class="header">
         <div class="header__breadcrumb">
             <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-            {# <a class="header__link" href="/{{ category | slug }}">/{{ category }}</a> #}
-            <span>{{ category }}</span>&nbsp;>&nbsp;
+            <a class="header__link" href="../">{{ category }}</a>&nbsp;>&nbsp;
             <span>{{ title }}</span>
         </div>
     </div>
@@ -21,5 +20,4 @@ layout: layouts/base.njk
     {% if previousPost %}<a class="nav__item nav__item--prev" href="{{ previousPost.url }}">{{ previousPost.data.title }}</a>{% endif %}
     {% if nextPost %}<a class="nav__item nav__item--next" href="{{ nextPost.url }}">{{ nextPost.data.title }}</a>{% endif %}
     </div>
-    {# {% include "follow.njk" %} #}
 </div>

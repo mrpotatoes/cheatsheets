@@ -59,4 +59,4 @@ I wanna deploy to a specific server not GH pages. Here are some links to look in
 - https://github.com/marketplace/actions/ssh-scp-deploy
 - https://github.com/appleboy/scp-action
 - https://stackoverflow.com/questions/60253093/how-do-i-scp-repo-files-using-github-actions
-- 
+- https://github.com/CloudCannon/bookshop
