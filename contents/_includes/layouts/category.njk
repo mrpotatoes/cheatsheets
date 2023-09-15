@@ -1,27 +1,46 @@
 ---
 layout: layouts/base.njk
 pagination:
-  data: collections.groupByCategories
-  size: 6
+  data: collections.andric
+  size: 4
   alias: posts
 ---
-{% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
+
+{# {%- for item in pagination.items %}
+  {{ collections.andric[item] | debugger }}
+  {%- set butts = item.data.category === title -%}
+  {%- set obj = { butts: item.data.category === title, title: title , cat: item.data.category} -%}
+  {{ item.data.category === title | debugger }}
+  {{ obj | debugger }}
+{% endfor -%} #}
+
+{{ title | debugger }}
+
+<ol>
+    {%- for item in pagination.items %}
+        {%- set butts = item.data.category === title -%}
+
+        {%- set obj = {
+            butts: item.data.category === title,
+            title: title,
+            cat: item.data.category
+        } -%}
+
+        {# {{ obj | debugger }} #}
+
+        {%- if butts === true %}
+        asd
+            {# {{ title | debugger }} #}
+            [{{item.data.category}} - {{title}}] <br />
+            <li><a href="{{ item.data.page.url }}">{{ item.data.title }}</a></li>
+        {% endif -%}
+    {% endfor -%}
+</ol>
+
+{# {{ pagination | debugger }} #}
+
+{# {% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.sortByTitle | getNextCollectionItem(page) %}
-
-{# <ol>
-{% for post in posts %}
-    {{ post | debugger }}
-  <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
-{% endfor %}
-</ol> #}
-
-<ul>
-   {% for name, item in collections %}
-      <li>{{ name }}</li>
-   {% endfor %}
-</ul>
-
-<pre>{{ collections.groupByCategories[title].length | dumpy }}</pre>
 
 <div class="container">
     <div class="header">
@@ -30,6 +49,25 @@ pagination:
             <span>{{ title | titlecase }}</span>
         </div>
     </div>
+
+    <ol>
+    {%- for post in posts %}
+        {% set hey = post.data.category === title %}
+
+        [{{post.data.category}} - {{title}}] <br />
+
+        {%- if hey %}
+            <li><a href="{{ post.data.page.url }}">{{ post.data.title }}</a></li>
+        {% endif -%}
+    {% endfor -%}
+    </ol>
+
+    {{ posts | debugger }}
+    <hr>
+    <ul>
+        <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
+        <li>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Next</a>{% else %}Next{% endif %}</li>
+    </ul>
 
     <div class="category">
         <h1 class="category__name">{{ title }}</h1>
@@ -43,4 +81,4 @@ pagination:
             {%- endfor -%}
         </div>
     </div>
-</div>
+</div> #}

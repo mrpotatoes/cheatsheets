@@ -19,13 +19,15 @@ module.exports = function (eleventyConfig) {
     });
 
     eleventyConfig.addFilter("debugger", (...args) => {
+    // eleventyConfig.addFilter("debugger", (...args) => {
         // console.clear()
         // execSync("clear && printf '\e[3J'")
 
-        console.log('-- DEBUGGER -------------------------------------')
-        console.log('args', args[0])
+        // console.log('-- DEBUGGER -------------------------------------')
+        console.log('args:', args[0])
         // console.log('args', ...args)
-        console.log('-------------------------------------------------\n')
+        // console.log('args', Object.keys(args))
+        // console.log('-------------------------------------------------\n')
         debugger;
     });
 
@@ -68,6 +70,30 @@ module.exports = function (eleventyConfig) {
             });
     });
 
+    eleventyConfig.addCollection('andric', function (collectionAPI) {
+        const collection = collectionAPI.getFilteredByGlob("**/*.md")
+        const categories = {};
+
+        return collection
+
+        const t = collection.forEach((item) => {
+            const category = item.data.category;
+
+            if (!category) {
+                return;
+            }
+
+            Array.isArray(categories[category])
+                ? categories[category].push(item)
+                : categories[category] = [item];
+        });
+
+        // console.log('hello:', categories['Array'])
+        // console.log('hello:', Object.keys(categories['Array']))
+
+        return categories
+    });
+
     eleventyConfig.addCollection('categories', function (collectionApi) {
         const categories = [];
         collectionApi.getAll()
@@ -87,7 +113,6 @@ module.exports = function (eleventyConfig) {
     eleventyConfig.addCollection('groupByCategories', function (collectionApi) {
         const categories = {};
 
-        // console.log(collectionApi)
         collectionApi.getAll()
             .filter(function (item) {
                 let extension = item.inputPath.split('.').pop();
@@ -95,6 +120,7 @@ module.exports = function (eleventyConfig) {
             })
             .forEach((item) => {
                 const category = item.data.category;
+
                 if (!category) {
                     return;
                 }
@@ -102,19 +128,20 @@ module.exports = function (eleventyConfig) {
                     ? categories[category].push(item)
                     : categories[category] = [item];
             });
+        // console.log('categories', categories)
         return categories;
     });
 
-    // eleventyConfig.addTransform('minify-html', function(content) {
-    //     if (this.outputPath && this.outputPath.endsWith('.html')) {
-    //         return htmlmin.minify(content, {
-    //             useShortDoctype: true,
-    //             removeComments: true,
-    //             collapseWhitespace: true
-    //         });
-    //     }    
-    //     return content;
-    // });
+    eleventyConfig.addTransform('minify-html', function(content) {
+        if (this.outputPath && this.outputPath.endsWith('.html')) {
+            return htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            });
+        }
+        return content;
+    });
 
     // console.log('process.env.NODE_ENV', process.env.NODE_ENV)
     // console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')
