@@ -2,44 +2,11 @@
 layout: layouts/base.njk
 pagination:
   data: collections.andric
-  size: 4
+  size: 10
   alias: posts
 ---
 
-{# {%- for item in pagination.items %}
-  {{ collections.andric[item] | debugger }}
-  {%- set butts = item.data.category === title -%}
-  {%- set obj = { butts: item.data.category === title, title: title , cat: item.data.category} -%}
-  {{ item.data.category === title | debugger }}
-  {{ obj | debugger }}
-{% endfor -%} #}
-
-{{ title | debugger }}
-
-<ol>
-    {%- for item in pagination.items %}
-        {%- set butts = item.data.category === title -%}
-
-        {%- set obj = {
-            butts: item.data.category === title,
-            title: title,
-            cat: item.data.category
-        } -%}
-
-        {# {{ obj | debugger }} #}
-
-        {%- if butts === true %}
-        asd
-            {# {{ title | debugger }} #}
-            [{{item.data.category}} - {{title}}] <br />
-            <li><a href="{{ item.data.page.url }}">{{ item.data.title }}</a></li>
-        {% endif -%}
-    {% endfor -%}
-</ol>
-
-{# {{ pagination | debugger }} #}
-
-{# {% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
+{% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
 {% set nextPost = collections.sortByTitle | getNextCollectionItem(page) %}
 
 <div class="container">
@@ -52,17 +19,13 @@ pagination:
 
     <ol>
     {%- for post in posts %}
-        {% set hey = post.data.category === title %}
+        {% set condish = post.data.category === title %}
 
-        [{{post.data.category}} - {{title}}] <br />
-
-        {%- if hey %}
-            <li><a href="{{ post.data.page.url }}">{{ post.data.title }}</a></li>
+        {%- if condish %}
+            <li>{{post.data.category}} - <a href="{{ post.data.page.url }}">{{ post.data.title }}</a></li>
         {% endif -%}
     {% endfor -%}
     </ol>
-
-    {{ posts | debugger }}
     <hr>
     <ul>
         <li>{% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Previous</a>{% else %}Previous{% endif %}</li>
@@ -81,4 +44,4 @@ pagination:
             {%- endfor -%}
         </div>
     </div>
-</div> #}
+</div>
