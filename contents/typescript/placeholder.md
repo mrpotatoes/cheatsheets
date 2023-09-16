@@ -1,5 +1,5 @@
 ---
-layout: layouts/category.njk
+layout: layouts/post.njk
 title: Placeholder
 category: TypeScript
 ---

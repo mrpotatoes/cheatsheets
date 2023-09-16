@@ -9,6 +9,10 @@ I wanted something where I remember all the neat little code snippets I've creat
 - Change prefix to "`/cheatsheet`"
 - Pagination on the category pages
 - Cleanup code
+- Add tags page
+- Add tag list to posts
+- Search
+- Description for landing pages in frontmatter
 
 ### Future Plugins
 These are plugins that I'm ineresting in playing with. Will not spend more than 2 hours on each to test them out. Unless, of course, they are priority such as a search plugins.

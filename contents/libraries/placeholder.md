@@ -1,7 +1,7 @@
 ---
 layout: layouts/post.njk
 title: Placeholder
-category: Libraries & Packages
+category: Libraries
 ---
 
 I'm a place Holder
