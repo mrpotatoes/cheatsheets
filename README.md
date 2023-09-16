@@ -17,36 +17,38 @@ Start here: https://www.11ty.dev/docs/plugins/
 
 <details>
   <summary>Plugin List</summary>
-  - https://www.npmjs.com/package/eleventy-plugin-edit-on-github
-  - https://github.com/christopherpickering/eleventy-plugin-edit-on-github
-  - https://github.com/bnoctis/eleventy-multisite
-  - https://github.com/AleksandrHovhannisyan/eleventy-plugin-code-demo
-  - https://github.com/johanbrook/eleventy-plugin-reading-time
-  - https://www.npmjs.com/package/eleventy-plugin-nesting-toc
-  - https://www.npmjs.com/package/eleventy-plugin-plantuml
-  - https://www.npmjs.com/package/@factorial/eleventy-plugin-fstack
-  - https://www.npmjs.com/package/eleventy-plugin-toc
-  - https://www.npmjs.com/package/eleventy-plugin-mtos
-  - https://www.npmjs.com/package/eleventy-plugin-reader-bar
-  - https://www.npmjs.com/package/eleventy-plugin-embed-everything
-  - https://www.npmjs.com/package/@inframanufaktur/eleventy-plugin-clean-urls
-  - https://www.npmjs.com/package/eleventy-plugin-markdown-shortcode
-  - https://www.npmjs.com/package/eleventy-plugin-emoji
-  - https://www.npmjs.com/package/eleventy-plugin-footnotes
-  - https://www.npmjs.com/package/eleventy-plugin-broken-links
-  - https://www.npmjs.com/package/@code-blocks/eleventy-plugin
-  - https://www.npmjs.com/package/eleventy-favicon
-  - https://www.npmjs.com/package/eleventy-plugin-backlinks
-  - https://www.npmjs.com/package/@orchidjs/eleventy-plugin-ids
-  - https://www.npmjs.com/package/eleventy-plugin-unified
-  - https://www.npmjs.com/package/eleventy-plugin-heroicons
-  - https://www.npmjs.com/package/eleventy-plugin-page-assets
-  - https://www.npmjs.com/package/eleventy-plugin-unfurl
-  - https://pagefind.app/
-    + https://rknight.me/using-pagefind-with-eleventy-for-search/
-    + https://github.com/rknightuk/eleventy-pagefind-demo/
-  - https://github.com/KittyGiraudel/eleventy-plugin-footnotes
-  - https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/
+  <ul>
+  <li>https://www.npmjs.com/package/eleventy-plugin-edit-on-github</li>
+  <li>https://github.com/christopherpickering/eleventy-plugin-edit-on-github</li>
+  <li>https://github.com/bnoctis/eleventy-multisite</li>
+  <li>https://github.com/AleksandrHovhannisyan/eleventy-plugin-code-demo</li>
+  <li>https://github.com/johanbrook/eleventy-plugin-reading-time</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-nesting-toc</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-plantuml</li>
+  <li>https://www.npmjs.com/package/@factorial/eleventy-plugin-fstack</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-toc</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-mtos</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-reader-bar</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-embed-everything</li>
+  <li>https://www.npmjs.com/package/@inframanufaktur/eleventy-plugin-clean-urls</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-markdown-shortcode</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-emoji</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-footnotes</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-broken-links</li>
+  <li>https://www.npmjs.com/package/@code-blocks/eleventy-plugin</li>
+  <li>https://www.npmjs.com/package/eleventy-favicon</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-backlinks</li>
+  <li>https://www.npmjs.com/package/@orchidjs/eleventy-plugin-ids</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-unified</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-heroicons</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-page-assets</li>
+  <li>https://www.npmjs.com/package/eleventy-plugin-unfurl</li>
+  <li>https://pagefind.app/</li>
+    <li>https://rknight.me/using-pagefind-with-eleventy-for-search/</li>
+    <li>https://github.com/rknightuk/eleventy-pagefind-demo/</li>
+  <li>https://github.com/KittyGiraudel/eleventy-plugin-footnotes</li>
+  <li>https://www.alpower.com/tutorials/configuring-footnotes-with-eleventy/</li>
+  </ul>
 </details>
 
 ## Deployment
@@ -54,13 +56,15 @@ I wanna deploy to a specific server not GH pages. Here are some links to look in
 
 <details>
   <summary>Deployment Examples</summary>
-  - https://gist.github.com/nichtich/5290675
-  - https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions
-  - https://github.com/actions/starter-workflows/blob/main/deployments/google.yml
-  - https://github.com/marketplace/actions/scp-deploy-action
-  - https://github.com/marketplace/actions/ssh-scp-deploy
-  - https://github.com/appleboy/scp-action
-  - https://stackoverflow.com/questions/60253093/how-do-i-scp-repo-files-using-github-actions
-  - https://github.com/CloudCannon/bookshop
+  <ul>
+  <li>https://gist.github.com/nichtich/5290675</li>
+  <li>https://docs.github.com/en/actions/deployment/about-deployments/deploying-with-github-actions</li>
+  <li>https://github.com/actions/starter-workflows/blob/main/deployments/google.yml</li>
+  <li>https://github.com/marketplace/actions/scp-deploy-action</li>
+  <li>https://github.com/marketplace/actions/ssh-scp-deploy</li>
+  <li>https://github.com/appleboy/scp-action</li>
+  <li>https://stackoverflow.com/questions/60253093/how-do-i-scp-repo-files-using-github-actions</li>
+  <li>https://github.com/CloudCannon/bookshop</li>
+  </ul>
 </details>
 
