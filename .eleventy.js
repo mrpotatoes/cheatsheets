@@ -105,16 +105,16 @@ module.exports = function (eleventyConfig) {
         return categories;
     });
 
-    // eleventyConfig.addTransform('minify-html', function(content) {
-    //     if (this.outputPath && this.outputPath.endsWith('.html')) {
-    //         return htmlmin.minify(content, {
-    //             useShortDoctype: true,
-    //             removeComments: true,
-    //             collapseWhitespace: true
-    //         });
-    //     }    
-    //     return content;
-    // });
+    eleventyConfig.addTransform('minify-html', function(content) {
+        if (this.outputPath && this.outputPath.endsWith('.html')) {
+            return htmlmin.minify(content, {
+                useShortDoctype: true,
+                removeComments: true,
+                collapseWhitespace: true
+            });
+        }
+        return content;
+    });
 
     // console.log('process.env.NODE_ENV', process.env.NODE_ENV)
     // console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')

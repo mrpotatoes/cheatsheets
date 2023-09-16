@@ -26,6 +26,7 @@
 @media (min-width: 640px) {
     .nav {
         display: flex;
+        margin-top: 20px;
     }
     :root {
         --nav__item-margin-bottom: 0;
