@@ -11,7 +11,6 @@ eleventyExcludeFromCollections: true
   <div class="columns">
     {% for cat in collections.categories %}
       {% set posts = collections.groupByCategories[cat] %}
-
       <div class="category">
         <div class="category__posts">
           <h2 class="index__category">
