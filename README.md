@@ -3,6 +3,7 @@ I wanted something where I remember all the neat little code snippets I've creat
 
 ## Future
 ### Future Features & Enhancements
+- Indentation
 - Deployment to my domain using actions
 - Optional Icon functionality set in `frontmatter`
 - Fix favicon

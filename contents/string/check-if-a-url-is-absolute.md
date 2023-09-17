@@ -19,8 +19,8 @@ const isAbsoluteUrl = (url: string): boolean => /^[a-z][a-z0-9+.-]*:/.test(url);
 **Examples**
 
 ```js
-isAbsoluteUrl('https://1loc.dev'); // true
-isAbsoluteUrl('https://1loc.dev/foo/bar'); // true
-isAbsoluteUrl('1loc.dev'); // false
-isAbsoluteUrl('//1loc.dev'); // false
+isAbsoluteUrl('https://tech.libresinn.com/cheatsheet/'); // true
+isAbsoluteUrl('https://tech.libresinn.com/cheatsheet/foo/bar'); // true
+isAbsoluteUrl('tech.libresinn.com/cheatsheet/'); // false
+isAbsoluteUrl('//tech.libresinn.com/cheatsheet/'); // false
 ```

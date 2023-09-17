@@ -1,5 +1,5 @@
 {
-    "name": "1loc",
+    "name": "cheatsheet",
     "description": "What's your favorite JavaScript single LOC (line of code)",
     "license": "MIT",
     "scripts": {

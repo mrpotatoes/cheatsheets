@@ -116,12 +116,8 @@ module.exports = function (eleventyConfig) {
         return content;
     });
 
-    // console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-    // console.log('pathPrefix', process.env.NODE_ENV == 'production' ? '/1loc' : '/')
-    // process.exit()
-
     return {
-        pathPrefix: '/1loc',
+        pathPrefix: '/cheatsheet',
         // pathPrefix,
         // Control which files Eleventy will process
         // e.g.: *.md, *.njk, *.html, *.liquid
