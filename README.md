@@ -7,12 +7,14 @@ I wanted something where I remember all the neat little code snippets I've creat
 - Optional Icon functionality set in `frontmatter`
 - Fix favicon
 - Change prefix to "`/cheatsheet`"
+- Rename repo to "`cheatsheets`"
 - Pagination on the category pages
 - Cleanup code
 - Add tags page
 - Add tag list to posts
 - Search
 - Description for landing pages in frontmatter
+- I ***might*** like to turn this repo into a set of "collections" and each collection will be it's own deployable subdirectory on my hosted website.
 
 ### Future Plugins
 These are plugins that I'm ineresting in playing with. Will not spend more than 2 hours on each to test them out. Unless, of course, they are priority such as a search plugins.
