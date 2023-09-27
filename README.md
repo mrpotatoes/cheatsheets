@@ -6,6 +6,7 @@ I wanted something where I remember all the neat little code snippets I've creat
 - Deployment to my domain using actions
 - Optional Icon functionality set in `frontmatter`
 - Fix favicon
+- Fix indentation
 - Change prefix to "`/cheatsheet`"
 - Rename repo to "`cheatsheets`"
 - Pagination on the category pages
@@ -15,6 +16,9 @@ I wanted something where I remember all the neat little code snippets I've creat
 - Search
 - Description for landing pages in frontmatter
 - I ***might*** like to turn this repo into a set of "collections" and each collection will be it's own deployable subdirectory on my hosted website.
+- Script to add a new category (folder + `index.njk` file)
+- Script to add a new category post
+- Add copy functionality to the code snippets?
 
 ### Future Plugins
 These are plugins that I'm ineresting in playing with. Will not spend more than 2 hours on each to test them out. Unless, of course, they are priority such as a search plugins.
