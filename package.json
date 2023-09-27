@@ -3,7 +3,7 @@
     "description": "What's your favorite JavaScript single LOC (line of code)",
     "license": "MIT",
     "scripts": {
-        "build": "env NODE_ENV=production npm run build:eleventy && npm run build:sass",
+        "build": "rm .cache _site; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
         "build:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed",
         "build:eleventy": "npx @11ty/eleventy",
         "serve": "npx eleventy --serve",
