@@ -14,7 +14,7 @@
 #           publish_dir: _site 
 #           publish_branch: gh-pages
 #           github_token: ${{ secrets.GITHUB_TOKEN }}
-name: Build Eleventy
+name: Depoly to tech.libresinn.com/cheetsheets
 on:
   push:
     branches:
