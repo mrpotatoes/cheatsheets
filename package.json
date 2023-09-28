@@ -3,13 +3,14 @@
     "description": "What's your favorite JavaScript single LOC (line of code)",
     "license": "MIT",
     "scripts": {
+        "clean": "rm .cache _site; ",
         "build": "rm .cache _site; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
         "build:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed",
         "build:eleventy": "npx @11ty/eleventy",
         "serve": "npx eleventy --serve",
         "deploy": "npm run build && netlify deploy --prod --dir=_site",
         "format": "prettier --write \"**/*.+(json|md|scss)\"",
-        "start": "npm run watch:eleventy & npm run watch:sass",
+        "start": "rm .cache _site; npm run watch:eleventy & npm run watch:sass",
         "watch:eleventy": "npx @11ty/eleventy --quiet --watch --port=8081 --serve",
         "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch",
         "new": "node ./scripts/new"
