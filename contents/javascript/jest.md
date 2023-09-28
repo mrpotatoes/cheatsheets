@@ -6,7 +6,6 @@ category: JavaScript
 
 ## `beforeAll()`
 ```js
-
 describe('Lorem ipsum dolor sit amet', () => {
   let someVariable = null
   

@@ -11,17 +11,21 @@
         "format": "prettier --write \"**/*.+(json|md|scss)\"",
         "start": "npm run watch:eleventy & npm run watch:sass",
         "watch:eleventy": "npx @11ty/eleventy --quiet --watch --port=8081 --serve",
-        "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch"
+        "watch:sass": "sass styles/index.scss _site/styles/index.min.css --no-source-map --style compressed --watch",
+        "new": "node ./scripts/new"
     },
     "devDependencies": {
         "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
         "html-minifier": "^4.0.0",
+        "pagefind": "^1.0.3",
         "prettier": "^2.7.1",
         "sass": "^1.54.8"
     },
     "dependencies": {
         "@11ty/eleventy": "2.0.1",
         "@11ty/eleventy-fetch": "^3.0.0",
-        "markdown-it": "^13.0.1"
+        "child_process": "^1.0.2",
+        "markdown-it": "^13.0.1",
+        "nunjucks": "^3.2.4"
     }
 }

@@ -1,54 +1,69 @@
 <!doctype html>
 <html lang="{{ metadata.language }}">
-    <head>
-        <title>{{ title or metadata.title }} - 1 LOC</title>   
-        <link rel="icon" href="/assets/favicon.png" type="image/png" />
-        <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
-        <link rel="mask-icon" href="/assets/mask-favicon.svg" color="#1975FF" />
-        <meta charset="utf-8">
-        <meta name="author" content="Nguyen Huu Phuoc" />
-        <meta name="description" content="{{ title or metadata.title }}" />
-        <meta name="keywords" content="JavaScript helpers, JavaScript snippets, JavaScript utils" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:description" content="{{ title or metadata.title }}" />
-        <meta name="twitter:site" content="@nghuuphuoc" />
-        <meta name="twitter:title" content="{{ title or metadata.title }} - 1 LOC" />
-        <meta property="og:description" content="{{ title or metadata.title }}" />
-        <meta property="og:site_name" content="Cheatsheet" />
-        <meta property="og:title" content="{{ title or metadata.title }} - 1 LOC" />
-        <meta property="og:url" content="https://tech.libresinn.com/cheatsheet/" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
-        <link rel="stylesheet" href="/styles/index.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap">
-    </head>
-    <body>
-        {{ content | safe }}
-        <div class="container">
-            <footer class="footer">
-                <div class="footer__col">
-                    <div class="footer__heading">Repo</div>
-                    <ul class="footer__list">
-                        <p>Repo: <a href="https://github.com/mrpotatoes/cheetsheet">Github/MrPotatoes</a></p>
-                        <p>Code & Repo orginally Phước Nguyễn's <a href="https://github.com/phuocng/1loc">1loc's</a> code/repo</p>
-                    </ul>
-                </div>
-                <div class="footer__col">
-                    <div class="footer__heading">About</div>
-                    <div class="footer__author">
-                        ©2023 - Andric LibreSinn. All rights reserved.
-                    </div>
-                </div>
-                <div class="footer__col">
-                    <div class="footer__heading">Eleventy</div>
-                    <ul class="footer__list">
-                        <ul class="footer__list">
-                        <li>Website Generator: <a href="https://www.11ty.dev/docs/">Eleventy</a></li>
-                        </ul>
-                    </ul>
-                </div>
-            </footer>
+  <head>
+    <title>{{ title or metadata.title }} - 1 LOC</title>
+
+    <meta charset="utf-8">
+    <meta name="author" content="Nguyen Huu Phuoc"/>
+    <meta name="description" content="{{ title or metadata.title }}"/>
+    <meta name="keywords" content="JavaScript helpers, JavaScript snippets, JavaScript utils"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:description" content="{{ title or metadata.title }}"/>
+    <meta name="twitter:site" content="@nghuuphuoc"/>
+    <meta name="twitter:title" content="{{ title or metadata.title }} - 1 LOC"/>
+    <meta property="og:description" content="{{ title or metadata.title }}"/>
+    <meta property="og:site_name" content="Cheatsheet"/>
+    <meta property="og:title" content="{{ title or metadata.title }} - 1 LOC"/>
+    <meta property="og:url" content="https://tech.libresinn.com/cheatsheet/"/>
+
+    <link rel="icon" href="/assets/favicon.png" type="image/png"/>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+    <link rel="mask-icon" href="/assets/mask-favicon.svg" color="#1975FF"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true"/>
+    <link rel="stylesheet" href="/styles/index.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap">
+    <link href="/assets/pagefind/pagefind-ui.css" rel="stylesheet">
+  </head>
+  <body>
+    <main data-pagefind-body>
+
+    {{ content | safe }}
+    <div class="container">
+      <footer class="footer">
+        <div class="footer__col">
+          <div class="footer__heading">Repo</div>
+          <ul class="footer__list">
+            <p>Repo:
+              <a href="https://github.com/mrpotatoes/cheetsheet">Github/MrPotatoes</a>
+            </p>
+            <p>Code & Repo orginally Phước Nguyễn's
+              <a href="https://github.com/phuocng/1loc">1loc's</a>
+              code/repo</p>
+          </ul>
         </div>
-    </body>
+        <div class="footer__col">
+          <div class="footer__heading">About</div>
+          <div class="footer__author">
+            ©2023 - Andric LibreSinn. All rights reserved.
+          </div>
+        </div>
+        <div class="footer__col">
+          <div class="footer__heading">Eleventy</div>
+          <ul class="footer__list">
+            <ul class="footer__list">
+              <li>Website Generator:
+                <a href="https://www.11ty.dev/docs/">Eleventy</a>
+              </li>
+            </ul>
+          </ul>
+        </div>
+      </footer>
+    </div>
+    {# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}
+    <script src="/assets/code-copy.js"></script>
+    <script src="/assets/pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false, baseUrl: '/cheatsheets' });"></script>
+    </main>
+  </body>
 </html>
