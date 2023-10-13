@@ -11,33 +11,23 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@v3
+      # ------------------------------------------------------------------------
+      # Installs dependencies and generates static files inside the wwwroot folder
+      - name: Generate static files in wwwroot
+        uses: actions/setup-node@v3
+        with:
+          node-version: current
+      - run: npm ci
+      - run: npm run build
 
-    # Installs dependencies and generates static files inside the wwwroot folder
-    - name: Generate static files in wwwroot
-      uses: actions/setup-node@v3
-      with:
-        node-version: current
-    - run: npm ci
-    - run: npm run build
-    
-    # # Need to use Node to build static site
-    # - name: USE NODE.JS CURRENT
-    #   uses: actions/setup-node@v3
-    #   with:
-    #     node-version: current
-    # - run: npm i
-    # - run: npm run build
-
-    - uses: actions/checkout@v3
-    - name: DEPLOY
-      uses: appleboy/scp-action@v0.1.4
-      with:
-        host: ${{ secrets.CHEATSHEET_HOST }}
-        username: ${{ secrets.CHEATSHEET_USERNAME }}
-        password: ${{ secrets.CHEATSHEET_PASSWORD }}
-        port: ${{ secrets.CHEATSHEET_PORT }}
-        rm: true
-        source: "_site/*"
-        target: "/home/dh_swaz4r/tech.libresinn.com/cheatsheets"
+      # ------------------------------------------------------------------------
+      - name: DEPLOY
+        uses: appleboy/scp-action@v0.1.4
+        with:
+          host: ${{ secrets.CHEATSHEET_HOST }}
+          username: ${{ secrets.CHEATSHEET_USERNAME }}
+          password: ${{ secrets.CHEATSHEET_PASSWORD }}
+          port: ${{ secrets.CHEATSHEET_PORT }}
+          rm: true
+          source: "_site/*"
+          target: "/home/dh_swaz4r/tech.libresinn.com/1loc"
