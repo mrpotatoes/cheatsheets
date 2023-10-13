@@ -18,7 +18,7 @@ jobs:
     - name: Generate static files in wwwroot
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: current
     - run: npm ci
     - run: npm run build
     
