@@ -33,4 +33,4 @@ jobs:
           port: ${{ secrets.CHEATSHEET_PORT }}
           rm: true
           source: "_site/*"
-          target: "/home/dh_swaz4r/tech.libresinn.com/1loc/"
+          target: "/home/dh_swaz4r/tech.libresinn.com/"

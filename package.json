@@ -1,6 +1,6 @@
 {
     "name": "cheatsheet",
-    "description": "What's your favorite JavaScript single LOC (line of code)",
+    "description": "Personal cheatsheet",
     "license": "MIT",
     "scripts": {
         "clean": "rm .cache _site; ",
