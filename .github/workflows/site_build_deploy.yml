@@ -7,17 +7,28 @@ on:
 
 jobs:
   build:
-    name: BUILD
+    name: INSTALL, BUILD & DEPLOY
     runs-on: ubuntu-latest
     
     steps:
-    # Need to use Node to build static site
-    - name: USE NODE.JS CURRENT
-      uses: actions/setup-node@v3
+    # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+    - uses: actions/checkout@v2
+
+    # Installs dependencies and generates static files inside the wwwroot folder
+    - name: Generate static files in wwwroot
+      uses: actions/setup-node@v1
       with:
-        node-version: current
-    - run: npm i
+        node-version: '12.x'
+    - run: npm ci
     - run: npm run build
+    
+    # # Need to use Node to build static site
+    # - name: USE NODE.JS CURRENT
+    #   uses: actions/setup-node@v3
+    #   with:
+    #     node-version: current
+    # - run: npm i
+    # - run: npm run build
 
     - uses: actions/checkout@v3
     - name: DEPLOY
