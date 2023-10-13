@@ -16,7 +16,7 @@ jobs:
 
       # ------------------------------------------------------------------------
       # Installs dependencies and generates static files inside the wwwroot folder
-      - name: Generate static files in wwwroot
+      - name: BUILD SITE
         uses: actions/setup-node@v3
         with:
           node-version: current
@@ -33,4 +33,4 @@ jobs:
           port: ${{ secrets.CHEATSHEET_PORT }}
           rm: true
           source: "_site/*"
-          target: "/home/dh_swaz4r/tech.libresinn.com/1loc"
+          target: "/home/dh_swaz4r/tech.libresinn.com/1loc/."
