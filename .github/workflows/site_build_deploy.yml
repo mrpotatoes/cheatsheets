@@ -19,7 +19,7 @@ jobs:
     
     - name: INSTALL DEPENDENCIES & BUILD
       run: |
-        cd ..
+        echo GITHUB_WORKSPACE: $GITHUB_WORKSPACE
         npm i
         npm run build
 
