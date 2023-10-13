@@ -20,6 +20,8 @@ jobs:
     - name: INSTALL DEPENDENCIES & BUILD
       run: |
         cd ..
+        pwd
+        ls -la
         npm i
         npm run build
 
