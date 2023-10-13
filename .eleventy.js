@@ -142,7 +142,8 @@ module.exports = function (eleventyConfig) {
       input: 'contents',
       includes: '_includes',
       data: '_data',
-      output: '_site'
+      output: '_site',
+      // output: '1loc',
     }
   };
 };
