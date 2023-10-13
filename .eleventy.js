@@ -106,7 +106,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --site _site --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    execSync(`npx pagefind --site 1loc --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
   // eleventyConfig.addTransform('minify-html', function (content) {
@@ -142,8 +142,8 @@ module.exports = function (eleventyConfig) {
       input: 'contents',
       includes: '_includes',
       data: '_data',
-      output: '_site',
-      // output: '1loc',
+      // output: '_site',
+      output: '1loc',
     }
   };
 };

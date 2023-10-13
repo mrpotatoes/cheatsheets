@@ -1,5 +1,9 @@
 .cache
 .netlify
-_site
 node_modules
 .DS_Store
+
+# BUILD DIRECTORIES
+_site
+1loc
+cheatsheets
