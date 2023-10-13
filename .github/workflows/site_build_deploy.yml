@@ -19,7 +19,7 @@ jobs:
     
     - name: INSTALL DEPENDENCIES & BUILD
       run: |
-        npm c
+        npm i
         npm run build
 
     - uses: actions/checkout@v3
