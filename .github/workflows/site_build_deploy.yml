@@ -19,6 +19,7 @@ jobs:
     
     - name: INSTALL DEPENDENCIES & BUILD
       run: |
+        cd ..
         npm i
         npm run build
 
