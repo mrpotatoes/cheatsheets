@@ -1,7 +1,8 @@
 ---
 layout: layouts/post.njk
-title: This is my booty
+title: Making sure this is built and deployed
 category: Andric
 ---
 
-# This is my booty
+# Ignore this pls
+Okay?

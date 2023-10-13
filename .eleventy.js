@@ -109,22 +109,16 @@ module.exports = function (eleventyConfig) {
     execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
-  // Minify just for production.
-  const isProd = process.env.NODE_ENV == 'production'
-  // console.log('isProd', isProd)
-  // process.exit()
-
   eleventyConfig.addTransform('minify-html', function (content) {
     if (this.outputPath && this.outputPath.endsWith('.html')) {
-      console.log('I am here?')
       return htmlmin.minify(content, {
         useShortDoctype: true,
         removeComments: true,
         collapseWhitespace: true
-      });
+      })
     }
-    return content;
-  });
+    return content
+  })
 
   return {
     pathPrefix: '/cheatsheets',
