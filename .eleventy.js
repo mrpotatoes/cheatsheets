@@ -106,31 +106,32 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --site 1loc --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
-  // eleventyConfig.addTransform('minify-html', function (content) {
-  //   if (this.outputPath && this.outputPath.endsWith('.html')) {
-  //     return htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true
-  //     });
-  //   }
-  //   return content;
-  // });
+  // Minify just for production.
+  const isProd = process.env.NODE_ENV == 'production'
+  // console.log('isProd', isProd)
+  // process.exit()
+
+  eleventyConfig.addTransform('minify-html', function (content) {
+    if (this.outputPath && this.outputPath.endsWith('.html')) {
+      console.log('I am here?')
+      return htmlmin.minify(content, {
+        useShortDoctype: true,
+        removeComments: true,
+        collapseWhitespace: true
+      });
+    }
+    return content;
+  });
 
   return {
-    pathPrefix: '/1loc',
-    // pathPrefix,
+    pathPrefix: '/cheatsheets',
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
-    templateFormats: [
-      'md',
-      'njk',
-      'html',
-      'liquid',
-    ],
+    templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
+
     // Pre-process *.md files with: (default: `liquid`)
     markdownTemplateEngine: 'njk',
 
@@ -143,7 +144,7 @@ module.exports = function (eleventyConfig) {
       includes: '_includes',
       data: '_data',
       // output: '_site',
-      output: '1loc',
+      output: 'cheatsheets',
     }
   };
 };

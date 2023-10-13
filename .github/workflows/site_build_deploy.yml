@@ -32,5 +32,5 @@ jobs:
           password: ${{ secrets.CHEATSHEET_PASSWORD }}
           port: ${{ secrets.CHEATSHEET_PORT }}
           rm: true
-          source: "1loc/*"
+          source: "cheatsheets/*"
           target: "/home/dh_swaz4r/tech.libresinn.com/"
