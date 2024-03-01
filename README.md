@@ -26,3 +26,8 @@ I wanted something where I remember all the neat little code snippets I've creat
   - Add tag list to posts
   - I ***might*** like to turn this repo into a set of "collections" and each collection will be it's own deployable subdirectory on my hosted website.
 
+Upgrade
+```
+INSTALL, BUILD & DEPLOY
+Node.js 16 actions are deprecated. Please update the following actions to use Node.js 20: actions/checkout@v3, actions/setup-node@v3. For more information see: https://github.blog/changelog/2023-09-***-github-actions-transitioning-from-node-16-to-node-20/.
+```
