@@ -5,9 +5,6 @@ category: Dotfiles
 ---
 
 # Placeholder
-```sql
-SELECT *
-FROM <TABLE>
-WHERE <CLAUSE>
-LIMIT 10
+```bash
+echo "foo bar"
 ```
