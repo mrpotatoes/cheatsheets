@@ -3,28 +3,54 @@ I wanted something where I remember all the neat little code snippets I've creat
 
 ## Future
 ### Features & Enhancements
-- Code
-  - ~Rename repo to "`cheatsheets`"~
-  - ~Change path prefix to "`/cheatsheets`" (url)~
-  - ~Cleanup code~
-  - ~Indentation~
-  - ~Add a `.editorconfig` file~
-- ~Scripts~
-  - ~Add a new category (folder + `index.njk` file)~
-  - ~Add a new category post~
 - Website
-  - ~Add copy functionality to the code snippets~
-  - ~Search~
   - Fix favicon
   - Pagination on the category pages
-- Deployment
-  - I may want to delete the repo and recreate it once I can deploy so I can get rid of the old workflows that I've disabled
 - Optional Features
   - Icon functionality set in `frontmatter`
   - Description for landing pages in frontmatter
-  - Add tags page
-  - Add tag list to posts
-  - I ***might*** like to turn this repo into a set of "collections" and each collection will be it's own deployable subdirectory on my hosted website.
+- Allow for nested directories
+  - See below
+- Description under the category name on the category page
+  - https://tech.libresinn.com/cheatsheets/dotfiles/
+    - Dotfiles
+    - {{SOME DESCRIPTION}}
+
+```
+├── _includes
+│   ├── base.njk
+│   ├── category.njk
+│   └── post.njk
+├── browser
+│   ├── css
+│   ├── dom
+│   └── html
+├── javascript
+│   ├── array
+│   ├── date-time
+│   ├── function
+│   ├── functional-programming
+│   ├── libraries
+│   │   ├── express
+│   │   └── jest
+│   ├── math
+│   ├── misc
+│   ├── number
+│   ├── object
+│   ├── random
+│   ├── recursion
+│   ├── reduce
+│   ├── string
+│   ├── typescript
+│   └── validator
+├── robots.njk
+├── sitemap.njk
+├── sql
+└── subsystem
+    ├── bash
+    └── dotfiles
+```
+
 
 Upgrade
 ```
