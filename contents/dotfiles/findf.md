@@ -8,6 +8,6 @@ category: Dotfiles
 
 This is a way to find files quickly. 
 
-```bash
-type "findf $FILE_NAME"
+```sh
+$ "findf $FILE_NAME"
 ```
