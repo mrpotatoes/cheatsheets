@@ -8,8 +8,7 @@ const util = require('util')
 
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy('./assets');
-  eleventyConfig.addPassthroughCopy('./styles');
+  eleventyConfig.addPassthroughCopy({ './11ty/assets': 'assets' });
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -135,9 +134,7 @@ module.exports = function (eleventyConfig) {
     // These are all optional (defaults are shown):
     dir: {
       input: 'contents',
-      includes: '_includes',
-      data: '_data',
-      // output: '_site',
+      layouts: '../11ty/layouts',
       output: 'cheatsheets',
     }
   };
