@@ -1,6 +1,6 @@
 :root {
   --category__name-font-size: 1.5rem;
-  --category__post-num-columns: 1;
+  --category__post-num-columns: 3;
 }
 
 .category__name {
@@ -35,7 +35,7 @@
 @media (min-width: 768px) {
   :root {
     --category__name-font-size: 2rem;
-    --category__post-num-columns: 2;
+    --category__post-num-columns: 3;
   }
 }
 

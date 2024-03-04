@@ -3,11 +3,7 @@
   border-radius: 0.5rem;
   text-align: center;
   border: 3px solid #FFF;
-  // cursor: pointer;
   width: 100%;
-  // top: 0;
-  // left: 0;
-  // z-index: 1;
 }
 
 .card__item:hover {
@@ -17,9 +13,13 @@
 .card__link {
   color: #6366f1;
   font-size: 1.10rem;
-  text-align: center;
   text-decoration: none;
+  text-overflow: ellipsis;
   display: block;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
 }
 
 .card__link:hover {
