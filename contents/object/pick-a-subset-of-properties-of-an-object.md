@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Pick a subset of properties of an object
 category: Object
 ---

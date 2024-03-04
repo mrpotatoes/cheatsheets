@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Sort lines of a text document in the alphabetical order
 category: String
 ---

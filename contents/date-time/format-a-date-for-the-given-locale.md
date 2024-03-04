@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Format a date for the given locale
 category: Date Time
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert a number to equivalent characters
 category: Number
 ---

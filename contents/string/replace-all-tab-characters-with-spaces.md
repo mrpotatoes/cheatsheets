@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Replace all tab characters with spaces
 category: String
 ---

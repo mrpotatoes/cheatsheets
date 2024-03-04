@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Jest snippets (break up please)
 category: JavaScript
 ---

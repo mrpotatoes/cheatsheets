@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Find the index of the last matching item of an array
 category: Array
 ---

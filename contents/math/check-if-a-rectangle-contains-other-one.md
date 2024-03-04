@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Check if a rectangle contains other one
 category: Math
 ---

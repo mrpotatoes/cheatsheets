@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Create an object from the pairs of key and value
 category: Object
 ---

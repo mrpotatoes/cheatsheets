@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Omit a subset of properties from an object
 category: Object
 ---

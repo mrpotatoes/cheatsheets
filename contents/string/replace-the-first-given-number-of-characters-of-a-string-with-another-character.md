@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Replace the first given number of characters of a string with another character
 category: String
 ---

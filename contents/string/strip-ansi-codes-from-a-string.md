@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Strip ANSI codes from a string
 category: String
 ---

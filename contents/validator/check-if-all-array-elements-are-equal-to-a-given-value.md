@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Check if all array elements are equal to a given value
 category: Validator
 ---

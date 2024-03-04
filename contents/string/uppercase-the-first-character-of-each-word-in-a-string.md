@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Uppercase the first character of each word in a string
 category: String
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Redirect the page to HTTPS if it is in HTTP
 category: Misc
 ---

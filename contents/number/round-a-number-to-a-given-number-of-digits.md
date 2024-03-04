@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Round a number to a given number of digits
 category: Number
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Compute the greatest common divisor between two numbers
 category: Number
 ---

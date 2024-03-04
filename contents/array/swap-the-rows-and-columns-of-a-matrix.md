@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Swap the rows and columns of a matrix
 category: Array
 ---
