@@ -8,25 +8,33 @@
 #   having to set it in category property in the frontmatter
 ---
 category-tree:
+- name: Languages
+  desc: Languages n' stuf
+  path: languages
+
 - name: Javascript
   desc: Language Specific things
-  path: javascript
+  path: languages/javascript
 
-- name: Bash
-  desc: Language Specific things
-  path: bash
+- name: Array
+  desc: Arrays
+  path: languages/javascript/arrays
 
-- name: Dotfiles
-  desc: Language Specific things
-  path: bash/dotfiles
+# - name: Bash
+#   desc: Language Specific things
+#   path: bash
 
-- name: Commands
-  desc: Useful & oft used `bash` commands
-  path: bash/commands
+# - name: Dotfiles
+#   desc: Language Specific things
+#   path: bash/dotfiles
 
-- name: Libraries & Tools
-  desc: Jest snippets
+# - name: Commands
+#   desc: Useful & oft used `bash` commands
+#   path: bash/commands
 
-- name: Jest
-  desc: Jest snippets
+# - name: Libraries & Tools
+#   desc: Jest snippets
+
+# - name: Jest
+#   desc: Jest snippets
 
