@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert a date to YYYY-MM-DD format
 category: Date Time
 ---

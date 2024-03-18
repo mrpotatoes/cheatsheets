@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Insert given HTML after an element
 category: DOM
 ---

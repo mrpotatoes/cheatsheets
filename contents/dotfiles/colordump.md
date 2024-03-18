@@ -1,7 +1,7 @@
 ---
-layout: layouts/post.njk
-title: argv
-category: colordump
+layout: post.njk
+title: colordump
+category: Dotfiles
 ---
 
 # `argv`

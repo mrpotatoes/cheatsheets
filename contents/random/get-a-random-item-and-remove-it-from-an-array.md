@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get a random item and remove it from an array
 category: Random
 ---

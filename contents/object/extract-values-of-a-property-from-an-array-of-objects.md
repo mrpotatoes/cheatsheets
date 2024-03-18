@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Extract values of a property from an array of objects
 category: Object
 ---

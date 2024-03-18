@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert a base64 encoded string to an uint8 array
 category: String
 ---

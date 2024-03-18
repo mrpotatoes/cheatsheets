@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Compare two arrays regardless of order
 category: Array
 ---

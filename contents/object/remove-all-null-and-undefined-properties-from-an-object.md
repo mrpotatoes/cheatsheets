@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Remove all null and undefined properties from an object
 category: Object
 ---

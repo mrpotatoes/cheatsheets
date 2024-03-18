@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Sort the characters of a string in the alphabetical order
 category: String
 ---

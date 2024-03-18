@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Count the occurrences of a value in an array
 category: Array
 ---

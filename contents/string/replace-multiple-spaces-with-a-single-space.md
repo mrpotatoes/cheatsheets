@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Replace multiple spaces with a single space
 category: String
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Calculate the mod of collection index
 category: Number
 ---

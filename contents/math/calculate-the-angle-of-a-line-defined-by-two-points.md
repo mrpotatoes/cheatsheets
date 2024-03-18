@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Calculate the angle of a line defined by two points
 category: Math
 ---

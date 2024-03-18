@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Trim slashes at the beginning and the end of a string
 category: String
 ---

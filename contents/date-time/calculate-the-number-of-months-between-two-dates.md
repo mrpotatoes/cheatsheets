@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Calculate the number of months between two dates
 category: Date Time
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Delay the evaluation of a function
 category: Function
 ---

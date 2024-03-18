@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Validate a Gregorian date
 category: Validator
 ---

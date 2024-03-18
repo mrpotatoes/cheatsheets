@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Create a function that accepts a single argument
 category: Function
 ---

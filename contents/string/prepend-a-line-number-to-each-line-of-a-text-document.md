@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Prepend a line number to each line of a text document
 category: String
 ---

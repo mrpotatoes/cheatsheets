@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: prune-dirs
 category: Dotfiles
 ---

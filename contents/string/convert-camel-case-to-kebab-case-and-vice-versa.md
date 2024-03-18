@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert camelCase to kebab-case and vice versa
 category: String
 ---

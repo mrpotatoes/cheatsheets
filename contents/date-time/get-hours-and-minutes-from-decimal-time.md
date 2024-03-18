@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the hours and minutes from the decimal time
 category: Date Time
 ---

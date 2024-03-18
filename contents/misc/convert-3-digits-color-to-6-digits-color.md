@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert 3 digits color to 6 digits color
 category: Misc
 ---

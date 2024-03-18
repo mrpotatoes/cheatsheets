@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Add an ordinal suffix to a number
 category: Number
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the position of an element relative to the document
 category: DOM
 ---

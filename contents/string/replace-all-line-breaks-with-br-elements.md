@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Replace all line breaks with br elements
 category: String
 ---

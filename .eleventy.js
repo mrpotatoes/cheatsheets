@@ -8,8 +8,8 @@ const util = require('util')
 
 module.exports = function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy('./assets');
-  eleventyConfig.addPassthroughCopy('./styles');
+  eleventyConfig.addPassthroughCopy({ './11ty/assets': 'assets' });
+  // eleventyConfig.addPassthroughCopy({ './11ty/styles': 'styles' });
 
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
@@ -120,8 +120,10 @@ module.exports = function (eleventyConfig) {
     return content
   })
 
+  const path = process.env.NODE_ENV == undefined ? '/cheatsheets/' : '/'
+
   return {
-    pathPrefix: '/cheatsheets',
+    pathPrefix: path,
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
@@ -135,9 +137,7 @@ module.exports = function (eleventyConfig) {
     // These are all optional (defaults are shown):
     dir: {
       input: 'contents',
-      includes: '_includes',
-      data: '_data',
-      // output: '_site',
+      layouts: '../11ty/layouts',
       output: 'cheatsheets',
     }
   };

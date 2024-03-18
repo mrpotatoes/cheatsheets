@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Normalize the ratio of a number in a range
 category: Math
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Returns an object with unique values by key
 category: Object
 ---

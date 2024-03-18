@@ -1,6 +1,9 @@
 # My code cheetsheet
 I wanted something where I remember all the neat little code snippets I've created or find so I don't have to rewrite them in the future.
 
+## New Thoughts
+I have been thinking about how I have setup the categories and to use tags. [I put those thoughts in this directory](./11ty/config/) for future development
+
 ## Future
 ### Features & Enhancements
 - Website

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Remove duplicate lines of a text document
 category: String
 ---

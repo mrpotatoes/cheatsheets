@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Count the occurrences of a character in a string
 category: String
 ---
