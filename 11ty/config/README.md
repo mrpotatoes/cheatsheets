@@ -116,6 +116,8 @@ All these will be 1 page of links
 ### Data Stores
 - PostgreSQL
   - Anti Patterns
+    - [Presentations](https://www.slideshare.net/billkarwin)
+    - [Sql Antipatterns Strike Back](https://www.slideshare.net/billkarwin/sql-antipatterns-strike-back)
 - Mongo
 - Redis
 
