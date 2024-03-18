@@ -1,4 +1,10 @@
 # Ideas on categories & url paths
+Categories are a great top-level concept to organize content I want to use `tags` as a mechanism to show related items ala [Astro Doc's] bottom of the page links.
+
+![](./related-example.png)
+
+I also like [this type of category page](https://docs.astro.build/en/getting-started/). Might make sense since I want to add a `description` property to each category and possibly even an image/icon/logo (small). Actual pages will also have a link image similar to categories. Perhaps even a hero image but that might be overkill and I don't want to figure out that `CSS` within this template
+
 ### Links
 - https://roadmap.sh/
   - https://roadmap.sh/backend
@@ -71,8 +77,6 @@
 - Serverless Architecture
   - Serverless Concepts
   - Serverless Other
-
-### 
 
 ### Computer Science
 All these will be 1 page of links
