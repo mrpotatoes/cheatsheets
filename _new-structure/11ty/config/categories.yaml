@@ -1,0 +1,40 @@
+# Category navigation example
+# 
+# - I haven't decided if the path will be required but it makes sense
+#   to me to compare the paths to the categories. If that is the case
+#   then I won't need to nest these which I think will be beneficial
+# 
+# - I hope to use the directories as the `Category` metadata instead of
+#   having to set it in category property in the frontmatter
+---
+category-tree:
+- name: Languages
+  desc: Languages n' stuf
+  path: languages
+
+- name: Javascript
+  desc: Language Specific things
+  path: languages/javascript
+
+- name: Array
+  desc: Arrays
+  path: languages/javascript/arrays
+
+# - name: Bash
+#   desc: Language Specific things
+#   path: bash
+
+# - name: Dotfiles
+#   desc: Language Specific things
+#   path: bash/dotfiles
+
+# - name: Commands
+#   desc: Useful & oft used `bash` commands
+#   path: bash/commands
+
+# - name: Libraries & Tools
+#   desc: Jest snippets
+
+# - name: Jest
+#   desc: Jest snippets
+

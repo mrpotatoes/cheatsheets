@@ -1,0 +1,27 @@
+.card__item {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 3px solid #FFF;
+  width: 100%;
+}
+
+.card__item:hover {
+  border: 1px solid #6366f1;
+}
+
+.card__link {
+  color: #6366f1;
+  font-size: 1.10rem;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+.card__link:hover {
+  font-weight: bold;
+}
