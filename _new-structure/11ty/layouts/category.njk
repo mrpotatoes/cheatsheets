@@ -1,0 +1,27 @@
+---
+layout: base.njk
+---
+
+{% set previousPost = collections.sortByTitle | getPreviousCollectionItem(page) %}
+{% set nextPost = collections.sortByTitle | getNextCollectionItem(page) %}
+<div class="container">
+  <div class="header">
+    <div class="header__breadcrumb">
+      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+      <span>{{ title | titlecase }}</span>
+    </div>
+  </div>
+  <div class="category">
+    <h1 class="category__name">{{ title }}</h1>
+    <div class="category__layout">
+      {%- for post in collections.groupByCategories[title] -%}
+        {# {{ post | debugger }} #}
+        <div class="content">
+          <div class="card__item">
+            <a class="card__link" href="{{ post.url }}">{{ post.data.title }}</a>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
