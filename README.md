@@ -11,10 +11,14 @@ Requirements
   - Blog? Links?
 - Formatter support
   - `main-bucket`: The main path to show under
-  - Tags (related) to show under other files
-  - Image Header (optional)
-  - Stub (optional)
-  - "Icon" (optional)
+  - `tags` (related) to show under other files
+  - `image` Header (optional)
+  - `stub` (optional)
+  - `icon` (optional)
+  - `similar-to`
+    - Different from the tags/related property. This will group these posts together under the same bucket in the UI vs within the post
+    - Posts it's similar to. Think grouping vs related where it'll show
+  - `used-for`. A prop that has an array of descriptions as to what this could be used for. Limited to a certain length to fit on page.
 - Shorten file names, they're too damned big
 - Optional `index.json` of a contents folder to globally set stuff
   - Bucket heading, icon, background colour etc
@@ -27,6 +31,7 @@ Optional
   - https://phuoc.ng/collection/1-loc/intersperse-element-between-elements/
   - https://phuoc.ng/collections/
 - Scripts to generate pages, navigation, bucket
+- Open in the side panel to show post vs new page
 
 <!--
 USEFUL LINKS
