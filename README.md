@@ -32,6 +32,8 @@ Optional
   - https://phuoc.ng/collections/
 - Scripts to generate pages, navigation, bucket
 - Open in the side panel to show post vs new page
+  - 11ty might not support this as i'd like so I need to think about this a bit more
+  - I would rather not have to convert to JSON as that's stupid 🙄
 
 <!--
 USEFUL LINKS
