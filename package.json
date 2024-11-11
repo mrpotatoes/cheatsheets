@@ -6,7 +6,7 @@
     "clean": "rm -rf .cache cheatsheets; ",
     "build": "rm -rf .cache cheatsheets; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
     "build:sass": "sass config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed",
-    "build:eleventy": "npx @11ty/eleventy",
+    "build:eleventy": "npx @11ty/eleventy --config=config/11ty/eleventy.config.js",
     "serve": "rm -rf .cache cheatsheets; npm run build; LOCAL_STATIC=yes serve cheatsheets",
     "deploy": "npm run build && netlify deploy --prod --dir=cheatsheets",
     "format": "prettier --write \"**/*.+(json|md|scss)\"",
