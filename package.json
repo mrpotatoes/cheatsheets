@@ -1,6 +1,6 @@
 {
   "name": "cheatsheet",
-  "description": "Personal cheatsheet",
+  "description": "My tech blog & cheatsheets",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .cache cheatsheets; ",
