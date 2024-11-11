@@ -18,4 +18,4 @@ async function copyCode(block) {
   await navigator.clipboard.writeText(text);
 }
 
-alert("passthough still works")
+console.log("passthough still works")
