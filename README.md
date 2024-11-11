@@ -163,3 +163,9 @@ I am changing how the cheatsheets are loaded and whatever in this website. I wan
   - [javascript - List all possible paths using lodash - Stack Overflow](https://stackoverflow.com/questions/36128171/list-all-possible-paths-using-lodash)
   - [Find path in a JS object? My favorite question to ask in a Frontend interview. | by Srijan Gulati | Medium](https://srijansinghgulati.medium.com/find-path-in-a-js-object-my-favorite-question-to-ask-in-a-frontend-interview-faab189e2c19)
   - [javascript - Get array of all Lodash paths of object - Stack Overflow](https://stackoverflow.com/questions/55700754/get-array-of-all-lodash-paths-of-object)
+  - [Find a full object path to a given value with JavaScript - Stack Overflow](https://stackoverflow.com/questions/53543303/find-a-full-object-path-to-a-given-value-with-javascript)
+  - [find-object-paths - npm](https://www.npmjs.com/package/find-object-paths)
+  - ⭐️ [Find all paths of value in a JavaScript object](https://lowrey.me/find-all-paths-of-value-in-a-javascript-object/)
+  - [JavaScript Find Path of Key in Deeply Nested Object or Array - TecHighness](https://www.techighness.com/post/javascript-find-key-path-in-deeply-nested-object-or-array/)
+  
+  
