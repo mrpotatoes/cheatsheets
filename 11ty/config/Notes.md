@@ -1,4 +1,0 @@
-- https://github.com/paulirish/git-open
-  - 7 Years old tho
-- https://github.com/hotoo/gitopen
-- 

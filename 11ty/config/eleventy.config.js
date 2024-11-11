@@ -106,7 +106,7 @@ module.exports = function (eleventyConfig) {
   });
 
   eleventyConfig.on('eleventy.after', () => {
-    execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    //execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
   eleventyConfig.addTransform('minify-html', function (content) {
