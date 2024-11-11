@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the number of days in given month
 category: Date Time
 ---

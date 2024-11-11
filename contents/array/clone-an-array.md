@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Clone an array
 category: Array
 ---

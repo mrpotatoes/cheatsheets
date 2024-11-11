@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Calculate the linear interpolation between two numbers
 category: Math
 ---

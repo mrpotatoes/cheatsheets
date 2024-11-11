@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Check if a string consists of a repeated character sequence
 category: String
 ---

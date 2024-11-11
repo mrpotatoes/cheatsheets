@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Round a number to the nearest multiple of a given value
 category: Math
 ---

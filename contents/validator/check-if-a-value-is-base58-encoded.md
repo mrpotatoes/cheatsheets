@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Check if a value is base58 encoded
 category: Validator
 ---

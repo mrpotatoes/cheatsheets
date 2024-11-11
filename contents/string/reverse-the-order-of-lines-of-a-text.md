@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Reverse the order of lines of a text
 category: String
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the current timestamp in seconds
 category: Date Time
 ---

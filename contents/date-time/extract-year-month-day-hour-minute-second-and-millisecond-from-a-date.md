@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Extract year, month, day, hour, minute, second and millisecond from a date
 category: Date Time
 ---

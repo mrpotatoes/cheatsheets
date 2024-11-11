@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Create an array of cumulative sum
 category: Array
 ---

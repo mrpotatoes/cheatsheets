@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Create an array of numbers in the given range
 category: Array
 ---

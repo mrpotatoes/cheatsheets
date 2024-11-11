@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Generate an array of random integers in a given range
 category: Random
 ---

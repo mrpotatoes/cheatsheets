@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the first date in the month of a date
 category: Date Time
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Make the first character of a string lowercase
 category: String
 ---

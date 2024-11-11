@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the value of a param from a URL
 category: Misc
 ---

@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Truncate a number to a given number of decimal places without rounding
 category: Number
 ---

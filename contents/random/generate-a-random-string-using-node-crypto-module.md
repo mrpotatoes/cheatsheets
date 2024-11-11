@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Generate a random string using Node crypto module
 category: Random
 ---

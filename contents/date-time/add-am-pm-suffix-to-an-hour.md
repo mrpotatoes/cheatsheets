@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Add AM PM suffix to an hour
 category: Date Time
 ---

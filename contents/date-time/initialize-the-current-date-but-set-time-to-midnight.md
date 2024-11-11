@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Initialize the current date but set time to midnight
 category: Date Time
 ---

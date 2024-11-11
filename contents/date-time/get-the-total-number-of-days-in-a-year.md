@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Get the total number of days in a year
 category: Date Time
 ---

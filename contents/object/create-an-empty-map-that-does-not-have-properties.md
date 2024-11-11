@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Create an empty map that does not have properties
 category: Object
 ---

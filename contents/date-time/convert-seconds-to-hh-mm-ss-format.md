@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert seconds to hh:mm:ss format
 category: Date Time
 ---

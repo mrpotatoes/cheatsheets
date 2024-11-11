@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Generate an array of alphabet characters
 category: Array
 ---

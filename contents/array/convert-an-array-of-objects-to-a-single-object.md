@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Convert an array of objects to a single object
 category: Array
 ---

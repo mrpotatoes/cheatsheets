@@ -1,5 +1,5 @@
 ---
-layout: layouts/post.njk
+layout: post.njk
 title: Find the length of the longest string in an array
 category: Array
 ---
