@@ -17,5 +17,3 @@ async function copyCode(block) {
   let text = code.innerText;
   await navigator.clipboard.writeText(text);
 }
-
-console.log("passthough still works")

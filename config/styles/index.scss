@@ -1,15 +1,15 @@
-@import './common';
+@use 'common';
 
-@import './blocks/card';
-@import './blocks/category';
-@import './blocks/hero';
-@import './blocks/follow';
-@import './blocks/footer';
-@import './blocks/header';
-@import './blocks/nav';
-@import './blocks/post';
-@import './blocks/indexnav';
-@import './blocks/code';
+@use 'blocks/card';
+@use 'blocks/category';
+@use 'blocks/hero';
+@use 'blocks/_follow';
+@use 'blocks/footer';
+@use 'blocks/header';
+@use 'blocks/nav';
+@use 'blocks/post';
+@use 'blocks/indexnav';
+@use 'blocks/code';
 
 // Themes
-@import './themes/dracula.scss';
+@use 'themes/dracula.scss';
