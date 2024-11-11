@@ -109,18 +109,26 @@ module.exports = function (eleventyConfig) {
     // execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
-  eleventyConfig.addTransform('minify-html', function (content) {
-    if (this.outputPath && this.outputPath.endsWith('.html')) {
-      return htmlmin.minify(content, {
-        useShortDoctype: true,
-        removeComments: true,
-        collapseWhitespace: true
-      })
-    }
-    return content
-  })
+  // eleventyConfig.addTransform('minify-html', function (content) {
+  //   if (this.outputPath && this.outputPath.endsWith('.html')) {
+  //     return htmlmin.minify(content, {
+  //       useShortDoctype: true,
+  //       removeComments: true,
+  //       collapseWhitespace: true
+  //     })
+  //   }
+  //   return content
+  // })
 
-  const path = process.env.NODE_ENV == undefined ? '/cheatsheets/' : '/'
+  // Not sure what is going on here with the prod version and local builds
+  // const path = process.env.NODE_ENV == undefined ? '/cheatsheets/' : '/'
+
+  const path = '/'
+
+  console.log('\n\n----------------------------------------------------')
+  console.log('process.env.NODE_ENV', process.env.NODE_ENV)
+  console.log('path', path)
+  console.log('----------------------------------------------------\n\n')
 
   return {
     pathPrefix: path,
