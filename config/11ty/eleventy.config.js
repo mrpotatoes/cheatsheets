@@ -121,14 +121,7 @@ module.exports = function (eleventyConfig) {
   // })
 
   // Not sure what is going on here with the prod version and local builds
-  // const path = process.env.NODE_ENV == undefined ? '/cheatsheets/' : '/'
-
-  const path = '/'
-
-  console.log('\n\n----------------------------------------------------')
-  console.log('process.env.NODE_ENV', process.env.NODE_ENV)
-  console.log('path', path)
-  console.log('----------------------------------------------------\n\n')
+  const path = process.env.NODE_ENV == undefined ? '/' : '/cheatsheets'
 
   return {
     pathPrefix: path,
