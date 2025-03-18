@@ -1,7 +1,10 @@
 ---
 layout: post.njk
 title: Counts
-category: SQL
+category: A thing yo
+tags: 
+  - hey
+  - there
 ---
 
 ## TODO

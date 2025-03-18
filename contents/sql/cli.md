@@ -1,7 +1,10 @@
 ---
-layout: post.njk
 title: CLI
-category: SQL
+layout: post.njk
+category: SQL > CLI
+tags: 
+  - hey
+  - there
 ---
 
 ## TODO

@@ -2,6 +2,10 @@
 layout: post.njk
 title: Compress Images
 category: Bash
+tags: 
+  - images
+  - compress
+  - imagemagick
 ---
 
 ## First install `imagemagick`
