@@ -15,7 +15,8 @@ eleventyExcludeFromCollections: true
       <div class="category">
         <div class="category__posts">
           <h2 class="index__category">
-            <a href="/{{ cat | slugify | urlize | htmlBaseUrl }}/">{{ cat }} ({{ posts | length }} snippets)</a>
+            {# <a href="/{{ cat | slugify | urlize | htmlBaseUrl }}/">{{ cat }} ({{ posts | length }} snippets)</a> #}
+            <a href="/{{ cat | slugify | urlize }}/">{{ cat }} ({{ posts | length }} snippets)</a>
           </h2>
         </div>
       </div>
