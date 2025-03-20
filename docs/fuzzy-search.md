@@ -1,4 +1,22 @@
 # Fuzzy Search Thoughts
+```js
+const snippet = {
+  // I think these are self explanatory.
+  path: '/some/url'
+  title: 'Snippet Title',
+  teaser: '',
+  image: '',
+
+  // In order, not sure if this should be an object or a plain string
+  // Will this be clickable?
+  breadcrumbs: [{ label: '', url: '' }],
+  
+  related: [{ tag: '', url: '' }],
+}
+
+// For the fuzzy search
+const categories = [snippet, snippet, snippet]
+```
 
 ## Links
 - [leeoniya/uFuzzy: A tiny, efficient fuzzy search that doesn't suck](https://github.com/leeoniya/uFuzzy)

@@ -1,3 +1,6 @@
+## OO
+
+```
 NAME
     oo -- Open an application or the current folder that you're in.
 SYNOPSIS
@@ -16,3 +19,4 @@ AUTHOR
   Andric Villanueva
 COPYRIGHT
   MIT
+```

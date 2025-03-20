@@ -1,4 +1,4 @@
-// console.clear()
+console.clear()
 
 const filters = require('./filters')
 const collections = require('./collections')
@@ -28,9 +28,73 @@ module.exports = function (eleventyConfig) {
 
   // Categories
   eleventyConfig.addCollection('categories', collections.categories)
-  eleventyConfig.addCollection('categoryTree', collections.categoryTree)
   eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
+  // eleventyConfig.addCollection('categoryTree', collections.categoryTree)
+  
+  const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
+  
+  const category = (str) => {
+    const trimmed = trimSlashes(str).split('/')
+    const paths = trimmed.slice(0, trimmed.length - 1)
+    return paths
+  }
+  
+  const breadcrumb = 'asd'
+
+  const categories = {
+    [breadcrumb]: {
+      label: '',
+      url: '',
+    }
+  }
+
+  eleventyConfig.addCollection('categoryTree', (collectionApi) => {
+    let cats = {}
+    const all = collectionApi.getAll()
+
+    const urls = [
+      '/sql/cli/',
+      '/subsystem/bash/compress-images/',
+    ]
+
+    all.forEach(e => {      
+      if (e.page.url === urls[1]) {        
+        const paths = category(e.url)        
+
+        console.log({
+          paths: paths,
+          title: e.data.title,
+          url: e.url,
+          tags: e.data.tags,
+          category: e.data.category,
+          // layout: e.data.layout,
+        })
+      }
+
+      cats = {
+        ...cats,
+        [trimSlashes(e.url)]: {
+          title: e.data.title,
+          // url: trimSlashes(e.url),
+          // tags: e.data.tags,
+          category: e.data.category,
+          // layout: e.data.layout,
+        },
+      }
+    })
+
+    // console.log('cats', cats)
+    // console.log(Object.keys(cats))
+
+    /**
+     * Once these are all aggregated I want to then make a tree outta them.
+     * 
+     */
+
+    return all
+  }
+)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
