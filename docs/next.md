@@ -1,7 +1,23 @@
-## What
+## What I want
+The [`mrpotatoes/11ty-starter-exploration`](https://github.com/mrpotatoes/11ty-starter-exploration/tree/main/__categories-test) repo goes into more detail so I'll link it here.
+
+
+- Breadcrumbs
+- Category by directory & directory json files
+- An autocomplete fuzzy search
+
 Convert this flattened object into a tree to know parents and children
 
-```js 
+```js
+const metadata = {
+  parent: metadata,
+  category: {
+    key: '',
+    name: '',
+    description: '',
+  }
+}
+
 const content = {
   '/languages/javascript/array/group-an-array-of-objects-by-a-key/': { metadata },
   '/languages/javascript/array/intersperse-element-between-elements/': { metadata },
