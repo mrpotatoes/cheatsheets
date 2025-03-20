@@ -58,8 +58,8 @@ module.exports = function (eleventyConfig) {
       '/subsystem/bash/compress-images/',
     ]
 
-    all.forEach(e => {      
-      if (e.page.url === urls[1]) {        
+    all.forEach(e => {
+      if (e.page.url === urls[1]) {
         const paths = category(e.url)        
 
         console.log({
@@ -76,21 +76,13 @@ module.exports = function (eleventyConfig) {
         ...cats,
         [trimSlashes(e.url)]: {
           title: e.data.title,
+          category: e.data.category,
           // url: trimSlashes(e.url),
           // tags: e.data.tags,
-          category: e.data.category,
           // layout: e.data.layout,
         },
       }
     })
-
-    // console.log('cats', cats)
-    // console.log(Object.keys(cats))
-
-    /**
-     * Once these are all aggregated I want to then make a tree outta them.
-     * 
-     */
 
     return all
   }
