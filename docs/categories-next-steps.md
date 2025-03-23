@@ -10,6 +10,23 @@ After this I want to update this branch of 11ty to the newest version so I can u
 
 Finally I need to rebuild the main and sub-pages to show them on-screen.
 
+### So far
+So far I've been able to generate an object where the folder directory is the key. I recursively walk the directory tree to get all the breadcrumbs. The output looks like:
+```json
+{
+  "contents/browser": { "label": "Browser" },
+  "contents/browser/css": { "label": "CSS" },
+  "contents/sql": { "label": "SQL" },
+  "contents/subsystem": { "label": "Sub System" },
+  "contents/subsystem/bash": { "label": "Bash" },
+  "contents/subsystem/test1": { "label": "Test 1" },
+  "contents/subsystem/test1/test2": { "label": "Test 2" },
+  "contents/subsystem/test1/test2/test3": { "label": "Test 3" }
+}
+```
+
+This is helpful when it comes to building the breadcrumbs for a snippet. What I still need to do is create a category & content tree to build the pages which means this object isn't what I need to build category pages. I need to build this tree in the `addCollections` function. I do not believe it would make sense to build this outside of `11ty` as a standalone script. Tho, I could save it to the data directory like I plan to do with breadcrumbs.
+
 ## Requirements
 - Deeply nested folder structure
 - Breadcrumbs for every snippet
@@ -86,67 +103,25 @@ const snippet = {
 const snippets = [snippet, snippet, snippet, ...]
 ```
 
-<!-- Convert this flattened object into a tree to know parents and children
+## Links
+<!-- I don't actually need these since I will be using a [fuzzy search library instead](./docs/fuzzy-search.md) -->
 
-```js
-const metadata = {
-  parent: metadata,
-  category: {
-    key: '',
-    label: '',
-    description: '',
-  }
-}
-
-const content = {
-  '/languages/javascript/array/group-an-array-of-objects-by-a-key/': { metadata },
-  '/languages/javascript/array/intersperse-element-between-elements/': { metadata },
-  '/languages/javascript/array/partition-an-array-based-on-a-condition/': { metadata },
-  '/languages/javascript/array/merge-two-arrays/': { metadata },
-  '/languages/javascript/array/remove-duplicate-values-in-an-array/': { metadata },
-  '/languages/javascript/array/repeat-an-array/': { metadata },
-  '/languages/javascript/array/shuffle-an-array/': { metadata },
-  '/languages/javascript/array/remove-falsy-values-from-array/': { metadata },
-  '/languages/javascript/array/sort-an-array-of-items-by-given-key/': { metadata },
-  '/languages/javascript/array/sort-an-array-of-numbers/': { metadata },
-  '/languages/javascript/array/split-an-array-into-chunks/': { metadata },
-  '/languages/javascript/array/swap-the-rows-and-columns-of-a-matrix/': { metadata },
-  '/languages/javascript/array/swap-two-array-items/': { metadata },
-  '/languages/javascript/array/unzip-an-array-of-arrays/': { metadata },
-  '/languages/javascript/array/zip-multiple-arrays/': { metadata },
-  '/sql/backing-up/': { metadata },
-}
-```
-
-Converted to
-```js
-const navigationTree = {
-  'languages': {
-    'javascript': {
-      'array': {
-        'group-an-array-of-objects-by-a-key': metadata,
-        'merge-two-arrays': metadata,
-        // ... and so on
-      },
-    }
-  }  
-}
-```
-
-Lastly, on `eleventy.after` cache the tree to a file
-
-```js
-eleventyConfig.on('eleventy.after', () => {
-  execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
-})
-```
-
-## Also
-When generating either object I want to make sure that I store the metadata I need for easy access
-1. URL
-2. Tags
-3. Categry info
-4. If only directories within a path that means it's an index
-5. Breadcrumbs
-6. Related content
-7. [`mrpotatoes/11ty-starter-exploration`](https://github.com/mrpotatoes/11ty-starter-exploration/tree/main/__categories-test) -->
+- [TreeView with Search Bar](https://js.devexpress.com/jQuery/Demos/WidgetsGallery/Demo/TreeView/TreeViewWithSearchBar/MaterialBlueLight/)
+- [Searching TreeViews](https://developer.mescius.com/wijmo/demos/Nav/TreeView/Searching/purejs)
+- [TreeView with Search Bar](https://codepen.io/husin/pen/MPEjMK)
+- [Yn96ju (forked) - StackBlitz](https://stackblitz.com/run?file=index.js)
+- [package.json — nodebox — CodeSandbox](https://codesandbox.io/p/sandbox/mystifying-brown-bleztc?file=%2Fpackage.json)
+- [Demo - Searching TreeViews - JSFiddle - Code Playground](https://jsfiddle.net/Wijmo5/ff81c4u0/)
+- [index.js — nodebox — CodeSandbox](https://codesandbox.io/p/sandbox/modified-tree-final-forked-op1x0k?file=%2Fsrc%2Findex.js%3A10%2C29)
+- [Create Searchable nested TreeView in Vanilla Javascript - YouTube](https://www.youtube.com/watch?v=-T_oryzmD40)
+- [front-end-components/tree-view/src/v3\_search at main · StepanNaryshkov/front-end-components](https://github.com/StepanNaryshkov/front-end-components/tree/main/tree-view/src/v3_search)
+- [javascript - How to find search path of node in tree js/ts - Stack Overflow](https://stackoverflow.com/questions/56950600/how-to-find-search-path-of-node-in-tree-js-ts)
+- [How to Find a Path Through a Tree With JavaScript - James H. Edwards](https://incrediblesound.github.io/blog/2014/07/27/how-to-find-a-path-through-a-tree-with-javascript/)
+- [javascript - How to get A Path from a nested object tree - Stack Overflow](https://stackoverflow.com/questions/70635605/how-to-get-a-path-from-a-nested-object-tree)
+- [javascript - List all possible paths using lodash - Stack Overflow](https://stackoverflow.com/questions/36128171/list-all-possible-paths-using-lodash)
+- [Find path in a JS object? My favorite question to ask in a Frontend interview. | by Srijan Gulati | Medium](https://srijansinghgulati.medium.com/find-path-in-a-js-object-my-favorite-question-to-ask-in-a-frontend-interview-faab189e2c19)
+- [javascript - Get array of all Lodash paths of object - Stack Overflow](https://stackoverflow.com/questions/55700754/get-array-of-all-lodash-paths-of-object)
+- [Find a full object path to a given value with JavaScript - Stack Overflow](https://stackoverflow.com/questions/53543303/find-a-full-object-path-to-a-given-value-with-javascript)
+- [find-object-paths - npm](https://www.npmjs.com/package/find-object-paths)
+- ⭐️ [Find all paths of value in a JavaScript object](https://lowrey.me/find-all-paths-of-value-in-a-javascript-object/)
+- [JavaScript Find Path of Key in Deeply Nested Object or Array - TecHighness](https://www.techighness.com/post/javascript-find-key-path-in-deeply-nested-object-or-array/)

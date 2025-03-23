@@ -8,6 +8,7 @@ const transforms = require('./transforms')
 const { passthroughs, basePath, targets } = require('./variables')
 
 module.exports = function (eleventyConfig) {
+  console.clear()
   eleventyConfig.addWatchTarget(targets('collections'), { resetConfig: true })
 
   // Copy the `img` and `css` folders to the output
@@ -39,17 +40,61 @@ module.exports = function (eleventyConfig) {
     const paths = trimmed.slice(0, trimmed.length - 1)
     return paths
   }
-  
-  const breadcrumb = 'asd'
 
-  const categories = {
-    [breadcrumb]: {
-      label: '',
-      url: '',
-    }
-  }
+  /**
+   * A category tree that is used to create the category + snippet pages
+   * 
+   * Main Page
+   *  - Top-level categories
+   * 
+   * Category Page
+   *  - Featured image
+   *  - Description of category
+   *  - Child categories & Related
+   *    - Perhaps as a tree underneath description
+   *  - Snippets
+   *    - Summarized description
+   *    - ? Icon
+   *    - ? Related snippet tags
+   * 
+   * Snippet Page
+   *  - Breadcrumbs
+   *  - Full description
+   *  - Content
+   *  - Related snippets
+   *  - ? Related blog posts
+   */
+  eleventyConfig.addCollection('catTree', (collectionApi) => {
+    // console.log('TREE')
+    let tree = {}
+    const all = collectionApi.getAll()
 
-  eleventyConfig.addCollection('categoryTree', (collectionApi) => {
+    const urls = [
+      '/sql/cli/',
+      '/subsystem/bash/compress-images/',
+    ]
+
+    all.forEach(e => {
+      // if (e.page.url === urls[1]) {
+      //   const paths = category(e.url)
+
+      //   console.log({
+      //     title: e.data.title,
+      //     category: e.data.category,
+      //     breadcrumb: paths,
+      //     // url: e.url,
+      //     // tags: e.data.tags,
+      //     // layout: e.data.layout,
+      //   })
+      // }
+    })
+
+    // console.log(tree)
+
+    return all
+  })
+
+  eleventyConfig.addCollection('breadcrumbs', (collectionApi) => {
     let cats = {}
     const all = collectionApi.getAll()
 
@@ -63,11 +108,12 @@ module.exports = function (eleventyConfig) {
         const paths = category(e.url)        
 
         console.log({
-          paths: paths,
           title: e.data.title,
-          url: e.url,
-          tags: e.data.tags,
           category: e.data.category,
+          breadcrumb: e.data.breadcrumbs,
+          url: e.url,
+          // paths: paths,
+          // tags: e.data.tags,
           // layout: e.data.layout,
         })
       }
@@ -85,8 +131,7 @@ module.exports = function (eleventyConfig) {
     })
 
     return all
-  }
-)
+  })
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
@@ -109,6 +154,7 @@ module.exports = function (eleventyConfig) {
     // These are all optional (defaults are shown):
     dir: {
       input: 'contents',
+      data: '../config/11ty/data',
       layouts: '../config/layouts',
       output: 'cheatsheets',
     }

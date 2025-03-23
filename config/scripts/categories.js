@@ -1,29 +1,42 @@
-/**
- * HOW
- *  - Goes through dir recursively
- *  - Directories with a dirr.json file are saved to an object (valid cat data)
- *  - Invalid directories are saved to a noConfig variable (rename)
- *  - Use current path to find all breadcrumbs
- *  - Breadcrumbs do not include the first item (./contents)
- * 
- * TODO
- *  - Remove the base directory (ie: contents/)
- *  - Write to a file (the cache)
- *  - Rename functions & variables
- *  - Create script to run from commandline
- *  - Create breadcrumb links
- *  - Run in template
- * 
- * 
- * ???
- *  - Categories structure ...
- */
-
 const fs = require('fs')
 const path = require('path')
 console.clear()
 
-const directories = (directory) => {
+const crumbs = {
+  'contents/browser': {
+    'label': 'Browser',
+    'related': ['bash', 'zsh']
+  },
+  'contents/browser/css': {
+    'label': 'CSS',
+    'related': ['bash', 'zsh']
+  },
+  'contents/sql': {
+    'label': 'SQL',
+    'related': ['SQL COMMANDS']
+  },
+  'contents/subsystem': {
+    'label': 'Sub System',
+    'related': ['bash', 'zsh']
+  },
+  'contents/subsystem/bash': {
+    'label': 'Bash'
+  },
+  'contents/subsystem/test1': {
+    'label': 'Test 1',
+    'related': ['SQL COMMANDS']
+  },
+  'contents/subsystem/test1/test2': {
+    'label': 'Test 2',
+    'related': ['SQL COMMANDS']
+  },
+  'contents/subsystem/test1/test2/test3': {
+    'label': 'Test 3',
+    'related': ['SQL COMMANDS']
+  }
+}
+
+const breadcrumbs = (directory) => {
   let results = {}
   let noConfig = []
 
@@ -69,7 +82,7 @@ const directories = (directory) => {
 }
 
 // Example usage:
-const dirs = directories('./contents')
+const dirs = breadcrumbs('./contents')
 
 // THIS CREATES THE BREADCRUMBS AND ISN'T PART OF THIS SCRIPT.
 const catPaths = [
@@ -84,15 +97,15 @@ const split = catPaths[3].split('/')
 
 const fn = (split) => (acc, curr, i) => {
   const key = split.slice(split, i + 1).join('/')
-  return !dirs.results[key] ? acc : [ ...acc,  dirs.results[key].label ]
+  return !dirs.results[key] ? acc : [...acc, dirs.results[key].label]
 }
 
-const breadcrumbs = split.reduce(fn(split), []).join(' > ')
+const breadcrumb = split.reduce(fn(split), []).join(' > ')
 
 console.log('--- CATEGORIES --------------------------------------------')
 console.log(dirs.results)
 // console.log(dirs.noConfig)
 
-console.log('\n--- BREADCRUMBS -------------------------------------------')
-console.log(catPaths[3])
-console.log(breadcrumbs)
+// console.log('\n--- BREADCRUMBS -------------------------------------------')
+// console.log(catPaths[3])
+// console.log(breadcrumb)

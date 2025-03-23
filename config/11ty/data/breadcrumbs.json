@@ -1,0 +1,33 @@
+{
+  "contents/browser": {
+    "label": "Browser",
+    "related": [ "bash", "zsh" ]
+  },
+  "contents/browser/css": {
+    "label": "CSS",
+    "related": [ "bash", "zsh" ]
+  },
+  "contents/sql": {
+    "label": "SQL",
+    "related": [ "SQL COMMANDS" ]
+  },
+  "contents/subsystem": {
+    "label": "Sub System",
+    "related": [ "bash", "zsh" ]
+  },
+  "contents/subsystem/bash": {
+    "label": "Bash"
+  },
+  "contents/subsystem/test1": {
+    "label": "Test 1",
+    "related": [ "SQL COMMANDS" ]
+  },
+  "contents/subsystem/test1/test2": {
+    "label": "Test 2",
+    "related": [ "SQL COMMANDS" ]
+  },
+  "contents/subsystem/test1/test2/test3": {
+    "label": "Test 3",
+    "related": [ "SQL COMMANDS" ]
+  }
+}

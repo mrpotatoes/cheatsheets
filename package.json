@@ -3,6 +3,8 @@
   "description": "My tech blog & cheatsheets",
   "license": "MIT",
   "scripts": {
+    "crumbs": "nodemon config/scripts/breadcrumbs.js",
+    "cats": "nodemon config/scripts/categories.js",
     "clean": "rm -rf .cache cheatsheets; ",
     "build": "rm -rf .cache cheatsheets; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
     "build:sass": "sass config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed",
