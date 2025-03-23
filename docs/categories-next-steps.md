@@ -2,7 +2,13 @@
 I want to change the way that I handle the snippets on my [cheatsheets](https://tech.libresinn.com/cheatsheets/) website. I want a more deeply nested structure to better organize my snippets.
 
 ## Thoughts
-I think I might need to maintain a secondary script to manage a category path using `11ty.on('after')` or as a standalone script. I'll ask in Discord if there is a way to do this with the platform natively. If I have to maintain a separate JSON file I think I may handle it 
+I think I might need to maintain a secondary script to manage a category path using `11ty.on('after')` or as a standalone script. I'll ask in Discord if there is a way to do this with the platform natively. If I have to maintain a separate JSON file I think I may handle it.
+
+Lastly I need to make that this output will work produce an object that my fuzzy logic can understand and therefore search. 
+
+After this I want to update this branch of 11ty to the newest version so I can use `import` and `export` statements.
+
+Finally I need to rebuild the main and sub-pages to show them on-screen.
 
 ## Requirements
 - Deeply nested folder structure
@@ -31,6 +37,8 @@ I think I might need to maintain a secondary script to manage a category path us
 ## Development
 ### Concerns
 My current biggest concern is how to maintain the breadcrumbs (parent tree) in the `addCollection` function. That needs to be maintained for all.
+
+I think the best option will be to make it a data file: `./config/11ty/data/categories.(json|yaml)`. I can use the `eleventyConfig.on('eleventy.after', event.after)` to save the categories that I generated in the `eleventyConfig.addCollection('categories')` function (both cat list & breadcrumbs). This proposal would allow me to leverage `11ty` to it's fullest.
 
 ### UI Output
 ![example use](./example.gif)

@@ -1,4 +1,9 @@
 # Fuzzy Search Thoughts
+1. I want to make sure the data structure will work with the fuzzy search.
+2. I don't know if I want a dropdown search or to filter the entire page.
+   1. I am not sure this is the option I want to take cuz i'll need to load all the snippets.
+   2. That may be fine since the categories file will contain all snippets as a `JSON` file which i'll server via the browser.
+
 ```js
 const snippet = {
   // I think these are self explanatory.
