@@ -23,6 +23,34 @@ const snippet = {
 const categories = [snippet, snippet, snippet]
 ```
 
+### UI Output
+![example use](./example.gif)
+
+```txt
+maro
+--------------------------------
+20 matches in 2.4ms
+
+- Super Mario 1
+  - Games > Nintendo > SNES 
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - Related: tag 1, tag 2, tag 3
+- Super Mario 
+  - Games > Nintendo > SNES
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - Related: tag 1, tag 2, tag 3
+- Mario Kart
+  - Games > Nintendo > Switch > Super Mario 3
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - Related: tag 1, tag 2, tag 3
+- Mario Party 3
+  - Games > Nintendo > WII > Super Mario 3
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  - Related: tag 1, tag 2, tag 3
+
+(... further results)
+```
+
 ## Links
 - [leeoniya/uFuzzy: A tiny, efficient fuzzy search that doesn't suck](https://github.com/leeoniya/uFuzzy)
 - [Nozbe/microfuzz: A tiny, simple, fast JS fuzzy search library](https://github.com/Nozbe/microfuzz)

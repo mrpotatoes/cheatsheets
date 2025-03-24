@@ -1,5 +1,7 @@
 console.clear()
 
+const _ = require('lodash')
+
 const filters = require('./filters')
 const collections = require('./collections')
 const events = require('./events')
@@ -32,6 +34,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
   // eleventyConfig.addCollection('categoryTree', collections.categoryTree)
+
+  eleventyConfig.addFilter("debug", (content) => JSON.stringify(content, null, 2)) //`<pre>${JSON.stringify(content, null, 2)}</pre>`)
   
   const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
   
@@ -65,39 +69,44 @@ module.exports = function (eleventyConfig) {
    *  - ? Related blog posts
    */
   eleventyConfig.addCollection('catTree', (collectionApi) => {
-    // console.log('TREE')
-    let tree = {}
     const all = collectionApi.getAll()
+    const item = all[0]
 
-    const urls = [
-      '/sql/cli/',
-      '/subsystem/bash/compress-images/',
-    ]
+    // console.log(item.data.breadcrumbs)
+    const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
+    const setPath = trimSlashes(item.page.filePathStem).replaceAll('/', '.')
 
-    all.forEach(e => {
-      // if (e.page.url === urls[1]) {
-      //   const paths = category(e.url)
-
-      //   console.log({
-      //     title: e.data.title,
-      //     category: e.data.category,
-      //     breadcrumb: paths,
-      //     // url: e.url,
-      //     // tags: e.data.tags,
-      //     // layout: e.data.layout,
-      //   })
-      // }
+    // console.log('\n')
+    // console.log({
+    //   data: Object.keys(item.data),
+    //   // page: item.data,
+    //   // path: setPath,
+    //   // file: item.data.page.inputPath,
+    //   // category: item.data.category,
+    //   // categories: item.data.categories,
+    //   // collections: item.data.collections,
+    //   // rest: Object.keys(item.data.collections)
+    // })
+    // console.log('\n')
+    
+    _.set(item.data.breadcrumbs, setPath, {
+      label: item.data.title,
+      category: item.data.category,
     })
 
-    // console.log(tree)
+    // console.log(item.data.breadcrumbs)
 
-    return all
+    // all.forEach(e => {
+    //   console.log(e.data.page.inputPath)
+    // })
+
+    return item.data.breadcrumbs
   })
 
   eleventyConfig.addCollection('breadcrumbs', (collectionApi) => {
     let cats = {}
     const all = collectionApi.getAll()
-
+    
     const urls = [
       '/sql/cli/',
       '/subsystem/bash/compress-images/',
@@ -107,15 +116,15 @@ module.exports = function (eleventyConfig) {
       if (e.page.url === urls[1]) {
         const paths = category(e.url)        
 
-        console.log({
-          title: e.data.title,
-          category: e.data.category,
-          breadcrumb: e.data.breadcrumbs,
-          url: e.url,
-          // paths: paths,
-          // tags: e.data.tags,
-          // layout: e.data.layout,
-        })
+        // console.log({
+        //   title: e.data.title,
+        //   category: e.data.category,
+        //   url: e.url,
+        //   breadcrumb: e.data.breadcrumbs,
+        //   // paths: paths,
+        //   // tags: e.data.tags,
+        //   // layout: e.data.layout,
+        // })
       }
 
       cats = {

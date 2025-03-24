@@ -1,42 +1,67 @@
-const fs = require('fs')
-const path = require('path')
+/**
+ * Links
+ *  - https://brandonclapp.github.io/arranging-an-array-of-flat-paths-into-a-json-tree-like-structure/
+ *  - https://www.npmjs.com/package/to-path-tree
+ *  - https://stackoverflow.com/questions/59049635/how-to-transform-array-of-strings-into-specific-tree-structure-in-javascript
+ *  - https://stackoverflow.com/questions/62360475/create-a-tree-from-a-list-of-objects-containing-paths-in-javascript
+ *    - This one uses an ID. Would need to remove it.
+ *  - https://stackoverflow.com/a/62365586
+ *    - I would need to add a bunch of metadata to this one to properly render this bitch
+ *  - https://stackoverflow.com/questions/69290300/how-to-convert-an-array-of-paths-to-an-object-in-javascript
+ *    - Best one so far but needs some work
+ *      - Snippets require their metadata appended to it
+ *      - Needs top-level categories to have their own metadata
+ *      - I think it will be a good idea to add a children property also
+ *      - How to add individual items
+ */
 console.clear()
+const _ = require('lodash')
+const fns = require('./_.tmp.fns')
 
-const crumbs = {
-  'contents/browser': {
-    'label': 'Browser',
-    'related': ['bash', 'zsh']
+const exampleTree = {
+  browser: {
+    label: 'Browsers',
+    css: { label: 'CSS' },
+    dom: { label: 'DOM' },
+    html: { label: 'HTML' },
+    pwa: { label: 'PWAs' }
   },
-  'contents/browser/css': {
-    'label': 'CSS',
-    'related': ['bash', 'zsh']
+  languages: {
+    label: 'Languages',
+    java: { label: 'Java' },
+    javascript: {
+      label: 'JavaScript',
+      array: { label: 'Arrays' },
+      math: { label: 'Math' }
+    },
+    typescript: { label: 'TypeScript' }
   },
-  'contents/sql': {
-    'label': 'SQL',
-    'related': ['SQL COMMANDS']
+  libraries: {
+    label: 'Libraries',
+    angular: { label: 'Angular' },
+    effect: { label: 'Effect' },
+    express: { label: 'Express' },
+    jest: { label: 'Jest' },
+    react: { label: 'React' },
+    redux: { label: 'Redux' },
+    xstate: { label: 'xState' }
   },
-  'contents/subsystem': {
-    'label': 'Sub System',
-    'related': ['bash', 'zsh']
-  },
-  'contents/subsystem/bash': {
-    'label': 'Bash'
-  },
-  'contents/subsystem/test1': {
-    'label': 'Test 1',
-    'related': ['SQL COMMANDS']
-  },
-  'contents/subsystem/test1/test2': {
-    'label': 'Test 2',
-    'related': ['SQL COMMANDS']
-  },
-  'contents/subsystem/test1/test2/test3': {
-    'label': 'Test 3',
-    'related': ['SQL COMMANDS']
+  sql: { label: 'SQL' },
+  subsystem: {
+    label: 'Sub System',
+    bash: { label: 'Bash' },
+    dotfiles: { label: 'Personal Dotfiles' },
+    test1: {
+      label: 'Test 1',
+      test2: {
+        label: 'Test 2',
+        test3: { label: 'Test 3' }
+      }
+    }
   }
 }
 
-const breadcrumbs = (directory) => {
+const categoryTree = (directory) => {
   let results = {}
   let noConfig = []
 
@@ -56,14 +81,10 @@ const breadcrumbs = (directory) => {
           })
 
           const cont = JSON.parse(json)
+          const setPath = fullPath.replaceAll('contents/', '').replaceAll('/', '.')
 
-          results = {
-            ...results,
-            [fullPath]: {
-              label: cont.category,
-              related: cont.tags
-            }
-          }
+          // Sadly this mutates the object but oh well. My assumption is it's faster this way.
+          _.set(results, setPath, { label: cont.category })
         } else {
           noConfig.push(fullPath)
         }
@@ -81,31 +102,32 @@ const breadcrumbs = (directory) => {
   }
 }
 
-// Example usage:
-const dirs = breadcrumbs('./contents')
+const tree = categoryTree('./contents')
 
-// THIS CREATES THE BREADCRUMBS AND ISN'T PART OF THIS SCRIPT.
-const catPaths = [
-  'contents',
-  'contents/browser', // curr category for snippet. ie contents/browser/snippet.md
-  'contents/browser/css',
-  'contents/subsystem/test1/test2',
-]
+/**
+ * From: https://zguyun.com/blog/how-to-print-nested-object-in-javascript/#using-recursion-to-print-nested-objects
+ */
+function outputTree(obj, indent = 2) {
+  let output = ''
 
-// Get the breadcrumbs
-const split = catPaths[3].split('/')
+  for (let key in obj) {
+    if (typeof obj[key] === 'object') {
+      // console.log(`${' '.repeat(indent)}${key}:`)      
+      // output += `${output} ${' '.repeat(indent)}${key }:\n`
 
-const fn = (split) => (acc, curr, i) => {
-  const key = split.slice(split, i + 1).join('/')
-  return !dirs.results[key] ? acc : [...acc, dirs.results[key].label]
+      output += outputTree(obj[key], indent + 2)
+    } else {
+      // console.log(`${' '.repeat(indent)}${key}: ${obj[key]}`)
+      output += (`${' '.repeat(indent)}${key}: ${obj[key]}\n`)
+    }
+  }
+
+  return output
 }
 
-const breadcrumb = split.reduce(fn(split), []).join(' > ')
+// Calling the function to print the nested object
+const t = outputTree(tree.results)
+console.log('\n-------------------------------------------------')
+console.log('\n')
+console.log(t)
 
-console.log('--- CATEGORIES --------------------------------------------')
-console.log(dirs.results)
-// console.log(dirs.noConfig)
-
-// console.log('\n--- BREADCRUMBS -------------------------------------------')
-// console.log(catPaths[3])
-// console.log(breadcrumb)
