@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Calculate the linear interpolation between two numbers
-category: Math
 ---
 
 **JavaScript version**

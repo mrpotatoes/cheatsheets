@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: delete-files
-category: Dotfiles
 ---
 
 # `delete-files`

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Go back to the previous page
-category: DOM
 ---
 
 **JavaScript version**

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Check if an element is focused
-category: DOM
 ---
 
 **JavaScript version**

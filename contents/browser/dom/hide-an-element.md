@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Hide an element
-category: DOM
 ---
 
 **JavaScript version**

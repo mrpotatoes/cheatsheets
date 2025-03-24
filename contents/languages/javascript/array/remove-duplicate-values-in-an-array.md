@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Remove duplicate values in an array
-category: Array
 ---
 
 **JavaScript version**

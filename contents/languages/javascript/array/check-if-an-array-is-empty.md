@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Check if an array is empty
-category: Array
 ---
 
 **JavaScript version**

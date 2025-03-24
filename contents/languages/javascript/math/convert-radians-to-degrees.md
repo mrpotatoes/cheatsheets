@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Convert radians to degrees
-category: Math
 ---
 
 **JavaScript version**

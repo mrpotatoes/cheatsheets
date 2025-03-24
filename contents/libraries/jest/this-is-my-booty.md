@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Options for handling exceptions
-category: Jest
 ---
 
 ## Callback

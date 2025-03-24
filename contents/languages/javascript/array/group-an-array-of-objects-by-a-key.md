@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Group an array of objects by a key
-category: Array
 ---
 
 **JavaScript version**

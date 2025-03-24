@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get all subsets of an array
-category: Array
 ---
 
 **JavaScript version**

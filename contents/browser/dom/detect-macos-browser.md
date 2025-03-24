@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Detect macOS browser
-category: DOM
 ---
 
 **JavaScript version**

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Convert an array of strings to numbers
-category: Array
 ---
 
 **JavaScript version**

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Box Model
-category: HTML
 ---
 
 ## Box Model

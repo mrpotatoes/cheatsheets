@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Generate an array of alphabet characters
-category: Array
 ---
 
 **JavaScript version**

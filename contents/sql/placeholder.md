@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Placeholder
-category: SQL
 ---
 
 # Placeholder

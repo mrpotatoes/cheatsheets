@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: explode-path
-category: Dotfiles
 ---
 
 # `explode-path`

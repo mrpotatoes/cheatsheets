@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Starter Template
-category: HTML
 ---
 
 ## Copy Starter Template

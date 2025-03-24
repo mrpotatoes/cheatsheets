@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Swap two array items
-category: Array
 ---
 
 **JavaScript version**

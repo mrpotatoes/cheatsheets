@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Redirect to another page
-category: DOM
 ---
 
 **JavaScript version**

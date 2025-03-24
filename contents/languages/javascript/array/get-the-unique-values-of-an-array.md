@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get the unique values of an array
-category: Array
 ---
 
 **JavaScript version**

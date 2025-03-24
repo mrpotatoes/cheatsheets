@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: git-revert
-category: Dotfiles
 ---
 
 # `git-revert`

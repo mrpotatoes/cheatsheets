@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: git-rebuild-source
-category: Dotfiles
 ---
 
 # `git-rebuild-source`

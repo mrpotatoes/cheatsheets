@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: git-rename
-category: Dotfiles
 ---
 
 # `git-rename`

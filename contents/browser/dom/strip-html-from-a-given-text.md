@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Strip HTML from a given text
-category: DOM
 ---
 
 **JavaScript version**

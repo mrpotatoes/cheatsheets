@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: argv
-category: Dotfiles
 ---
 
 # `argv`

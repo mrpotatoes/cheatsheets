@@ -22,7 +22,6 @@ eleventyExcludeFromCollections: true
 
 post: `
 ---
-layout: post.njk
 title: {{ postTitle }}
 category: {{ category }}
 ---

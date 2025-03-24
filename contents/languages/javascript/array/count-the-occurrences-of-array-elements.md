@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Count the occurrences of array elements
-category: Array
 ---
 
 **JavaScript version**

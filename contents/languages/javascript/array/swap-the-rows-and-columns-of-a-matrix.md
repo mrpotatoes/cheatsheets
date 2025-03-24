@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Swap the rows and columns of a matrix
-category: Array
 ---
 
 **JavaScript version**

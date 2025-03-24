@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Scroll to top of the page
-category: DOM
 ---
 
 **JavaScript version**

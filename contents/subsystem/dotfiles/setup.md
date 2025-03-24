@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: setup
-category: Dotfiles
 ---
 
 # `setup`

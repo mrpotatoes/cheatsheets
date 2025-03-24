@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Split an array into chunks
-category: Array
 ---
 
 **JavaScript version**

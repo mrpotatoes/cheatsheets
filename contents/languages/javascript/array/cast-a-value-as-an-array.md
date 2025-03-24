@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Cast a value as an array
-category: Array
 ---
 
 ## JavaScript version

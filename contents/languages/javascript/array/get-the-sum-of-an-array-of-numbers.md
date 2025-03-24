@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get the sum of an array of numbers
-category: Array
 ---
 
 **JavaScript version**

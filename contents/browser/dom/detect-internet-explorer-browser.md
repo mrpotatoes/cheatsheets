@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Detect Internet Explorer browser
-category: DOM
 ---
 
 **JavaScript version**

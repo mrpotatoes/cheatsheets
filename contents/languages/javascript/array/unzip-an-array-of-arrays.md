@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Unzip an array of arrays
-category: Array
 ---
 
 **JavaScript version**

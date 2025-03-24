@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Clone an array
-category: Array
 ---
 
 **JavaScript version**

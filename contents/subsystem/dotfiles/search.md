@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: search
-category: Dotfiles
 ---
 
 # `search`

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Empty an array
-category: Array
 ---
 
 **JavaScript version**

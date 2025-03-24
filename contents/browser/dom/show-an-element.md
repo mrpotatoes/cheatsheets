@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Show an element
-category: DOM
 ---
 
 **JavaScript version**

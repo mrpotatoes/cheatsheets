@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Check if a rectangle overlaps other one
-category: Math
 ---
 
 **JavaScript version**

@@ -1,5 +1,4 @@
 ---
-layout: post.njk
 title: Counts
 tags: 
   - hey

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: +x
-category: Dotfiles
 ---
 
 # `+x`

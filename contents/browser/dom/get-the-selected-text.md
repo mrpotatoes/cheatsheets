@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get the selected text
-category: DOM
 ---
 
 **JavaScript version**

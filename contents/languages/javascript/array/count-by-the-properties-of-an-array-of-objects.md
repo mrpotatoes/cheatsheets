@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Count by the properties of an array of objects
-category: Array
 ---
 
 **JavaScript version**

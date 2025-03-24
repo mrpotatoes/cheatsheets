@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Zip multiple arrays
-category: Array
 ---
 
 **JavaScript version**

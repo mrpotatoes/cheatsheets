@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get the intersection of arrays
-category: Array
 ---
 
 **JavaScript version**

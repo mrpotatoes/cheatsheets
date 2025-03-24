@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: noargs
-category: Dotfiles
 ---
 
 # `noargs`

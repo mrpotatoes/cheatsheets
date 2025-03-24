@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: find-ext
-category: Dotfiles
 ---
 
 # `find-ext`

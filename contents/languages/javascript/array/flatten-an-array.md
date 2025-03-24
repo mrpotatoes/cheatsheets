@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Flatten an array
-category: Array
 ---
 
 **JavaScript version**

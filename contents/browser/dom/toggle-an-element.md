@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Toggle an element
-category: DOM
 ---
 
 **JavaScript version**

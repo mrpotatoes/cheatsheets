@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Replace an element
-category: DOM
 ---
 
 **JavaScript version**

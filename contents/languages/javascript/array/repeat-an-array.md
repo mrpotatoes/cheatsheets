@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Repeat an array
-category: Array
 ---
 
 **JavaScript version**

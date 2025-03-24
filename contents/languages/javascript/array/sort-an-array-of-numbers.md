@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Sort an array of numbers
-category: Array
 ---
 
 **JavaScript version**

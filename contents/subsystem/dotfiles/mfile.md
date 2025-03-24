@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: mfile
-category: Dotfiles
 ---
 
 # `mfile`

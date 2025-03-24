@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get all siblings of an element
-category: DOM
 ---
 
 **JavaScript version**

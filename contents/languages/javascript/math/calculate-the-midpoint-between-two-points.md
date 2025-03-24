@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Calculate the midpoint between two points
-category: Math
 ---
 
 **JavaScript version**

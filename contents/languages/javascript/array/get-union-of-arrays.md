@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get union of arrays
-category: Array
 ---
 
 **JavaScript version**

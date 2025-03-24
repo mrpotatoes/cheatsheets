@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: testsql
-category: Dotfiles
 ---
 
 # `testsql`

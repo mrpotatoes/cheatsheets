@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: unhide
-category: Dotfiles
 ---
 
 # `unhide`

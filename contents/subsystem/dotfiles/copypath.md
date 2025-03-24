@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: copypath
-category: Dotfiles
 ---
 
 # `copypath`

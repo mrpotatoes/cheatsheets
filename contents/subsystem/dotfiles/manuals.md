@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: manuals
-category: Dotfiles
 ---
 
 # `manuals`

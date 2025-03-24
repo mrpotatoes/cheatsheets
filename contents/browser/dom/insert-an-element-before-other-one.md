@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Insert an element before other one
-category: DOM
 ---
 
 **JavaScript version**

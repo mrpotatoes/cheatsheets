@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Merge two arrays
-category: Array
 ---
 
 **JavaScript version**

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Reload the current page
-category: DOM
 ---
 
 **JavaScript version**

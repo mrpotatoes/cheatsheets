@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: sqlup
-category: Dotfiles
 ---
 
 # `sqlup`

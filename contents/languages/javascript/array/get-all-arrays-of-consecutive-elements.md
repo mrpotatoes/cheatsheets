@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Get all arrays of consecutive elements
-category: Array
 ---
 
 **JavaScript version**

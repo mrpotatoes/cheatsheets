@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: findf
-category: Dotfiles
 ---
 
 # `findf`

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Insert an element after other one
-category: DOM
 ---
 
 **JavaScript version**

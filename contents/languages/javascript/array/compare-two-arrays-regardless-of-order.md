@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Compare two arrays regardless of order
-category: Array
 ---
 
 **JavaScript version**

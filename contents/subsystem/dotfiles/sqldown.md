@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: sqldown
-category: Dotfiles
 ---
 
 # `sqldown`

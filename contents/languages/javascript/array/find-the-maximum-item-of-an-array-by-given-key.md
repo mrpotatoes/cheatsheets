@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Find the maximum item of an array by given key
-category: Array
 ---
 
 **JavaScript version**

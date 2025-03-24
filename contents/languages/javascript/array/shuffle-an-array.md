@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Shuffle an array
-category: Array
 ---
 
 **JavaScript version**

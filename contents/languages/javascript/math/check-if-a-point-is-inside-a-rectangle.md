@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Check if a point is inside a rectangle
-category: Math
 ---
 
 **JavaScript version**

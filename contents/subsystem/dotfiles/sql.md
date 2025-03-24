@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: sql
-category: Dotfiles
 ---
 
 # `sql`

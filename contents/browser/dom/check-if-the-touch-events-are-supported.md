@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Check if the touch events are supported
-category: DOM
 ---
 
 **JavaScript version**

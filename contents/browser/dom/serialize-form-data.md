@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Serialize form data
-category: DOM
 ---
 
 **JavaScript version**

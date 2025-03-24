@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Create cartesian product
-category: Array
 ---
 
 **JavaScript version**

@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Remove falsy values from array
-category: Array
 ---
 
 **JavaScript version**
