@@ -42,5 +42,8 @@ Welp, I gave up trying to use a simple object of url keys for instant lookup and
 
 ## Links
 - [reactjs - How to recursively render React components based on a deeply nested array? - Stack Overflow](https://stackoverflow.com/questions/70499223/how-to-recursively-render-react-components-based-on-a-deeply-nested-array)
-- [Master the Magic of Recursive Components in React | Medium](https://medium.com/@sdmahfuz/recursive-components-in-react-a-tutorial-d5705e26229f)
-
+- [Master the Magic of Recursive Components in React](https://medium.com/@sdmahfuz/recursive-components-in-react-a-tutorial-d5705e26229f)
+- [Creating pages from data with Eleventy - Florian Eckerstorfer](https://florian.ec/blog/eleventy-data-pages/)
+- [Create Pages From Data — Eleventy](https://www.11ty.dev/docs/pages-from-data/)
+- [Generate Page Content From a Global Data File Using Eleventy](https://tannerdolby.com/writing/generate-page-content-from-a-global-data-file-using-eleventy/)
+- [vrugtehagel/yozo.ooo: Yozo's website](https://github.com/vrugtehagel/yozo.ooo/tree/main)
