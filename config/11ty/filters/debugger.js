@@ -1,10 +1,8 @@
 module.exports = (...args) => {
-  // console.clear()
-  // execSync("clear && printf '\e[3J'")
+  if (!args[0]) return
 
   console.log('-- DEBUGGER -------------------------------------')
   console.log('args', args[0])
-  // console.log('args', ...args)
   console.log('-------------------------------------------------\n')
-  debugger;
+  // debugger
 }

@@ -11,6 +11,9 @@ const { passthroughs, basePath, targets } = require('./variables')
 
 module.exports = function (eleventyConfig) {
   console.clear()
+  // https://www.11ty.dev/docs/virtual-templates/
+  // https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
+
   eleventyConfig.addWatchTarget(targets('collections'), { resetConfig: true })
 
   // Copy the `img` and `css` folders to the output
@@ -70,16 +73,17 @@ module.exports = function (eleventyConfig) {
    */
   eleventyConfig.addCollection('catTree', (collectionApi) => {
     const all = collectionApi.getAll()
-    const item = all[0]
+    const item = all[1]
 
     // console.log(item.data.breadcrumbs)
     const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
     const setPath = trimSlashes(item.page.filePathStem).replaceAll('/', '.')
 
     // console.log('\n')
+    // console.log(item.data.page)
     // console.log({
     //   data: Object.keys(item.data),
-    //   // page: item.data,
+    //   page: item.data.page,
     //   // path: setPath,
     //   // file: item.data.page.inputPath,
     //   // category: item.data.category,
