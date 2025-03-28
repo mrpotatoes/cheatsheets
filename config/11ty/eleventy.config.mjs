@@ -1,18 +1,42 @@
-// const fs = require('fs');
-const markdownIt = require('markdown-it');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlmin = require('html-minifier');
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const { execSync } = require('child_process');
-const util = require('util')
+import markdownIt from 'markdown-it'
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+import htmlmin from 'html-minifier'
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
+import util from 'util'
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy({ './config/assets': 'assets' });
   // eleventyConfig.addPassthroughCopy({ './config/styles': 'styles' });
+  // eleventyConfig.addGlobalData("myDate", () => new Date());
+
+  const cats = [
+    {
+      label: 'FOO',
+      deets: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam auctor tortor euismod turpis egestas pretium. Aliquam ullamcorper nulla diam, a fermentum velit vehicula non. Pellentesque egestas enim vitae pellentesque pulvinar. Nam placerat dictum mattis. Nunc non augue molestie, ullamcorper dui eu, interdum nunc. In ac aliquet sapien. Cras viverra luctus nisl, nec iaculis mauris laoreet sed. Etiam eu tortor nec mauris semper accumsan at at turpis.',
+    }, {
+      label: 'BAR',
+      deets: 'BAR BAR BAR BAR BAR BAR',
+    }, {
+      label: 'BAZ',
+      deets: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam auctor tortor euismod turpis egestas pretium. Aliquam ullamcorper nulla diam, a fermentum velit vehicula non. Pellentesque egestas enim vitae pellentesque pulvinar. Nam placerat dictum mattis. Nunc non augue molestie, ullamcorper dui eu, interdum nunc. In ac aliquet sapien. Cras viverra luctus nisl, nec iaculis mauris laoreet sed. Etiam eu tortor nec mauris semper accumsan at at turpis.',
+    },
+  ]
+
+  cats.forEach((cat) => {
+    eleventyConfig.addTemplate(
+      `code/tips/${cat.label}.njk`,
+      '',
+      {
+        layout: 'test.njk',
+        title: cat.label,
+        deets: cat.deets,
+      }
+    )
+  })
 
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
   eleventyConfig.addFilter('dumpy', obj => {
     return util.inspect(obj)
@@ -141,5 +165,5 @@ module.exports = function (eleventyConfig) {
       layouts: '../config/layouts',
       output: 'cheatsheets',
     }
-  };
-};
+  }
+}
