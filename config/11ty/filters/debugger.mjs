@@ -1,4 +1,4 @@
-module.exports = (...args) => {
+export default (...args) => {
   if (!args[0]) return
 
   console.log('-- DEBUGGER -------------------------------------')

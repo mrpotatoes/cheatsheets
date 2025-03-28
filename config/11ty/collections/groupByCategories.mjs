@@ -1,4 +1,4 @@
-module.exports = (collectionApi) => {
+export default (collectionApi) => {
   const categories = {};
 
   // console.log(collectionApi)

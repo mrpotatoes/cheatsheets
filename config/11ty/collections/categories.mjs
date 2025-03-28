@@ -1,4 +1,4 @@
-module.exports = (collectionApi) => {
+export default (collectionApi) => {
   const categories = []
   collectionApi.getAll()
     .filter(function (item) {

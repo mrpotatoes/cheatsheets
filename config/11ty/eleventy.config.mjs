@@ -1,16 +1,19 @@
 console.clear()
 
-const _ = require('lodash')
+import _ from 'lodash'
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+import htmlmin from 'html-minifier'
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
+// import util from 'util'
 
-const filters = require('./filters')
-const collections = require('./collections')
-const events = require('./events')
-const plugins = require('./plugins')
-const transforms = require('./transforms')
-const { passthroughs, basePath, targets } = require('./variables')
+import filters from './filters/index.mjs'
+import collections from './collections/index.mjs'
+import events from './events/index.mjs'
+import plugins from './plugins/index.mjs'
+import transforms from './transforms/index.mjs'
+import { passthroughs, basePath, targets } from './variables/index.mjs'
 
-module.exports = function (eleventyConfig) {
-  console.clear()
+export default function (eleventyConfig) {
   // https://www.11ty.dev/docs/virtual-templates/
   // https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
 
@@ -27,6 +30,12 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addFilter('head', filters.head)
   eleventyConfig.addFilter('debugger', filters.debuggerme)
 
+  // Some test to add global data
+  // eleventyConfig.addGlobalData("myDate", () => new Date())
+
+  eleventyConfig.addPlugin(syntaxHighlight)
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
+
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
@@ -38,7 +47,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
   // eleventyConfig.addCollection('categoryTree', collections.categoryTree)
 
-  eleventyConfig.addFilter("debug", (content) => JSON.stringify(content, null, 2)) //`<pre>${JSON.stringify(content, null, 2)}</pre>`)
+  eleventyConfig.addFilter('debug', (content) => JSON.stringify(content, null, 2)) //`<pre>${JSON.stringify(content, null, 2)}</pre>`)
   
   const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
   
@@ -171,5 +180,5 @@ module.exports = function (eleventyConfig) {
       layouts: '../config/layouts',
       output: 'cheatsheets',
     }
-  };
-};
+  }
+}

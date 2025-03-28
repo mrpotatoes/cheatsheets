@@ -1,4 +1,4 @@
-module.exports = (array, n) => {
+export default (array, n) => {
   if (!Array.isArray(array) || array.length === 0) {
     return [];
   }

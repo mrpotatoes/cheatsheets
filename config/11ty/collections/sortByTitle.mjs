@@ -1,4 +1,4 @@
-module.exports = (collectionApi) => {
+export default (collectionApi) => {
   return collectionApi.getAll()
     .filter(function (item) {
       let extension = item.inputPath.split('.').pop();

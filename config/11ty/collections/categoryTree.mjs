@@ -1,4 +1,4 @@
-module.exports = (collectionApi) => {
+export default (collectionApi) => {
   let cats = {}
   const all = collectionApi.getAll()
   // console.log(all.length)
