@@ -1,129 +1,168 @@
-import markdownIt from 'markdown-it'
+console.clear()
+
+import _ from 'lodash'
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import htmlmin from 'html-minifier'
 import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
-import util from 'util'
+// import util from 'util'
+
+import filters from './filters/index.mjs'
+import collections from './collections/index.mjs'
+import events from './events/index.mjs'
+import plugins from './plugins/index.mjs'
+import transforms from './transforms/index.mjs'
+import { passthroughs, basePath, targets } from './variables/index.mjs'
 
 export default function (eleventyConfig) {
-  // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy({ './config/assets': 'assets' });
-  // eleventyConfig.addPassthroughCopy({ './config/styles': 'styles' });
-  // eleventyConfig.addGlobalData("myDate", () => new Date());
+  // https://www.11ty.dev/docs/virtual-templates/
+  // https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
 
-  eleventyConfig.addPlugin(syntaxHighlight);
+  eleventyConfig.addWatchTarget(targets('collections'), { resetConfig: true })
+
+  // Copy the `img` and `css` folders to the output
+  eleventyConfig.addPassthroughCopy(passthroughs.assets)
+  // eleventyConfig.addPassthroughCopy(passthroughs.styles)
+
+  // Filters
+  eleventyConfig.addFilter('dumpy', filters.dumpy)
+  eleventyConfig.addFilter('urlize', filters.urlize)
+  eleventyConfig.addFilter('titlecase', filters.titlecase)
+  eleventyConfig.addFilter('head', filters.head)
+  eleventyConfig.addFilter('debugger', filters.debuggerme)
+
+  // Some test to add global data
+  // eleventyConfig.addGlobalData("myDate", () => new Date())
+
+  eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
-  eleventyConfig.addFilter('dumpy', obj => {
-    return util.inspect(obj)
-  });
+  // Libraries & Plugins
+  eleventyConfig.setLibrary('md', plugins.md)
+  eleventyConfig.addPlugin(plugins.syntaxHighlight)
+  eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
 
-  eleventyConfig.addFilter("debugger", (...args) => {
-    // console.clear()
-    // execSync("clear && printf '\e[3J'")
+  // Categories
+  eleventyConfig.addCollection('categories', collections.categories)
+  eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
+  eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
+  // eleventyConfig.addCollection('categoryTree', collections.categoryTree)
 
-    console.log('-- DEBUGGER -------------------------------------')
-    console.log('args', args[0])
-    // console.log('args', ...args)
-    console.log('-------------------------------------------------\n')
-    debugger;
-  });
+  eleventyConfig.addFilter('debug', (content) => JSON.stringify(content, null, 2)) //`<pre>${JSON.stringify(content, null, 2)}</pre>`)
+  
+  const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
+  
+  const category = (str) => {
+    const trimmed = trimSlashes(str).split('/')
+    const paths = trimmed.slice(0, trimmed.length - 1)
+    return paths
+  }
 
-  eleventyConfig.addFilter('urlize', (str) =>
-    (((str === null) || (str === '')) ? '' : `${str}`).toLowerCase()
-  )
+  /**
+   * A category tree that is used to create the category + snippet pages
+   * 
+   * Main Page
+   *  - Top-level categories
+   * 
+   * Category Page
+   *  - Featured image
+   *  - Description of category
+   *  - Child categories & Related
+   *    - Perhaps as a tree underneath description
+   *  - Snippets
+   *    - Summarized description
+   *    - ? Icon
+   *    - ? Related snippet tags
+   * 
+   * Snippet Page
+   *  - Breadcrumbs
+   *  - Full description
+   *  - Content
+   *  - Related snippets
+   *  - ? Related blog posts
+   */
+  eleventyConfig.addCollection('catTree', (collectionApi) => {
+    const all = collectionApi.getAll()
+    const item = all[1]
 
-  eleventyConfig.addFilter("titlecase", (str) => {
-    if ((str === null) || (str === ''))
-      return false;
-    else
-      str = str.toString();
+    // console.log(item.data.breadcrumbs)
+    const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
+    const setPath = trimSlashes(item.page.filePathStem).replaceAll('/', '.')
 
-    return str.replace(/\w\S*/g, (txt) => (
-      txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-    ));
-  });
+    // console.log('\n')
+    // console.log(item.data.page)
+    // console.log({
+    //   data: Object.keys(item.data),
+    //   page: item.data.page,
+    //   // path: setPath,
+    //   // file: item.data.page.inputPath,
+    //   // category: item.data.category,
+    //   // categories: item.data.categories,
+    //   // collections: item.data.collections,
+    //   // rest: Object.keys(item.data.collections)
+    // })
+    // console.log('\n')
+    
+    _.set(item.data.breadcrumbs, setPath, {
+      label: item.data.title,
+      category: item.data.category,
+    })
 
-  eleventyConfig.setLibrary('md', markdownIt({
-    html: true,
-    linkify: true
-  }));
+    // console.log(item.data.breadcrumbs)
 
-  // Get the first `n` elements of a collection.
-  eleventyConfig.addFilter("head", (array, n) => {
-    if (!Array.isArray(array) || array.length === 0) {
-      return [];
-    }
-    return (n < 0) ? array.slice(n) : array.slice(0, n);
-  });
+    // all.forEach(e => {
+    //   console.log(e.data.page.inputPath)
+    // })
 
-  eleventyConfig.addCollection('sortByTitle', function (collectionApi) {
-    return collectionApi.getAll()
-      .filter(function (item) {
-        let extension = item.inputPath.split('.').pop();
-        return extension === 'md';
-      })
-      .sort(function (a, b) {
-        return a.data.title - b.data.title;
-      });
-  });
-
-  eleventyConfig.addCollection('categories', function (collectionApi) {
-    const categories = [];
-    collectionApi.getAll()
-      .filter(function (item) {
-        let extension = item.inputPath.split('.').pop();
-        return extension === 'md';
-      })
-      .forEach((item) => {
-        const category = item.data.category;
-        if (category && !categories.includes(category)) {
-          categories.push(category);
-        }
-      });
-    return categories.sort();
-  });
-
-  eleventyConfig.addCollection('groupByCategories', function (collectionApi) {
-    const categories = {};
-
-    // console.log(collectionApi)
-    collectionApi.getAll()
-      .filter(function (item) {
-        let extension = item.inputPath.split('.').pop();
-        return extension === 'md';
-      })
-      .forEach((item) => {
-        const category = item.data.category;
-        if (!category) {
-          return;
-        }
-        Array.isArray(categories[category])
-          ? categories[category].push(item)
-          : categories[category] = [item];
-      });
-    return categories;
-  });
-
-  eleventyConfig.on('eleventy.after', () => {
-    // execSync(`npx pagefind --site cheatsheets --output-subdir assets/pagefind --glob \"**/*.html\"`, { encoding: 'utf-8' })
+    return item.data.breadcrumbs
   })
 
-  // eleventyConfig.addTransform('minify-html', function (content) {
-  //   if (this.outputPath && this.outputPath.endsWith('.html')) {
-  //     return htmlmin.minify(content, {
-  //       useShortDoctype: true,
-  //       removeComments: true,
-  //       collapseWhitespace: true
-  //     })
-  //   }
-  //   return content
-  // })
+  eleventyConfig.addCollection('breadcrumbs', (collectionApi) => {
+    let cats = {}
+    const all = collectionApi.getAll()
+    
+    const urls = [
+      '/sql/cli/',
+      '/subsystem/bash/compress-images/',
+    ]
 
-  // Not sure what is going on here with the prod version and local builds
-  const path = process.env.NODE_ENV == undefined ? '/' : '/cheatsheets'
+    all.forEach(e => {
+      if (e.page.url === urls[1]) {
+        const paths = category(e.url)        
+
+        // console.log({
+        //   title: e.data.title,
+        //   category: e.data.category,
+        //   url: e.url,
+        //   breadcrumb: e.data.breadcrumbs,
+        //   // paths: paths,
+        //   // tags: e.data.tags,
+        //   // layout: e.data.layout,
+        // })
+      }
+
+      cats = {
+        ...cats,
+        [trimSlashes(e.url)]: {
+          title: e.data.title,
+          category: e.data.category,
+          // url: trimSlashes(e.url),
+          // tags: e.data.tags,
+          // layout: e.data.layout,
+        },
+      }
+    })
+
+    return all
+  })
+
+  // Transforms
+  eleventyConfig.addTransform('minify-html', transforms.minify)
+
+  // Events
+  eleventyConfig.on('eleventy.after', events.after)
 
   return {
-    pathPrefix: path,
+    pathPrefix: basePath,
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
@@ -137,6 +176,7 @@ export default function (eleventyConfig) {
     // These are all optional (defaults are shown):
     dir: {
       input: 'contents',
+      data: '../config/11ty/data',
       layouts: '../config/layouts',
       output: 'cheatsheets',
     }

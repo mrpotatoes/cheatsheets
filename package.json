@@ -1,8 +1,10 @@
 {
-  "name": "cheatsheet",
+  "name": "cheatsheets",
   "description": "My tech blog & cheatsheets",
   "license": "MIT",
   "scripts": {
+    "crumbs": "nodemon config/scripts/breadcrumbs.js",
+    "cats": "nodemon config/scripts/categories.js",
     "clean": "rm -rf .cache cheatsheets; ",
     "build": "rm -rf .cache cheatsheets; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
     "build:sass": "sass config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed",
@@ -26,6 +28,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^3.0.0",
     "child_process": "^1.0.2",
+    "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "nunjucks": "^3.2.4",
     "serve": "^14.2.1"

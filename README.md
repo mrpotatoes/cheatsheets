@@ -17,6 +17,7 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
 - Both blog & examples need to have a related section at the bottom
   - [Tags page](https://eleventy-notes.sandroroth.com/tags/)
   - [Callouts](https://eleventy-notes.sandroroth.com/n/writing/callouts/)
+  - [Queries](https://eleventy-notes.sandroroth.com/n/writing/dynamic-content/queries/)
 - Image management
   - Since I will also be using this website to house my blog I will want to handle images a little differently. To be researched.
 
@@ -147,3 +148,18 @@ I am changing how the cheatsheets are loaded and whatever in this website. I wan
 - [Featured Post Images](https://11ta.netlify.app/2020/09/06/featured-post-images/)
 - [11ta/11ta-template](https://github.com/11ta/11ta-template)
   - I like the blog landing page theme
+
+## Other
+- [MarkdownIt plugins | Markdown It Plugins](https://mdit-plugins.github.io/)
+- [markdown-it/docs/development.md](https://github.com/markdown-it/markdown-it/blob/master/docs/development.md)
+  - I might need to write a custom `markdown-it` plugin to move files to a central directory (elsewhere)
+  - If I do this I wanna use an existing image plugin to _add_ features to
+- [CSS Selectors Playground](https://selectors.sandroroth.com/)
+- [`tinytip.co`](https://tinytip.co/)
+  - [Cheatsheet example](https://tinytip.co/cheatsheets/nan/)
+  - [Tips/Snippets example](https://tinytip.co/tips/regex-backreference/)
+- [Blog](https://sandroroth.com/blog/)
+  - [List example](https://sandroroth.com/blog/)
+  - [Post example](https://sandroroth.com/blog/angular-library/)
+- [Eleventy Walk Through - Partials and Include](https://rphunt.github.io/eleventy-walkthrough/partials-and-include.html#frontmatterpartials)
+- [Eleventy Themes & Templates - Built At Lightspeed](https://www.builtatlightspeed.com/category/eleventy)

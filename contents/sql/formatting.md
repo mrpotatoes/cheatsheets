@@ -1,7 +1,5 @@
 ---
-layout: post.njk
 title: Formatting
-category: SQL
 ---
 
 ## Short statements
