@@ -10,31 +10,6 @@ export default function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy({ './config/styles': 'styles' });
   // eleventyConfig.addGlobalData("myDate", () => new Date());
 
-  const cats = [
-    {
-      label: 'FOO',
-      deets: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam auctor tortor euismod turpis egestas pretium. Aliquam ullamcorper nulla diam, a fermentum velit vehicula non. Pellentesque egestas enim vitae pellentesque pulvinar. Nam placerat dictum mattis. Nunc non augue molestie, ullamcorper dui eu, interdum nunc. In ac aliquet sapien. Cras viverra luctus nisl, nec iaculis mauris laoreet sed. Etiam eu tortor nec mauris semper accumsan at at turpis.',
-    }, {
-      label: 'BAR',
-      deets: 'BAR BAR BAR BAR BAR BAR',
-    }, {
-      label: 'BAZ',
-      deets: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam auctor tortor euismod turpis egestas pretium. Aliquam ullamcorper nulla diam, a fermentum velit vehicula non. Pellentesque egestas enim vitae pellentesque pulvinar. Nam placerat dictum mattis. Nunc non augue molestie, ullamcorper dui eu, interdum nunc. In ac aliquet sapien. Cras viverra luctus nisl, nec iaculis mauris laoreet sed. Etiam eu tortor nec mauris semper accumsan at at turpis.',
-    },
-  ]
-
-  cats.forEach((cat) => {
-    eleventyConfig.addTemplate(
-      `code/tips/${cat.label}.njk`,
-      '',
-      {
-        layout: 'test.njk',
-        title: cat.label,
-        deets: cat.deets,
-      }
-    )
-  })
-
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
