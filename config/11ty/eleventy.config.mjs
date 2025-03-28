@@ -1,18 +1,17 @@
-// const fs = require('fs');
-const markdownIt = require('markdown-it');
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const htmlmin = require('html-minifier');
-const { EleventyHtmlBasePlugin } = require("@11ty/eleventy");
-const { execSync } = require('child_process');
-const util = require('util')
+import markdownIt from 'markdown-it'
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
+import htmlmin from 'html-minifier'
+import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
+import util from 'util'
 
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy({ './config/assets': 'assets' });
   // eleventyConfig.addPassthroughCopy({ './config/styles': 'styles' });
+  // eleventyConfig.addGlobalData("myDate", () => new Date());
 
   eleventyConfig.addPlugin(syntaxHighlight);
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin);
+  eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
   eleventyConfig.addFilter('dumpy', obj => {
     return util.inspect(obj)
@@ -141,5 +140,5 @@ module.exports = function (eleventyConfig) {
       layouts: '../config/layouts',
       output: 'cheatsheets',
     }
-  };
-};
+  }
+}
