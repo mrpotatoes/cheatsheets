@@ -1,4 +1,5 @@
 import dumpy from './dumpy.mjs'
+import debugFilter from './debug.mjs'
 import debuggerme from './debugger.mjs'
 import urlize from './urlize.mjs'
 import titlecase from './titlecase.mjs'
@@ -10,4 +11,5 @@ export default {
   urlize,
   titlecase,
   head,
+  debugFilter,
 }

@@ -28,6 +28,7 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^3.0.0",
     "child_process": "^1.0.2",
+    "js-yaml": "^4.1.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "nunjucks": "^3.2.4",

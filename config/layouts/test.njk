@@ -1,0 +1,36 @@
+---
+layout: base.njk
+---
+
+<div class="container">
+  <div class="header">
+    <div class="header__breadcrumb">
+      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+
+      {% for crumb in crumbs %}
+        <a class="header__link" href="{{ crumb.url }}">{{ crumb.name }}</a>&nbsp;>&nbsp;
+      {% endfor %}
+      <span>{{ title }}</span>
+    </div>
+  </div>
+
+  <div class="tip">
+    <h1 class="post__heading">{{ title }}</h1>
+
+    <div>
+      <p>{{ desc }}</p>
+    </div>
+
+    {# <pre>
+      {{ crumbs | debug }}
+    </pre> #}
+
+    <div class="post__content">
+      <ul>
+      {% for cat in cats %}
+        <li><a href="{{ cat.url }}" >{{ cat.title }}</a></li>
+      {% endfor %}
+      </ul>
+    </div>
+  </div>
+</div>

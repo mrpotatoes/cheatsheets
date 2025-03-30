@@ -2,22 +2,27 @@ console.clear()
 
 import _ from 'lodash'
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
-import htmlmin from 'html-minifier'
-import { EleventyHtmlBasePlugin } from "@11ty/eleventy"
-// import util from 'util'
+import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
+import yaml from 'js-yaml'
 
 import filters from './filters/index.mjs'
 import collections from './collections/index.mjs'
 import events from './events/index.mjs'
 import plugins from './plugins/index.mjs'
 import transforms from './transforms/index.mjs'
+import utils from '../utils/index.mjs'
+import tpls from './templates/index.mjs'
+
 import { passthroughs, basePath, targets } from './variables/index.mjs'
 
 export default function (eleventyConfig) {
-  // https://www.11ty.dev/docs/virtual-templates/
-  // https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
+  eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
+
+  // Virtual Templates
+  tpls.virtualTemplates(eleventyConfig)
 
   eleventyConfig.addWatchTarget(targets('collections'), { resetConfig: true })
+  // eleventyConfig.addWatchTarget(path.join(__dirname, 'collections'), { resetConfig: true })
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(passthroughs.assets)
@@ -41,119 +46,13 @@ export default function (eleventyConfig) {
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
 
-  // Categories
   eleventyConfig.addCollection('categories', collections.categories)
   eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
+  eleventyConfig.addCollection('breadcrumbs', collections.breadcrumbs)
   // eleventyConfig.addCollection('categoryTree', collections.categoryTree)
 
-  eleventyConfig.addFilter('debug', (content) => JSON.stringify(content, null, 2)) //`<pre>${JSON.stringify(content, null, 2)}</pre>`)
-  
-  const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
-  
-  const category = (str) => {
-    const trimmed = trimSlashes(str).split('/')
-    const paths = trimmed.slice(0, trimmed.length - 1)
-    return paths
-  }
-
-  /**
-   * A category tree that is used to create the category + snippet pages
-   * 
-   * Main Page
-   *  - Top-level categories
-   * 
-   * Category Page
-   *  - Featured image
-   *  - Description of category
-   *  - Child categories & Related
-   *    - Perhaps as a tree underneath description
-   *  - Snippets
-   *    - Summarized description
-   *    - ? Icon
-   *    - ? Related snippet tags
-   * 
-   * Snippet Page
-   *  - Breadcrumbs
-   *  - Full description
-   *  - Content
-   *  - Related snippets
-   *  - ? Related blog posts
-   */
-  eleventyConfig.addCollection('catTree', (collectionApi) => {
-    const all = collectionApi.getAll()
-    const item = all[1]
-
-    // console.log(item.data.breadcrumbs)
-    const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
-    const setPath = trimSlashes(item.page.filePathStem).replaceAll('/', '.')
-
-    // console.log('\n')
-    // console.log(item.data.page)
-    // console.log({
-    //   data: Object.keys(item.data),
-    //   page: item.data.page,
-    //   // path: setPath,
-    //   // file: item.data.page.inputPath,
-    //   // category: item.data.category,
-    //   // categories: item.data.categories,
-    //   // collections: item.data.collections,
-    //   // rest: Object.keys(item.data.collections)
-    // })
-    // console.log('\n')
-    
-    _.set(item.data.breadcrumbs, setPath, {
-      label: item.data.title,
-      category: item.data.category,
-    })
-
-    // console.log(item.data.breadcrumbs)
-
-    // all.forEach(e => {
-    //   console.log(e.data.page.inputPath)
-    // })
-
-    return item.data.breadcrumbs
-  })
-
-  eleventyConfig.addCollection('breadcrumbs', (collectionApi) => {
-    let cats = {}
-    const all = collectionApi.getAll()
-    
-    const urls = [
-      '/sql/cli/',
-      '/subsystem/bash/compress-images/',
-    ]
-
-    all.forEach(e => {
-      if (e.page.url === urls[1]) {
-        const paths = category(e.url)        
-
-        // console.log({
-        //   title: e.data.title,
-        //   category: e.data.category,
-        //   url: e.url,
-        //   breadcrumb: e.data.breadcrumbs,
-        //   // paths: paths,
-        //   // tags: e.data.tags,
-        //   // layout: e.data.layout,
-        // })
-      }
-
-      cats = {
-        ...cats,
-        [trimSlashes(e.url)]: {
-          title: e.data.title,
-          category: e.data.category,
-          // url: trimSlashes(e.url),
-          // tags: e.data.tags,
-          // layout: e.data.layout,
-        },
-      }
-    })
-
-    return all
-  })
+  eleventyConfig.addFilter('debug', filters.debugFilter)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
@@ -178,6 +77,7 @@ export default function (eleventyConfig) {
       input: 'contents',
       data: '../config/11ty/data',
       layouts: '../config/layouts',
+      includes: '../config/layouts',
       output: 'cheatsheets',
     }
   }

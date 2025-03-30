@@ -1,0 +1,41 @@
+---
+# This should not load but let's see
+browser:
+  meta:
+    name: Browser
+    desc: Browser tidbits that I would find useful
+
+  css:
+    meta:
+      name: CSS
+      desc: CSS Stuff
+  html:
+    meta:
+      name: HTML
+      desc: Yeah, HTML stuff
+    hey:
+      meta:
+        name: HEY
+        desc: Hey, you're here! Horray!
+      there:
+        meta:
+          name: THERE
+          desc: There we go
+
+languages:
+  meta:
+    name: Languages
+    desc: A bunch of languages
+  javascript:
+    meta:
+      name: JavaScript
+      desc: JavaScript Snippets
+    arrays:
+      meta:
+        name: Arrays
+        desc: Array Snippets
+    strings:
+      meta:
+        name: Strings
+        desc: String Snippets
+

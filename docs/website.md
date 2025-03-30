@@ -24,3 +24,6 @@ Brainstorming aboot website structure.
   /welding
   /fashion
 ```
+
+## What's Next
+I need to create a `contents/pages/*.md` template files all with their specific `permalinks`. This'll keep things nice and neat.
