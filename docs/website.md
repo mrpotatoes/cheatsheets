@@ -1,6 +1,9 @@
 # Website
 Brainstorming aboot website structure.
 
+## Note
+I'll want to change the url since it won't be just `Cheatsheets` and more of my personal website for everything. Yippie
+
 ## Sections / URLs
 ### Main
 ```
