@@ -57,31 +57,36 @@ browser:
 
 ## What's Next
 One thing I want to try before I do all this work within a virtual template is to
-- Delete each data file under contents
-- New urls for snippets
-- Move snippet documents to a specific directory
-- Create a category related files
-  - Page template
-  - Layout template
-  - New categories collection
-- Create a [schema](https://www.11ty.dev/docs/data-validate/) if possible for the categories data
-- Change the site's index page to render ALL the categories as links
+
+**Most important**
+- Get the `.mjs` files to rerun on save
+- Change `./contents` directory structure
+  - See [`website.md`](./website.md)
+  - New urls for snippets
 - Error handling
   - Folder no exist
   - Mapping no exist
-- Breadcrumbs
-  - Must have links
-  - May not contain empty stuff
-  - Top level (not home) should say "Snippets"
-- Sub trees [maybe, dunno yet]
-  - Only render sub trees on specific category pages
-- On main cat page
-  - Show all immediate categories (depth 1)
-    - Except when searching
-  - Each category may show up to 10 snippets
+- Complete the `categories.yaml` file
+- Decide on how to show snippets
+  - Since snippets themselves are pretty small/short I wonder if ...
+    - I should show multiple on a snippet page or something
+
+**Secondary**
+- Impliment fuzzy search
+- Delete each data file under contents
+  - Dynamically set the tags & categories
 - On cat pages show
   - Metadata
   - Sub cats
+
+**Tertiary**
+- Add markdown parsing to the description
+- Use hotwire
+- Create a [schema](https://www.11ty.dev/docs/data-validate/) if possible for the categories data
+- Move `config/11ty/data/` to `config/data/`
+- Use `config.on('eleventy.before', events.categories)` to do error checking
+  - For example making sure that directories exist on system
+  - That [meta] properties are set
 
 ## Example Code
 Passing the sample data structure above to the function

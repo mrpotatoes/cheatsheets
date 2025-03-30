@@ -25,5 +25,25 @@ Brainstorming aboot website structure.
   /fashion
 ```
 
+## Directory Structure
+Something like this makes sense to me
+
+```
+contents/
+  _pages/
+    about.njk
+    404.njk
+    redirects.njk
+    resume.njk
+  
+  snippets/
+  blog/
+  projects/
+  guides/
+  recipes/
+
+  index.njk
+```
+
 ## What's Next
 I need to create a `contents/pages/*.md` template files all with their specific `permalinks`. This'll keep things nice and neat.
