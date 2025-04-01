@@ -1,4 +1,11 @@
 # Categories
+- [So far](#so-far)
+- [Requirements](#requirements)
+- [Data Structure](#data-structure)
+- [What's Next](#whats-next)
+- [Example Code](#example-code)
+- [Links](#links)
+
 ## So far
 I've done so much so far. I have the category pages linking as expected tho.
 
@@ -59,13 +66,19 @@ browser:
 One thing I want to try before I do all this work within a virtual template is to
 
 **Most important**
+- Error handling
+  - Folder no exist
+  - Mapping no exist
+- Categories should only show up when there is something underneath
+- I need to get the URLs figured out
+  - Perhaps a [global function](https://www.11ty.dev/docs/data-global-custom/#functions)
+  - A variable that is set somewhere would also be helpful
+- Functionality is all over the place, I need to cleanup my functions and data
 - Get the `.mjs` files to rerun on save
 - Change `./contents` directory structure
   - See [`website.md`](./website.md)
   - New urls for snippets
-- Error handling
-  - Folder no exist
-  - Mapping no exist
+  - Remove all the `.json` data files
 - Complete the `categories.yaml` file
 - Decide on how to show snippets
   - Since snippets themselves are pretty small/short I wonder if ...

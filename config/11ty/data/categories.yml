@@ -9,6 +9,12 @@ browser:
     meta:
       name: CSS
       desc: CSS Stuff
+  
+  dom:
+    meta:
+      name: DOM
+      desc: CSS Stuff
+
   html:
     meta:
       name: HTML
@@ -38,4 +44,8 @@ languages:
       meta:
         name: Strings
         desc: String Snippets
+    math:
+      meta:
+        name: Math
+        desc: Math functions
 

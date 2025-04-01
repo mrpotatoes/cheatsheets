@@ -1,4 +1,4 @@
-import { transformCategories, categories, yamlData } from './flatten-categories.mjs'
+import { transformCategories, flattenCategories, yamlData } from './flatten-categories.mjs'
 
 const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
 
@@ -26,20 +26,11 @@ const breadcrumbs = (categories, path) => {
   return crumbs
 }
 
-const subTreePaths = () => {
-  // const f = utils.yamlData('categories.yml')
-  // const subtree = _.get(f, 'browser.html.hey')
-  // console.log(f.browser.html.hey)
-  // console.log()
-  // console.log(utils.transformCategories({ hey: subtree }))
-}
-
 export default {
   transformCategories,
   category,
-  categories,
+  flattenCategories,
   breadcrumbs,
   trimSlashes,
   yamlData,
-  subTreePaths,
 }

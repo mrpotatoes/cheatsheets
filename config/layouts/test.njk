@@ -17,20 +17,34 @@ layout: base.njk
   <div class="tip">
     <h1 class="post__heading">{{ title }}</h1>
 
+    {# <pre>
+      {{ catTree | debug }}
+    </pre> #}
+    
+    {# <pre>
+      {{ collections.categorySnippets | debug }}
+    </pre> #}
+
+    <div class="post">
+      <div class="post__content">
+        <h3>Category Tree</h3>
+        {% tree catTree %}
+
+        <h3>Snippets</h3>
+        {% snippetLinks collections.categorySnippets, subcat %}
+      </div>
+    </div>
+
     <div>
       <p>{{ desc }}</p>
     </div>
 
-    {# <pre>
-      {{ crumbs | debug }}
-    </pre> #}
-
     <div class="post__content">
-      <ul>
+      {# <ul>
       {% for cat in cats %}
         <li><a href="{{ cat.url }}" >{{ cat.title }}</a></li>
       {% endfor %}
-      </ul>
+      </ul> #}
     </div>
   </div>
 </div>

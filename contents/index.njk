@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 title: Andric's Cheatsheets
-eleventyExcludeFromCollections: true
+permalink: /
 ---
 
 <div class="container">
@@ -9,7 +9,21 @@ eleventyExcludeFromCollections: true
     <h1 class="hero__heading">{{title}}</h1>
     <div id="search" class="search"></div>
   </div>
+
+  {# Temporary until I get this figured out #}
+  <h2><a href="/code/tips">Snippets</a></h2>
+
+  {# <pre>
+    {{ categorySnippets | debug }}
+  </pre> #}
+
   <div class="columns">
+    {# {% for cat in Object.keys(collections.categorySnippets) %}
+      <pre>
+        {{ cat | debug }}
+      </pre>
+    {% endfor %} #}    
+    
     {% for cat in collections.categories %}
       {% set posts = collections.groupByCategories[cat] %}
       <div class="category">
@@ -23,7 +37,3 @@ eleventyExcludeFromCollections: true
     {% endfor %}
   </div>
 </div>  
-
-{# <pre>
-  {{ collections.catTree | debug }}
-</pre> #}

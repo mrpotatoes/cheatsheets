@@ -1,6 +1,3 @@
-import _ from 'lodash'
-import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
-import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 import yaml from 'js-yaml'
 import fs from 'fs'
 import path from 'path'
@@ -32,9 +29,4 @@ export const yamlData = (dataFile) => {
   return doc
 }
 
-export const categories = (dataFile) => {
-  const doc = yamlData(dataFile)
-  const categories = transformCategories(doc)
-
-  return categories
-}
+export const flattenCategories = (doc) => transformCategories(doc)
