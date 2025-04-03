@@ -1,6 +1,6 @@
 ---
 title: Guide
-permalink: guide/
+permalink: guides/
 layout: post.njk
 ---
 

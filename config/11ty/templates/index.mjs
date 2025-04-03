@@ -44,6 +44,7 @@ const virtualTemplates = (eleventyConfig) => {
       cats: flattened,
       crumbs: utils.breadcrumbs(flattened, cat),
       subcat: `/code/tips/${cat}`,
+      cat,
     })
   })
 }

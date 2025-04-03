@@ -21,7 +21,7 @@ const addSnippet = (url, item) => ({
 
 export default (eleventyConfig) => {
   // Some test to add global data
-  // eleventyConfig.addGlobalData("myDate", () => new Date())
+  // eleventyConfig.addGlobalData('globalData', () => new Date())
 
   // Allow yaml data
   eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
@@ -55,7 +55,43 @@ export default (eleventyConfig) => {
   eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
   eleventyConfig.addCollection('breadcrumbs', collections.breadcrumbs)
-    
+
+  const normalizedCategory = (snip) => {
+    const pathKey = '/code/tips/snippets/'
+    const slug = snip.page.fileSlug
+    const url = snip.page.url
+    const cat = url.replace(pathKey, '').replace(slug + '/', '')
+
+    return cat
+  }
+
+  eleventyConfig.addCollection('snips', (collectionApi) => {
+    const snippets = collectionApi.getFilteredByTag('snippets')
+
+    const snips = snippets.reduce((acc, curr) => {
+      const category = normalizedCategory(curr)
+
+      if (acc[category] === undefined) {
+        acc[category] = []
+      }
+
+      const next = {
+        title: curr.data.title,
+        url: curr.url,
+      }
+      
+      return {
+        ...acc,
+        [category]: [
+          ...acc[category],
+          next,
+        ],
+      }
+    }, {})
+
+    return snips
+  })
+
   eleventyConfig.addCollection('categorySnippets', (collectionApi) => {
     const cats = utils.yamlData('categories.yml')
     const flattened = utils.flattenCategories(cats)
@@ -67,7 +103,6 @@ export default (eleventyConfig) => {
 
     collectionApi.getAll().forEach((item) => {
       const page = item.page
-      const url = page.filePathStem.replace('/code/tips/', '')
       const snippetUrl = '/code/tips' + page.filePathStem.replace(page.fileSlug, '')
       
       if (newObj[snippetUrl] === undefined) {
