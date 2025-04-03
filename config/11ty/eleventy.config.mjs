@@ -14,7 +14,16 @@ import transforms from './transforms/index.mjs'
 import shortCodes from './shortcodes/index.mjs'
 import { basePath, passthroughs, targets } from './variables/index.mjs'
 
+const addSnippet = (url, item) => ({
+  url,
+  title: item.data.title,
+})
+
 export default (eleventyConfig) => {
+  // Some test to add global data
+  // eleventyConfig.addGlobalData("myDate", () => new Date())
+
+  // Allow yaml data
   eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
 
   // Virtual Templates
@@ -34,9 +43,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('head', filters.head)
   eleventyConfig.addFilter('debugger', filters.debuggerme)
 
-  // Some test to add global data
-  // eleventyConfig.addGlobalData("myDate", () => new Date())
-
   eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
@@ -50,11 +56,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
   eleventyConfig.addCollection('breadcrumbs', collections.breadcrumbs)
     
-  const addSnippet = (url, item) => ({
-    url,
-    title: item.data.title,
-  })
-  
   eleventyConfig.addCollection('categorySnippets', (collectionApi) => {
     const cats = utils.yamlData('categories.yml')
     const flattened = utils.flattenCategories(cats)
@@ -119,7 +120,7 @@ export default (eleventyConfig) => {
     // These are all optional (defaults are shown):
     dir: {
       input: 'contents',
-      data: '../config/11ty/data',
+      data: '../config/data',
       layouts: '../config/layouts',
       includes: '../config/layouts',
       output: 'cheatsheets',

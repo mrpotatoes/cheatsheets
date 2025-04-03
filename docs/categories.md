@@ -70,6 +70,7 @@ One thing I want to try before I do all this work within a virtual template is t
   - Folder no exist
   - Mapping no exist
 - Categories should only show up when there is something underneath
+- Rename the `test.njk` file
 - I need to get the URLs figured out
   - Perhaps a [global function](https://www.11ty.dev/docs/data-global-custom/#functions)
   - A variable that is set somewhere would also be helpful
@@ -86,11 +87,7 @@ One thing I want to try before I do all this work within a virtual template is t
 
 **Secondary**
 - Impliment fuzzy search
-- Delete each data file under contents
-  - Dynamically set the tags & categories
-- On cat pages show
-  - Metadata
-  - Sub cats
+  - Decide on datastructure output
 
 **Tertiary**
 - Add markdown parsing to the description

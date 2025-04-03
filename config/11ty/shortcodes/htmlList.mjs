@@ -16,7 +16,7 @@ const htmlList = (cats, level = 0, prop = '') => {
     }
 
     const newPath = path(prop, key)
-    const a = href(cats[key].meta.name, path(prop, key))
+    const a = href(cats[key].meta.name, path('/code/tips/' + prop, key))
 
     str += li(a, cats[key], level + 1, newPath)
   }

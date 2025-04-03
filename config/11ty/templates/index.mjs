@@ -14,7 +14,7 @@ const virtualTemplates = (eleventyConfig) => {
   const flattened = utils.flattenCategories(cats)
 
   eleventyConfig.addTemplate('code/tips/index.njk', '', {
-      layout: 'test.njk',
+      layout: 'snippets.njk',
       title: 'Snippets',
       desc: '',
       permalink: '/code/tips/',
@@ -36,7 +36,7 @@ const virtualTemplates = (eleventyConfig) => {
     }
 
     eleventyConfig.addTemplate(catTpl(cat), '', {
-      layout: 'test.njk',
+      layout: 'snippets.njk',
       catTree: subTree,
       title: flattened[cat].name,
       desc: flattened[cat].desc,
