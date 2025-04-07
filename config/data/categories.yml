@@ -1,5 +1,4 @@
 ---
-# This should not load but let's see
 browser:
   meta:
     name: Browser
@@ -19,33 +18,159 @@ browser:
     meta:
       name: HTML
       desc: Yeah, HTML stuff
-    hey:
-      meta:
-        name: HEY
-        desc: Hey, you're here! Horray!
-      there:
-        meta:
-          name: THERE
-          desc: There we go
+  
+  pwa:
+    meta:
+      name: PWAs
+      desc: Progressive Web Apps
 
+# ------------------------------------------------------------------------------
 languages:
   meta:
     name: Languages
     desc: A bunch of languages
+    weight: -10
+
+  java:
+    meta:
+      name: Java
+      desc: One of my least favorite languages, sorry.
+
   javascript:
     meta:
       name: JavaScript
       desc: JavaScript Snippets
+
     arrays:
       meta:
         name: Arrays
         desc: Array Snippets
+
     strings:
       meta:
         name: Strings
         desc: String Snippets
+
     math:
       meta:
         name: Math
         desc: Math functions
+    
+    date-time:
+      meta:
+        name: Date Time
+        desc: Date time functions
 
+    function: 
+      meta:
+        name: Fn
+        desc: Learn some function stuff
+
+    idiosyncrasies: 
+      meta:
+        name: Idiosyncrasies (wierd stuff)
+        desc: JavaScript can be idiosyncratic. Here are some fun things that can be done with it
+
+    misc: 
+      meta:
+        name: Misc
+        desc: Misc stuff that I don't know where to categorize
+        
+      reduce: 
+          meta:
+            name: Reduce
+            desc: One of my favorite functions. Here are some snippets so I don't forget
+
+    number: 
+      meta:
+        name: Numbers
+        desc: I dunno, stuff to do with functions?
+        
+    object: 
+      meta:
+        name: Objects
+        desc: JS object stuff
+        
+    random: 
+      meta:
+        name: Random
+        desc: Randomize stuff
+        
+    validator: 
+      meta:
+        name: Validation
+        desc: Functions to validate, coolio
+
+
+# ------------------------------------------------------------------------------
+sql: 
+  meta:
+    name: SQL
+    desc: SQL functionality yo!
+
+# ------------------------------------------------------------------------------
+subsystem: 
+  meta:
+    name: Subsystems
+    desc: I dunno, whatever 🤷🏽‍♀️
+
+  bash: 
+    meta:
+      name: Bash
+      desc: Bash is a subsystem on *nix systems
+
+  dotfiles: 
+    meta:
+      name: Dotfiles
+      desc: My personal .dotfiles
+
+libraries: 
+  meta:
+    name: Libraries
+    desc: Misc libraries i've picked up over time
+
+  11ty: 
+    meta:
+      name: 11ty
+      desc: The online documentation is more than enough but here we are 🤷🏽‍♀️
+    
+  angular: 
+    meta:
+      name: Angular
+      desc: I've used it and don't recommend it but it's likely I'll have to use it again.
+
+  effect: 
+    meta:
+      name: Effect
+      desc: Snippets based on the Effect ecosystem
+
+  express: 
+    meta:
+      name: Express
+      desc: I refuse to learn it's API so here are my snippets
+
+  jest: 
+    meta:
+      name: Jest
+      desc: Jest is a testing runner written by Facebook and used everywhere
+
+  react: 
+    meta:
+      name: React
+      desc: Another Facebook library used to build websites
+
+  redux: 
+    meta:
+      name: Redux
+      desc: A state management system
+
+  xstate: 
+    meta:
+      name: xState
+      desc: Stuff
+
+# ------------------------------------------------------------------------------
+paradigms: 
+  meta:
+    name: Paradigms
+    desc: Different programming paradigms

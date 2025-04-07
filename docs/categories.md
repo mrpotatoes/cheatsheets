@@ -64,14 +64,8 @@ One thing I want to try before I do all this work within a virtual template is t
 
 **Most important**
 - Get the `.mjs` files to rerun on save
-- Complete the `categories.yaml` file
 - `./contents/snippets/*` directory
-  - Add all snippets back
-  - Remove all data related to the old code
-  - Add groups to all the needed snippets
-  - Add categories to the `./config/data/categories.yml` file
-  - Regroup all the snippets
-- [OPTIONAL] Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
+  - Add `group` to all snippet docs
 
 **Secondary**
 - Decide on how to show snippets
@@ -86,6 +80,7 @@ One thing I want to try before I do all this work within a virtual template is t
 - Add more functionality to the categories
   - Hero image
   - Markdown parsing to description
+- [OPTIONAL] Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
 
 ## Links
 - [quasibit/eleventy-plugin-schema](https://github.com/quasibit/eleventy-plugin-schema?tab=readme-ov-file)
