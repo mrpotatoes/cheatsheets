@@ -1,7 +1,5 @@
 console.clear()
 
-import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
-import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import yaml from 'js-yaml'
 import collections from './collections/index.mjs'
 import events from './events/index.mjs'
@@ -10,12 +8,9 @@ import plugins from './plugins/index.mjs'
 import tpls from './templates/index.mjs'
 import transforms from './transforms/index.mjs'
 import shortCodes from './shortcodes/index.mjs'
-import { basePath, passthroughs, targets } from './variables/index.mjs'
+import utils from '../utils/index.mjs'
 
 export default (eleventyConfig) => {
-  // Some test to add global data
-  // eleventyConfig.addGlobalData('globalData', () => new Date())
-
   // Allow yaml data
   eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
 
@@ -23,20 +18,15 @@ export default (eleventyConfig) => {
   tpls.virtualTemplates(eleventyConfig)
 
   // Copy the `img` and `css` folders to the output
-  eleventyConfig.addPassthroughCopy(passthroughs.assets)
-  // eleventyConfig.addPassthroughCopy(passthroughs.styles)
+  eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
+  // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
 
   // Filters
-  // eleventyConfig.addFilter('dumpy', filters.dumpy)
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)
   eleventyConfig.addFilter('head', filters.head)
-  // eleventyConfig.addFilter('debugger', filters.debuggerme)
   eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
-
-  eleventyConfig.addPlugin(syntaxHighlight)
-  eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
@@ -44,11 +34,11 @@ export default (eleventyConfig) => {
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
 
   // Collections
-  eleventyConfig.addCollection('snippets', collections.snippets)
+  // eleventyConfig.addCollection('snippets', collections.snippets)
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
 
-  // ✅ eleventyConfig.addCollection('categories', collections.categories)
+  // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
   // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
 
   // Shortcodes
@@ -63,7 +53,7 @@ export default (eleventyConfig) => {
   eleventyConfig.on('eleventy.after', events.after)
 
   return {
-    pathPrefix: basePath,
+    pathPrefix: utils.vars.basePath,
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],

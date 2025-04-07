@@ -1,5 +1,6 @@
 import _ from 'lodash'
 import * as errors from './errors.mjs'
+import * as vars from './variables.mjs'
 
 /**
  * 
@@ -9,7 +10,7 @@ import * as errors from './errors.mjs'
  */
 export const catPath = (url, slug) => url
   .replace(`${slug}/`, '')
-  .replace('/code/tips/snippets/', '')
+  .replace(`${vars.urls.category}snippets/`, '')
 
 /**
  * 
@@ -32,8 +33,8 @@ export const segmented = (str, full) => {
  */
 export const breadcrumbs = (categories, path, full = false) => {
   const split = segmented(path, full)
-
-  const crumbs = [{ name: 'Snippets', url: '/code/tips/' }]
+  const crumbs = [{ name: 'Snippets', url: vars.urls.category }]
+  
   let acc = ''
 
   for (let i = 0; i < split.length; i++) {
@@ -42,7 +43,7 @@ export const breadcrumbs = (categories, path, full = false) => {
 
     crumbs.push({
       name: categories[acc].name,
-      url: '/code/tips/' + acc,
+      url: vars.urls.category + acc,
     })
   }
 
@@ -64,10 +65,9 @@ export const emptySnippet = () => ({
  * @returns 
  */
 export const normalizedCategoryPath = (snip) => {
-  const pathKey = '/code/tips/snippets/'
   const slug = snip.page.fileSlug
   const url = snip.page.url
-  const cat = url.replace(pathKey, '').replace(slug + '/', '')
+  const cat = url.replace(vars.urls.category, '').replace(slug + '/', '')
 
   return cat
 }

@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import utils from '../../utils/index.mjs'
 
 const href = (name, link) => (`<a href="${link}">${name}</a>`)
 const path = (base, next) => (!next) ? `${base}/` : `${base}${next}/`
@@ -16,7 +17,7 @@ const htmlList = (cats, level = 0, prop = '') => {
     }
 
     const newPath = path(prop, key)
-    const a = href(cats[key].meta.name, path('/code/tips/' + prop, key))
+    const a = href(cats[key].meta.name, path(utils.vars.urls.category + prop, key))
 
     str += li(a, cats[key], level + 1, newPath)
   }
@@ -24,4 +25,4 @@ const htmlList = (cats, level = 0, prop = '') => {
   return str
 }
 
-export default (catTree) => `${htmlList(catTree)}`
+export default (catTree) => htmlList(catTree)

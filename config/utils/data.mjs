@@ -15,7 +15,9 @@ import memoize from 'memoize'
  */
 export const directory = (path, file) => !file ? `${process.env.PWD}/${path}` : `${process.env.PWD}/${path}/${file}`
 
-// Move the memoize to the function export in the index.mjs file
+/**
+ * 
+ */
 export const yamlData = memoize((dataFile) => {
   const file = directory('config/data', dataFile)
 

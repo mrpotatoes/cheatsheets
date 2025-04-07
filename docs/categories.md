@@ -35,8 +35,6 @@ I've done so much so far. I have the category pages linking as expected tho.
 ## Data Structure
 The category data structure is a `trie` with metadata and each node has the following schema.
 
-<!-- I'm not sure exactly how I want to handle the structure yet -->
-
 ```yaml
 # ./__categories-test/cats.yml
 browser:
@@ -65,46 +63,22 @@ browser:
 One thing I want to try before I do all this work within a virtual template is to
 
 **Most important**
-- Categories should only show up when there is something underneath
-- Cleanup functionality as there is stuff all over the place
-- Clean up the virtual template
-  - I feel like I can reduce the amount of code and properties
-  - I should rename the file to `virtual-categories.mjs`
 - Get the `.mjs` files to rerun on save
 - Complete the `categories.yaml` file
-- Decide on how to show snippets
-  - Since snippets themselves are pretty small/short I wonder if ...
-    - I should show multiple on a snippet page or something
-- File functions
-  - use `process.env.PWD` to always have the project root
-  - Figure out a way to normalize file paths
-    - `.env` files perhaps?
-  - Move them all to the `config/utils` directory
-- Take the `/code/snippets/` string and standardize it
-- Text manipulation functions go in `config/utils`
-- Remove some filters (`dump`, `debuggerme` etc)
-- Delete the `breadcrumbs` collection
-- Add a `group` property to documents
-  - This would be set manually in each post
-  - Groups related snippets together `javascript/arrays` groups could be i.e.,
-    - `Find Index`
-    - `Convert ...`
-    - `Sort`
-    - `Convert`
-- Add all snippets back
+- `./contents/snippets/*` directory
+  - Add all snippets back
   - Remove all data related to the old code
   - Add groups to all the needed snippets
   - Add categories to the `./config/data/categories.yml` file
   - Regroup all the snippets
-- Put all category functionality under `./config/utils/categories.mjs`
-- Memoize more functions
-- [OPTIONAL] Move the variables out of `./config/11ty/variables` to `./config/variables`
 - [OPTIONAL] Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
 
 **Secondary**
+- Decide on how to show snippets
+  - Since snippets themselves are pretty small/short I wonder if ...
+    - I should show multiple on a snippet page or something
 - Impliment fuzzy search
   - Decide on datastructure output
-- Reimagine how I build out the breadcrumbs for snippets
 
 **Tertiary**
 - Use hotwire

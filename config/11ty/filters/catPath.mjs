@@ -1,3 +1,3 @@
 import utils from '../../utils/index.mjs'
 
-export default (page) => utils.categories.catPath(page.url, page.fileSlug)
+export default (page) => utils.categories.normalPath({ page })

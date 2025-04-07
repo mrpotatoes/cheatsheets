@@ -1,11 +1,9 @@
-import categories from './categories.mjs'
 import snippetsGrouped from './snippetsGrouped.mjs'
-import snippets from './snippets.mjs'
 import breadcrumbs from './breadcrumbs.mjs'
+import relatedSnippets from './related-snippets.mjs'
 
 export default {
-  categories,
-  snippets,
+  relatedSnippets,
   snippetsGrouped,
   breadcrumbs,
 }

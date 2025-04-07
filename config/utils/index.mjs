@@ -1,9 +1,19 @@
 import * as data from './data.mjs'
 import * as categories from './categories.mjs'
+import * as vars from './variables.mjs'
 
 export default {
-  env: {
+  vars: {
     DEBUG: process.env.DEBUG || false,
+    passthroughs: vars.passthroughs,
+    basePath: vars.basePath,
+    targets: vars.targets,
+    snippetBase: vars.snippetBase,
+    urls: vars.urls,
+  },
+
+  urls: {
+    snippet: (page) => `${vars.urls.sansTrailing}${page.filePathStem.replace('snippets/', '')}/`,
   },
 
   data: {
@@ -12,8 +22,8 @@ export default {
     emptyObject: data.emptyObject,
   },
 
-  files: {
-    data: () => {},
+  strings: {
+    trimSlashes: (str) => str.replace(/^\/+|\/+$/g, ''),
   },
 
   // I think it might be best to memoize most of these functions
