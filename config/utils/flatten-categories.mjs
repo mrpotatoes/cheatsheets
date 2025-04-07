@@ -21,8 +21,8 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
   }, {})
 
 export const yamlData = (dataFile) => {
-  const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
-  const __dirname = path.dirname(__filename); // get the name of the directory
+  const __filename = fileURLToPath(import.meta.url) // get the resolved path to the file
+  const __dirname = path.dirname(__filename) // get the name of the directory
   const file = path.join(__dirname, '../data', dataFile)
   const doc = yaml.load(fs.readFileSync(file, 'utf8'))
 

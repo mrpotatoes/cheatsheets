@@ -76,6 +76,26 @@ One thing I want to try before I do all this work within a virtual template is t
   - Since snippets themselves are pretty small/short I wonder if ...
     - I should show multiple on a snippet page or something
 - Delete the `breadcrumbs.js` and `categories.js` scripts
+- Rename
+  - `snips` -> snippets
+  - `categorySnippets` -> categories
+- File functions
+  - use `process.env.PWD` to always have the project root
+  - Figure out a way to normalize file paths
+    - `.env` files perhaps?
+  - Pulling `categories.yaml` should be memoized
+  - Move them all to the `config/utils` directory
+- Take the `/code/snippets/` string and standardize it
+- Text manipulation functions go in `config/utils`
+- Remove some filters (`dump`, `debuggerme` etc)
+- Delete the `breadcrumbs` collection
+- Add a `group` property to documents
+  - This would be set manually in each post
+  - Groups related snippets together `javascript/arrays` groups could be i.e.,
+    - `Find Index`
+    - `Convert ...`
+    - `Sort`
+    - `Convert`
 
 **Secondary**
 - Impliment fuzzy search

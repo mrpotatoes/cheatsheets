@@ -2,6 +2,15 @@ import { transformCategories, flattenCategories, yamlData } from './flatten-cate
 
 const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
 
+const normalizedCategory = (snip) => {
+  const pathKey = '/code/tips/snippets/'
+  const slug = snip.page.fileSlug
+  const url = snip.page.url
+  const cat = url.replace(pathKey, '').replace(slug + '/', '')
+
+  return cat
+}
+
 const category = (str) => {
   const trimmed = trimSlashes(str).split('/')
   const paths = trimmed.slice(0, trimmed.length - 1)
@@ -33,4 +42,5 @@ export default {
   breadcrumbs,
   trimSlashes,
   yamlData,
+  normalizedCategory,
 }

@@ -1,6 +1,5 @@
 ---
 title: Blog
-# permalink: 404.html
 layout: post.njk
 ---
 

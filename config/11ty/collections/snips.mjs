@@ -1,12 +1,11 @@
+/**
+ * Get a list of documents with the "snippets" tag and organize by category
+ */
 import utils from '../../utils/index.mjs'
 
-export default (collectionApi) => {
-  const snippets = collectionApi.getFilteredByTag('snippets')
-
-  // console.log('hey')
-
-  const snips = snippets.reduce((acc, curr) => {
-    const category = utils.categories.normalized(curr)
+export default (collectionApi) => 
+  collectionApi.getFilteredByTag('snippets').reduce((acc, curr) => {
+    const category = utils.normalizedCategory(curr)
 
     if (acc[category] === undefined) {
       acc[category] = []
@@ -25,6 +24,3 @@ export default (collectionApi) => {
       ],
     }
   }, {})
-
-  return snips
-}
