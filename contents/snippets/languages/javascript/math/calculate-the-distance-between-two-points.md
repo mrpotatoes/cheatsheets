@@ -1,5 +1,6 @@
 ---
 title: Calculate the distance between two points
+group: calculate
 ---
 
 **JavaScript version**

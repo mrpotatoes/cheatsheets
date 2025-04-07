@@ -3,8 +3,6 @@ console.clear()
 import { EleventyHtmlBasePlugin } from '@11ty/eleventy'
 import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight'
 import yaml from 'js-yaml'
-
-import utils from '../utils/index.mjs'
 import collections from './collections/index.mjs'
 import events from './events/index.mjs'
 import filters from './filters/index.mjs'
@@ -13,11 +11,6 @@ import tpls from './templates/index.mjs'
 import transforms from './transforms/index.mjs'
 import shortCodes from './shortcodes/index.mjs'
 import { basePath, passthroughs, targets } from './variables/index.mjs'
-
-const addSnippet = (url, item) => ({
-  url,
-  title: item.data.title,
-})
 
 export default (eleventyConfig) => {
   // Some test to add global data
@@ -29,19 +22,18 @@ export default (eleventyConfig) => {
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)
 
-  eleventyConfig.addWatchTarget(targets('collections'), { resetConfig: true })
-  // eleventyConfig.addWatchTarget(path.join(__dirname, 'collections'), { resetConfig: true })
-
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(passthroughs.styles)
 
   // Filters
-  eleventyConfig.addFilter('dumpy', filters.dumpy)
+  // eleventyConfig.addFilter('dumpy', filters.dumpy)
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)
   eleventyConfig.addFilter('head', filters.head)
-  eleventyConfig.addFilter('debugger', filters.debuggerme)
+  // eleventyConfig.addFilter('debugger', filters.debuggerme)
+  eleventyConfig.addFilter('debug', filters.debugFilter)
+  eleventyConfig.addFilter('cat', filters.catPath)
 
   eleventyConfig.addPlugin(syntaxHighlight)
   eleventyConfig.addPlugin(EleventyHtmlBasePlugin)
@@ -51,93 +43,23 @@ export default (eleventyConfig) => {
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
 
-  eleventyConfig.addCollection('categories', collections.categories)
-  eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
-  eleventyConfig.addCollection('groupByCategories', collections.groupByCategories)
-  eleventyConfig.addCollection('breadcrumbs', collections.breadcrumbs)
+  // Collections
+  eleventyConfig.addCollection('snippets', collections.snippets)
+  eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
+  eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
 
-  const normalizedCategory = (snip) => {
-    const pathKey = '/code/tips/snippets/'
-    const slug = snip.page.fileSlug
-    const url = snip.page.url
-    const cat = url.replace(pathKey, '').replace(slug + '/', '')
-
-    return cat
-  }
-
-  eleventyConfig.addCollection('snips', (collectionApi) => {
-    const snippets = collectionApi.getFilteredByTag('snippets')
-
-    const snips = snippets.reduce((acc, curr) => {
-      const category = normalizedCategory(curr)
-
-      if (acc[category] === undefined) {
-        acc[category] = []
-      }
-
-      const next = {
-        title: curr.data.title,
-        url: curr.url,
-      }
-      
-      return {
-        ...acc,
-        [category]: [
-          ...acc[category],
-          next,
-        ],
-      }
-    }, {})
-
-    return snips
-  })
-
-  eleventyConfig.addCollection('categorySnippets', (collectionApi) => {
-    const cats = utils.yamlData('categories.yml')
-    const flattened = utils.flattenCategories(cats)
-
-    const newObj = Object.keys(flattened).reduce((acc, curr) => ({
-      ...acc,
-      ['/code/tips/' + curr]: [],
-    }), {})
-
-    collectionApi.getAll().forEach((item) => {
-      const page = item.page
-      const snippetUrl = '/code/tips' + page.filePathStem.replace(page.fileSlug, '')
-      
-      if (newObj[snippetUrl] === undefined) {
-        return
-      }
-
-      newObj[snippetUrl] = [
-        ...newObj[snippetUrl],
-        addSnippet('/code/tips' + page.filePathStem, item)
-      ]
-    })
-
-    return newObj
-  })  
+  // ✅ eleventyConfig.addCollection('categories', collections.categories)
+  // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
 
   // Shortcodes
-  eleventyConfig.addShortcode('tree', shortCodes.htmlList)
-  
-  eleventyConfig.addShortcode('snippetLinks', (collection, cat) => {
-    if (!collection[cat]) {
-      return ''
-    }
-
-    const links = collection[cat].map(e => `<li><a href="${e.url}">${e.title}</a></li>`)
-
-    return links.join('')
-  })
-
-  // Filters
-  eleventyConfig.addFilter('debug', filters.debugFilter)
+  eleventyConfig.addShortcode('tree', shortCodes.htmlList)  
+  eleventyConfig.addShortcode('snippetLinks', shortCodes.snippetLinks)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
 
   // Events
+  eleventyConfig.on('eleventy.before', events.before)
   eleventyConfig.on('eleventy.after', events.after)
 
   return {

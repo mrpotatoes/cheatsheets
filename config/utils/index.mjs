@@ -1,46 +1,33 @@
-import { transformCategories, flattenCategories, yamlData } from './flatten-categories.mjs'
-
-const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
-
-const normalizedCategory = (snip) => {
-  const pathKey = '/code/tips/snippets/'
-  const slug = snip.page.fileSlug
-  const url = snip.page.url
-  const cat = url.replace(pathKey, '').replace(slug + '/', '')
-
-  return cat
-}
-
-const category = (str) => {
-  const trimmed = trimSlashes(str).split('/')
-  const paths = trimmed.slice(0, trimmed.length - 1)
-  return paths
-}
-
-const breadcrumbs = (categories, path) => {
-  const split = category(path)
-  const crumbs = [{ name: 'Snippets', url: '/code/tips/' }]
-  let acc = ''
-
-  for (let i = 0; i < split.length; i++) {
-    const e = split[i]
-    acc = `${acc}${e}/`
-
-    crumbs.push({
-      name: categories[acc].name,
-      url: '/code/tips/' + acc,
-    })
-  }
-
-  return crumbs
-}
+import * as data from './data.mjs'
+import * as categories from './categories.mjs'
 
 export default {
-  transformCategories,
-  category,
-  flattenCategories,
-  breadcrumbs,
-  trimSlashes,
-  yamlData,
-  normalizedCategory,
+  env: {
+    DEBUG: process.env.DEBUG || false,
+  },
+
+  data: {
+    yamlObject: data.yamlData,
+    tree: data.tree,
+    emptyObject: data.emptyObject,
+  },
+
+  files: {
+    data: () => {},
+  },
+
+  // I think it might be best to memoize most of these functions
+  categories: {
+    flattened: categories.flattenCategories,
+    normalPath: categories.normalizedCategoryPath, // Normalize fn above
+    crumbs: categories.breadcrumbs, // Breadcrumbs
+    clear: data.emptyObject(categories.emptySnippet),
+    addGroup: categories.addGroup,
+    tree: data.tree,
+    segmented: categories.segmented,
+    catPath: categories.catPath,
+    
+    list: () => {}, // Not sure yet
+    paths: () => {}, // The category fn above
+  },
 }

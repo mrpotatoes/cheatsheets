@@ -75,15 +75,10 @@ One thing I want to try before I do all this work within a virtual template is t
 - Decide on how to show snippets
   - Since snippets themselves are pretty small/short I wonder if ...
     - I should show multiple on a snippet page or something
-- Delete the `breadcrumbs.js` and `categories.js` scripts
-- Rename
-  - `snips` -> snippets
-  - `categorySnippets` -> categories
 - File functions
   - use `process.env.PWD` to always have the project root
   - Figure out a way to normalize file paths
     - `.env` files perhaps?
-  - Pulling `categories.yaml` should be memoized
   - Move them all to the `config/utils` directory
 - Take the `/code/snippets/` string and standardize it
 - Text manipulation functions go in `config/utils`
@@ -96,6 +91,15 @@ One thing I want to try before I do all this work within a virtual template is t
     - `Convert ...`
     - `Sort`
     - `Convert`
+- Add all snippets back
+  - Remove all data related to the old code
+  - Add groups to all the needed snippets
+  - Add categories to the `./config/data/categories.yml` file
+  - Regroup all the snippets
+- Put all category functionality under `./config/utils/categories.mjs`
+- Memoize more functions
+- [OPTIONAL] Move the variables out of `./config/11ty/variables` to `./config/variables`
+- [OPTIONAL] Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
 
 **Secondary**
 - Impliment fuzzy search

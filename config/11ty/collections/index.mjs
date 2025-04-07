@@ -1,13 +1,11 @@
 import categories from './categories.mjs'
-import sortByTitle from './sortByTitle.mjs'
-import groupByCategories from './groupByCategories.mjs'
+import snippetsGrouped from './snippetsGrouped.mjs'
 import snippets from './snippets.mjs'
-import snips from './snips.mjs'
+import breadcrumbs from './breadcrumbs.mjs'
 
 export default {
   categories,
-  sortByTitle,
-  groupByCategories,
   snippets,
-  snips,
+  snippetsGrouped,
+  breadcrumbs,
 }

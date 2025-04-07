@@ -4,6 +4,7 @@ import debuggerme from './debugger.mjs'
 import urlize from './urlize.mjs'
 import titlecase from './titlecase.mjs'
 import head from './head.mjs'
+import catPath from './catPath.mjs'
 
 export default {
   dumpy,
@@ -12,4 +13,5 @@ export default {
   titlecase,
   head,
   debugFilter,
+  catPath,
 }

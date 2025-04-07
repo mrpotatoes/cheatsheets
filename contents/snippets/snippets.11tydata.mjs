@@ -1,5 +1,5 @@
 export default {
-  layout: 'post.njk',
+  layout: 'snippet.njk',
   tags: 'snippets',
 
   permalink: ({ title, ...rest }) => `/code/tips${rest.page.filePathStem}/`
