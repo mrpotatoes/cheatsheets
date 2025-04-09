@@ -1,5 +1,6 @@
 ---
 title: Click all checkboxes
+group: Page Interactions
 ---
 ## Why
 I often need to just click everything in a page because I'm being lazy or something. I always forget so this is here now. Well, I play Warframe a lot and it's very grindy. I need to keep track of a bunch of things to be efficent. In order to do so I could use something like the [Warframe Foundry](https://warframe-foundry.app/primary) web app and click everything on then undo what I haven't done.

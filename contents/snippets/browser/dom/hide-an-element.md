@@ -1,5 +1,6 @@
 ---
 title: Hide an element
+group: Page Interactions
 ---
 
 **JavaScript version**

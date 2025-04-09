@@ -1,5 +1,6 @@
 ---
 title: Insert given HTML after an element
+group: Insert
 ---
 
 **JavaScript version**

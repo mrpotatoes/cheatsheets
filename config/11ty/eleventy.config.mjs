@@ -1,6 +1,7 @@
 console.clear()
 
 import yaml from 'js-yaml'
+import _ from 'lodash'
 import collections from './collections/index.mjs'
 import events from './events/index.mjs'
 import filters from './filters/index.mjs'
@@ -35,10 +36,8 @@ export default (eleventyConfig) => {
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
 
   // Collections
-  // eleventyConfig.addCollection('snippets', collections.snippets)
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
-
   // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
   // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
 

@@ -1,5 +1,6 @@
 ---
 title: Replace an element
+group: Page Interactions
 ---
 
 **JavaScript version**

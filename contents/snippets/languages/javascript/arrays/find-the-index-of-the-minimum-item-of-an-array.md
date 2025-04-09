@@ -1,5 +1,6 @@
 ---
 title: Find the index of the minimum item of an array
+group: Discovery
 ---
 
 **JavaScript version**

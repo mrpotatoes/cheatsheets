@@ -1,5 +1,6 @@
 ---
 title: Get all n-th items of an array
+group: Retrievals
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Get the intersection of arrays
+group: Retrievals
 ---
 
 **JavaScript version**

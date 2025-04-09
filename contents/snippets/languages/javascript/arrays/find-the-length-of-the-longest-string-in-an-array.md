@@ -1,5 +1,6 @@
 ---
 title: Find the length of the longest string in an array
+group: Discovery
 ---
 
 **JavaScript version**

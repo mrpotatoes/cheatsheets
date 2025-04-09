@@ -1,5 +1,6 @@
 ---
 title: Go back to the previous page
+group: Page Interactions
 ---
 
 **JavaScript version**

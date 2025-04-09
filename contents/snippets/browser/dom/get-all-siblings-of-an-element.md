@@ -1,5 +1,6 @@
 ---
 title: Get all siblings of an element
+group: Retrievals
 ---
 
 **JavaScript version**

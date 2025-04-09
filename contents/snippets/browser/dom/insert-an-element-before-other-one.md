@@ -1,5 +1,6 @@
 ---
 title: Insert an element before other one
+group: Insert
 ---
 
 **JavaScript version**

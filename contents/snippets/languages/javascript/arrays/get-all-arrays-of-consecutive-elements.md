@@ -1,5 +1,6 @@
 ---
 title: Get all arrays of consecutive elements
+group: Retrievals
 ---
 
 **JavaScript version**

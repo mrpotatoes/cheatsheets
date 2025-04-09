@@ -1,5 +1,6 @@
 ---
 title: Check if an element is focused
+group: Predicates
 ---
 
 **JavaScript version**

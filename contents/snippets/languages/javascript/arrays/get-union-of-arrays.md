@@ -1,5 +1,6 @@
 ---
 title: Get union of arrays
+group: Retrievals
 ---
 
 **JavaScript version**

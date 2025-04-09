@@ -1,5 +1,6 @@
 ---
 title: Get the average of an array
+group: Retrievals
 ---
 
 **JavaScript version**

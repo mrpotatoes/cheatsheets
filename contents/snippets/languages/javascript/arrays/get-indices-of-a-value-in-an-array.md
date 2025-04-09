@@ -1,5 +1,6 @@
 ---
 title: Get indices of a value in an array
+group: Retrievals
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Check if an element is a descendant of another
+group: Predicates
 ---
 
 **JavaScript version**

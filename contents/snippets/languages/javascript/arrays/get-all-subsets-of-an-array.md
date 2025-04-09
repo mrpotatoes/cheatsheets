@@ -1,5 +1,6 @@
 ---
 title: Get all subsets of an array
+group: Retrievals
 ---
 
 **JavaScript version**

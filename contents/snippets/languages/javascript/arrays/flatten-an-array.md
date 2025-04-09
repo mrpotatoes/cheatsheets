@@ -1,5 +1,6 @@
 ---
 title: Flatten an array
+group: Manipulations
 ---
 
 **JavaScript version**

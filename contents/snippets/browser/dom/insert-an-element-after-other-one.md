@@ -1,5 +1,6 @@
 ---
 title: Insert an element after other one
+group: Insert
 ---
 
 **JavaScript version**

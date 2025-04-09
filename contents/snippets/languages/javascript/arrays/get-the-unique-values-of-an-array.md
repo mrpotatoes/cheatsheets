@@ -1,5 +1,6 @@
 ---
 title: Get the unique values of an array
+group: Retrievals
 ---
 
 **JavaScript version**

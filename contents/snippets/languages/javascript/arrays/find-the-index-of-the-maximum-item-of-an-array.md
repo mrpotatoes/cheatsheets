@@ -1,5 +1,6 @@
 ---
 title: Find the index of the maximum item of an array
+group: Discovery
 ---
 
 **JavaScript version**

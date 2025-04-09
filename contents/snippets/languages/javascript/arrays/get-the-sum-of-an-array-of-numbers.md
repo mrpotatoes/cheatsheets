@@ -1,5 +1,6 @@
 ---
 title: Get the sum of an array of numbers
+group: Retrievals
 ---
 
 **JavaScript version**

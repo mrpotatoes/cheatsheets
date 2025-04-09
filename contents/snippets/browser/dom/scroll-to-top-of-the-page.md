@@ -1,5 +1,6 @@
 ---
 title: Scroll to top of the page
+group: Page Interactions
 ---
 
 **JavaScript version**

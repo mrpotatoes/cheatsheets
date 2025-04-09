@@ -1,5 +1,6 @@
 ---
 title: Redirect to another page
+group: Page Interactions
 ---
 
 **JavaScript version**

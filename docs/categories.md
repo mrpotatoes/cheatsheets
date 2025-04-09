@@ -60,36 +60,35 @@ browser:
 ```
 
 ## What's Next
-One thing I want to try before I do all this work within a virtual template is to
+One thing I want to try before I do all this work within a virtual template is to.
 
 **Most important**
+- Abstract the breadcrumbs function so I can use it in more places
+- Snippet documents
+  - Clean up formatting to better suit me
+  - Add groups to all snippets
+- Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
+- Convert to [`noelforte/eleventy-plugin-vento`](https://github.com/noelforte/eleventy-plugin-vento)
+  - Convert the [`htmlList.mjs`](../config/11ty/shortcodes/htmlList.mjs) into a partial
 - Add snippet counts
   - To category tree PER category
   - To snippets page PER card/grouping
 - Add a `weight` property to the category tree
   - Use this to sort
-- Make snippets rendered as a list
+- ~~Get the `.mjs`~~ files to rerun on save
+  - `TypeScript` might solve this problem
 
 **Secondary**
-- Decide on how to show snippets
-  - [THOUGHT]: Allow for a grouping to render all snippets within a card
-    - Perhaps they can open on the side using [`@hotwired/turbo`](https://hotwired.dev/)
-  - ~~Since snippets themselves are pretty small/short I wonder if ...~~
-    - ~~I should show multiple on a snippet page or something~~
+- A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)
 - Impliment fuzzy search
   - Decide on datastructure output
 - Related content functionality
-- Create Group URLs to show all snippets for a single group
 
 **Tertiary**
-- Use hotwire
+- Use [`@hotwired/turbo`](https://hotwired.dev/)
 - Create a [schema](https://www.11ty.dev/docs/data-validate/) if possible for the categories data
 - Add more functionality to the categories
   - Hero image
-- [OPTIONAL] Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
-- ~~Get the `.mjs`~~ files to rerun on save
-  - `TypeScript` might solve this problem
-- Convert to [`noelforte/eleventy-plugin-vento`](https://github.com/noelforte/eleventy-plugin-vento)
 
 ## Links
 - [quasibit/eleventy-plugin-schema](https://github.com/quasibit/eleventy-plugin-schema?tab=readme-ov-file)

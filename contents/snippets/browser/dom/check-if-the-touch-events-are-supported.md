@@ -1,5 +1,6 @@
 ---
 title: Check if the touch events are supported
+group: Predicates
 ---
 
 **JavaScript version**

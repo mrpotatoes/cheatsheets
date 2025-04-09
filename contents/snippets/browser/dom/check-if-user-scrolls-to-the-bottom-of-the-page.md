@@ -1,5 +1,6 @@
 ---
 title: Check if user scrolls to the bottom of the page
+group: Predicates
 ---
 
 **JavaScript version**

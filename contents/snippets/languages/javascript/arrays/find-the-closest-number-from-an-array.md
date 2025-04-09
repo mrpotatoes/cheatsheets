@@ -1,5 +1,6 @@
 ---
 title: Find the closest number from an array
+group: Discovery
 ---
 
 **JavaScript version**

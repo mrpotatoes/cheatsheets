@@ -1,5 +1,6 @@
 ---
 title: Reload the current page
+group: Page Interactions
 ---
 
 **JavaScript version**

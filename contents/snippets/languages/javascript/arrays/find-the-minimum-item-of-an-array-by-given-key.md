@@ -1,5 +1,6 @@
 ---
 title: Find the minimum item of an array by given key
+group: Discovery
 ---
 
 **JavaScript version**
