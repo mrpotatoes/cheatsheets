@@ -33,7 +33,6 @@ layout: base.njk
               <h3>{{ group }}</h3>
 
               <ul>
-                {{ category }}
                 {% for snippet in collections.groupedSnippets[category].snippets[group] %}
                   <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>
                 {% endfor %}
