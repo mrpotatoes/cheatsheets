@@ -13,3 +13,15 @@
 
 // Themes
 @use 'themes/dracula.scss';
+
+// These two classes are temporary
+.snippet-group-container {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.snippet-group-left {
+  // border: 1px solid red;
+  flex: 30%;
+}

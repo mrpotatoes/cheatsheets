@@ -1,5 +1,6 @@
 ---
 title: Normalize file path slashes
+group: Casing
 ---
 
 **JavaScript version**

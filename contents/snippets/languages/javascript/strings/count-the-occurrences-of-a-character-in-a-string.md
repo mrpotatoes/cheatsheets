@@ -1,5 +1,6 @@
 ---
 title: Count the occurrences of a character in a string
+group: Counting
 ---
 
 **JavaScript version**

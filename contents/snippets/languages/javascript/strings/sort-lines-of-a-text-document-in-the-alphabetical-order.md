@@ -1,5 +1,6 @@
 ---
 title: Sort lines of a text document in the alphabetical order
+group: Sorting
 ---
 
 **JavaScript version**

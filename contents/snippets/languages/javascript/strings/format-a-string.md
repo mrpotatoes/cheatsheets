@@ -1,5 +1,6 @@
 ---
 title: Format a string
+group: Conversions
 ---
 
 **JavaScript version**

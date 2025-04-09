@@ -1,5 +1,6 @@
 ---
 title: Swap case of characters in a string
+group: Casing
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Check if a URL is absolute
+group: Predicates
 ---
 
 **JavaScript version**

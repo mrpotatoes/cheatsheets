@@ -1,5 +1,6 @@
 ---
 title: Remove spaces from a string
+group: Casing
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Get the file name from a URL
+group: Retrivals
 ---
 
 **JavaScript version**

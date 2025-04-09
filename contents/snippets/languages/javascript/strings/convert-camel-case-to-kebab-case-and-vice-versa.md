@@ -1,5 +1,6 @@
 ---
 title: Convert camelCase to kebab-case and vice versa
+group: Conversions
 ---
 
 **JavaScript version**

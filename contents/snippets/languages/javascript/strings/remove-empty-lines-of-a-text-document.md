@@ -1,5 +1,6 @@
 ---
 title: Remove empty lines of a text document
+group: Casing
 ---
 
 **JavaScript version**

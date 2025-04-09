@@ -1,5 +1,6 @@
 ---
 title: Count the number of words in a string
+group: Counting
 ---
 
 **JavaScript version**

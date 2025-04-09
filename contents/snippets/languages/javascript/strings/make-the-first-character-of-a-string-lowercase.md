@@ -1,5 +1,6 @@
 ---
 title: Make the first character of a string lowercase
+group: Casing
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Unescape HTML special characters
+group: Casing
 ---
 
 **JavaScript version**

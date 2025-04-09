@@ -1,5 +1,6 @@
 ---
 title: Sort the characters of a string in the alphabetical order
+group: Sorting
 ---
 
 **JavaScript version**

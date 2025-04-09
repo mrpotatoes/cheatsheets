@@ -1,5 +1,6 @@
 ---
 title: Get the length of a string in bytes
+group: Retrivals
 ---
 
 **JavaScript version**

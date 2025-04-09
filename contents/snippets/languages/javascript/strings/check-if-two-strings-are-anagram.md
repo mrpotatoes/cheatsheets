@@ -1,5 +1,6 @@
 ---
 title: Check if two strings are anagram
+group: Predicates
 ---
 
 **JavaScript version**

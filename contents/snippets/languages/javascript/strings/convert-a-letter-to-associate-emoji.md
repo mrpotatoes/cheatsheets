@@ -1,5 +1,6 @@
 ---
 title: Convert a letter to associate emoji
+group: Conversions
 ---
 
 **JavaScript version**

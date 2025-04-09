@@ -1,5 +1,6 @@
 ---
 title: Get the file extension from a file name
+group: Retrivals
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Get the number of a character in a string
+group: Retrivals
 ---
 
 **JavaScript version**

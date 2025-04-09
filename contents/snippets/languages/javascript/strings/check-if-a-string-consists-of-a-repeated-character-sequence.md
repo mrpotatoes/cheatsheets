@@ -1,5 +1,6 @@
 ---
 title: Check if a string consists of a repeated character sequence
+group: Predicates
 ---
 
 **JavaScript version**

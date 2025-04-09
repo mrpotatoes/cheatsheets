@@ -1,5 +1,6 @@
 ---
 title: Convert snake_case to camelCase
+group: Conversions
 ---
 
 **JavaScript version**

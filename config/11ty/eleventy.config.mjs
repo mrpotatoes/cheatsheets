@@ -27,6 +27,7 @@ export default (eleventyConfig) => {
   eleventyConfig.addFilter('head', filters.head)
   eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
+  eleventyConfig.addFilter('md', filters.markdown)
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
@@ -42,7 +43,7 @@ export default (eleventyConfig) => {
   // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
 
   // Shortcodes
-  eleventyConfig.addShortcode('tree', shortCodes.htmlList)  
+  eleventyConfig.addShortcode('tree', shortCodes.htmlList)
   eleventyConfig.addShortcode('snippetLinks', shortCodes.snippetLinks)
 
   // Transforms

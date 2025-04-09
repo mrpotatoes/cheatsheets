@@ -1,5 +1,6 @@
 ---
 title: Convert an uint8 array to a base64 encoded string
+group: Conversions
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Convert a string to PascalCase
+group: Conversions
 ---
 
 **JavaScript version**

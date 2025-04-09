@@ -1,5 +1,6 @@
 ---
 title: Get the base URL without any parameters
+group: Retrivals
 ---
 
 **JavaScript version**

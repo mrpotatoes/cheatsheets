@@ -1,5 +1,6 @@
 ---
 title: Uppercase the first character of each word in a string
+group: Casing
 ---
 
 **JavaScript version**

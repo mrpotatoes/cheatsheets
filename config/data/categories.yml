@@ -2,7 +2,7 @@
 browser:
   meta:
     name: Browser
-    desc: Browser tidbits that I would find useful
+    desc: Browser tidbits that I find useful
 
   css:
     meta:
@@ -35,6 +35,11 @@ languages:
     meta:
       name: Java
       desc: One of my least favorite languages, sorry.
+  
+  typescript:
+    meta:
+      name: TypeScript
+      desc: '`TypeScript` Snippets'
 
   javascript:
     meta:
@@ -174,3 +179,8 @@ paradigms:
   meta:
     name: Paradigms
     desc: Different programming paradigms
+
+  functional-programming: 
+    meta:
+      name: Functional programming
+      desc: "I really don't think this one should be here but instead under guides and any other snippets would probably go under the `Effect`"

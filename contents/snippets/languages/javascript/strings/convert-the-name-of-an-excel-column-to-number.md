@@ -1,5 +1,6 @@
 ---
 title: Convert the name of an Excel column to number
+group: Conversions
 ---
 
 **JavaScript version**

@@ -3,19 +3,19 @@ import * as errors from './errors.mjs'
 import * as vars from './variables.mjs'
 
 /**
- * 
- * @param {*} url 
- * @param {*} slug 
- * @returns 
+ *
+ * @param {*} url
+ * @param {*} slug
+ * @returns
  */
 export const catPath = (url, slug) => url
   .replace(`${slug}/`, '')
   .replace(`${vars.urls.category}snippets/`, '')
 
 /**
- * 
- * @param {*} str 
- * @returns 
+ *
+ * @param {*} str
+ * @returns
  */
 export const segmented = (str, full) => {
   const trimmed = str.replace(/^\/+|\/+$/g, '').split('/')
@@ -26,15 +26,15 @@ export const segmented = (str, full) => {
 }
 
 /**
- * 
- * @param {*} categories 
- * @param {*} path 
- * @returns 
+ *
+ * @param {*} categories
+ * @param {*} path
+ * @returns
  */
 export const breadcrumbs = (categories, path, full = false) => {
   const split = segmented(path, full)
   const crumbs = [{ name: 'Snippets', url: vars.urls.category }]
-  
+
   let acc = ''
 
   for (let i = 0; i < split.length; i++) {
@@ -51,8 +51,8 @@ export const breadcrumbs = (categories, path, full = false) => {
 }
 
 /**
- * 
- * @returns 
+ *
+ * @returns
  */
 export const emptySnippet = () => ({
   groups: [],
@@ -60,9 +60,9 @@ export const emptySnippet = () => ({
 })
 
 /**
- * 
- * @param {*} snip 
- * @returns 
+ *
+ * @param {*} snip
+ * @returns
  */
 export const normalizedCategoryPath = (snip) => {
   const slug = snip.page.fileSlug
@@ -73,19 +73,24 @@ export const normalizedCategoryPath = (snip) => {
 }
 
 /**
- * 
- * @param {*} snippet 
- * @param {*} categories 
- * @param {*} group 
- * @returns 
+ * Add a snippet to specified group.
+ *
+ * TODO: I don't understand why checking if properties exist set them manually
+ *  in the calling function 🤷🏽‍♀️. Perhaps the shape coming in doesn't match what
+ *  I'm building here. I'll figure this out when I convert to TypeScript.
+ *
+ * @param {*} snippet
+ * @param {*} categories
+ * @param {*} group
+ * @returns
  */
-export const addGroup = (snippet, categories, group = 'other') => {
+export const addGroup = (snippet, categories, group = 'Other') => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
-  
+
   // TODO: Make this part of the error messaging.
   if (!cats[normalized]) {
-    // errors.message(`Category "${normalized}" doesn't exist in config`)
+    errors.message(`Category "${normalized}" doesn't exist in config`)
     return cats
   }
 
@@ -96,24 +101,28 @@ export const addGroup = (snippet, categories, group = 'other') => {
   if (!cats[normalized].snippets[group]) {
     cats[normalized].snippets[group] = []
   }
-  
+
+  // Add snippet to the group collection.
   cats[normalized].snippets[group].push({
     title: snippet.data.title,
     url: snippet.url,
     slug: snippet.page.fileSlug
   })
-  
-  cats[normalized].groups = [...(new Set(cats[normalized].groups)).add(group)]
+
+  // Add and sort the groups collection
+  cats[normalized].groups = [...(new Set(cats[normalized].groups))
+    .add(group)]
+    .sort((a, _) => (a === 'Other') ? 1 : -1)
 
   return cats
 }
 
 /**
- * 
- * @param {*} obj 
- * @param {*} delimiter 
- * @param {*} prefix 
- * @returns 
+ *
+ * @param {*} obj
+ * @param {*} delimiter
+ * @param {*} prefix
+ * @returns
  */
 export const transformCategories = (obj, delimiter = '/', prefix = '') =>
   Object.keys(obj).reduce((acc, key) => {
@@ -133,8 +142,8 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
   }, {})
 
 /**
- * 
- * @param {*} doc 
- * @returns 
+ *
+ * @param {*} doc
+ * @returns
  */
 export const flattenCategories = (doc) => transformCategories(doc)

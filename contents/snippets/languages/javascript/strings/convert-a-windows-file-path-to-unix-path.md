@@ -1,5 +1,6 @@
 ---
 title: Convert a Windows file path to Unix path
+group: Conversions
 ---
 
 **JavaScript version**

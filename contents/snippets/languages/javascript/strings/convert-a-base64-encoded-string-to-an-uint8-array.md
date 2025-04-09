@@ -1,5 +1,6 @@
 ---
 title: Convert a base64 encoded string to an uint8 array
+group: Conversions
 ---
 
 **JavaScript version**

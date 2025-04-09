@@ -1,5 +1,6 @@
 ---
 title: Convert a string to camelCase
+group: Conversions
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Convert a string to URL slug
+group: Conversions
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Check if a path is relative
+group: Predicates
 ---
 
 **JavaScript version**

@@ -1,5 +1,6 @@
 ---
 title: Check if a string is a palindrome
+group: Predicates
 ---
 
 **JavaScript version**
