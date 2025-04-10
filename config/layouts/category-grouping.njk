@@ -1,0 +1,26 @@
+---
+layout: base.njk
+data: groups
+---
+
+<div class="container">
+  <div class="header">
+    <div class="header__breadcrumb">
+      <a class="header__link" href="/">[Home]</a>
+    </div>
+  </div>
+
+  <div class="tip">
+    <h1 class="post__heading">{{ title }}</h1>
+    {# <pre>{{ group | debug }}</pre> #}
+    {# <pre>{{ groups[group] | debug }}</pre> #}
+
+    <div class="post">
+      <div class="post__content">
+        <div class="snippet-group-container">
+          A list of snippets for this category & grouping
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

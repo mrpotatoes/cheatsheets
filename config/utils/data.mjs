@@ -8,15 +8,15 @@ import memoize from 'memoize'
 
 /**
  * Get a path based on the project working root
- * 
- * @param {*} path 
- * @param {*} file 
- * @returns 
+ *
+ * @param {*} path
+ * @param {*} file
+ * @returns
  */
 export const directory = (path, file) => !file ? `${process.env.PWD}/${path}` : `${process.env.PWD}/${path}/${file}`
 
 /**
- * 
+ * TODO: [OPTIONAL] This should be a curried function that loads either a yaml or json file
  */
 export const yamlData = memoize((dataFile) => {
   const file = directory('config/data', dataFile)
@@ -28,9 +28,9 @@ export const yamlData = memoize((dataFile) => {
 
 /**
  * Takes a key/value object and sets every key to the supplied function
- * 
- * @param {*} categories 
- * @returns 
+ *
+ * @param {*} categories
+ * @returns
  */
 export const emptyObject = (fn) => (categories) =>
   _.reduce(categories, (result, _, key) => ({
@@ -39,7 +39,9 @@ export const emptyObject = (fn) => (categories) =>
   }), {})
 
 /**
- * 
- * @returns 
+ *
+ * @returns
  */
 export const tree = () => yamlData('categories.yml')
+
+export const groups = () => yamlData('groups.yml')

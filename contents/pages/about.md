@@ -4,4 +4,6 @@ permalink: about/
 layout: post.njk
 ---
 
-About page, cool huh?
+The about page.
+
+I'm a pretty cool person. I work on tech and prefer `TypeScript`.

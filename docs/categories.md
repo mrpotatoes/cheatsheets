@@ -60,16 +60,16 @@ browser:
 ```
 
 ## What's Next
-One thing I want to try before I do all this work within a virtual template is to.
-
-**Most important**
+**Priority**
+- Category Group urls
+  - Clicking on a grouping will goto a page that loads all of those snippets
+    - It doesn't make sense to add snippet content to the data file instead I will use `hotwire` to pull all that info into a page.
+  - Add more metadata to thingy
+- A urls file to handle all url creation & manipulation
+- Test that this deploys correctly to my website
+  - Use a different directory
+  - Github Actions to deploy a branch
 - Abstract the breadcrumbs function so I can use it in more places
-- Snippet documents
-  - Clean up formatting to better suit me
-  - Add groups to all snippets
-- Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
-- Convert to [`noelforte/eleventy-plugin-vento`](https://github.com/noelforte/eleventy-plugin-vento)
-  - Convert the [`htmlList.mjs`](../config/11ty/shortcodes/htmlList.mjs) into a partial
 - Add snippet counts
   - To category tree PER category
   - To snippets page PER card/grouping
@@ -77,18 +77,29 @@ One thing I want to try before I do all this work within a virtual template is t
   - Use this to sort
 - ~~Get the `.mjs`~~ files to rerun on save
   - `TypeScript` might solve this problem
+- `memoize` all category data
+  - normalization
+  - empty
+  - etc
+- Allow for ordering for categories & snippets (`weight` property)
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)
 - Impliment fuzzy search
   - Decide on datastructure output
 - Related content functionality
+- Convert to [`noelforte/eleventy-plugin-vento`](https://github.com/noelforte/eleventy-plugin-vento)
+  - Convert the [`htmlList.mjs`](../config/11ty/shortcodes/htmlList.mjs) into a partial
 
 **Tertiary**
 - Use [`@hotwired/turbo`](https://hotwired.dev/)
 - Create a [schema](https://www.11ty.dev/docs/data-validate/) if possible for the categories data
 - Add more functionality to the categories
   - Hero image
+- Snippet documents
+  - Clean up formatting to better suit me
+  - Add groups to all snippets
+- Convert to `TypeScript` to use [aliases](https://blog.logrocket.com/using-path-aliases-cleaner-react-typescript-imports/)
 
 ## Links
 - [quasibit/eleventy-plugin-schema](https://github.com/quasibit/eleventy-plugin-schema?tab=readme-ov-file)

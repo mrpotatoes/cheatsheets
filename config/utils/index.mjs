@@ -1,6 +1,7 @@
 import * as data from './data.mjs'
 import * as categories from './categories.mjs'
 import * as vars from './variables.mjs'
+import * as urls from './urls.mjs'
 
 export default {
   vars: {
@@ -19,6 +20,7 @@ export default {
   data: {
     yamlObject: data.yamlData,
     tree: data.tree,
+    groups: data.groups,
     emptyObject: data.emptyObject,
   },
 
@@ -36,7 +38,7 @@ export default {
     tree: data.tree,
     segmented: categories.segmented,
     catPath: categories.catPath,
-    
+
     list: () => {}, // Not sure yet
     paths: () => {}, // The category fn above
   },

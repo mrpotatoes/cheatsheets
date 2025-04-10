@@ -1,5 +1,6 @@
 ---
 title: Cast a value as an array
+group: test
 ---
 
 ## JavaScript version
