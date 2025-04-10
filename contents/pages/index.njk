@@ -1,0 +1,47 @@
+---
+layout: base.njk
+title: Andric's Cheatsheets
+permalink: /
+---
+
+<div class="container">
+  <div class="hero">
+    <h1 class="hero__heading">{{title}}</h1>
+    <div id="search" class="search"></div>
+  </div>
+
+  {# Temporary until I get this figured out #}
+  <h2><a href="{{ snippetBase }}">Snippets</a></h2>
+  <h2><a href="/guides">Guides</a></h2>
+  <h2><a href="/about">About</a></h2>
+  <h2><a href="/resume">Resume</a></h2>
+  <h2><a href="/projects">Projects</a></h2>
+  <h2><a href="/blog">Blog</a></h2>
+  <h2><a href="/changelog">Changelog</a></h2>
+  <h2><a href="/built-with">Built With</a></h2>
+
+  <div class="columns">
+    <div class="post">
+      <p>Excuse the currest situation. I am in the middle of re-authoring my website so it'll look pretty busted for awhile.</p>
+    </div>
+    {# {% for cat in Object.keys(collections.categorySnippets) %}
+      <pre>
+        {{ cat | debug }}
+      </pre>
+    {% endfor %} #}
+
+    <!--
+    {% for cat in collections.categories %}
+      {% set posts = collections.groupByCategories[cat] %}
+      <div class="category">
+        <div class="category__posts">
+          <h2 class="index__category">
+            {# <a href="/{{ cat | slugify | urlize | htmlBaseUrl }}/">{{ cat }} ({{ posts | length }} snippets)</a> #}
+            <a href="/{{ cat | slugify | urlize }}/">{{ cat }} ({{ posts | length }} snippets)</a>
+          </h2>
+        </div>
+      </div>
+    {% endfor %}
+    -->
+  </div>
+</div>

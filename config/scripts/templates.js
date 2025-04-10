@@ -14,7 +14,6 @@ module.exports = {
 
   category: `
 ---
-layout: category.njk
 title: {{ category }}
 eleventyExcludeFromCollections: true
 ---
@@ -22,7 +21,6 @@ eleventyExcludeFromCollections: true
 
 post: `
 ---
-layout: post.njk
 title: {{ postTitle }}
 category: {{ category }}
 ---

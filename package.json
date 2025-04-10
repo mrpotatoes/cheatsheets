@@ -1,5 +1,5 @@
 {
-  "name": "cheatsheet",
+  "name": "cheatsheets",
   "description": "My tech blog & cheatsheets",
   "license": "MIT",
   "scripts": {
@@ -11,6 +11,7 @@
     "deploy": "npm run build && netlify deploy --prod --dir=cheatsheets",
     "format": "prettier --write \"**/*.+(json|md|scss)\"",
     "start": "rm -rf .cache cheatsheets; npm run watch:eleventy & npm run watch:sass",
+    "start:debug": "rm -rf .cache cheatsheets; DEBUG=true npm run watch:eleventy & npm run watch:sass",
     "watch:eleventy": "npx @11ty/eleventy --config=config/11ty/eleventy.config.mjs --quiet --watch --port=8081 --serve",
     "watch:sass": "sass ./config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
     "new": "node ./scripts/new"
@@ -26,7 +27,10 @@
     "@11ty/eleventy": "^3.0.0",
     "@11ty/eleventy-fetch": "^3.0.0",
     "child_process": "^1.0.2",
+    "js-yaml": "^4.1.0",
+    "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
+    "memoize": "^10.1.0",
     "nunjucks": "^3.2.4",
     "serve": "^14.2.1"
   }

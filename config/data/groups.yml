@@ -1,0 +1,766 @@
+---
+languages/javascript/arrays/test:
+- title: Cast a value as an array
+  url: "/code/tips/languages/javascript/arrays/cast-a-value-as-an-array/"
+languages/javascript/arrays/other:
+- title: Check if an array is empty
+  url: "/code/tips/languages/javascript/arrays/check-if-an-array-is-empty/"
+- title: Clone an array
+  url: "/code/tips/languages/javascript/arrays/clone-an-array/"
+- title: Compare two arrays regardless of order
+  url: "/code/tips/languages/javascript/arrays/compare-two-arrays-regardless-of-order/"
+- title: Compare two arrays
+  url: "/code/tips/languages/javascript/arrays/compare-two-arrays/"
+- title: Convert an array of objects to a single object
+  url: "/code/tips/languages/javascript/arrays/convert-an-array-of-objects-to-a-single-object/"
+- title: Convert an array of strings to numbers
+  url: "/code/tips/languages/javascript/arrays/convert-an-array-of-strings-to-numbers/"
+- title: Count by the properties of an array of objects
+  url: "/code/tips/languages/javascript/arrays/count-by-the-properties-of-an-array-of-objects/"
+- title: Count the occurrences of a value in an array
+  url: "/code/tips/languages/javascript/arrays/count-the-occurrences-of-a-value-in-an-array/"
+- title: Count the occurrences of array elements
+  url: "/code/tips/languages/javascript/arrays/count-the-occurrences-of-array-elements/"
+- title: Create an array of cumulative sum
+  url: "/code/tips/languages/javascript/arrays/create-an-array-of-cumulative-sum/"
+- title: Create an array of numbers in the given range
+  url: "/code/tips/languages/javascript/arrays/create-an-array-of-numbers-in-the-given-range/"
+- title: Create cartesian product
+  url: "/code/tips/languages/javascript/arrays/create-cartesian-product/"
+- title: Empty an array
+  url: "/code/tips/languages/javascript/arrays/empty-an-array/"
+- title: Generate an array of alphabet characters
+  url: "/code/tips/languages/javascript/arrays/generate-an-array-of-alphabet-characters/"
+- title: Generate an array of arbitrary size
+  url: "/code/tips/languages/javascript/arrays/generate-an-array-of-arbitrary-size/"
+- title: Group an array of objects by a key
+  url: "/code/tips/languages/javascript/arrays/group-an-array-of-objects-by-a-key/"
+- title: Intersperse element between elements
+  url: "/code/tips/languages/javascript/arrays/intersperse-element-between-elements/"
+- title: Merge two arrays
+  url: "/code/tips/languages/javascript/arrays/merge-two-arrays/"
+- title: Partition an array based on a condition
+  url: "/code/tips/languages/javascript/arrays/partition-an-array-based-on-a-condition/"
+- title: Remove duplicate values in an array
+  url: "/code/tips/languages/javascript/arrays/remove-duplicate-values-in-an-array/"
+- title: Remove falsy values from array
+  url: "/code/tips/languages/javascript/arrays/remove-falsy-values-from-array/"
+- title: Repeat an array
+  url: "/code/tips/languages/javascript/arrays/repeat-an-array/"
+- title: Shuffle an array
+  url: "/code/tips/languages/javascript/arrays/shuffle-an-array/"
+- title: Sort an array of items by given key
+  url: "/code/tips/languages/javascript/arrays/sort-an-array-of-items-by-given-key/"
+- title: Sort an array of numbers
+  url: "/code/tips/languages/javascript/arrays/sort-an-array-of-numbers/"
+- title: Split an array into chunks
+  url: "/code/tips/languages/javascript/arrays/split-an-array-into-chunks/"
+- title: Swap the rows and columns of a matrix
+  url: "/code/tips/languages/javascript/arrays/swap-the-rows-and-columns-of-a-matrix/"
+- title: Swap two array items
+  url: "/code/tips/languages/javascript/arrays/swap-two-array-items/"
+- title: Unzip an array of arrays
+  url: "/code/tips/languages/javascript/arrays/unzip-an-array-of-arrays/"
+- title: Zip multiple arrays
+  url: "/code/tips/languages/javascript/arrays/zip-multiple-arrays/"
+languages/javascript/arrays/discovery:
+- title: Find the closest number from an array
+  url: "/code/tips/languages/javascript/arrays/find-the-closest-number-from-an-array/"
+- title: Find the index of the last matching item of an array
+  url: "/code/tips/languages/javascript/arrays/find-the-index-of-the-last-matching-item-of-an-array/"
+- title: Find the index of the maximum item of an array
+  url: "/code/tips/languages/javascript/arrays/find-the-index-of-the-maximum-item-of-an-array/"
+- title: Find the index of the minimum item of an array
+  url: "/code/tips/languages/javascript/arrays/find-the-index-of-the-minimum-item-of-an-array/"
+- title: Find the length of the longest string in an array
+  url: "/code/tips/languages/javascript/arrays/find-the-length-of-the-longest-string-in-an-array/"
+- title: Find the maximum item of an array by given key
+  url: "/code/tips/languages/javascript/arrays/find-the-maximum-item-of-an-array-by-given-key/"
+- title: Find the maximum item of an array
+  url: "/code/tips/languages/javascript/arrays/find-the-maximum-item-of-an-array/"
+- title: Find the minimum item of an array by given key
+  url: "/code/tips/languages/javascript/arrays/find-the-minimum-item-of-an-array-by-given-key/"
+- title: Find the minimum item of an array
+  url: "/code/tips/languages/javascript/arrays/find-the-minimum-item-of-an-array/"
+languages/javascript/arrays/manipulations:
+- title: Flatten an array
+  url: "/code/tips/languages/javascript/arrays/flatten-an-array/"
+languages/javascript/arrays/retrievals:
+- title: Get all arrays of consecutive elements
+  url: "/code/tips/languages/javascript/arrays/get-all-arrays-of-consecutive-elements/"
+- title: Get all n-th items of an array
+  url: "/code/tips/languages/javascript/arrays/get-all-nth-items-of-an-array/"
+- title: Get all subsets of an array
+  url: "/code/tips/languages/javascript/arrays/get-all-subsets-of-an-array/"
+- title: Get indices of a value in an array
+  url: "/code/tips/languages/javascript/arrays/get-indices-of-a-value-in-an-array/"
+- title: Get the average of an array
+  url: "/code/tips/languages/javascript/arrays/get-the-average-of-an-array/"
+- title: Get the intersection of arrays
+  url: "/code/tips/languages/javascript/arrays/get-the-intersection-of-arrays/"
+- title: Get the rank of an array of numbers
+  url: "/code/tips/languages/javascript/arrays/get-the-rank-of-an-array-of-numbers/"
+- title: Get the sum of an array of numbers
+  url: "/code/tips/languages/javascript/arrays/get-the-sum-of-an-array-of-numbers/"
+- title: Get the unique values of an array
+  url: "/code/tips/languages/javascript/arrays/get-the-unique-values-of-an-array/"
+- title: Get union of arrays
+  url: "/code/tips/languages/javascript/arrays/get-union-of-arrays/"
+languages/javascript/date-time/other:
+- title: Add AM PM suffix to an hour
+  url: "/code/tips/languages/javascript/date-time/add-am-pm-suffix-to-an-hour/"
+- title: Calculate the number of difference days between two dates
+  url: "/code/tips/languages/javascript/date-time/calculate-the-number-of-difference-days-between-two-dates/"
+- title: Calculate the number of months between two dates
+  url: "/code/tips/languages/javascript/date-time/calculate-the-number-of-months-between-two-dates/"
+- title: Compare two dates
+  url: "/code/tips/languages/javascript/date-time/compare-two-dates/"
+- title: Convert a date to YYYY-MM-DD format
+  url: "/code/tips/languages/javascript/date-time/convert-a-date-to-yyyy-mm-dd-format/"
+- title: Convert seconds to hh:mm:ss format
+  url: "/code/tips/languages/javascript/date-time/convert-seconds-to-hh-mm-ss-format/"
+- title: Determine one year from now
+  url: "/code/tips/languages/javascript/date-time/determine-one-year-from-now/"
+- title: Extract year, month, day, hour, minute, second and millisecond from a date
+  url: "/code/tips/languages/javascript/date-time/extract-year-month-day-hour-minute-second-and-millisecond-from-a-date/"
+- title: Format a date for the given locale
+  url: "/code/tips/languages/javascript/date-time/format-a-date-for-the-given-locale/"
+- title: Get the hours and minutes from the decimal time
+  url: "/code/tips/languages/javascript/date-time/get-hours-and-minutes-from-decimal-time/"
+- title: Get the current quarter of a date
+  url: "/code/tips/languages/javascript/date-time/get-the-current-quarter-of-a-date/"
+- title: Get the current timestamp in seconds
+  url: "/code/tips/languages/javascript/date-time/get-the-current-timestamp-in-seconds/"
+- title: Get the day of the year from a date
+  url: "/code/tips/languages/javascript/date-time/get-the-day-of-the-year-from-a-date/"
+- title: Get the first date in the month of a date
+  url: "/code/tips/languages/javascript/date-time/get-the-first-date-in-the-month-of-a-date/"
+- title: Get the last date in the month of a date
+  url: "/code/tips/languages/javascript/date-time/get-the-last-date-in-the-month-of-a-date/"
+- title: Get the month name of a date
+  url: "/code/tips/languages/javascript/date-time/get-the-month-name-of-a-date/"
+- title: Get the number of days in given month
+  url: "/code/tips/languages/javascript/date-time/get-the-number-of-days-in-given-month/"
+- title: Get the timezone string
+  url: "/code/tips/languages/javascript/date-time/get-the-timezone-string/"
+- title: Get the tomorrow date
+  url: "/code/tips/languages/javascript/date-time/get-the-tomorrow-date/"
+- title: Get the total number of days in a year
+  url: "/code/tips/languages/javascript/date-time/get-the-total-number-of-days-in-a-year/"
+- title: Get the weekday of a date
+  url: "/code/tips/languages/javascript/date-time/get-the-weekday-of-a-date/"
+- title: Get the yesterday date
+  url: "/code/tips/languages/javascript/date-time/get-the-yesterday-date/"
+- title: Initialize the current date but set time to midnight
+  url: "/code/tips/languages/javascript/date-time/initialize-the-current-date-but-set-time-to-midnight/"
+- title: Sort an array of dates
+  url: "/code/tips/languages/javascript/date-time/sort-an-array-of-dates/"
+languages/javascript/function/other:
+- title: Box handler
+  url: "/code/tips/languages/javascript/function/box-handler/"
+- title: Check if a value is a function
+  url: "/code/tips/languages/javascript/function/check-if-a-value-is-a-function/"
+- title: Check if a value is a generator function
+  url: "/code/tips/languages/javascript/function/check-if-a-value-is-a-generator-function/"
+- title: Check if a value is an async function
+  url: "/code/tips/languages/javascript/function/check-if-a-value-is-an-async-function/"
+- title: Compose functions from left to right
+  url: "/code/tips/languages/javascript/function/compose-functions-from-left-to-right/"
+- title: Compose functions
+  url: "/code/tips/languages/javascript/function/compose-functions/"
+- title: Create a function that accepts a single argument
+  url: "/code/tips/languages/javascript/function/create-a-function-that-accepts-a-single-argument/"
+- title: Create an empty function
+  url: "/code/tips/languages/javascript/function/create-an-empty-function/"
+- title: Curry a function
+  url: "/code/tips/languages/javascript/function/curry-a-function/"
+- title: Delay the evaluation of a function
+  url: "/code/tips/languages/javascript/function/delay-the-evaluation-of-a-function/"
+- title: Execute a function once
+  url: "/code/tips/languages/javascript/function/execute-a-function-once/"
+- title: Flip the arguments of a function
+  url: "/code/tips/languages/javascript/function/flip-the-arguments-of-a-function/"
+- title: Identity function
+  url: "/code/tips/languages/javascript/function/identity-function/"
+- title: Logical xor operator
+  url: "/code/tips/languages/javascript/function/logical-xor-operator/"
+- title: Memoize a function
+  url: "/code/tips/languages/javascript/function/memoize-a-function/"
+- title: Partially apply a function
+  url: "/code/tips/languages/javascript/function/partially-apply-a-function/"
+- title: Uncurry a function
+  url: "/code/tips/languages/javascript/function/uncurry-a-function/"
+languages/javascript/idiosyncrasies/other:
+- title: Immediately Invoked Functions
+  url: "/code/tips/languages/javascript/idiosyncrasies/immediately-invoked-functions.md/"
+- title: Nested Ternaries
+  url: "/code/tips/languages/javascript/idiosyncrasies/nested-ternaries/"
+languages/javascript/misc/other:
+- title: Check if the code is running in Jest
+  url: "/code/tips/languages/javascript/misc/check-if-the-code-is-running-in-jest/"
+- title: Check if the code is running in NodeJS
+  url: "/code/tips/languages/javascript/misc/check-if-the-code-is-running-in-node-js/"
+- title: Check if the code is running in the browser
+  url: "/code/tips/languages/javascript/misc/check-if-the-code-is-running-in-the-browser/"
+- title: Clear all cookies
+  url: "/code/tips/languages/javascript/misc/clear-all-cookies/"
+- title: Convert 3 digits color to 6 digits color
+  url: "/code/tips/languages/javascript/misc/convert-3-digits-color-to-6-digits-color/"
+- title: Convert Celsius to Fahrenheit
+  url: "/code/tips/languages/javascript/misc/convert-celsius-to-fahrenheit/"
+- title: Convert cookie to object
+  url: "/code/tips/languages/javascript/misc/convert-cookie-to-object/"
+- title: Convert Fahrenheit to Celsius
+  url: "/code/tips/languages/javascript/misc/convert-fahrenheit-to-celsius/"
+- title: Convert hex to rgb
+  url: "/code/tips/languages/javascript/misc/convert-hex-to-rgb/"
+- title: Convert rgb color to hex
+  url: "/code/tips/languages/javascript/misc/convert-rgb-color-to-hex/"
+- title: Convert URL parameters to object
+  url: "/code/tips/languages/javascript/misc/convert-url-parameters-to-object/"
+- title: Decode a JWT token
+  url: "/code/tips/languages/javascript/misc/decode-a-jwt-token/"
+- title: Detect dark mode
+  url: "/code/tips/languages/javascript/misc/detect-dark-mode/"
+- title: Easing functions
+  url: "/code/tips/languages/javascript/misc/easing-functions/"
+- title: Emulate a dice throw
+  url: "/code/tips/languages/javascript/misc/emulate-a-dice-throw/"
+- title: Encode a URL
+  url: "/code/tips/languages/javascript/misc/encode-a-url/"
+- title: Generate an unique and increment id
+  url: "/code/tips/languages/javascript/misc/generate-an-unique-and-increment-id/"
+- title: Get the first defined and non null argument
+  url: "/code/tips/languages/javascript/misc/get-the-first-defined-and-non-null-argument/"
+- title: Get the value of a cookie
+  url: "/code/tips/languages/javascript/misc/get-the-value-of-a-cookie/"
+- title: Get the value of a param from a URL
+  url: "/code/tips/languages/javascript/misc/get-the-value-of-a-param-from-a-url/"
+- title: Get type of a variable in string
+  url: "/code/tips/languages/javascript/misc/get-type-of-a-variable-in-string/"
+- title: Recursion
+  url: "/code/tips/languages/javascript/misc/recursion/"
+- title: Redirect the page to HTTPS if it is in HTTP
+  url: "/code/tips/languages/javascript/misc/redirect-the-page-to-https-if-it-is-in-http/"
+- title: Run Promises in sequence
+  url: "/code/tips/languages/javascript/misc/run-promises-in-sequence/"
+- title: Swap two variables
+  url: "/code/tips/languages/javascript/misc/swap-two-variables/"
+- title: Wait for an amount of time
+  url: "/code/tips/languages/javascript/misc/wait-for-an-amount-of-time/"
+languages/javascript/misc/reduce/other:
+- title: Reduce + Set
+  url: "/code/tips/languages/javascript/misc/reduce/reduce-set/"
+languages/javascript/number/other:
+- title: Add an ordinal suffix to a number
+  url: "/code/tips/languages/javascript/number/add-an-ordinal-suffix-to-a-number/"
+- title: Calculate Fibonacci numbers
+  url: "/code/tips/languages/javascript/number/calculate-fibonacci-numbers/"
+- title: Calculate the average of arguments
+  url: "/code/tips/languages/javascript/number/calculate-the-average-of-arguments/"
+- title: Calculate the division of arguments
+  url: "/code/tips/languages/javascript/number/calculate-the-division-of-arguments/"
+- title: Calculate the factorial of a number
+  url: "/code/tips/languages/javascript/number/calculate-the-factorial-of-a-number/"
+- title: Calculate the mod of collection index
+  url: "/code/tips/languages/javascript/number/calculate-the-mod-of-collection-index/"
+- title: Calculate the remainder of division of arguments
+  url: "/code/tips/languages/javascript/number/calculate-the-remainder-of-division-of-arguments/"
+- title: Calculate the sum of arguments
+  url: "/code/tips/languages/javascript/number/calculate-the-sum-of-arguments/"
+- title: Clamp a number between two values
+  url: "/code/tips/languages/javascript/number/clamp-a-number-between-two-values/"
+- title: Compute the greatest common divisor between two numbers
+  url: "/code/tips/languages/javascript/number/compute-the-greatest-common-divisor-between-two-numbers/"
+- title: Convert a number to equivalent characters
+  url: "/code/tips/languages/javascript/number/convert-a-number-to-equivalent-characters/"
+- title: Convert a string to number
+  url: "/code/tips/languages/javascript/number/convert-a-string-to-number/"
+- title: Convert decimal to binary recursively
+  url: "/code/tips/languages/javascript/number/convert-decimal-to-binary-recursively/"
+- title: Get the arrays of digits from a number
+  url: "/code/tips/languages/javascript/number/get-the-arrays-of-digits-from-a-number/"
+- title: Multiply arguments
+  url: "/code/tips/languages/javascript/number/multiply-arguments/"
+- title: Prefix an integer with zeros
+  url: "/code/tips/languages/javascript/number/prefix-an-integer-with-zeros/"
+- title: Round a number to a given number of digits
+  url: "/code/tips/languages/javascript/number/round-a-number-to-a-given-number-of-digits/"
+- title: Subtract arguments
+  url: "/code/tips/languages/javascript/number/subtract-arguments/"
+- title: Truncate a number at decimal
+  url: "/code/tips/languages/javascript/number/truncate-a-number-at-decimal/"
+- title: Truncate a number to a given number of decimal places without rounding
+  url: "/code/tips/languages/javascript/number/truncate-a-number-to-a-given-number-of-decimal-places-without-rounding/"
+- title: Wrap a number between two values
+  url: "/code/tips/languages/javascript/number/wrap-a-number-between-two-values/"
+languages/javascript/object/other:
+- title: Check if multiple objects are equal
+  url: "/code/tips/languages/javascript/object/check-if-multiple-objects-are-equal/"
+- title: Create an empty map that does not have properties
+  url: "/code/tips/languages/javascript/object/create-an-empty-map-that-does-not-have-properties/"
+- title: Create an object from the pairs of key and value
+  url: "/code/tips/languages/javascript/object/create-an-object-from-the-pairs-of-key-and-value/"
+- title: Extract values of a property from an array of objects
+  url: "/code/tips/languages/javascript/object/extract-values-of-a-property-from-an-array-of-objects/"
+- title: Get the value at given path of an object
+  url: "/code/tips/languages/javascript/object/get-the-value-at-given-path-of-an-object/"
+- title: Returns an object with unique values by key
+  url: "/code/tips/languages/javascript/object/get-unique-arr-obj/"
+- title: Immutably rename object keys
+  url: "/code/tips/languages/javascript/object/immutably-rename-object-keys/"
+- title: Invert keys and values of an object
+  url: "/code/tips/languages/javascript/object/invert-keys-and-values-of-an-object/"
+- title: Omit a subset of properties from an object
+  url: "/code/tips/languages/javascript/object/omit-a-subset-of-properties-from-an-object/"
+- title: Pick a subset of properties of an object
+  url: "/code/tips/languages/javascript/object/pick-a-subset-of-properties-of-an-object/"
+- title: Remove all null and undefined properties from an object
+  url: "/code/tips/languages/javascript/object/remove-all-null-and-undefined-properties-from-an-object/"
+- title: Shallow copy an object
+  url: "/code/tips/languages/javascript/object/shallow-copy-an-object/"
+- title: Sort an object by its properties
+  url: "/code/tips/languages/javascript/object/sort-an-object-by-its-properties/"
+languages/javascript/random/other:
+- title: Generate a random boolean
+  url: "/code/tips/languages/javascript/random/generate-a-random-boolean/"
+- title: Generate a random floating point number in given range
+  url: "/code/tips/languages/javascript/random/generate-a-random-floating-point-number-in-given-range/"
+- title: Generate a random hex color
+  url: "/code/tips/languages/javascript/random/generate-a-random-hex-color/"
+- title: Generate a random integer in given range
+  url: "/code/tips/languages/javascript/random/generate-a-random-integer-in-given-range/"
+- title: Generate a random IP address
+  url: "/code/tips/languages/javascript/random/generate-a-random-ip-address/"
+- title: Generate a random sign
+  url: "/code/tips/languages/javascript/random/generate-a-random-sign/"
+- title: Generate a random string from given characters
+  url: "/code/tips/languages/javascript/random/generate-a-random-string-from-given-characters/"
+- title: Generate a random string using Node crypto module
+  url: "/code/tips/languages/javascript/random/generate-a-random-string-using-node-crypto-module/"
+- title: Generate a random string with given length
+  url: "/code/tips/languages/javascript/random/generate-a-random-string-with-given-length/"
+- title: Generate a random UUID
+  url: "/code/tips/languages/javascript/random/generate-a-random-uuid/"
+- title: Generate an array of random integers in a given range
+  url: "/code/tips/languages/javascript/random/generate-an-array-of-random-integers-in-a-given-range/"
+- title: Get a random item and remove it from an array
+  url: "/code/tips/languages/javascript/random/get-a-random-item-and-remove-it-from-an-array/"
+- title: Get a random item from an array
+  url: "/code/tips/languages/javascript/random/get-a-random-item-from-an-array/"
+- title: Get random items of an array
+  url: "/code/tips/languages/javascript/random/get-random-items-of-an-array/"
+- title: Pick a random property of an object
+  url: "/code/tips/languages/javascript/random/pick-a-random-property-of-an-object/"
+- title: Pick random lines from a text document
+  url: "/code/tips/languages/javascript/random/pick-random-lines-from-a-text-document/"
+languages/javascript/strings/other:
+- title: Capitalize a string
+  url: "/code/tips/languages/javascript/strings/capitalize-a-string/"
+- title: Decapitalize a string
+  url: "/code/tips/languages/javascript/strings/decapitalize-a-string/"
+- title: Decode HTML entities
+  url: "/code/tips/languages/javascript/strings/decode-html-entities/"
+- title: Escape HTML special characters
+  url: "/code/tips/languages/javascript/strings/escape-html-special-characters/"
+- title: Generate a hash of a string
+  url: "/code/tips/languages/javascript/strings/generate-a-hash-of-a-string/"
+- title: Prepend a line number to each line of a text document
+  url: "/code/tips/languages/javascript/strings/prepend-a-line-number-to-each-line-of-a-text-document/"
+- title: Repeat a string
+  url: "/code/tips/languages/javascript/strings/repeat-a-string/"
+- title: Replace all line breaks with br elements
+  url: "/code/tips/languages/javascript/strings/replace-all-line-breaks-with-br-elements/"
+- title: Replace all tab characters with spaces
+  url: "/code/tips/languages/javascript/strings/replace-all-tab-characters-with-spaces/"
+- title: Replace multiple spaces with a single space
+  url: "/code/tips/languages/javascript/strings/replace-multiple-spaces-with-a-single-space/"
+- title: Replace the first given number of characters of a string with another character
+  url: "/code/tips/languages/javascript/strings/replace-the-first-given-number-of-characters-of-a-string-with-another-character/"
+- title: Reverse a string
+  url: "/code/tips/languages/javascript/strings/reverse-a-string/"
+- title: Reverse the order of lines of a text
+  url: "/code/tips/languages/javascript/strings/reverse-the-order-of-lines-of-a-text/"
+- title: Strip ANSI codes from a string
+  url: "/code/tips/languages/javascript/strings/strip-ansi-codes-from-a-string/"
+- title: Trim slashes at the beginning and the end of a string
+  url: "/code/tips/languages/javascript/strings/trim-slashes-at-the-beginning-and-the-end-of-a-string/"
+- title: Trim some character
+  url: "/code/tips/languages/javascript/strings/trim-some-character/"
+- title: Trim the file extension from a file name
+  url: "/code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/"
+- title: Truncate a string at full words
+  url: "/code/tips/languages/javascript/strings/truncate-a-string-at-full-words/"
+- title: Placeholder
+  url: "/code/tips/languages/javascript/strings/calculate-the-angle-of-a-line-defined-by-two-points/"
+languages/javascript/strings/predicates:
+- title: Check if a path is relative
+  url: "/code/tips/languages/javascript/strings/check-if-a-path-is-relative/"
+- title: Check if a string consists of a repeated character sequence
+  url: "/code/tips/languages/javascript/strings/check-if-a-string-consists-of-a-repeated-character-sequence/"
+- title: Check if a string is a palindrome
+  url: "/code/tips/languages/javascript/strings/check-if-a-string-is-a-palindrome/"
+- title: Check if a URL is absolute
+  url: "/code/tips/languages/javascript/strings/check-if-a-url-is-absolute/"
+- title: Check if two strings are anagram
+  url: "/code/tips/languages/javascript/strings/check-if-two-strings-are-anagram/"
+languages/javascript/strings/conversions:
+- title: Convert a base64 encoded string to an uint8 array
+  url: "/code/tips/languages/javascript/strings/convert-a-base64-encoded-string-to-an-uint8-array/"
+- title: Convert a letter to associate emoji
+  url: "/code/tips/languages/javascript/strings/convert-a-letter-to-associate-emoji/"
+- title: Convert a string to camelCase
+  url: "/code/tips/languages/javascript/strings/convert-a-string-to-camel-case/"
+- title: Convert a string to PascalCase
+  url: "/code/tips/languages/javascript/strings/convert-a-string-to-pascal-case/"
+- title: Convert a string to URL slug
+  url: "/code/tips/languages/javascript/strings/convert-a-string-to-url-slug/"
+- title: Convert a Windows file path to Unix path
+  url: "/code/tips/languages/javascript/strings/convert-a-windows-file-path-to-unix-path/"
+- title: Convert an uint8 array to a base64 encoded string
+  url: "/code/tips/languages/javascript/strings/convert-an-uint8-array-to-a-base64-encoded-string/"
+- title: Convert camelCase to kebab-case and vice versa
+  url: "/code/tips/languages/javascript/strings/convert-camel-case-to-kebab-case-and-vice-versa/"
+- title: Convert snake_case to camelCase
+  url: "/code/tips/languages/javascript/strings/convert-snake-case-to-camel-case/"
+- title: Convert the name of an Excel column to number
+  url: "/code/tips/languages/javascript/strings/convert-the-name-of-an-excel-column-to-number/"
+- title: Format a string
+  url: "/code/tips/languages/javascript/strings/format-a-string/"
+languages/javascript/strings/counting:
+- title: Count the number of words in a string
+  url: "/code/tips/languages/javascript/strings/count-the-number-of-words-in-a-string/"
+- title: Count the occurrences of a character in a string
+  url: "/code/tips/languages/javascript/strings/count-the-occurrences-of-a-character-in-a-string/"
+languages/javascript/strings/retrivals:
+- title: Get the base URL without any parameters
+  url: "/code/tips/languages/javascript/strings/get-the-base-url-without-any-parameters/"
+- title: Get the file extension from a file name
+  url: "/code/tips/languages/javascript/strings/get-the-file-extension-from-a-file-name/"
+- title: Get the file name from a URL
+  url: "/code/tips/languages/javascript/strings/get-the-file-name-from-a-url/"
+- title: Get the length of a string in bytes
+  url: "/code/tips/languages/javascript/strings/get-the-length-of-a-string-in-bytes/"
+- title: Get the number of a character in a string
+  url: "/code/tips/languages/javascript/strings/get-the-number-of-a-character-in-a-string/"
+languages/javascript/strings/casing:
+- title: Make the first character of a string lowercase
+  url: "/code/tips/languages/javascript/strings/make-the-first-character-of-a-string-lowercase/"
+- title: Normalize file path slashes
+  url: "/code/tips/languages/javascript/strings/normalize-file-path-slashes/"
+- title: Remove duplicate lines of a text document
+  url: "/code/tips/languages/javascript/strings/remove-duplicate-lines-of-a-text-document/"
+- title: Remove empty lines of a text document
+  url: "/code/tips/languages/javascript/strings/remove-empty-lines-of-a-text-document/"
+- title: Remove spaces from a string
+  url: "/code/tips/languages/javascript/strings/remove-spaces-from-a-string/"
+- title: Swap case of characters in a string
+  url: "/code/tips/languages/javascript/strings/swap-case-of-characters-in-a-string/"
+- title: Unescape HTML special characters
+  url: "/code/tips/languages/javascript/strings/unescape-html-special-characters/"
+- title: Uppercase the first character of each word in a string
+  url: "/code/tips/languages/javascript/strings/uppercase-the-first-character-of-each-word-in-a-string/"
+languages/javascript/strings/sorting:
+- title: Sort lines of a text document in the alphabetical order
+  url: "/code/tips/languages/javascript/strings/sort-lines-of-a-text-document-in-the-alphabetical-order/"
+- title: Sort the characters of a string in the alphabetical order
+  url: "/code/tips/languages/javascript/strings/sort-the-characters-of-a-string-in-the-alphabetical-order/"
+languages/javascript/validator/other:
+- title: Check if a character is a digit
+  url: "/code/tips/languages/javascript/validator/check-if-a-character-is-a-digit/"
+- title: Check if a date is a weekday
+  url: "/code/tips/languages/javascript/validator/check-if-a-date-is-a-weekday/"
+- title: Check if a date is a weekend
+  url: "/code/tips/languages/javascript/validator/check-if-a-date-is-a-weekend/"
+- title: Check if a date is between two dates
+  url: "/code/tips/languages/javascript/validator/check-if-a-date-is-between-two-dates/"
+- title: Check if a date is today
+  url: "/code/tips/languages/javascript/validator/check-if-a-date-is-today/"
+- title: Check if a date occurs in the current year
+  url: "/code/tips/languages/javascript/validator/check-if-a-date-occurs-in-the-current-year/"
+- title: Check if a flat array has duplicate values
+  url: "/code/tips/languages/javascript/validator/check-if-a-flat-array-has-duplicate-values/"
+- title: Check if a given integer is a prime number
+  url: "/code/tips/languages/javascript/validator/check-if-a-given-integer-is-a-prime-number/"
+- title: Check if a number is a power of 2
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-a-power-of-2/"
+- title: Check if a number is even
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-even/"
+- title: Check if a number is in a given range
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-in-a-given-range/"
+- title: Check if a number is negative
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-negative/"
+- title: Check if a number is odd
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-odd/"
+- title: Check if a number is positive
+  url: "/code/tips/languages/javascript/validator/check-if-a-number-is-positive/"
+- title: Check if a string contains lower case characters
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-lower-case-characters/"
+- title: Check if a string contains only ASCII characters
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-only-ascii-characters/"
+- title: Check if a string contains only digits
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-only-digits/"
+- title: Check if a string contains only letters and numbers
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-only-letters-and-numbers/"
+- title: Check if a string contains only letters
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-only-letters/"
+- title: Check if a string contains upper case characters
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-upper-case-characters/"
+- title: Check if a string contains whitespace
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-contains-whitespace/"
+- title: Check if a string is a hexadecimal color
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-a-hexadecimal-color/"
+- title: Check if a string is a hexadecimal number
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-a-hexadecimal-number/"
+- title: Check if a string is a MongoDB ObjectId
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-a-mongo-db-object-id/"
+- title: Check if a string is an octal number
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-an-octal-number/"
+- title: Check if a string is lower case
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-lower-case/"
+- title: Check if a string is upper case
+  url: "/code/tips/languages/javascript/validator/check-if-a-string-is-upper-case/"
+- title: Check if a value is a business identifier code
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-a-business-identifier-code/"
+- title: Check if a value is a number
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-a-number/"
+- title: Check if a value is a plain object
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-a-plain-object/"
+- title: Check if a value is a regular expression
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-a-regular-expression/"
+- title: Check if a value is a string
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-a-string/"
+- title: Check if a value is an object
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-an-object/"
+- title: Check if a value is base32 encoded
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-base32-encoded/"
+- title: Check if a value is base58 encoded
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-base58-encoded/"
+- title: Check if a value is base64 encoded
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-base64-encoded/"
+- title: Check if a value is nil
+  url: "/code/tips/languages/javascript/validator/check-if-a-value-is-nil/"
+- title: Check if a year is leap year
+  url: "/code/tips/languages/javascript/validator/check-if-a-year-is-leap-year/"
+- title: Check if all array elements are equal to a given value
+  url: "/code/tips/languages/javascript/validator/check-if-all-array-elements-are-equal-to-a-given-value/"
+- title: Check if all items in an array are equal
+  url: "/code/tips/languages/javascript/validator/check-if-all-items-in-an-array-are-equal/"
+- title: Check if an array contains a value matching some criterias
+  url: "/code/tips/languages/javascript/validator/check-if-an-array-contains-a-value-matching-some-criterias/"
+- title: Check if an array is not empty
+  url: "/code/tips/languages/javascript/validator/check-if-an-array-is-not-empty/"
+- title: Check if an array is subset of other array
+  url: "/code/tips/languages/javascript/validator/check-if-an-array-is-subset-of-other-array/"
+- title: Check if an object is a Promise
+  url: "/code/tips/languages/javascript/validator/check-if-an-object-is-a-promise/"
+- title: Check if an object is an array
+  url: "/code/tips/languages/javascript/validator/check-if-an-object-is-an-array/"
+- title: Check if an object is empty
+  url: "/code/tips/languages/javascript/validator/check-if-an-object-is-empty/"
+- title: Validate a Gregorian date
+  url: "/code/tips/languages/javascript/validator/validate-a-gregorian-date/"
+libraries/jest/other:
+- title: Jest snippets (break up please)
+  url: "/code/tips/libraries/jest/jest/"
+- title: Options for handling exceptions
+  url: "/code/tips/libraries/jest/this-is-my-booty/"
+paradigms/functional-programming/other:
+- title: Placeholder
+  url: "/code/tips/paradigms/functional-programming/placeholder/"
+browser/css/other:
+- title: Placeholder
+  url: "/code/tips/browser/css/placeholder/"
+browser/dom/predicates:
+- title: Check if an element is a descendant of another
+  url: "/code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/"
+- title: Check if an element is focused
+  url: "/code/tips/browser/dom/check-if-an-element-is-focused/"
+- title: Check if the touch events are supported
+  url: "/code/tips/browser/dom/check-if-the-touch-events-are-supported/"
+- title: Check if user scrolls to the bottom of the page
+  url: "/code/tips/browser/dom/check-if-user-scrolls-to-the-bottom-of-the-page/"
+browser/dom/other:
+- title: Detect Internet Explorer browser
+  url: "/code/tips/browser/dom/detect-internet-explorer-browser/"
+- title: Detect macOS browser
+  url: "/code/tips/browser/dom/detect-macos-browser/"
+- title: Serialize form data
+  url: "/code/tips/browser/dom/serialize-form-data/"
+- title: Show an element
+  url: "/code/tips/browser/dom/show-an-element/"
+- title: Strip HTML from a given text
+  url: "/code/tips/browser/dom/strip-html-from-a-given-text/"
+browser/dom/page interactions:
+- title: Click all checkboxes
+  url: "/code/tips/browser/dom/force-click-all-buttons/"
+- title: Go back to the previous page
+  url: "/code/tips/browser/dom/go-back-to-the-previous-page/"
+- title: Hide an element
+  url: "/code/tips/browser/dom/hide-an-element/"
+- title: Redirect to another page
+  url: "/code/tips/browser/dom/redirect-to-another-page/"
+- title: Reload the current page
+  url: "/code/tips/browser/dom/reload-the-current-page/"
+- title: Replace an element
+  url: "/code/tips/browser/dom/replace-an-element/"
+- title: Scroll to top of the page
+  url: "/code/tips/browser/dom/scroll-to-top-of-the-page/"
+- title: Toggle an element
+  url: "/code/tips/browser/dom/toggle-an-element/"
+browser/dom/retrievals:
+- title: Get all siblings of an element
+  url: "/code/tips/browser/dom/get-all-siblings-of-an-element/"
+- title: Get the position of an element relative to the document
+  url: "/code/tips/browser/dom/get-the-position-of-an-element-relative-to-the-document/"
+- title: Get the selected text
+  url: "/code/tips/browser/dom/get-the-selected-text/"
+browser/dom/insert:
+- title: Insert an element after other one
+  url: "/code/tips/browser/dom/insert-an-element-after-other-one/"
+- title: Insert an element before other one
+  url: "/code/tips/browser/dom/insert-an-element-before-other-one/"
+- title: Insert given HTML after an element
+  url: "/code/tips/browser/dom/insert-given-html-after-an-element/"
+- title: Insert given HTML before an element
+  url: "/code/tips/browser/dom/insert-given-html-before-an-element/"
+browser/html/other:
+- title: Box Model
+  url: "/code/tips/browser/html/box-model/"
+- title: Starter Template
+  url: "/code/tips/browser/html/starter-template/"
+browser/pwa/other:
+- title: Placeholder
+  url: "/code/tips/browser/pwa/placeholder/"
+languages/java/other:
+- title: Placeholder
+  url: "/code/tips/languages/java/placeholder/"
+languages/javascript/math/calculate:
+- title: Calculate the angle of a line defined by two points
+  url: "/code/tips/languages/javascript/math/calculate-the-angle-of-a-line-defined-by-two-points/"
+- title: Calculate the distance between two points
+  url: "/code/tips/languages/javascript/math/calculate-the-distance-between-two-points/"
+languages/javascript/math/other:
+- title: Calculate the linear interpolation between two numbers
+  url: "/code/tips/languages/javascript/math/calculate-the-linear-interpolation-between-two-numbers/"
+- title: Calculate the midpoint between two points
+  url: "/code/tips/languages/javascript/math/calculate-the-midpoint-between-two-points/"
+- title: Check if a point is inside a rectangle
+  url: "/code/tips/languages/javascript/math/check-if-a-point-is-inside-a-rectangle/"
+- title: Check if a rectangle contains other one
+  url: "/code/tips/languages/javascript/math/check-if-a-rectangle-contains-other-one/"
+- title: Check if a rectangle overlaps other one
+  url: "/code/tips/languages/javascript/math/check-if-a-rectangle-overlaps-other-one/"
+- title: Convert degrees to radians
+  url: "/code/tips/languages/javascript/math/convert-degrees-to-radians/"
+- title: Convert radians to degrees
+  url: "/code/tips/languages/javascript/math/convert-radians-to-degrees/"
+- title: Normalize the ratio of a number in a range
+  url: "/code/tips/languages/javascript/math/normalize-the-ratio-of-a-number-in-a-range/"
+- title: Round a number to the nearest multiple of a given value
+  url: "/code/tips/languages/javascript/math/round-a-number-to-the-nearest-multiple-of-a-given-value/"
+languages/typescript/other:
+- title: Placeholder
+  url: "/code/tips/languages/typescript/placeholder/"
+libraries/11ty/other:
+- title: Debugging a template in 11ty
+  url: "/code/tips/libraries/11ty/debugging-template/"
+libraries/angular/other:
+- title: Placeholder
+  url: "/code/tips/libraries/angular/placeholder/"
+libraries/effect/other:
+- title: Placeholder
+  url: "/code/tips/libraries/effect/placeholder/"
+libraries/express/other:
+- title: Placeholder
+  url: "/code/tips/libraries/express/placeholder/"
+libraries/react/other:
+- title: Placeholder
+  url: "/code/tips/libraries/react/placeholder/"
+libraries/redux/other:
+- title: Placeholder
+  url: "/code/tips/libraries/redux/placeholder/"
+libraries/xstate/other:
+- title: Placeholder
+  url: "/code/tips/libraries/xstate/placeholder/"
+sql/other:
+- title: Backing up
+  url: "/code/tips/sql/backing-up/"
+- title: CLI
+  url: "/code/tips/sql/cli/"
+- title: Counts
+  url: "/code/tips/sql/counting/"
+- title: Formatting
+  url: "/code/tips/sql/formatting/"
+- title: Placeholder
+  url: "/code/tips/sql/placeholder/"
+- title: Restoring DB
+  url: "/code/tips/sql/restoring/"
+- title: Sub Selects
+  url: "/code/tips/sql/subselects/"
+- title: SQL UP
+  url: "/code/tips/sql/up/"
+subsystem/bash/other:
+- title: Compress Images
+  url: "/code/tips/subsystem/bash/compress-images/"
+- title: Placeholder
+  url: "/code/tips/subsystem/bash/placeholder/"
+subsystem/dotfiles/other:
+- title: "+x"
+  url: "/code/tips/subsystem/dotfiles/+x/"
+- title: argv
+  url: "/code/tips/subsystem/dotfiles/argv/"
+- title: colordump
+  url: "/code/tips/subsystem/dotfiles/colordump/"
+- title: copypath
+  url: "/code/tips/subsystem/dotfiles/copypath/"
+- title: delete-files
+  url: "/code/tips/subsystem/dotfiles/delete-files/"
+- title: explode-path
+  url: "/code/tips/subsystem/dotfiles/explode-path/"
+- title: find-ext
+  url: "/code/tips/subsystem/dotfiles/file-ext/"
+- title: findf
+  url: "/code/tips/subsystem/dotfiles/findf/"
+- title: git-rebuild-source
+  url: "/code/tips/subsystem/dotfiles/git-rebuild-source/"
+- title: git-rename
+  url: "/code/tips/subsystem/dotfiles/git-rename/"
+- title: git-revert
+  url: "/code/tips/subsystem/dotfiles/git-revert/"
+- title: hide
+  url: "/code/tips/subsystem/dotfiles/hide/"
+- title: manuals
+  url: "/code/tips/subsystem/dotfiles/manuals/"
+- title: mfile
+  url: "/code/tips/subsystem/dotfiles/mfile/"
+- title: noargs
+  url: "/code/tips/subsystem/dotfiles/noargs/"
+- title: oo
+  url: "/code/tips/subsystem/dotfiles/oo/"
+- title: peak
+  url: "/code/tips/subsystem/dotfiles/peak/"
+- title: prune-dirs
+  url: "/code/tips/subsystem/dotfiles/prune-dirs/"
+- title: search
+  url: "/code/tips/subsystem/dotfiles/search/"
+- title: setup
+  url: "/code/tips/subsystem/dotfiles/setup/"
+- title: show-hidden
+  url: "/code/tips/subsystem/dotfiles/show-hidden/"
+- title: sql
+  url: "/code/tips/subsystem/dotfiles/sql/"
+- title: sqldown
+  url: "/code/tips/subsystem/dotfiles/sqldown/"
+- title: sqlup
+  url: "/code/tips/subsystem/dotfiles/sqlup/"
+- title: star-wars
+  url: "/code/tips/subsystem/dotfiles/star-wars/"
+- title: testsql
+  url: "/code/tips/subsystem/dotfiles/testsql/"
+- title: ttar
+  url: "/code/tips/subsystem/dotfiles/ttar/"
+- title: unhide
+  url: "/code/tips/subsystem/dotfiles/unhide/"
+- title: untar
+  url: "/code/tips/subsystem/dotfiles/untar/"
