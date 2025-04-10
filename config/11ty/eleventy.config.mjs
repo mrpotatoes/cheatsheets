@@ -42,46 +42,9 @@ export default (eleventyConfig) => {
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
+  // ✅ eleventyConfig.addCollection('groupedUrls', collections.groupData)
   // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
   // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
-
-  /**
-   * Process:
-   *
-   * - Get categories object
-   * - Generate a unique url
-   *    - category + group
-   * - Save to a URLs object
-   * - Save this object to a file in the after event
-   * - Once those URLs are created I create virtual templates based on that
-   *
-   * Example URL
-   *  - /code/tips/languages/javascript/strings/retrivals/
-   */
-  eleventyConfig.addCollection('groupedUrls', (collectionApi) => {
-    const snippets = collectionApi.getFilteredByTag('snippets')
-    const urls = {}
-
-    snippets.forEach((snip) => {
-      // The group needs to be lowercased + slugified
-      const group = (snip.data.group || 'other').toLowerCase()
-      const catUrl = utils.categories.normalPath(snip)
-
-      // Use set here instead
-      if (!urls[`${catUrl}${group}`]) {
-        urls[`${catUrl}${group}`] = []
-      }
-
-      urls[`${catUrl}${group}`].push({
-        title: snip.data.title,
-        url: snip.page.url,
-      })
-    })
-
-    // console.log(urls['languages/javascript/strings/sorting'][0])
-
-    return urls
-  })
 
   // Shortcodes
   eleventyConfig.addShortcode('tree', shortCodes.htmlList)

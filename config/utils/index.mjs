@@ -38,6 +38,8 @@ export default {
     tree: data.tree,
     segmented: categories.segmented,
     catPath: categories.catPath,
+    link: categories.catLink,
+    tpl: categories.catTpl,
 
     list: () => {}, // Not sure yet
     paths: () => {}, // The category fn above

@@ -1,8 +1,5 @@
-import utils from '../../utils/index.mjs'
 import _ from 'lodash'
-
-const catLink = (id) => (`${utils.vars.urls.category}${id}/`)
-const catTpl = (id) => (`sub-category/${id}.njk`)
+import utils from '../../utils/index.mjs'
 
 /**
  * https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
@@ -24,11 +21,11 @@ export default (eleventyConfig) => {
   Object.keys(flattened).forEach((cat) => {
     const path = cat.replace(/^\/+|\/+$/g, '').replaceAll('/', '.')
 
-    eleventyConfig.addTemplate(catTpl(cat), '', {
+    eleventyConfig.addTemplate(utils.categories.tpl(cat), '', {
       layout: 'category.njk',
       title: flattened[cat].name,
       desc: flattened[cat].desc,
-      permalink: catLink(utils.strings.trimSlashes(cat)),
+      permalink: utils.categories.link(utils.strings.trimSlashes(cat)),
 
       category: cat,
       catTree: { [cat]: _.get(cats, path) },

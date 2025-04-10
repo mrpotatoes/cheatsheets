@@ -9,11 +9,13 @@ import _ from 'lodash'
  *  /code/tips/languages/javascript/strings/other
  */
 export default (eleventyConfig) => {
+  // const tree = utils.data.tree()
+
   Object.keys(utils.data.groups()).forEach(group => {
     eleventyConfig.addTemplate(`${group}.njk`, '', {
       layout: 'category-grouping.njk',
       title: group,
-      permalink: `/code/tips/${group}/`,
+      permalink: `${utils.vars.urls.category}/${group}/`,
       group: 'languages/javascript/strings/retrivals',
     })
   })

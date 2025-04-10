@@ -59,9 +59,7 @@ browser:
   - Clicking on a grouping will goto a page that loads all of those snippets
     - It doesn't make sense to add snippet content to the data file instead I will use `hotwire` to pull all that info into a page.
   - Add more metadata to thingy
-- A urls file to handle all url creation & manipulation
 - Abstract the breadcrumbs function so I can use it in more places
-- `memoize` all grouping & category data
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)

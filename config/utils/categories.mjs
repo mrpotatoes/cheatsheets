@@ -1,6 +1,22 @@
 import _ from 'lodash'
+import memoize from 'memoize'
+
 import * as errors from './errors.mjs'
 import * as vars from './variables.mjs'
+
+/**
+ *
+ * @param {*} id
+ * @returns
+ */
+export const catLink = (id) => (`${vars.urls.category}${id}/`)
+
+/**
+ *
+ * @param {*} id
+ * @returns
+ */
+export const catTpl = (id) => (`sub-category/${id}.njk`)
 
 /**
  *
@@ -34,7 +50,6 @@ export const segmented = (str, full) => {
 export const breadcrumbs = (categories, path, full = false) => {
   const split = segmented(path, full)
   const crumbs = [{ name: 'Snippets', url: vars.urls.category }]
-
   let acc = ''
 
   for (let i = 0; i < split.length; i++) {
@@ -146,4 +161,4 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc) => transformCategories(doc)
+export const flattenCategories = (doc) => memoize(transformCategories(doc))
