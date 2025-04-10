@@ -61,11 +61,7 @@ browser:
   - Add more metadata to thingy
 - A urls file to handle all url creation & manipulation
 - Abstract the breadcrumbs function so I can use it in more places
-- Add snippet counts
-  - To category tree PER category
-  - To snippets page PER card/grouping
 - `memoize` all grouping & category data
-- Allow for ordering for categories & snippets (`weight` property)
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)
@@ -75,6 +71,10 @@ browser:
 - Convert to [`noelforte/eleventy-plugin-vento`](https://github.com/noelforte/eleventy-plugin-vento)
   - Convert the [`htmlList.mjs`](../config/11ty/shortcodes/htmlList.mjs) into a partial
     - Might need to use `vento`'s [`{{ include}}`](https://vento.js.org/syntax/include/) functionality
+- Add snippet counts
+  - To category tree PER category
+  - To snippets page PER card/grouping
+- Allow for ordering for categories & snippets (`weight` property)
 
 **Tertiary**
 - Related content functionality
