@@ -17,9 +17,6 @@ import utils from '@utils/index'
 export default (collectionApi) => {
   const snippets = collectionApi.getFilteredByTag('snippets')
   const urls = {}
-  const empty = () => []
-  const fn = utils.data.emptyObject(empty)
-  const cats = fn(utils.categories.flattened(utils.data.tree()))
   const flattened = utils.categories.flattened(utils.data.tree())
 
   snippets.forEach((snip) => {
@@ -27,7 +24,6 @@ export default (collectionApi) => {
     const group = (snip.data.group || 'other').toLowerCase()
     const catUrl = utils.categories.normalPath(snip)
     const crumbs = utils.categories.crumbs(flattened, catUrl)
-    // console.log(crumbs)
 
     // Use set here instead
     if (!urls[`${catUrl}${group}`]) {
@@ -37,14 +33,9 @@ export default (collectionApi) => {
     urls[`${catUrl}${group}`].push({
       title: snip.data.title,
       url: snip.page.url,
-      crumbs: crumbs,
+      group: group,
     })
   })
-
-  // console.log(urls['languages/javascript/strings/sorting'][0])
-  // console.log(JSON.stringify(urls))
-  // console.log(urls['browser/html/other'][0].crumbs)
-  // console.log(urls)
 
   return urls
 }

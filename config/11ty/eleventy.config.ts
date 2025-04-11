@@ -26,8 +26,6 @@ export default (eleventyConfig) => {
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
 
-  // console.log('asd')
-
   // Filters
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)

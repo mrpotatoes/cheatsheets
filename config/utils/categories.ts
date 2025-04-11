@@ -102,7 +102,6 @@ export const normalizedCategoryPath = (snip) => {
 export const addGroup = (snippet, categories, group = 'Other') => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
-  // console.log(normalized)
 
   // TODO: Make this part of the error messaging.
   if (!cats[normalized]) {

@@ -55,3 +55,6 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - [List example](https://sandroroth.com/blog/)
   - [Post example](https://sandroroth.com/blog/angular-library/)
 - [Eleventy Themes & Templates - Built At Lightspeed](https://www.builtatlightspeed.com/category/eleventy)
+
+
+Figure out why 'Generate a random hex color' isn't showing up. Might be others.
