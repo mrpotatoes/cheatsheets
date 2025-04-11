@@ -14,10 +14,12 @@
     "start:debug": "rm -rf .cache cheatsheets; DEBUG=true npm run watch:eleventy & npm run watch:sass",
     "watch:eleventy": "npx @11ty/eleventy --config=config/11ty/eleventy.config.mjs --quiet --watch --port=8081 --serve",
     "watch:sass": "sass ./config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
+    "test": "tsx watch --include \"./content/*\" node_modules/@11ty/eleventy/cmd.cjs --config=config/11ty/eleventy.config.ts --quiet --port=8081 --serve",
     "new": "node ./scripts/new"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
+    "@types/node": "^22.14.0",
     "html-minifier": "^4.0.0",
     "pagefind": "^1.0.3",
     "prettier": "^2.7.1",
@@ -32,6 +34,7 @@
     "markdown-it": "^13.0.1",
     "memoize": "^10.1.0",
     "nunjucks": "^3.2.4",
-    "serve": "^14.2.1"
+    "serve": "^14.2.1",
+    "tsx": "^4.19.3"
   }
 }

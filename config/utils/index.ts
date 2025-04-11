@@ -1,7 +1,7 @@
-import * as data from './data.mjs'
-import * as categories from './categories.mjs'
-import * as vars from './variables.mjs'
-import * as urls from './urls.mjs'
+import * as data from '@utils/data'
+import * as categories from '@utils/categories'
+import * as vars from '@utils/variables'
+import * as urls from '@utils/urls'
 
 export default {
   vars: {
@@ -9,7 +9,7 @@ export default {
     passthroughs: vars.passthroughs,
     basePath: vars.basePath,
     targets: vars.targets,
-    snippetBase: vars.snippetBase,
+    snippetBase: vars.urls.category,
     urls: vars.urls,
   },
 
@@ -41,7 +41,7 @@ export default {
     link: categories.catLink,
     tpl: categories.catTpl,
 
-    list: () => {}, // Not sure yet
-    paths: () => {}, // The category fn above
+    list: () => { }, // Not sure yet
+    paths: () => { }, // The category fn above
   },
 }

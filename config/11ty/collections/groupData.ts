@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import utils from '../../utils/index.mjs'
+import utils from '@utils/index'
 
 /**
  * Process:

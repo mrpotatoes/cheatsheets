@@ -1,4 +1,4 @@
-import utils from '../../utils/index.mjs'
+import utils from '@utils/index'
 
 export default (collectionApi) => collectionApi
   .getFilteredByTag('snippets').reduce((acc, curr) => {

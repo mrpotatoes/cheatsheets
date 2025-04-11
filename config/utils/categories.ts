@@ -1,8 +1,8 @@
 import _ from 'lodash'
 import memoize from 'memoize'
 
-import * as errors from './errors.mjs'
-import * as vars from './variables.mjs'
+import * as errors from '@utils/errors'
+import * as vars from '@utils/variables'
 
 /**
  *
@@ -102,6 +102,7 @@ export const normalizedCategoryPath = (snip) => {
 export const addGroup = (snippet, categories, group = 'Other') => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
+  // console.log(normalized)
 
   // TODO: Make this part of the error messaging.
   if (!cats[normalized]) {
@@ -161,4 +162,4 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc) => memoize(transformCategories(doc))
+export const flattenCategories = (doc) => transformCategories(doc)

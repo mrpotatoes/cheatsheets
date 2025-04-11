@@ -26,6 +26,9 @@ layout: base.njk
           {% tree catTree %}
         {% endif %}
 
+        <pre> {{ category | debug }} </pre>
+        <pre> {{ collections.groupedSnippets[category] | debug }} </pre>
+
         <div class="snippet-group-container">
           {% for group in collections.groupedSnippets[category].groups %}
             <div class="snippet-group-left">

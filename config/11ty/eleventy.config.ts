@@ -2,14 +2,14 @@ console.clear()
 
 import yaml from 'js-yaml'
 import _ from 'lodash'
-import collections from './collections/index.mjs'
-import events from './events/index.mjs'
-import filters from './filters/index.mjs'
-import plugins from './plugins/index.mjs'
-import tpls from './templates/index.mjs'
-import transforms from './transforms/index.mjs'
-import shortCodes from './shortcodes/index.mjs'
-import utils from '../utils/index.mjs'
+import collections from '@collections/index'
+import events from '@events/index'
+import filters from '@filters/index'
+import plugins from '@plugins/index'
+import tpls from '@templates/index'
+import transforms from '@transforms/index'
+import shortCodes from '@shortcodes/index'
+import utils from '@utils/index'
 
 export default (eleventyConfig) => {
   // Allow yaml data
@@ -25,6 +25,8 @@ export default (eleventyConfig) => {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
+
+  // console.log('asd')
 
   // Filters
   eleventyConfig.addFilter('urlize', filters.urlize)
