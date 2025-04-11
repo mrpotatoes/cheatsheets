@@ -1,8 +1,8 @@
 import _ from 'lodash'
 import memoize from 'memoize'
 
-import * as errors from './errors.mjs'
-import * as vars from './variables.mjs'
+import * as errors from '@utils/errors'
+import * as vars from '@utils/variables'
 
 /**
  *
@@ -161,4 +161,4 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc) => memoize(transformCategories(doc))
+export const flattenCategories = (doc) => transformCategories(doc)

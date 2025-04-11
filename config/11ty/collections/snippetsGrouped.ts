@@ -1,4 +1,4 @@
-import utils from '../../utils/index.mjs'
+import utils from '@utils'
 
 export default (collectionApi) => {
   const snippets = collectionApi.getFilteredByTag('snippets')

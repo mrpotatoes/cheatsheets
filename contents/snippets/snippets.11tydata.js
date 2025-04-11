@@ -1,4 +1,4 @@
-import utils from '../../config/utils/index.mjs'
+import utils from '@utils'
 
 export default {
   layout: 'snippet.njk',
