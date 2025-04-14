@@ -60,6 +60,11 @@ browser:
     - It doesn't make sense to add snippet content to the data file instead I will use `hotwire` to pull all that info into a page.
   - Add more metadata to thingy
 - Abstract the breadcrumbs function so I can use it in more places
+- `TypeScript` conversion
+  - Create type files for all functions
+  - Document all functions
+  - Write tests for everything
+  - Create documentation output (perhaps to the `README`?)
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)

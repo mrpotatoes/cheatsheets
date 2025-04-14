@@ -27,12 +27,15 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - `feature/fuzzy-search`
   - `feature/theme`
   - `feature/mdit-plugins`
+  - `feature/custom-modules`
 - Check out [`@code-blocks`](https://code-blocks.surge.sh/)
 - Interate [`MarkdownIt`](https://mdit-plugins.github.io/) plugins for lots more functionality
 - Create a `/changelog` page
   - Should automatically update
 - Create a page that pulls in this projects `README`
   - Could go best under `/changelog`
+- [`pgilad/leasot` - GitHub Actions example](https://github.com/pgilad/leasot/issues/340)
+- A better `yaml` loader & conversion (object literal → `YAML`)
 
 ## Links
 ### Useful Articles
