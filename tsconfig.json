@@ -6,7 +6,6 @@
     "skipLibCheck": true,
     "target": "ESNext",
 
-    // "rootDirs": ["./"],
     "baseUrl": "./",
     "paths": {
       "@utils": [ "./config/utils/index.ts" ],
@@ -27,6 +26,8 @@
       "@transforms/*": [ "./config/11ty/transforms/*" ],
       "@variables": [ "./config/11ty/variables/index.ts" ],
       "@variables/*": [ "./config/11ty/variables/*" ],
+      "@types": [ "./config/types/index.ts" ],
+      "@types/*": [ "./config/types/*" ],
     },
   },
   "include": [ "./config/**/*", "./contents/**/*" ],

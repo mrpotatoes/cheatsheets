@@ -64,6 +64,9 @@ browser:
   - Create type files for all functions
   - Document all functions
   - Write tests for everything
+    - Not sure if I want to co-locate or `./config/tests/` directory. I lean toward the latter.
+    - ([2024 testing frameworks comparisons](https://raygun.com/blog/javascript-unit-testing-frameworks/))
+    - [Jest - Getting Started (`TypeScript`)](https://jestjs.io/docs/getting-started#using-typescript)
   - Create documentation output (perhaps to the `README`?)
 
 **Secondary**
