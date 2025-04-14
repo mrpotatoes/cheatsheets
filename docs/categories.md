@@ -55,19 +55,6 @@ browser:
 
 ## What's Next
 **Priority**
-- Category Group urls
-  - Clicking on a grouping will goto a page that loads all of those snippets
-    - It doesn't make sense to add snippet content to the data file instead I will use `hotwire` to pull all that info into a page.
-  - Add more metadata to thingy
-- Abstract the breadcrumbs function so I can use it in more places
-- `TypeScript` conversion
-  - Create type files for all functions
-  - Document all functions
-  - Write tests for everything
-    - Not sure if I want to co-locate or `./config/tests/` directory. I lean toward the latter.
-    - ([2024 testing frameworks comparisons](https://raygun.com/blog/javascript-unit-testing-frameworks/))
-    - [Jest - Getting Started (`TypeScript`)](https://jestjs.io/docs/getting-started#using-typescript)
-  - Create documentation output (perhaps to the `README`?)
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)

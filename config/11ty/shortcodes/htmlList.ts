@@ -1,14 +1,41 @@
 import _ from 'lodash'
 import utils from '@utils/index'
-
-const href = (name, link) => (`<a href="${link}">${name}</a>`)
-const path = (base, next) => (!next) ? `${base}/` : `${base}${next}/`
-const li = (a, children, level, newPath) => `<ul><li>${a}${htmlList(children, level + 1, newPath)}</li></ul>`
+import { Core, Meta } from '@mytypes/categories'
 
 /**
- * Remove levelStr when ready
+ *
+ * @param name
+ * @param link
+ * @returns
  */
-const htmlList = (cats, level = 0, prop = '') => {
+const href = (name: string, link: string): string => (`<a href="${link}">${name}</a>`)
+
+/**
+ *
+ * @param base
+ * @param next
+ * @returns
+ */
+const path = (base: string, next: string): string => (!next) ? `${base}/` : `${base}${next}/`
+
+/**
+ *
+ * @param a
+ * @param children
+ * @param level
+ * @param newPath
+ * @returns
+ */
+const li = (a: string, children: Core, level: number, newPath: string): string => `<ul><li>${a}${htmlList(children, level + 1, newPath)}</li></ul>`
+
+/**
+ * TODO: Remove level when ready
+ * @param cats
+ * @param level
+ * @param prop
+ * @returns
+ */
+const htmlList = (cats: Meta, level = 0, prop = ''): string => {
   var str = ''
 
   for (var key in cats) {
@@ -25,4 +52,4 @@ const htmlList = (cats, level = 0, prop = '') => {
   return str
 }
 
-export default (catTree) => htmlList(catTree)
+export default (catTree: Core): string => htmlList(catTree)

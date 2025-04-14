@@ -10,7 +10,7 @@ layout: base.njk
       <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
 
       {% for crumb in collections.crumbs[catPath] %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.name }}</a>&nbsp;>&nbsp;
+        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
       {% endfor %}
 
       <span>{{ title }}</span>

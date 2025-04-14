@@ -1,1 +1,1 @@
-export default (content) => JSON.stringify(content, null, 2)
+export default (content: string): string => JSON.stringify(content, null, 2)

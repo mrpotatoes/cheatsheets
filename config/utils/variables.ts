@@ -1,4 +1,4 @@
-export const targets = (config) => `./config/11ty/${config}/**`
+export const targets = (config: string): string => `./config/11ty/${config}/**`
 
 export const basePath = process.env.NODE_ENV == undefined ? '/' : '/cheatsheets'
 

@@ -1,10 +1,13 @@
 {
   "compilerOptions": {
     "esModuleInterop": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
     "skipLibCheck": true,
     "target": "ESNext",
+
+    // "noImplicitAny": true,
+    "strict": true,
 
     "baseUrl": "./",
     "paths": {
@@ -26,8 +29,8 @@
       "@transforms/*": [ "./config/11ty/transforms/*" ],
       "@variables": [ "./config/11ty/variables/index.ts" ],
       "@variables/*": [ "./config/11ty/variables/*" ],
-      "@types": [ "./config/types/index.ts" ],
-      "@types/*": [ "./config/types/*" ],
+      "@mytypes": [ "./config/types/index.ts" ],
+      "@mytypes/*": [ "./config/types/*" ],
     },
   },
   "include": [ "./config/**/*", "./contents/**/*" ],

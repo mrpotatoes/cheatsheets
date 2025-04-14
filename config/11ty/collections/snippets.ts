@@ -1,6 +1,7 @@
+import { Config } from '@mytypes/11ty'
 import utils from '@utils/index'
 
-export default (collectionApi) => collectionApi
+export default (collectionApi: Config) => collectionApi
   .getFilteredByTag('snippets').reduce((acc, curr) => {
     const category = utils.categories.normalPath(curr)
 

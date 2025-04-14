@@ -10,8 +10,9 @@ import tpls from '@templates/index'
 import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
+import { Config } from '@mytypes/11ty'
 
-export default (eleventyConfig) => {
+export default (eleventyConfig: Config) => {
   // Allow yaml data
   eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
 

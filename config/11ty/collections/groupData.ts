@@ -1,5 +1,7 @@
 import _ from 'lodash'
 import utils from '@utils/index'
+import { Config } from '@mytypes/11ty'
+import { GroupedUrls } from '@mytypes/categories'
 
 /**
  * Process:
@@ -14,7 +16,7 @@ import utils from '@utils/index'
  * Example URL
  *  - /code/tips/languages/javascript/strings/retrivals/
  */
-export default (collectionApi) => {
+export default (collectionApi: Config): GroupedUrls => {
   const snippets = collectionApi.getFilteredByTag('snippets')
   const urls = {}
   const flattened = utils.categories.flattened(utils.data.tree())
@@ -23,9 +25,12 @@ export default (collectionApi) => {
     // The group needs to be lowercased + slugified
     const group = (snip.data.group || 'other').toLowerCase()
     const catUrl = utils.categories.normalPath(snip)
-    const crumbs = utils.categories.crumbs(flattened, catUrl)
+    // const crumbs = utils.categories.crumbs(flattened, catUrl)
 
-    // Use set here instead
+    /**
+     * TODO: Element implicitly has an 'any' type because expression of type '`${string}${any}`' can't be used to index type '{}'
+     * TODO: Use set here instead
+     */
     if (!urls[`${catUrl}${group}`]) {
       urls[`${catUrl}${group}`] = []
     }

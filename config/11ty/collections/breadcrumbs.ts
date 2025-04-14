@@ -1,7 +1,8 @@
 import _ from 'lodash'
-import utils from '@utils/index'
+import utils from '@utils'
+import { Config } from '@mytypes/11ty'
 
-export default (collectionApi) => {
+export default (collectionApi: Config) => {
   const cats = utils.categories.tree()
   const flattened = utils.categories.flattened(cats)
 

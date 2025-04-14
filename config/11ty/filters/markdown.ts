@@ -1,3 +1,3 @@
 import markdownit from 'markdown-it'
 
-export default (val) => markdownit({ html: true }).render(val)
+export default (val: string): string => markdownit({ html: true }).render(val)

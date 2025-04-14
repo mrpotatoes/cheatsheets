@@ -3,37 +3,42 @@ import memoize from 'memoize'
 
 import * as errors from '@utils/errors'
 import * as vars from '@utils/variables'
+import { Breadcrumb, Core, Empty, Flattened, Grouped } from '@mytypes/categories'
+import { EleventyPage } from '@mytypes/11ty'
 
 /**
+ * Get a unique category link
  *
  * @param {*} id
  * @returns
  */
-export const catLink = (id) => (`${vars.urls.category}${id}/`)
+export const catLink = (id: string): string => (`${vars.urls.category}${id}/`)
 
 /**
+ * Get a unique sub-category template
  *
  * @param {*} id
  * @returns
  */
-export const catTpl = (id) => (`sub-category/${id}.njk`)
+export const catTpl = (id: string): string => (`sub-category/${id}.njk`)
 
 /**
- *
+ * Clean a category path of any extra 11ty url stuff.
  * @param {*} url
  * @param {*} slug
  * @returns
  */
-export const catPath = (url, slug) => url
+export const catPath = (url: string, slug: string): string => url
   .replace(`${slug}/`, '')
   .replace(`${vars.urls.category}snippets/`, '')
 
 /**
+ * Get a path segmented into parts
  *
  * @param {*} str
- * @returns
+ * @returns An array of path parts
  */
-export const segmented = (str, full) => {
+export const segmented = (str: string, full: boolean): string[] => {
   const trimmed = str.replace(/^\/+|\/+$/g, '').split('/')
   const length = full ? trimmed.length : trimmed.length - 1
   const paths = trimmed.slice(0, length)
@@ -42,14 +47,19 @@ export const segmented = (str, full) => {
 }
 
 /**
+ * Build an array of breadcrumbs for a given path
  *
- * @param {*} categories
- * @param {*} path
+ * TODO: Sincej the flattened array would be memoized I should remove the
+ *  function parameter as it wouldn't be needed
+ *
+ * @param categories
+ * @param path
+ * @param full
  * @returns
  */
-export const breadcrumbs = (categories, path, full = false) => {
+export const breadcrumbs = (categories: Flattened, path: string, full = false): Breadcrumb[] => {
   const split = segmented(path, full)
-  const crumbs = [{ name: 'Snippets', url: vars.urls.category }]
+  const crumbs = [{ title: 'Snippets', url: vars.urls.category }]
   let acc = ''
 
   for (let i = 0; i < split.length; i++) {
@@ -57,7 +67,7 @@ export const breadcrumbs = (categories, path, full = false) => {
     acc = `${acc}${e}/`
 
     crumbs.push({
-      name: categories[acc].name,
+      title: categories[acc].name,
       url: vars.urls.category + acc,
     })
   }
@@ -66,20 +76,22 @@ export const breadcrumbs = (categories, path, full = false) => {
 }
 
 /**
+ * An empty snippet object.
  *
  * @returns
  */
-export const emptySnippet = () => ({
+export const emptySnippet = (): Empty => ({
   groups: [],
   snippets: {},
 })
 
 /**
+ * Normalize a category path
  *
  * @param {*} snip
  * @returns
  */
-export const normalizedCategoryPath = (snip) => {
+export const normalizedCategoryPath = (snip: EleventyPage): string => {
   const slug = snip.page.fileSlug
   const url = snip.page.url
   const cat = url.replace(vars.urls.category, '').replace(slug + '/', '')
@@ -99,7 +111,7 @@ export const normalizedCategoryPath = (snip) => {
  * @param {*} group
  * @returns
  */
-export const addGroup = (snippet, categories, group = 'Other') => {
+export const addGroup = (snippet: EleventyPage, categories: any, group = 'Other'): Grouped => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
 
@@ -133,14 +145,15 @@ export const addGroup = (snippet, categories, group = 'Other') => {
 }
 
 /**
+ * Take an object tree and flatten it
  *
  * @param {*} obj
  * @param {*} delimiter
  * @param {*} prefix
  * @returns
  */
-export const transformCategories = (obj, delimiter = '/', prefix = '') =>
-  Object.keys(obj).reduce((acc, key) => {
+export const transformCategories = (obj: Core, delimiter = '/', prefix = ''): Flattened =>
+  Object.keys(obj).reduce((acc: Flattened, key: string) => {
     const pre = prefix.length ? `${prefix}${delimiter}` : ''
     const isObject = typeof obj[key] === 'object'
     const notEmpty = obj[key] !== null
@@ -157,8 +170,8 @@ export const transformCategories = (obj, delimiter = '/', prefix = '') =>
   }, {})
 
 /**
- *
+ * TODO: Memoize
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc) => transformCategories(doc)
+export const flattenCategories = (doc: Core): Flattened => transformCategories(doc)

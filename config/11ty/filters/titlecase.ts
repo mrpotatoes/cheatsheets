@@ -1,10 +1,10 @@
-export default (str) => {
+export default (str: string): string | boolean => {
   if ((str === null) || (str === ''))
-    return false;
+    return false
   else
-    str = str.toString();
+    str = str.toString()
 
-  return str.replace(/\w\S*/g, (txt) => (
+  return str.replace(/\w\S*/g, (txt: string) => (
     txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
-  ));
-};
+  ))
+}

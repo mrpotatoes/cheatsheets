@@ -6,11 +6,11 @@ data: groups
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
-      <a class="header__link" href="/">[Home]</a>&nbsp;&nbsp;
+      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
 
       {% for crumb in crumbs %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.name }}</a>
-        {% if loop.last %}  {% else %} &nbsp;>&nbsp; {% endif %}
+        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
+        {% if loop.last %} {% else %} &nbsp;>&nbsp; {% endif %}
       {% endfor %}
     </div>
   </div>

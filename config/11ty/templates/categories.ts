@@ -1,10 +1,11 @@
 import _ from 'lodash'
 import utils from '@utils/index'
+import { Config } from '@mytypes/11ty'
 
 /**
  * https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
  */
-export default (eleventyConfig) => {
+export default (eleventyConfig: Config) => {
   const cats = utils.data.tree()
   const flattened = utils.categories.flattened(cats)
 

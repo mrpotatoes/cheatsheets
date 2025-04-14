@@ -1,4 +1,4 @@
-export default (content) => {
+export default (content: string): string => {
   return content
   // if (this.outputPath && this.outputPath.endsWith('.html')) {
   //   return htmlmin.minify(content, {

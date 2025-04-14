@@ -1,7 +1,7 @@
 import * as data from '@utils/data'
 import * as categories from '@utils/categories'
 import * as vars from '@utils/variables'
-import * as urls from '@utils/urls'
+import { EleventyPage } from '@mytypes/11ty'
 
 export default {
   vars: {
@@ -14,7 +14,7 @@ export default {
   },
 
   urls: {
-    snippet: (page) => `${vars.urls.sansTrailing}${page.filePathStem.replace('snippets/', '')}/`,
+    snippet: (page: EleventyPage) => `${vars.urls.sansTrailing}${page.filePathStem.replace('snippets/', '')}/`,
   },
 
   data: {
@@ -25,7 +25,7 @@ export default {
   },
 
   strings: {
-    trimSlashes: (str) => str.replace(/^\/+|\/+$/g, ''),
+    trimSlashes: (str: string): string => str.replace(/^\/+|\/+$/g, ''),
   },
 
   // I think it might be best to memoize most of these functions
