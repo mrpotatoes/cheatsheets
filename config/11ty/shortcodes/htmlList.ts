@@ -38,7 +38,7 @@ const li = (a: string, children: Core, level: number, newPath: string): string =
 const htmlList = (cats: Meta, level = 0, prop = ''): string => {
   var str = ''
 
-  for (var key in cats) {
+  for (let key in cats) {
     if (key === 'meta') {
       continue
     }
@@ -52,4 +52,4 @@ const htmlList = (cats: Meta, level = 0, prop = ''): string => {
   return str
 }
 
-export default (catTree: Core): string => htmlList(catTree)
+export default (catTree: Meta): string => htmlList(catTree)

@@ -1,5 +1,5 @@
-import { Grouped } from '@mytypes/categories'
 import utils from '@utils'
+import { Grouped } from '@mytypes/categories'
 import { Config, EleventyPage } from '@mytypes/11ty'
 
 export default (collectionApi: Config): Grouped => {

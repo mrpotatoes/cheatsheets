@@ -1,10 +1,11 @@
 import MarkdownIt from 'markdown-it'
-import { Breadcrumb } from '@mytypes/categories'
+import { Breadcrumb, Meta } from '@mytypes/categories'
 
 export type Filtered = (tag: string) => any[]
 
-type thing = (tag: string) => void
-type thing2 = (a: Collection, tag: string) => string
+type GenericCallback = (tag: string) => void
+type Transform = (content: string) => string
+type Shortcode = (cats: Meta) => string
 
 // TODO: Make generic
 export type Collection = (conf: Config) => any
@@ -12,23 +13,23 @@ export type Collection = (conf: Config) => any
 export interface Config {
   getFilteredByTag: (tag: string) => any[]
   addCollection: (tag: string, fn: Collection) => void
-  addDataExtension: (exts: string, fn: thing) => void
+  addDataExtension: (exts: string, fn: GenericCallback) => void
   addGlobalData: (exts: string, data: any) => void
   addPassthroughCopy: (t: any) => void
   addFilter: (tag: string, fn: any) => void
-  addPlugin: (fn: thing) => void
+  addPlugin: (fn: GenericCallback) => void
 
   // TODO: Make generic. Every use of this has different properties.
   addTemplate: (tpl: string, content: string, config: TemplateConfig) => void
 
   // TODO: Make generic
-  setLibrary: (tag: string, fn: thing | MarkdownIt) => void
+  setLibrary: (tag: string, fn: GenericCallback | MarkdownIt) => void
 
   // TODO: Make generic
-  addShortcode: (tag: string, fn: thing2) => void
+  addShortcode: (tag: string, fn: Shortcode) => void
 
   // TODO: Make generic
-  addTransform: (tag: string, fn: thing2) => void
+  addTransform: (tag: string, fn: Transform) => void
 
   on: (tag: string, fn: () => void) => void
 }

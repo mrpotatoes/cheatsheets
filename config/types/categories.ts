@@ -33,7 +33,7 @@ export interface Group {
   [key: string]: {
     groups: string[]
     snippets: {
-      [key: string]: Snippet
+      [key: string]: Snippet[]
     }
   }
 }

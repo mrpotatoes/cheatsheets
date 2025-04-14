@@ -3,7 +3,7 @@ import memoize from 'memoize'
 
 import * as errors from '@utils/errors'
 import * as vars from '@utils/variables'
-import { Breadcrumb, Core, Empty, Flattened, Grouped } from '@mytypes/categories'
+import { Breadcrumb, Core, Empty, Flattened, Group, Grouped } from '@mytypes/categories'
 import { EleventyPage } from '@mytypes/11ty'
 
 /**
@@ -111,7 +111,7 @@ export const normalizedCategoryPath = (snip: EleventyPage): string => {
  * @param {*} group
  * @returns
  */
-export const addGroup = (snippet: EleventyPage, categories: any, group = 'Other'): Grouped => {
+export const addGroup = (snippet: EleventyPage, categories: Group, group = 'Other'): Group => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
 

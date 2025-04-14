@@ -49,7 +49,7 @@ export default (eleventyConfig: Config) => {
 
   // Shortcodes
   eleventyConfig.addShortcode('tree', shortCodes.htmlList)
-  eleventyConfig.addShortcode('snippetLinks', shortCodes.snippetLinks)
+  // eleventyConfig.addShortcode('snippetLinks', shortCodes.snippetLinks)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
