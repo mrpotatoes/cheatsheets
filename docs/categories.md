@@ -55,6 +55,8 @@ browser:
 
 ## What's Next
 **Priority**
+- Memoize more stuff
+- Main datastructure interface
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)

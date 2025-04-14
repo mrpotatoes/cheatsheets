@@ -7,7 +7,6 @@
  *    - Flattened & Empty
  *    - Grouped
  */
-
 export interface Meta {
   name: string
   desc: string
@@ -18,7 +17,8 @@ export interface Meta {
  * TODO: I think it will make more sense to change the category schema
  */
 export interface Core {
-  [key: string]: Meta
+  // [key: string]: Meta | Core // hmmmm
+  [key: string]: Meta | Core
 }
 
 export interface Flattened {
@@ -38,36 +38,28 @@ export interface Group {
   }
 }
 
+export interface Base {
+  title: string
+  url: string
+}
+
+export type Breadcrumb = Base
+
 export interface Empty {
   groups: string[]
   snippets: {}
 }
 
-export interface Snippet {
-  title: string
-  url: string
+export interface Snippet extends Base {
   slug: string
 }
 
-export interface GroupUrl {
-  title: string
-  url: string
+export interface GroupUrl extends Base {
   group: string
-}
-
-export interface BaseObject {
-  title: string
-  url: string
 }
 
 export interface GroupedUrls {
   [key: string]: GroupUrl[]
-}
-
-// TODO: Convert name to title
-export interface Breadcrumb {
-  title: string
-  url: string
 }
 
 export interface CatSnippet {
