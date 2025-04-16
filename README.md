@@ -21,10 +21,9 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
 - Image management
   - Since I will also be using this website to house my blog I will want to handle images a little differently. To be researched.
 - Feature branches
-  - `feature/typescript`
+  - `feature/fuzzy-search`
   - `feature/vento`
   - `feature/hotwire`
-  - `feature/fuzzy-search`
   - `feature/theme`
   - `feature/mdit-plugins`
   - `feature/custom-modules`
