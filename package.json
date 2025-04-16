@@ -2,6 +2,7 @@
   "name": "cheatsheets",
   "description": "My tech blog & cheatsheets",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "clean": "rm -rf .cache cheatsheets; ",
     "build": "rm -rf .cache cheatsheets; env NODE_ENV=production npm run build:eleventy && npm run build:sass",
@@ -26,7 +27,7 @@
     "@types/js-yaml": "^4.0.9",
     "@types/lodash": "^4.17.16",
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "^22.14.0",
+    "@types/node": "^22.14.1",
     "html-minifier": "^4.0.0",
     "pagefind": "^1.0.3",
     "prettier": "^2.7.1",
