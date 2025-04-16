@@ -3,7 +3,7 @@ import _ from 'lodash'
 import fs from 'fs'
 import memoize from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { Core } from '@mytypes/categories'
+import { CategoryTree } from '@mytypes/categories'
 
 /**
  * Takes a key/value object and sets every key to the supplied function
@@ -36,9 +36,9 @@ export const directory = (path: string, file: string): string =>
  * @param dataFile
  * @returns
  */
-export const yamlData = memoize((dataFile: string): Core => {
+export const yamlData = memoize((dataFile: string): CategoryTree => {
   const file = directory('config/data', dataFile)
-  const doc = yaml.load(fs.readFileSync(file, 'utf8')) as Core
+  const doc = yaml.load(fs.readFileSync(file, 'utf8')) as CategoryTree
 
   return doc
 })
@@ -48,10 +48,10 @@ export const yamlData = memoize((dataFile: string): Core => {
  *
  * @returns
  */
-export const tree = (): Core => yamlData('categories.yml')
+export const tree = (): CategoryTree => yamlData('categories.yml')
 
 /**
  * Grouping object
  * @returns
  */
-export const groups = (): Core => yamlData('groups.yml')
+export const groups = (): CategoryTree => yamlData('groups.yml')

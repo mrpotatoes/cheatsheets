@@ -31,6 +31,8 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - `feature/creation-scripts`
     - Write in `.ts`
     - Create path aliases if needed/desired
+  - [`azat-io/todoctor`](https://github.com/azat-io/todoctor)
+    - A better and nicer looking todo reporter. Example command: `todoctor -o .reports`
 - Check out [`@code-blocks`](https://code-blocks.surge.sh/)
 - Interate [`MarkdownIt`](https://mdit-plugins.github.io/) plugins for lots more functionality
 - Create a `/changelog` page

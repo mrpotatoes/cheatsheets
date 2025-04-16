@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import utils from '@utils/index'
-import { Core, Meta } from '@mytypes/categories'
+import { CategoryTree } from '@mytypes/categories'
 
 /**
  *
@@ -19,6 +19,7 @@ const href = (name: string, link: string): string => (`<a href="${link}">${name}
 const path = (base: string, next: string): string => (!next) ? `${base}/` : `${base}${next}/`
 
 /**
+ * TODO: Fix my typings
  *
  * @param a
  * @param children
@@ -26,16 +27,18 @@ const path = (base: string, next: string): string => (!next) ? `${base}/` : `${b
  * @param newPath
  * @returns
  */
-const li = (a: string, children: Core, level: number, newPath: string): string => `<ul><li>${a}${htmlList(children, level + 1, newPath)}</li></ul>`
+const li = (a: string, children: CategoryTree, level: number, newPath: string): string => `<ul><li>${a}${htmlList(children, level + 1, newPath)}</li></ul>`
 
 /**
  * TODO: Remove level when ready
+ * TODO: Fix typings here
+ *
  * @param cats
  * @param level
  * @param prop
  * @returns
  */
-const htmlList = (cats: Meta, level = 0, prop = ''): string => {
+const htmlList = (cats: CategoryTree, level = 0, prop = ''): string => {
   var str = ''
 
   for (let key in cats) {
@@ -52,4 +55,4 @@ const htmlList = (cats: Meta, level = 0, prop = ''): string => {
   return str
 }
 
-export default (catTree: Meta): string => htmlList(catTree)
+export default (catTree: CategoryTree): string => htmlList(catTree)

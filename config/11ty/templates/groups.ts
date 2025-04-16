@@ -1,9 +1,9 @@
 import _ from 'lodash'
 import utils from '@utils'
 import { breadcrumbs } from '@utils/categories'
-import { Config } from '@mytypes/11ty'
+import { EleventyConfig } from '@mytypes/11ty'
 
-export default (eleventyConfig: Config) => {
+export default (eleventyConfig: EleventyConfig) => {
   const tree = utils.categories.flattened(utils.data.tree())
 
   Object.keys(utils.data.groups()).forEach(group => {

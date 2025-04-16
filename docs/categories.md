@@ -57,6 +57,7 @@ browser:
 **Priority**
 - Memoize more stuff
 - Main datastructure interface
+- Add the [`11ty.ts`](https://www.npmjs.com/package/11ty.ts) package for types support
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)

@@ -1,7 +1,6 @@
 import _ from 'lodash'
-import utils from '@utils/index'
-import { Config } from '@mytypes/11ty'
+import { EleventyConfig } from '@mytypes/11ty'
 
-export default (collectionApi: Config) => {
+export default (collectionApi: EleventyConfig): string => {
   return 'Nothing here yet'
 }

@@ -13,12 +13,16 @@ export interface Meta {
   weight?: number
 }
 
+export interface Base {
+  title: string
+  url: string
+}
+
 /**
- * TODO: I think it will make more sense to change the category schema
+ * TODO: Validate if this typing is correct. I feel that it is recursive.
  */
-export interface Core {
-  // [key: string]: Meta | Core // hmmmm
-  [key: string]: Meta | Core
+export interface CategoryTree {
+  [key: string]: Meta[]
 }
 
 export interface Flattened {
@@ -33,14 +37,13 @@ export interface Group {
   [key: string]: {
     groups: string[]
     snippets: {
-      [key: string]: Snippet[]
+      [key: string]: GroupSnippet[]
     }
   }
 }
 
-export interface Base {
-  title: string
-  url: string
+export interface GroupSnippet extends Base {
+  slug: string
 }
 
 export type Breadcrumb = Base
@@ -48,10 +51,6 @@ export type Breadcrumb = Base
 export interface Empty {
   groups: string[]
   snippets: {}
-}
-
-export interface Snippet extends Base {
-  slug: string
 }
 
 export interface GroupUrl extends Base {
@@ -66,4 +65,8 @@ export interface CatSnippet {
   url: string
   fileSlug: string
   filePathStem: string
+}
+
+export interface Snippets {
+  [key: string]: Base[]
 }

@@ -1,6 +1,6 @@
-export default (str: string): string | boolean => {
+export default (str: string): string => {
   if ((str === null) || (str === ''))
-    return false
+    return ''
   else
     str = str.toString()
 

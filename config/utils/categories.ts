@@ -1,10 +1,8 @@
 import _ from 'lodash'
-import memoize from 'memoize'
-
 import * as errors from '@utils/errors'
 import * as vars from '@utils/variables'
-import { Breadcrumb, Core, Empty, Flattened, Group, Grouped } from '@mytypes/categories'
-import { EleventyPage } from '@mytypes/11ty'
+import { Breadcrumb, CategoryTree, Empty, Flattened, Group } from '@mytypes/categories'
+import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
 
 /**
  * Get a unique category link
@@ -91,7 +89,7 @@ export const emptySnippet = (): Empty => ({
  * @param {*} snip
  * @returns
  */
-export const normalizedCategoryPath = (snip: EleventyPage): string => {
+export const normalizedCategoryPath = (snip: CollectionItem | CollectionItemPicked): string => {
   const slug = snip.page.fileSlug
   const url = snip.page.url
   const cat = url.replace(vars.urls.category, '').replace(slug + '/', '')
@@ -111,7 +109,7 @@ export const normalizedCategoryPath = (snip: EleventyPage): string => {
  * @param {*} group
  * @returns
  */
-export const addGroup = (snippet: EleventyPage, categories: Group, group = 'Other'): Group => {
+export const addGroup = (snippet: CollectionItem, categories: Group, group = 'Other'): Group => {
   const cats = _.cloneDeep(categories)
   const normalized = normalizedCategoryPath(snippet)
 
@@ -147,12 +145,14 @@ export const addGroup = (snippet: EleventyPage, categories: Group, group = 'Othe
 /**
  * Take an object tree and flatten it
  *
+ * TODO: The types here are all fubar'd. This is used a lot so I need to figure this out
+ *
  * @param {*} obj
  * @param {*} delimiter
  * @param {*} prefix
  * @returns
  */
-export const transformCategories = (obj: Core, delimiter = '/', prefix = ''): Flattened =>
+export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix = ''): Flattened =>
   Object.keys(obj).reduce((acc: Flattened, key: string) => {
     const pre = prefix.length ? `${prefix}${delimiter}` : ''
     const isObject = typeof obj[key] === 'object'
@@ -160,6 +160,7 @@ export const transformCategories = (obj: Core, delimiter = '/', prefix = ''): Fl
     const isLength = Object.keys(obj[key]).length > 0
     const isMeta = key === 'meta'
 
+    // TODO: Can I clean this up somehow?
     if (isMeta) {
       acc[pre] = obj[key]
     } else if (isObject && notEmpty && isLength) {
@@ -174,4 +175,5 @@ export const transformCategories = (obj: Core, delimiter = '/', prefix = ''): Fl
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc: Core): Flattened => transformCategories(doc)
+export const flattenCategories = (doc: CategoryTree): Flattened =>
+  transformCategories(doc)

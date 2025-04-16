@@ -1,8 +1,9 @@
 import _ from 'lodash'
 import utils from '@utils'
-import { Config } from '@mytypes/11ty'
+import { EleventyConfig } from '@mytypes/11ty'
+import { Snippets } from '@mytypes/categories'
 
-export default (collectionApi: Config) => {
+export default (collectionApi: EleventyConfig): Snippets => {
   const cats = utils.categories.tree()
   const flattened = utils.categories.flattened(cats)
 

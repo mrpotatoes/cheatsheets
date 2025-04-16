@@ -10,10 +10,10 @@ import tpls from '@templates/index'
 import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
-import { Config } from '@mytypes/11ty'
+import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
-export default (eleventyConfig: Config) => {
-  // Allow yaml data
+// https://www.11ty.dev/docs/ignores/
+export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
 
   // Global Data
@@ -30,10 +30,10 @@ export default (eleventyConfig: Config) => {
   // Filters
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)
-  eleventyConfig.addFilter('head', filters.head)
   eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
   eleventyConfig.addFilter('md', filters.markdown)
+  // eleventyConfig.addFilter('head', filters.head)
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
