@@ -6,19 +6,28 @@ data: groups
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
-      <a class="header__link" href="/">[Home]</a>
+      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+
+      {% for crumb in crumbs %}
+        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
+        {% if loop.last %} {% else %} &nbsp;>&nbsp; {% endif %}
+      {% endfor %}
     </div>
   </div>
 
   <div class="tip">
-    <h1 class="post__heading">{{ title }}</h1>
-    {# <pre>{{ group | debug }}</pre> #}
-    {# <pre>{{ groups[group] | debug }}</pre> #}
-
+    <h1 class="post__heading">{{ title }} ({{ groupName }})</h1>
     <div class="post">
       <div class="post__content">
+
         <div class="snippet-group-container">
-          A list of snippets for this category & grouping
+        {% for snippet in groups[group] %}
+          <div class="snippet-group-left">
+            <ul>
+              <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>
+            </ul>
+          </div>
+        {% endfor %}
         </div>
       </div>
     </div>

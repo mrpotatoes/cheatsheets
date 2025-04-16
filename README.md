@@ -27,12 +27,24 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - `feature/fuzzy-search`
   - `feature/theme`
   - `feature/mdit-plugins`
+  - `feature/custom-modules`
+  - `feature/creation-scripts`
+    - Write in `.ts`
+    - Create path aliases if needed/desired
+  - [`azat-io/todoctor`](https://github.com/azat-io/todoctor)
+    - A better and nicer looking todo reporter. Example command: `todoctor -o .reports`
 - Check out [`@code-blocks`](https://code-blocks.surge.sh/)
 - Interate [`MarkdownIt`](https://mdit-plugins.github.io/) plugins for lots more functionality
 - Create a `/changelog` page
   - Should automatically update
 - Create a page that pulls in this projects `README`
   - Could go best under `/changelog`
+- [`pgilad/leasot` - GitHub Actions example](https://github.com/pgilad/leasot/issues/340)
+- A better `yaml` loader & conversion (object literal → `YAML`)
+  - [`eemeli/yaml`](https://github.com/eemeli/yaml)
+- [OPTIONAL] Create new directory called `website`/`site`/`public`
+  - Images folder
+  - `assets` & `styles` folders
 
 ## Links
 ### Useful Articles
@@ -55,3 +67,6 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - [List example](https://sandroroth.com/blog/)
   - [Post example](https://sandroroth.com/blog/angular-library/)
 - [Eleventy Themes & Templates - Built At Lightspeed](https://www.builtatlightspeed.com/category/eleventy)
+
+
+Figure out why 'Generate a random hex color' isn't showing up. Might be others.

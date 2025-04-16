@@ -8,7 +8,7 @@ layout: base.njk
       <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
 
       {% for crumb in crumbs %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.name }}</a>&nbsp;>&nbsp;
+        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
       {% endfor %}
       <span>{{ title }}</span>
     </div>
@@ -29,8 +29,7 @@ layout: base.njk
         <div class="snippet-group-container">
           {% for group in collections.groupedSnippets[category].groups %}
             <div class="snippet-group-left">
-              {# <h3><a href="{{snippetBase}}{{category}}{{ group | urlize }}">{{ group }}</a></h3> #}
-              <h3>{{ group }}</h3>
+              <h3><a href="{{snippetBase}}{{category}}{{ group | urlize }}">{{ group }}</a></h3>
 
               <ul>
                 {% for snippet in collections.groupedSnippets[category].snippets[group] %}

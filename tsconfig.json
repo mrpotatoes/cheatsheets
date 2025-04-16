@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext",
+    "skipLibCheck": true,
+    "target": "ESNext",
+
+    // "noImplicitAny": true,
+    "strict": true,
+
+    "baseUrl": "./",
+    "paths": {
+      "@utils": [ "./config/utils/index.ts" ],
+      "@utils/*": [ "./config/utils/*" ],
+      "@collections": [ "./config/11ty/collections/index.ts" ],
+      "@collections/*": [ "./config/11ty/collections/*" ],
+      "@events": [ "./config/11ty/events/index.ts" ],
+      "@events/*": [ "./config/11ty/events/*" ],
+      "@filters": [ "./config/11ty/filters/index.ts" ],
+      "@filters/*": [ "./config/11ty/filters/*" ],
+      "@plugins": [ "./config/11ty/plugins/index.ts" ],
+      "@plugins/*": [ "./config/11ty/plugins/*" ],
+      "@shortcodes": [ "./config/11ty/shortcodes/index.ts" ],
+      "@shortcodes/*": [ "./config/11ty/shortcodes/*" ],
+      "@templates": [ "./config/11ty/templates/index.ts" ],
+      "@templates/*": [ "./config/11ty/templates/*" ],
+      "@transforms": [ "./config/11ty/transforms/index.ts" ],
+      "@transforms/*": [ "./config/11ty/transforms/*" ],
+      "@variables": [ "./config/11ty/variables/index.ts" ],
+      "@variables/*": [ "./config/11ty/variables/*" ],
+      "@mytypes": [ "./config/types/index.ts" ],
+      "@mytypes/*": [ "./config/types/*" ],
+    },
+  },
+  "include": [ "./config/**/*", "./contents/**/*" ],
+  "exclude": [
+    "node_modules",
+    "_site",
+    "cheatsheets"
+  ]
+}

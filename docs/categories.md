@@ -55,11 +55,9 @@ browser:
 
 ## What's Next
 **Priority**
-- Category Group urls
-  - Clicking on a grouping will goto a page that loads all of those snippets
-    - It doesn't make sense to add snippet content to the data file instead I will use `hotwire` to pull all that info into a page.
-  - Add more metadata to thingy
-- Abstract the breadcrumbs function so I can use it in more places
+- Memoize more stuff
+- Main datastructure interface
+- Add the [`11ty.ts`](https://www.npmjs.com/package/11ty.ts) package for types support
 
 **Secondary**
 - A `TODO.md` file that is added to the content stuff (`./contents/pages/todo.md`)
