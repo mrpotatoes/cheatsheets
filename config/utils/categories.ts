@@ -47,7 +47,7 @@ export const segmented = (str: string, full: boolean): string[] => {
 /**
  * Build an array of breadcrumbs for a given path
  *
- * TODO: Sincej the flattened array would be memoized I should remove the
+ * TODO: Since the flattened array would be memoized I should remove the
  *  function parameter as it wouldn't be needed
  *
  * @param categories
