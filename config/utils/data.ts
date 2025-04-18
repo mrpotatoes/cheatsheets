@@ -1,9 +1,9 @@
-import yaml from 'js-yaml'
+import yaml from 'yaml'
 import _ from 'lodash'
 import fs from 'fs'
 import memoize from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { CategoryTree } from '@mytypes/categories'
+import { Base, CategoryTree, FuzzySearch, YamlObject } from '@mytypes/categories'
 
 /**
  * Takes a key/value object and sets every key to the supplied function
@@ -36,22 +36,30 @@ export const directory = (path: string, file: string): string =>
  * @param dataFile
  * @returns
  */
-export const yamlData = memoize((dataFile: string): CategoryTree => {
+export const yamlData = <T>(dataFile: string): YamlObject<T> => {
   const file = directory('config/data', dataFile)
-  const doc = yaml.load(fs.readFileSync(file, 'utf8')) as CategoryTree
+  const doc = yaml.parse(fs.readFileSync(file, 'utf8'))
 
   return doc
-})
+}
+
+const yamlMem = memoize(yamlData)
 
 /**
  * The categories object
  *
  * @returns
  */
-export const tree = (): CategoryTree => yamlData('categories.yml')
+export const tree = (): YamlObject<CategoryTree> => yamlMem('categories.yml')
 
 /**
  * Grouping object
+ *
+ * TODO: Delete me. Datafile is not required anymore
+ * TODO: Find all references and modify them
+ *
+ * NOTE: This is used in the groups template so i MAY still need this so I'm not sure
+ *
  * @returns
  */
-export const groups = (): CategoryTree => yamlData('groups.yml')
+export const groups = (): YamlObject<FuzzySearch> => yamlMem('groups.yml')

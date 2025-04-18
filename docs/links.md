@@ -5,7 +5,6 @@
   - [YouTube Videos](#youtube-videos)
 
 ## WebC
-
 ### Articles
 - [Partial Hydration](https://www.11ty.dev/docs/plugins/is-land/)
 - [Introduction to WebC](https://11ty.rocks/posts/introduction-webc/)

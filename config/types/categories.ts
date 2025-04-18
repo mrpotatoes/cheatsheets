@@ -57,6 +57,13 @@ export interface GroupUrl extends Base {
   group: string
 }
 
+export interface FuzzySearch {
+  [key: string]: Base[]
+}
+
+/**
+ * No but seriously isn't this great?
+ */
 export interface GroupedUrls {
   [key: string]: GroupUrl[]
 }
@@ -69,4 +76,8 @@ export interface CatSnippet {
 
 export interface Snippets {
   [key: string]: Base[]
+}
+
+export interface YamlObject<T> {
+  [key: string]: T
 }

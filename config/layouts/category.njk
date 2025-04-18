@@ -1,12 +1,12 @@
 ---
 layout: base.njk
 ---
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
 
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
       <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-
       {% for crumb in crumbs %}
         <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
       {% endfor %}
@@ -19,11 +19,23 @@ layout: base.njk
 
     <div class="post">
       <div class="post__content">
+        {# <pre>{{ root | debug }}</pre> #}
         <p>{{ desc | md | safe }}</p>
 
+        {% if root %}
+          <div>
+            <label for="search">Search</label><br>
+            <input type="text" id="search" name="search">
+
+            <div id="results"> </div>
+          </div>
+        {% endif %}
+
         {% if catTreeCount %}
-          <h3>Category</h3>
-          {% tree catTree %}
+          <div id="category-navigation">
+            <h3>Category</h3>
+            {% tree catTree %}
+          </div>
         {% endif %}
 
         <div class="snippet-group-container">
@@ -43,3 +55,34 @@ layout: base.njk
     </div>
   </div>
 </div>
+
+<script type="text/javascript">
+  const resSimplifiedHTML = (res) => res.map(e => `<li><a href="${e.url}">${e.title}</a></li>`)
+
+  const resSimplified = (results) => results.map(e => ({
+    title: e.item.title,
+    url: e.item.url,
+    cat: e.item.cat,
+    crumbs: e.item.crumbs.map(e => e.title).join(' > ')}))
+
+  const searchEvent = e => {
+    const fuseOptions = { keys: [ 'cat', 'title' ] }
+    const fuse = new Fuse(e, fuseOptions)
+
+    document
+      .getElementById('search')
+      .addEventListener('input', (e) => {
+        const hasText = e.target.value !== ''
+        const results = fuse.search(e.target.value).slice(0, 50)
+        const resCount = `<p>[Results: ${results.length}]</p>`
+        const resTpl = resSimplifiedHTML(resSimplified(results)).join('')
+        const output = (results.length > 0) ? `${resCount} <ul>${resTpl}</ul>` : ''
+
+        document.getElementById('category-navigation').style.display = hasText ? 'none' : 'block'
+        document.getElementById('results').innerHTML = output
+      })
+  }
+
+  {# I want to do this inline pls #}
+  fetch('/assets/fuzzy.json').then(response => response.json()).then(searchEvent)
+</script>
