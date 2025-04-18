@@ -3,6 +3,11 @@ import utils from '@utils'
 import { breadcrumbs } from '@utils/categories'
 import { EleventyConfig } from '@mytypes/11ty'
 
+/**
+ * TODO: Fix typings
+ * TODO: See if I can get the Collection API somehow so I can use that to get
+ *  all the items. Possible? Otherwise I need to keep the groups.yml
+ */
 export default (eleventyConfig: EleventyConfig) => {
   const tree = utils.categories.flattened(utils.data.tree())
 

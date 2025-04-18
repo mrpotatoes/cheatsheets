@@ -7,6 +7,8 @@ export const passthroughs = {
   styles: { './config/styles': 'styles' },
 }
 
+// TODO: Add a json global link
+
 export const urls = {
   category: '/code/tips/',
   sansTrailing: '/code/tips',

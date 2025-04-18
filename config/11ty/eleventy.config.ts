@@ -1,6 +1,3 @@
-console.clear()
-
-import yaml from 'js-yaml'
 import _ from 'lodash'
 import collections from '@collections/index'
 import events from '@events/index'
@@ -10,12 +7,10 @@ import tpls from '@templates/index'
 import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
-import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
+import { CollectionApi, EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
 // https://www.11ty.dev/docs/ignores/
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
-  eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
-
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
 
@@ -33,7 +28,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
   eleventyConfig.addFilter('md', filters.markdown)
-  // eleventyConfig.addFilter('head', filters.head)
+  eleventyConfig.addFilter('json', (content): string => JSON.stringify(content))
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
@@ -43,7 +38,8 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
-  // ✅ eleventyConfig.addCollection('groupedUrls', collections.groupData)
+  eleventyConfig.addCollection('groupedUrls', collections.groupData)
+  eleventyConfig.addCollection('fuzzy', collections.fuzzySearch)
   // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
   // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
 
@@ -53,6 +49,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
+  eleventyConfig.addDataExtension(transforms.yaml.exts, transforms.yaml.parse)
 
   // Events
   eleventyConfig.on('eleventy.before', events.before)

@@ -60,6 +60,7 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
   const crumbs = [{ title: 'Snippets', url: vars.urls.category }]
   let acc = ''
 
+  // TODO: Convert to a different type of iterator (reducer)
   for (let i = 0; i < split.length; i++) {
     const e = split[i]
     acc = `${acc}${e}/`
@@ -172,6 +173,8 @@ export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix =
 
 /**
  * TODO: Memoize
+ * TODO: Curry so I can call it simpler
+ *
  * @param {*} doc
  * @returns
  */

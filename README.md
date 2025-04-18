@@ -27,6 +27,8 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
   - `feature/theme`
   - `feature/mdit-plugins`
   - `feature/custom-modules`
+  - `feature/refactor-content`
+  - `feature/refactor-typings`
   - `feature/creation-scripts`
     - Write in `.ts`
     - Create path aliases if needed/desired
