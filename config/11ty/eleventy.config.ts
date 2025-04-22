@@ -7,7 +7,7 @@ import tpls from '@templates/index'
 import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
-import { CollectionApi, EleventyConfig, ReturnConfig } from '@mytypes/11ty'
+import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
 // https://www.11ty.dev/docs/ignores/
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
@@ -16,7 +16,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)
-  // tpls.groups(eleventyConfig)
+  tpls.groups(eleventyConfig)
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
@@ -40,8 +40,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
   eleventyConfig.addCollection('groupedUrls', collections.groupData)
   eleventyConfig.addCollection('fuzzy', collections.fuzzySearch)
-  // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
-  // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
+  eleventyConfig.addCollection('groupsYaml', collections.snippets)
 
   // Shortcodes
   eleventyConfig.addShortcode('tree', shortCodes.htmlList)

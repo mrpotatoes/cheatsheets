@@ -9,6 +9,7 @@ import { EleventyConfig } from '@mytypes/11ty'
  *  all the items. Possible? Otherwise I need to keep the groups.yml
  */
 export default (eleventyConfig: EleventyConfig) => {
+  // @ts-ignore
   const tree = utils.categories.flattened(utils.data.tree())
 
   Object.keys(utils.data.groups()).forEach(group => {

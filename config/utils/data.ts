@@ -46,6 +46,21 @@ export const yamlData = <T>(dataFile: string): YamlObject<T> => {
 const yamlMem = memoize(yamlData)
 
 /**
+ *
+ * @param data
+ * @param dataFile
+ * @returns
+ */
+// @ts-ignore
+export const saveYaml = (data, dataFile) => {
+  const file = directory('config/data', dataFile)
+  const doc = yaml.stringify(data)
+  fs.writeFileSync(file, doc)
+
+  return doc
+}
+
+/**
  * The categories object
  *
  * @returns
@@ -63,3 +78,16 @@ export const tree = (): YamlObject<CategoryTree> => yamlMem('categories.yml')
  * @returns
  */
 export const groups = (): YamlObject<FuzzySearch> => yamlMem('groups.yml')
+
+/**
+ *
+ * @param snippets
+ * @returns
+ */
+export const saveGroups = (snippets: any): any => {
+  if (!_.isEqual(groups(), snippets)) {
+    saveYaml(snippets, 'groups.yml')
+  }
+
+  return snippets
+}

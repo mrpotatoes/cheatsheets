@@ -1,7 +1,9 @@
 ---
 layout: base.njk
 ---
+{% if root %}
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@7.1.0"></script>
+{% endif %}
 
 <div class="container">
   <div class="header">
@@ -19,17 +21,17 @@ layout: base.njk
 
     <div class="post">
       <div class="post__content">
-        {# <pre>{{ root | debug }}</pre> #}
         <p>{{ desc | md | safe }}</p>
+        {# <pre>{{ collections.groupedUrls | debug }}</pre> #}
 
-          {% if root %}
-            <div>
-              <label for="search">Search</label><br>
-              <input type="text" id="search" name="search">
+        {% if root %}
+          <div>
+            <label for="search">Search</label><br>
+            <input type="text" id="search" name="search">
 
-              <div id="results"> </div>
-            </div>
-          {% endif %}
+            <div id="results"> </div>
+          </div>
+        {% endif %}
 
         {% if catTreeCount %}
           <div id="category-navigation">
@@ -56,12 +58,13 @@ layout: base.njk
   </div>
 </div>
 
+{% if root %}
 <script type="text/javascript">
   // TODO: Please use templates
   // TODO: Please use a transform on this in the passthrough()
   const crumbsReadable = (crumbs) => crumbs.map(crumb => crumb.title).join(' > ')
-
-  const snips = (r) => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`)
+  const groupUrl = (res, snippet) => `<p><b><a href="/code/tips/${res.cat}">${snippet}</b></p>`
+  const snips = (r) => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`).join('')
 
   const resSimplified = (results) => results.map(e => ({
     title: e.item.title,
@@ -70,7 +73,7 @@ layout: base.njk
     crumbs: e.item.crumbs.map(e => e.title).join(' > ')}))
 
   const resTpl = (results) => Object.keys(results)
-    .map(key => `<div class="snippet-group-left"><p>${key}</p><ul>${snips(results[key]).join('')}</ul></div>`)
+    .map(key => `<div class="snippet-group-left"><p>${groupUrl(results[key][0], key)}</p><ul>${snips(results[key])}</ul></div>`)
     .join('')
 
   const filteredResults = (results) => results.reduce((acc, curr) => {
@@ -79,6 +82,8 @@ layout: base.njk
       title: curr.item.title,
       crumbs: crumbsReadable(curr.item.crumbs),
       url: curr.item.url,
+      group: curr.item.group,
+      cat: curr.item.cat,
     }
 
     if (acc[cat] === undefined) {
@@ -121,3 +126,4 @@ layout: base.njk
     .then(response => response.json())
     .then(searchEvent)
 </script>
+{% endif %}

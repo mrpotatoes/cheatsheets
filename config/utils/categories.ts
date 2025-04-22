@@ -1,8 +1,35 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
 import * as vars from '@utils/variables'
+import { groups } from '@utils/data'
 import { Breadcrumb, CategoryTree, Empty, Flattened, Group } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
+
+// @ts-ignore
+export const hasCategory = (acc, curr) => acc[catGroupUrl(curr)] === undefined
+
+/**
+ *
+ * @param curr
+ * @returns
+ */
+export const catGroupUrl = (curr: CollectionItem) =>
+  normalizedCategoryPath(curr) + group(curr)
+
+/**
+ *
+ * @param snip
+ * @returns
+ */
+export const group = (snip: CollectionItem) => (snip.data.group || 'other').toLowerCase()
+
+/**
+ * TODO: Move this function to elsewhere.
+ *
+ * @param updated
+ * @returns
+ */
+export const isSameGroup = (updated: any): boolean => _.isEqual(updated, groups())
 
 /**
  * Get a unique category link

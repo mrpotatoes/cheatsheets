@@ -3,18 +3,10 @@
  * TODO: Delete the groups.yml data file, maybe.
  */
 import _ from 'lodash'
-import utils from '@utils/index'
-import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
+import { tree } from '@utils/data'
 import { GroupedUrls } from '@mytypes/categories'
-import { groups, tree } from '@utils/data'
-import { breadcrumbs, flattenCategories } from '@utils/categories'
-
-// TODO: Move this function to elsewhere.
-export const isSameGroup = (updated: any): boolean => _.isEqual(updated, groups())
-// TODO: Move this function to elsewhere.
-export const cat = (snip: CollectionItem) => utils.categories.normalPath(snip)
-// TODO: Move this function to elsewhere.
-export const group = (snip: CollectionItem) => (snip.data.group || 'other').toLowerCase()
+import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
+import { breadcrumbs, flattenCategories, group, normalizedCategoryPath } from '@utils/categories'
 
 /**
  * Process
@@ -35,10 +27,10 @@ export const group = (snip: CollectionItem) => (snip.data.group || 'other').toLo
  */
 export default (collectionApi: EleventyConfig): GroupedUrls =>
   collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
-    cat: `${cat(snip)}${group(snip)}`,
+    cat: `${normalizedCategoryPath(snip)}${group(snip)}`,
     title: snip.data.title,
     url: snip.page.url,
     group: group(snip),
     // @ts-ignore
-    crumbs: breadcrumbs(flattenCategories(tree()), cat(snip), true).slice(1),
+    crumbs: breadcrumbs(flattenCategories(tree()), normalizedCategoryPath(snip), true).slice(1),
   }))
