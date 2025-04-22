@@ -22,14 +22,14 @@ layout: base.njk
         {# <pre>{{ root | debug }}</pre> #}
         <p>{{ desc | md | safe }}</p>
 
-        {% if root %}
-          <div>
-            <label for="search">Search</label><br>
-            <input type="text" id="search" name="search">
+          {% if root %}
+            <div>
+              <label for="search">Search</label><br>
+              <input type="text" id="search" name="search">
 
-            <div id="results"> </div>
-          </div>
-        {% endif %}
+              <div id="results"> </div>
+            </div>
+          {% endif %}
 
         {% if catTreeCount %}
           <div id="category-navigation">
@@ -57,7 +57,11 @@ layout: base.njk
 </div>
 
 <script type="text/javascript">
-  const resSimplifiedHTML = (res) => res.map(e => `<li><a href="${e.url}">${e.title}</a></li>`)
+  // TODO: Please use templates
+  // TODO: Please use a transform on this in the passthrough()
+  const crumbsReadable = (crumbs) => crumbs.map(crumb => crumb.title).join(' > ')
+
+  const snips = (r) => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`)
 
   const resSimplified = (results) => results.map(e => ({
     title: e.item.title,
@@ -65,24 +69,55 @@ layout: base.njk
     cat: e.item.cat,
     crumbs: e.item.crumbs.map(e => e.title).join(' > ')}))
 
-  const searchEvent = e => {
+  const resTpl = (results) => Object.keys(results)
+    .map(key => `<div class="snippet-group-left"><p>${key}</p><ul>${snips(results[key]).join('')}</ul></div>`)
+    .join('')
+
+  const filteredResults = (results) => results.reduce((acc, curr) => {
+    const cat = crumbsReadable(curr.item.crumbs)
+    const next = {
+      title: curr.item.title,
+      crumbs: crumbsReadable(curr.item.crumbs),
+      url: curr.item.url,
+    }
+
+    if (acc[cat] === undefined) {
+      acc[cat] = []
+    }
+
+    return {
+      ...acc,
+      [cat]: [
+        ...acc[cat],
+        next,
+      ],
+    }
+  }, {})
+
+  const filterEvent = (fuse) => (e) => {
+    const hasText = e.target.value !== ''
+    const searchResults = fuse.search(e.target.value).slice(0, 50)
+    const results = filteredResults(searchResults)
+    const resCount = `<p>[Results: ${searchResults.length}]</p>`
+    const resNone = (hasText) ? '<p>[Results: 0] No results for search value</p>' : ''
+    const stuff = `<div class="snippet-group-container">${resTpl(results)}</div?`
+    const output = (searchResults.length > 0) ? `${resCount} ${stuff}` : resNone
+
+    document.getElementById('category-navigation').style.display = hasText ? 'none' : 'block'
+    document.getElementById('results').innerHTML = output
+  }
+
+  const searchEvent = (json) => {
     const fuseOptions = { keys: [ 'cat', 'title' ] }
-    const fuse = new Fuse(e, fuseOptions)
+    const fuse = new Fuse(json, fuseOptions)
 
     document
       .getElementById('search')
-      .addEventListener('input', (e) => {
-        const hasText = e.target.value !== ''
-        const results = fuse.search(e.target.value).slice(0, 50)
-        const resCount = `<p>[Results: ${results.length}]</p>`
-        const resTpl = resSimplifiedHTML(resSimplified(results)).join('')
-        const output = (results.length > 0) ? `${resCount} <ul>${resTpl}</ul>` : ''
-
-        document.getElementById('category-navigation').style.display = hasText ? 'none' : 'block'
-        document.getElementById('results').innerHTML = output
-      })
+      .addEventListener('input', filterEvent(fuse))
   }
 
-  {# I want to do this inline pls #}
-  fetch('/assets/fuzzy.json').then(response => response.json()).then(searchEvent)
+  // I want to do this inline pls
+  fetch('/assets/fuzzy.json')
+    .then(response => response.json())
+    .then(searchEvent)
 </script>

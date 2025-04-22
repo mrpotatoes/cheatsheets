@@ -33,37 +33,12 @@ export const group = (snip: CollectionItem) => (snip.data.group || 'other').toLo
  *  save it to a file. In this case I still want to make sure that I do a deep
  *  comparison of the file's data and the object I build here.
  */
-export default (collectionApi: EleventyConfig): GroupedUrls => {
-  return collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
+export default (collectionApi: EleventyConfig): GroupedUrls =>
+  collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
     cat: `${cat(snip)}${group(snip)}`,
     title: snip.data.title,
     url: snip.page.url,
     group: group(snip),
     // @ts-ignore
-    crumbs: breadcrumbs(flattenCategories(tree()), cat(snip), true),
+    crumbs: breadcrumbs(flattenCategories(tree()), cat(snip), true).slice(1),
   }))
-}
-
-// ORIGINAL
-// TODO: I may want to come back to this but i'll need a different
-//  fuzzy search library.
-//
-// snippets.forEach((snip: CollectionItem) => {
-//   // The group needs to be lowercased + slugified
-//   const group = (snip.data.group || 'other').toLowerCase()
-//   const catUrl = utils.categories.normalPath(snip)
-//
-//   if (!urls[`${catUrl}${group}`]) {
-//     urls[`${catUrl}${group}`] = []
-//   }
-//
-//   urls[`${catUrl}${group}`].push({
-//     cat: `${catUrl}${group}`,
-//     title: snip.data.title,
-//     url: snip.page.url,
-//     group: group,
-//
-//     // @ts-ignore
-//     crumbs: breadcrumbs(flat, catUrl, true),
-//   })
-// })

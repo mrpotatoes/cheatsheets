@@ -19,29 +19,11 @@ permalink: /
   <h2><a href="/blog">Blog</a></h2>
   <h2><a href="/changelog">Changelog</a></h2>
   <h2><a href="/built-with">Built With</a></h2>
+  <h2><a href="/assets/fuzzy.json" target="_blank">Fuzzy Search JSON</a></h2>
 
   <div class="columns">
     <div class="post">
       <p>Excuse the currest situation. I am in the middle of re-authoring my website so it'll look pretty busted for awhile.</p>
     </div>
-    {# {% for cat in Object.keys(collections.categorySnippets) %}
-      <pre>
-        {{ cat | debug }}
-      </pre>
-    {% endfor %} #}
-
-    <!--
-    {% for cat in collections.categories %}
-      {% set posts = collections.groupByCategories[cat] %}
-      <div class="category">
-        <div class="category__posts">
-          <h2 class="index__category">
-            {# <a href="/{{ cat | slugify | urlize | htmlBaseUrl }}/">{{ cat }} ({{ posts | length }} snippets)</a> #}
-            <a href="/{{ cat | slugify | urlize }}/">{{ cat }} ({{ posts | length }} snippets)</a>
-          </h2>
-        </div>
-      </div>
-    {% endfor %}
-    -->
   </div>
 </div>

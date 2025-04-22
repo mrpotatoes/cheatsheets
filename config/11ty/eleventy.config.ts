@@ -16,7 +16,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)
-  tpls.groups(eleventyConfig)
+  // tpls.groups(eleventyConfig)
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
