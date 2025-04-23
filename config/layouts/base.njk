@@ -25,10 +25,13 @@
     <link rel="stylesheet" href="/styles/index.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap">
     <!-- <link href="assets/pagefind/pagefind-ui.css" rel="stylesheet"> -->
+
+    {% if page.url === '/code/tips/' %}
+    <script src="/assets/fuzzy.js"></script>
+    {% endif %}
+
   </head>
   <body>
-    <!-- <main data-pagefind-body> -->
-
     {{ content | safe }}
 
     <div class="container">

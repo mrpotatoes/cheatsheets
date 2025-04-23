@@ -9,10 +9,10 @@ import { EleventyConfig } from '@mytypes/11ty'
  */
 export default (eleventyConfig: EleventyConfig): void => {
   const cats = utils.data.tree()
+  // @ts-ignore
   const flattened = utils.categories.flattened(cats)
 
   eleventyConfig.addTemplate('index.njk', '', {
-    root: true,
     layout: 'category.njk',
     title: 'Snippets',
     desc: '',
@@ -26,7 +26,6 @@ export default (eleventyConfig: EleventyConfig): void => {
     const path = cat.replace(/^\/+|\/+$/g, '').replaceAll('/', '.')
 
     eleventyConfig.addTemplate(utils.categories.tpl(cat), '', {
-      root: false,
       layout: 'category.njk',
       title: flattened[cat].name,
       desc: flattened[cat].desc,

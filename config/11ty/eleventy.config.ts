@@ -10,9 +10,23 @@ import utils from '@utils/index'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
 // https://www.11ty.dev/docs/ignores/
+// @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
+
+  // https://medium.com/@brettdewoody/bundling-js-in-eleventy-with-esbuild-76f7059c2f3e
+  // eleventyConfig.addBundle('fuzzySearch', {
+  //   transforms: [
+  //     // @ts-ignore
+  //     async function (content) {
+  //       // @ts-ignore
+  //       let { type, page } = this
+
+  //       return 'ads stuff yo'
+  //     }
+  //   ]
+  // })
 
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)
@@ -34,6 +48,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
+  eleventyConfig.addPlugin(plugins.jsConfig)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)

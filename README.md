@@ -46,6 +46,7 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
 - [OPTIONAL] Create new directory called `website`/`site`/`public`
   - Images folder
   - `assets` & `styles` folders
+- Fix the header in `base.njk` since I don't have the `metadata` variable available
 
 ## Links
 ### Useful Articles
