@@ -47,7 +47,7 @@ I want to be able to manually set teaser content for content. Preferably add the
 - `feature/theme` or `feature/vento`
 - `feature/mdit-plugins`
   - [`MarkdownIt`](https://mdit-plugins.github.io/)
-- `feature/custom-modules`
+- `feature/code-refactor`
 - `feature/eleventy-img`
 - `feature/schema`
   - [`quasibit/eleventy-plugin-schema`](https://github.com/quasibit/eleventy-plugin-schema?tab=readme-ov-file)

@@ -1,6 +1,5 @@
 // @ts-nocheck
 import Fuse from 'fuse.js'
-import { jsConfig } from '@plugins/bundle-typescript'
 
 // TODO: Handle the case that if a value exists in input run the fuzzy search.
 // TODO: Please use templates
@@ -65,7 +64,7 @@ const searchEvent = (json) => {
     .addEventListener('input', filterEvent(fuse))
 }
 
-// I want to do this inline pls
-fetch('/assets/fuzzy.json')
+// TODO: Fix this so it gets the correct URL
+fetch(`${path}assets/fuzzy.json`)
   .then(response => response.json())
   .then(searchEvent)

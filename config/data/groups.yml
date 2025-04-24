@@ -444,46 +444,27 @@ languages/javascript/random/other:
     url: /code/tips/languages/javascript/random/pick-a-random-property-of-an-object/
   - title: Pick random lines from a text document
     url: /code/tips/languages/javascript/random/pick-random-lines-from-a-text-document/
-languages/javascript/strings/other:
-  - title: Placeholder
-    url: /code/tips/languages/javascript/strings/calculate-the-angle-of-a-line-defined-by-two-points/
+languages/javascript/strings/casing:
   - title: Capitalize a string
     url: /code/tips/languages/javascript/strings/capitalize-a-string/
   - title: Decapitalize a string
     url: /code/tips/languages/javascript/strings/decapitalize-a-string/
-  - title: Decode HTML entities
-    url: /code/tips/languages/javascript/strings/decode-html-entities/
-  - title: Escape HTML special characters
-    url: /code/tips/languages/javascript/strings/escape-html-special-characters/
-  - title: Generate a hash of a string
-    url: /code/tips/languages/javascript/strings/generate-a-hash-of-a-string/
-  - title: Prepend a line number to each line of a text document
-    url: /code/tips/languages/javascript/strings/prepend-a-line-number-to-each-line-of-a-text-document/
-  - title: Repeat a string
-    url: /code/tips/languages/javascript/strings/repeat-a-string/
-  - title: Replace all line breaks with br elements
-    url: /code/tips/languages/javascript/strings/replace-all-line-breaks-with-br-elements/
-  - title: Replace all tab characters with spaces
-    url: /code/tips/languages/javascript/strings/replace-all-tab-characters-with-spaces/
-  - title: Replace multiple spaces with a single space
-    url: /code/tips/languages/javascript/strings/replace-multiple-spaces-with-a-single-space/
-  - title: Replace the first given number of characters of a string with another
-      character
-    url: /code/tips/languages/javascript/strings/replace-the-first-given-number-of-characters-of-a-string-with-another-character/
-  - title: Reverse a string
-    url: /code/tips/languages/javascript/strings/reverse-a-string/
-  - title: Reverse the order of lines of a text
-    url: /code/tips/languages/javascript/strings/reverse-the-order-of-lines-of-a-text/
-  - title: Strip ANSI codes from a string
-    url: /code/tips/languages/javascript/strings/strip-ansi-codes-from-a-string/
-  - title: Trim slashes at the beginning and the end of a string
-    url: /code/tips/languages/javascript/strings/trim-slashes-at-the-beginning-and-the-end-of-a-string/
-  - title: Trim some character
-    url: /code/tips/languages/javascript/strings/trim-some-character/
-  - title: Trim the file extension from a file name
-    url: /code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/
-  - title: Truncate a string at full words
-    url: /code/tips/languages/javascript/strings/truncate-a-string-at-full-words/
+  - title: Make the first character of a string lowercase
+    url: /code/tips/languages/javascript/strings/make-the-first-character-of-a-string-lowercase/
+  - title: Normalize file path slashes
+    url: /code/tips/languages/javascript/strings/normalize-file-path-slashes/
+  - title: Remove duplicate lines of a text document
+    url: /code/tips/languages/javascript/strings/remove-duplicate-lines-of-a-text-document/
+  - title: Remove empty lines of a text document
+    url: /code/tips/languages/javascript/strings/remove-empty-lines-of-a-text-document/
+  - title: Remove spaces from a string
+    url: /code/tips/languages/javascript/strings/remove-spaces-from-a-string/
+  - title: Swap case of characters in a string
+    url: /code/tips/languages/javascript/strings/swap-case-of-characters-in-a-string/
+  - title: Unescape HTML special characters
+    url: /code/tips/languages/javascript/strings/unescape-html-special-characters/
+  - title: Uppercase the first character of each word in a string
+    url: /code/tips/languages/javascript/strings/uppercase-the-first-character-of-each-word-in-a-string/
 languages/javascript/strings/predicates:
   - title: Check if a path is relative
     url: /code/tips/languages/javascript/strings/check-if-a-path-is-relative/
@@ -523,6 +504,40 @@ languages/javascript/strings/counting:
     url: /code/tips/languages/javascript/strings/count-the-number-of-words-in-a-string/
   - title: Count the occurrences of a character in a string
     url: /code/tips/languages/javascript/strings/count-the-occurrences-of-a-character-in-a-string/
+languages/javascript/strings/other:
+  - title: Decode HTML entities
+    url: /code/tips/languages/javascript/strings/decode-html-entities/
+  - title: Escape HTML special characters
+    url: /code/tips/languages/javascript/strings/escape-html-special-characters/
+  - title: Generate a hash of a string
+    url: /code/tips/languages/javascript/strings/generate-a-hash-of-a-string/
+  - title: Prepend a line number to each line of a text document
+    url: /code/tips/languages/javascript/strings/prepend-a-line-number-to-each-line-of-a-text-document/
+  - title: Repeat a string
+    url: /code/tips/languages/javascript/strings/repeat-a-string/
+  - title: Replace all line breaks with br elements
+    url: /code/tips/languages/javascript/strings/replace-all-line-breaks-with-br-elements/
+  - title: Replace all tab characters with spaces
+    url: /code/tips/languages/javascript/strings/replace-all-tab-characters-with-spaces/
+  - title: Replace multiple spaces with a single space
+    url: /code/tips/languages/javascript/strings/replace-multiple-spaces-with-a-single-space/
+  - title: Replace the first given number of characters of a string with another
+      character
+    url: /code/tips/languages/javascript/strings/replace-the-first-given-number-of-characters-of-a-string-with-another-character/
+  - title: Reverse a string
+    url: /code/tips/languages/javascript/strings/reverse-a-string/
+  - title: Reverse the order of lines of a text
+    url: /code/tips/languages/javascript/strings/reverse-the-order-of-lines-of-a-text/
+  - title: Strip ANSI codes from a string
+    url: /code/tips/languages/javascript/strings/strip-ansi-codes-from-a-string/
+  - title: Trim slashes at the beginning and the end of a string
+    url: /code/tips/languages/javascript/strings/trim-slashes-at-the-beginning-and-the-end-of-a-string/
+  - title: Trim some character
+    url: /code/tips/languages/javascript/strings/trim-some-character/
+  - title: Trim the file extension from a file name
+    url: /code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/
+  - title: Truncate a string at full words
+    url: /code/tips/languages/javascript/strings/truncate-a-string-at-full-words/
 languages/javascript/strings/retrivals:
   - title: Get the base URL without any parameters
     url: /code/tips/languages/javascript/strings/get-the-base-url-without-any-parameters/
@@ -534,23 +549,6 @@ languages/javascript/strings/retrivals:
     url: /code/tips/languages/javascript/strings/get-the-length-of-a-string-in-bytes/
   - title: Get the number of a character in a string
     url: /code/tips/languages/javascript/strings/get-the-number-of-a-character-in-a-string/
-languages/javascript/strings/casing:
-  - title: Make the first character of a string lowercase
-    url: /code/tips/languages/javascript/strings/make-the-first-character-of-a-string-lowercase/
-  - title: Normalize file path slashes
-    url: /code/tips/languages/javascript/strings/normalize-file-path-slashes/
-  - title: Remove duplicate lines of a text document
-    url: /code/tips/languages/javascript/strings/remove-duplicate-lines-of-a-text-document/
-  - title: Remove empty lines of a text document
-    url: /code/tips/languages/javascript/strings/remove-empty-lines-of-a-text-document/
-  - title: Remove spaces from a string
-    url: /code/tips/languages/javascript/strings/remove-spaces-from-a-string/
-  - title: Swap case of characters in a string
-    url: /code/tips/languages/javascript/strings/swap-case-of-characters-in-a-string/
-  - title: Unescape HTML special characters
-    url: /code/tips/languages/javascript/strings/unescape-html-special-characters/
-  - title: Uppercase the first character of each word in a string
-    url: /code/tips/languages/javascript/strings/uppercase-the-first-character-of-each-word-in-a-string/
 languages/javascript/strings/sorting:
   - title: Sort lines of a text document in the alphabetical order
     url: /code/tips/languages/javascript/strings/sort-lines-of-a-text-document-in-the-alphabetical-order/

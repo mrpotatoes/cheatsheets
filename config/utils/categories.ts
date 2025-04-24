@@ -147,6 +147,8 @@ export const addGroup = (snippet: CollectionItem, categories: Group, group = 'Ot
     return cats
   }
 
+  // TODO: I think this can be merged with the group condition. If one doesn't
+  //  exist I don't think that the other will.
   if (!cats[normalized].snippets) {
     cats[normalized].snippets = {}
   }

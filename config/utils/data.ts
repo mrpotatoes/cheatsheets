@@ -1,9 +1,9 @@
 import yaml from 'yaml'
 import _ from 'lodash'
 import fs from 'fs'
-import memoize from 'memoize'
+import memoize, { memoizeClear } from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { Base, CategoryTree, FuzzySearch, YamlObject } from '@mytypes/categories'
+import { CategoryTree, FuzzySearch, YamlObject } from '@mytypes/categories'
 
 /**
  * Takes a key/value object and sets every key to the supplied function
@@ -70,6 +70,8 @@ export const tree = (): YamlObject<CategoryTree> => yamlMem('categories.yml')
 /**
  * Grouping object
  *
+ * @param fresh Skip memoization
+ *
  * TODO: Delete me. Datafile is not required anymore
  * TODO: Find all references and modify them
  *
@@ -77,7 +79,13 @@ export const tree = (): YamlObject<CategoryTree> => yamlMem('categories.yml')
  *
  * @returns
  */
-export const groups = (): YamlObject<FuzzySearch> => yamlMem('groups.yml')
+export const groups = (fresh = false): YamlObject<FuzzySearch> => {
+  if (fresh) {
+    memoizeClear(yamlMem)
+  }
+
+  return yamlMem('groups.yml')
+}
 
 /**
  *
@@ -85,7 +93,10 @@ export const groups = (): YamlObject<FuzzySearch> => yamlMem('groups.yml')
  * @returns
  */
 export const saveGroups = (snippets: any): any => {
-  if (!_.isEqual(groups(), snippets)) {
+  const isSame = !_.isEqual(groups(), snippets)
+
+  if (isSame) {
+    groups(true) // Get the updated file.
     saveYaml(snippets, 'groups.yml')
   }
 

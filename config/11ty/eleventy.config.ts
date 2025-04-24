@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import dotenv from 'dotenv'
 import collections from '@collections/index'
 import events from '@events/index'
 import filters from '@filters/index'
@@ -9,24 +10,23 @@ import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
+import { serverConfig } from '@utils/variables'
+
+// Setup environment variables
+dotenv.config(utils.vars.dotenv())
+
 // https://www.11ty.dev/docs/ignores/
 // @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
+  // TODO: Pull this out into it's own file
+  // TODO: More options here: https://www.11ty.dev/docs/dev-server/
+  // TODO: Fix these typings
+  // @ts-ignore
+  eleventyConfig.setServerOptions(serverConfig())
+
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
-
-  // https://medium.com/@brettdewoody/bundling-js-in-eleventy-with-esbuild-76f7059c2f3e
-  // eleventyConfig.addBundle('fuzzySearch', {
-  //   transforms: [
-  //     // @ts-ignore
-  //     async function (content) {
-  //       // @ts-ignore
-  //       let { type, page } = this
-
-  //       return 'ads stuff yo'
-  //     }
-  //   ]
-  // })
+  // https://github.com/11ty/eleventy/issues/2387
 
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)

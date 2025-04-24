@@ -1,6 +1,7 @@
 // @ts-nocheck
 import esbuild from 'esbuild'
 import path from 'node:path'
+import { basePath } from '@utils/variables'
 
 export const jsConfig = eleventyConfig => {
   eleventyConfig.addTemplateFormats('ts')
@@ -9,17 +10,21 @@ export const jsConfig = eleventyConfig => {
     outputFileExtension: 'js',
 
     compile: async (content, inputPath) => async () => {
-      console.log(inputPath)
+      const path = basePath()
 
       let output = await esbuild.build({
         target: 'es2020',
         entryPoints: [inputPath],
         bundle: true,
+        platform: 'browser',
+        banner: {
+          js: `var path = "${path}"`
+        },
 
         // TODO: Check if in debug mode or not
         // TODO: Add source maps
-        minify: true,
-        write: false
+        // minify: true,
+        write: false,
       })
 
       return output.outputFiles[0].text

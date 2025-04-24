@@ -7,10 +7,12 @@ export default {
   vars: {
     DEBUG: process.env.DEBUG || false,
     passthroughs: vars.passthroughs,
-    basePath: vars.basePath,
+    basePath: vars.basePath(),
     targets: vars.targets,
     snippetBase: vars.urls.category,
     urls: vars.urls,
+    dotenv: vars.dotenvConfig,
+    snippetUrl: vars.snippetUrl,
   },
 
   urls: {
