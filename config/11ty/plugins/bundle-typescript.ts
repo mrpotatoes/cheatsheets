@@ -12,7 +12,7 @@ export const jsConfig = eleventyConfig => {
     compile: async (content, inputPath) => async () => {
       const path = basePath()
 
-      let output = await esbuild.build({
+      const output = await esbuild.build({
         target: 'es2020',
         entryPoints: [inputPath],
         bundle: true,

@@ -29,7 +29,6 @@
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.14.1",
     "html-minifier": "^4.0.0",
-    "pagefind": "^1.0.3",
     "prettier": "^2.7.1",
     "sass": "^1.54.8"
   },

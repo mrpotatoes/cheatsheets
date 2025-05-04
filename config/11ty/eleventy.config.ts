@@ -10,7 +10,7 @@ import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 
-import { serverConfig } from '@utils/variables'
+import { serverConfig, basePath, port } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -18,6 +18,9 @@ dotenv.config(utils.vars.dotenv())
 // https://www.11ty.dev/docs/ignores/
 // @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
+  // Status messages
+  console.log(`\nhttp://localhost:${port()}/\n`)
+
   // TODO: Pull this out into it's own file
   // TODO: More options here: https://www.11ty.dev/docs/dev-server/
   // TODO: Fix these typings
@@ -26,6 +29,8 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
+  eleventyConfig.addGlobalData('basePath', basePath())
+
   // https://github.com/11ty/eleventy/issues/2387
 
   // Virtual Templates

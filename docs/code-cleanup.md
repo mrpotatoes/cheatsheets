@@ -87,6 +87,7 @@
     - Because this would make more sense since most of this file is `dotenv()` or other configurations
 - [ ] Apply `eleventyExcludeFromCollections`
   - [ ] assets?
+- [ ] Remove full stops from all single line comments
 
 ## Typings
 - [ ] Ask about how to type the category correctly

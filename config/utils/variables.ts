@@ -50,7 +50,14 @@ export const envPath = (type: string): string =>
 export const snippetUrl = () => process.env.SNIPPET_URL
 
 /**
+ *
+ * @returns
+ */
+export const port = () => process.env.PORT
+
+/**
  * TODO: Convert this to a function instead and it should take an env object
+ * TODO: Make this a function to pull from the .env file
  */
 export const urls = {
   category: '/code/tips/',
@@ -68,7 +75,11 @@ export const dotenvConfig = (options = {}) => ({
   debug: true,
 })
 
+/**
+ *
+ * @returns
+ */
 export const serverConfig = () => ({
   // TODO: Retrieve this from the env files instead.
-  port: process.env.PORT,
+  port: port(),
 })
