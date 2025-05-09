@@ -16,15 +16,22 @@ export const resTpl = (results: FuzzySearchRemapped): string => Object.keys(resu
  * @param text
  * @returns
  */
-export const groupUrl = (res: Remapped, text: string): string => `<p><b><a href="/code/tips/${res.catU}">${text}</b></p>`
+export const groupUrl = (res: Remapped, text: string): string =>
+  `<p><b><a href="${path}code/tips/${res.catU}">${text}</b></p>`
 
+/**
+ *
+ * @param url
+ * @returns
+ */
+export const fullUrl = (url: string): string => `${path}${url.substring(1)}`
 
 /**
  *
  * @param r
  * @returns
  */
-export const snippetsTpl = (r: FuzzySearch2[]): string => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`).join('')
+export const snippetsTpl = (r: FuzzySearch2[]): string => r.map(e => `<li><a href="${fullUrl(e.url)}">${e.title}</a></li>`).join('')
 
 /**
  * TODO: Fix the rest of my typings pls
