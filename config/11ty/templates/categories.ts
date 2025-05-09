@@ -4,9 +4,12 @@ import { EleventyConfig } from '@mytypes/11ty'
 
 /**
  * https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
+ *
+ * TODO: Type is messed up here.
  */
 export default (eleventyConfig: EleventyConfig): void => {
   const cats = utils.data.tree()
+  // @ts-ignore
   const flattened = utils.categories.flattened(cats)
 
   eleventyConfig.addTemplate('index.njk', '', {

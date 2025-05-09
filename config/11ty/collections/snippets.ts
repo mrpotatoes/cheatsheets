@@ -1,26 +1,25 @@
-import { CollectionApi, CollectionItem } from '@mytypes/11ty'
+import _ from 'lodash'
+import { saveGroups } from '@utils/data'
+import { catGroupUrl, hasCategory } from '@utils/categories'
 import { Snippets } from '@mytypes/categories'
-import utils from '@utils/index'
+import { CollectionApi, CollectionItem } from '@mytypes/11ty'
 
-export default (collectionApi: CollectionApi): Snippets => collectionApi
+export default (collectionApi: CollectionApi): Snippets => saveGroups(collectionApi
   .getFilteredByTag('snippets')
   .reduce((acc: Snippets, curr: CollectionItem) => {
-    const category = utils.categories.normalPath(curr)
-
-    if (acc[category] === undefined) {
-      acc[category] = []
-    }
-
-    const next = {
-      title: curr.data.title,
-      url: curr.url,
+    // TODO: I know I can simplify this so do that. yo.
+    if (hasCategory(acc, curr)) {
+      acc[catGroupUrl(curr)] = []
     }
 
     return {
       ...acc,
-      [category]: [
-        ...acc[category],
-        next,
-      ],
+      [catGroupUrl(curr)]: [
+        ...acc[catGroupUrl(curr)], {
+          title: curr.data.title,
+          url: curr.url,
+        }
+      ]
     }
-  }, {})
+  }, {}))
+

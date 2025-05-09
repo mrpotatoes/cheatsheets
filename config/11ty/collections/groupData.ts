@@ -1,7 +1,12 @@
+/**
+ * TODO: Delete me and move this to the fuzzy search collection.
+ * TODO: Delete the groups.yml data file, maybe.
+ */
 import _ from 'lodash'
-import utils from '@utils/index'
-import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
+import { tree } from '@utils/data'
 import { GroupedUrls } from '@mytypes/categories'
+import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
+import { breadcrumbs, flattenCategories, group, normalizedCategoryPath, categoryPath } from '@utils/categories'
 
 /**
  * Process
@@ -16,30 +21,20 @@ import { GroupedUrls } from '@mytypes/categories'
  *  - /code/tips/languages/javascript/strings/retrivals/
  *
  * TODO: Fix typings
+ * TODO: I do not believe that I can get collection via an api so I will have to
+ *  save it to a file. In this case I still want to make sure that I do a deep
+ *  comparison of the file's data and the object I build here.
  */
-export default (collectionApi: EleventyConfig): GroupedUrls => {
-  const snippets = collectionApi.getFilteredByTag('snippets')
-  const urls = {}
+export default (collectionApi: EleventyConfig): GroupedUrls =>
+  collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
+    cat: normalizedCategoryPath(snip),
+    title: snip.data.title,
+    url: snip.page.url,
+    group: group(snip),
 
-  snippets.forEach((snip: CollectionItem) => {
-    // The group needs to be lowercased + slugified
-    const group = (snip.data.group || 'other').toLowerCase()
-    const catUrl = utils.categories.normalPath(snip)
+    // @ts-ignore
+    crumbs: breadcrumbs(flattenCategories(tree()), normalizedCategoryPath(snip), true).slice(1),
 
-    /**
-     * TODO: Element implicitly has an 'any' type because expression of type '`${string}${any}`' can't be used to index type '{}'
-     * TODO: Use set here instead
-     */
-    if (!urls[`${catUrl}${group}`]) {
-      urls[`${catUrl}${group}`] = []
-    }
-
-    urls[`${catUrl}${group}`].push({
-      title: snip.data.title,
-      url: snip.page.url,
-      group: group,
-    })
-  })
-
-  return urls
-}
+    // @ts-ignore
+    crumbs2: categoryPath(flattenCategories(tree()), normalizedCategoryPath(snip), true),
+  }))

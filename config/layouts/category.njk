@@ -1,12 +1,10 @@
 ---
 layout: base.njk
 ---
-
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
       <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-
       {% for crumb in crumbs %}
         <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
       {% endfor %}
@@ -21,9 +19,20 @@ layout: base.njk
       <div class="post__content">
         <p>{{ desc | md | safe }}</p>
 
+        {% if page.url === '/code/tips/' %}
+          <div>
+            <label for="search">Search</label><br>
+            <input type="text" id="search" name="search" autofocus />
+
+            <div id="results"> </div>
+          </div>
+        {% endif %}
+
         {% if catTreeCount %}
-          <h3>Category</h3>
-          {% tree catTree %}
+          <div id="category-navigation">
+            <h3>Category</h3>
+            {% tree catTree %}
+          </div>
         {% endif %}
 
         <div class="snippet-group-container">

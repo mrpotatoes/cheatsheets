@@ -1,8 +1,35 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
 import * as vars from '@utils/variables'
+import { groups } from '@utils/data'
 import { Breadcrumb, CategoryTree, Empty, Flattened, Group } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
+
+// @ts-ignore
+export const hasCategory = (acc, curr) => acc[catGroupUrl(curr)] === undefined
+
+/**
+ *
+ * @param curr
+ * @returns
+ */
+export const catGroupUrl = (curr: CollectionItem) =>
+  normalizedCategoryPath(curr) + group(curr)
+
+/**
+ *
+ * @param snip
+ * @returns
+ */
+export const group = (snip: CollectionItem) => (snip.data.group || 'other').toLowerCase()
+
+/**
+ * TODO: Move this function to elsewhere.
+ *
+ * @param updated
+ * @returns
+ */
+export const isSameGroup = (updated: any): boolean => _.isEqual(updated, groups())
 
 /**
  * Get a unique category link
@@ -60,6 +87,7 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
   const crumbs = [{ title: 'Snippets', url: vars.urls.category }]
   let acc = ''
 
+  // TODO: Convert to a different type of iterator (reducer?)
   for (let i = 0; i < split.length; i++) {
     const e = split[i]
     acc = `${acc}${e}/`
@@ -72,6 +100,34 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
 
   return crumbs
 }
+
+/**
+ * The last item in a cat aggregrate.
+ *
+ * NOTE: Only use with categoryPath()
+ *
+ * @param acc
+ * @returns
+ */
+export const basePath = (acc: string[]): string => _.last(acc) || ''
+
+/**
+ * Get a human readable category path
+ *
+ * It's a simple process
+ *  - Build an array of paths to query the category tree
+ *  - Pull out the pretty names
+ *  - Finally put them all together into a nice string
+ *
+ * @param categories
+ * @param path
+ * @param full
+ */
+export const categoryPath = (categories: Flattened, path: string, full = false): string =>
+  segmented(path, full)
+    .reduce((acc: string[], curr: string): string[] => ([...acc, `${basePath(acc)}${curr}/`]), [])
+    .map((e: string) => categories[e].name)
+    .join(' > ')
 
 /**
  * An empty snippet object.
@@ -119,6 +175,8 @@ export const addGroup = (snippet: CollectionItem, categories: Group, group = 'Ot
     return cats
   }
 
+  // TODO: I think this can be merged with the group condition. If one doesn't
+  //  exist I don't think that the other will.
   if (!cats[normalized].snippets) {
     cats[normalized].snippets = {}
   }
@@ -172,6 +230,8 @@ export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix =
 
 /**
  * TODO: Memoize
+ * TODO: Curry so I can call it simpler
+ *
  * @param {*} doc
  * @returns
  */

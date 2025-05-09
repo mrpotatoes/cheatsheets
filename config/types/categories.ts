@@ -57,6 +57,14 @@ export interface GroupUrl extends Base {
   group: string
 }
 
+// TODO: Used in data.ts and this is completely wrong. Dummy.
+export interface FuzzySearch {
+  [key: string]: Base[]
+}
+
+/**
+ * No but seriously isn't this great?
+ */
 export interface GroupedUrls {
   [key: string]: GroupUrl[]
 }
@@ -69,4 +77,29 @@ export interface CatSnippet {
 
 export interface Snippets {
   [key: string]: Base[]
+}
+
+export interface YamlObject<T> {
+  [key: string]: T
+}
+
+export interface FuzzySearch2 {
+  cat: string
+  title: string
+  url: string
+  group: string
+  crumbs2: string
+  crumbs: any // DELETE ME
+}
+
+export interface Remapped {
+  title: string
+  catU: string
+  group: string
+  cat: string
+  url: string
+}
+
+export interface FuzzySearchRemapped {
+  [key: string]: Remapped[]
 }

@@ -1,7 +1,5 @@
-console.clear()
-
-import yaml from 'js-yaml'
 import _ from 'lodash'
+import dotenv from 'dotenv'
 import collections from '@collections/index'
 import events from '@events/index'
 import filters from '@filters/index'
@@ -11,13 +9,27 @@ import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
+import { serverConfig, basePath, port } from '@utils/variables'
 
-// https://www.11ty.dev/docs/ignores/
+// Setup environment variables
+dotenv.config(utils.vars.dotenv())
+
+// @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
-  eleventyConfig.addDataExtension('yml, yaml', (contents) => yaml.load(contents))
+  // Status messages
+  console.log(`\nhttp://localhost:${port()}/\n`)
+
+  // TODO: Pull this out into it's own file
+  // TODO: More options here: https://www.11ty.dev/docs/dev-server/
+  // TODO: Fix these typings
+  // @ts-ignore
+  eleventyConfig.setServerOptions(serverConfig())
 
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
+  eleventyConfig.addGlobalData('basePath', basePath())
+
+  // https://github.com/11ty/eleventy/issues/2387
 
   // Virtual Templates
   tpls.virtualTemplates(eleventyConfig)
@@ -33,19 +45,20 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
   eleventyConfig.addFilter('md', filters.markdown)
-  // eleventyConfig.addFilter('head', filters.head)
+  eleventyConfig.addFilter('json', (content): string => JSON.stringify(content))
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
+  eleventyConfig.addPlugin(plugins.jsConfig)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
-  // ✅ eleventyConfig.addCollection('groupedUrls', collections.groupData)
-  // ✅ eleventyConfig.addCollection('related.snippets', collections.relatedSnippets)
-  // ❌ eleventyConfig.addCollection('sortByTitle', collections.sortByTitle)
+  eleventyConfig.addCollection('groupedUrls', collections.groupData)
+  eleventyConfig.addCollection('fuzzy', collections.fuzzySearch)
+  eleventyConfig.addCollection('groupsYaml', collections.snippets)
 
   // Shortcodes
   eleventyConfig.addShortcode('tree', shortCodes.htmlList)
@@ -53,13 +66,14 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
+  eleventyConfig.addDataExtension(transforms.yaml.exts, transforms.yaml.parse)
 
   // Events
   eleventyConfig.on('eleventy.before', events.before)
   eleventyConfig.on('eleventy.after', events.after)
 
   return {
-    pathPrefix: utils.vars.basePath,
+    pathPrefix: basePath(),
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
