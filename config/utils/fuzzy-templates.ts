@@ -1,11 +1,12 @@
-// @ts-nocheck
+import { FuzzySearch2, FuzzySearchRemapped, Remapped } from '@mytypes/categories'
+// import type Fuzzysort from 'fuzzysort'
 
 /**
  *
  * @param results
  * @returns
  */
-export const resTpl = (results) => Object.keys(results)
+export const resTpl = (results: FuzzySearchRemapped): string => Object.keys(results)
   .map(key => `<div class="snippet-group-left"><p>${groupUrl(results[key][0], key)}</p><ul>${snippetsTpl(results[key])}</ul></div>`)
   .join('')
 
@@ -15,7 +16,7 @@ export const resTpl = (results) => Object.keys(results)
  * @param text
  * @returns
  */
-export const groupUrl = (res, text) => `<p><b><a href="/code/tips/${res.catU}">${text}</b></p>`
+export const groupUrl = (res: Remapped, text: string): string => `<p><b><a href="/code/tips/${res.catU}">${text}</b></p>`
 
 
 /**
@@ -23,14 +24,15 @@ export const groupUrl = (res, text) => `<p><b><a href="/code/tips/${res.catU}">$
  * @param r
  * @returns
  */
-export const snippetsTpl = (r) => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`).join('')
+export const snippetsTpl = (r: FuzzySearch2[]): string => r.map(e => `<li><a href="${e.url}">${e.title}</a></li>`).join('')
 
 /**
+ * TODO: Fix the rest of my typings pls
  *
  * @param results
  * @returns
  */
-export const remapped = (results) => results.reduce((acc, curr) => {
+export const remapped = (results: Fuzzysort.KeyResults<FuzzySearch2>) => results.reduce((acc, curr) => {
   const cat = curr.obj.crumbs2
 
   const next = {

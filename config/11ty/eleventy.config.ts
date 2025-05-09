@@ -73,7 +73,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.on('eleventy.after', events.after)
 
   return {
-    pathPrefix: utils.vars.basePath,
+    pathPrefix: basePath(),
     // Control which files Eleventy will process
     // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
