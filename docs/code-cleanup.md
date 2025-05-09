@@ -94,6 +94,7 @@
   - [ ] Properly convert to `boolean`
   - [ ] Throw error if data is incorrect
   - [ ] Add debug handling to correct code
+- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
 
 ## Content
 - [ ] `/assets`

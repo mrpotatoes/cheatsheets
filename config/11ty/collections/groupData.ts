@@ -27,7 +27,7 @@ import { breadcrumbs, flattenCategories, group, normalizedCategoryPath, category
  */
 export default (collectionApi: EleventyConfig): GroupedUrls =>
   collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
-    cat: `${normalizedCategoryPath(snip)}${group(snip)}`,
+    cat: normalizedCategoryPath(snip),
     title: snip.data.title,
     url: snip.page.url,
     group: group(snip),
