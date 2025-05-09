@@ -1,6 +1,3 @@
-browser/css/other:
-  - title: Placeholder
-    url: /code/tips/browser/css/placeholder/
 browser/dom/predicates:
   - title: Check if an element is a descendant of another
     url: /code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/
@@ -59,9 +56,6 @@ browser/html/other:
     url: /code/tips/browser/html/box-model/
   - title: Starter Template
     url: /code/tips/browser/html/starter-template/
-browser/pwa/other:
-  - title: Placeholder
-    url: /code/tips/browser/pwa/placeholder/
 languages/java/other:
   - title: Placeholder
     url: /code/tips/languages/java/placeholder/
@@ -444,27 +438,6 @@ languages/javascript/random/other:
     url: /code/tips/languages/javascript/random/pick-a-random-property-of-an-object/
   - title: Pick random lines from a text document
     url: /code/tips/languages/javascript/random/pick-random-lines-from-a-text-document/
-languages/javascript/strings/casing:
-  - title: Capitalize a string
-    url: /code/tips/languages/javascript/strings/capitalize-a-string/
-  - title: Decapitalize a string
-    url: /code/tips/languages/javascript/strings/decapitalize-a-string/
-  - title: Make the first character of a string lowercase
-    url: /code/tips/languages/javascript/strings/make-the-first-character-of-a-string-lowercase/
-  - title: Normalize file path slashes
-    url: /code/tips/languages/javascript/strings/normalize-file-path-slashes/
-  - title: Remove duplicate lines of a text document
-    url: /code/tips/languages/javascript/strings/remove-duplicate-lines-of-a-text-document/
-  - title: Remove empty lines of a text document
-    url: /code/tips/languages/javascript/strings/remove-empty-lines-of-a-text-document/
-  - title: Remove spaces from a string
-    url: /code/tips/languages/javascript/strings/remove-spaces-from-a-string/
-  - title: Swap case of characters in a string
-    url: /code/tips/languages/javascript/strings/swap-case-of-characters-in-a-string/
-  - title: Unescape HTML special characters
-    url: /code/tips/languages/javascript/strings/unescape-html-special-characters/
-  - title: Uppercase the first character of each word in a string
-    url: /code/tips/languages/javascript/strings/uppercase-the-first-character-of-each-word-in-a-string/
 languages/javascript/strings/predicates:
   - title: Check if a path is relative
     url: /code/tips/languages/javascript/strings/check-if-a-path-is-relative/
@@ -538,6 +511,10 @@ languages/javascript/strings/other:
     url: /code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/
   - title: Truncate a string at full words
     url: /code/tips/languages/javascript/strings/truncate-a-string-at-full-words/
+  - title: Capitalize a string
+    url: /code/tips/languages/javascript/strings/capitalize-a-string/
+  - title: Decapitalize a string
+    url: /code/tips/languages/javascript/strings/decapitalize-a-string/
 languages/javascript/strings/retrivals:
   - title: Get the base URL without any parameters
     url: /code/tips/languages/javascript/strings/get-the-base-url-without-any-parameters/
@@ -549,6 +526,23 @@ languages/javascript/strings/retrivals:
     url: /code/tips/languages/javascript/strings/get-the-length-of-a-string-in-bytes/
   - title: Get the number of a character in a string
     url: /code/tips/languages/javascript/strings/get-the-number-of-a-character-in-a-string/
+languages/javascript/strings/casing:
+  - title: Make the first character of a string lowercase
+    url: /code/tips/languages/javascript/strings/make-the-first-character-of-a-string-lowercase/
+  - title: Normalize file path slashes
+    url: /code/tips/languages/javascript/strings/normalize-file-path-slashes/
+  - title: Remove duplicate lines of a text document
+    url: /code/tips/languages/javascript/strings/remove-duplicate-lines-of-a-text-document/
+  - title: Remove empty lines of a text document
+    url: /code/tips/languages/javascript/strings/remove-empty-lines-of-a-text-document/
+  - title: Remove spaces from a string
+    url: /code/tips/languages/javascript/strings/remove-spaces-from-a-string/
+  - title: Swap case of characters in a string
+    url: /code/tips/languages/javascript/strings/swap-case-of-characters-in-a-string/
+  - title: Unescape HTML special characters
+    url: /code/tips/languages/javascript/strings/unescape-html-special-characters/
+  - title: Uppercase the first character of each word in a string
+    url: /code/tips/languages/javascript/strings/uppercase-the-first-character-of-each-word-in-a-string/
 languages/javascript/strings/sorting:
   - title: Sort lines of a text document in the alphabetical order
     url: /code/tips/languages/javascript/strings/sort-lines-of-a-text-document-in-the-alphabetical-order/
@@ -765,3 +759,9 @@ subsystem/dotfiles/other:
 languages/javascript/function/functions:
   - title: Closures
     url: /code/tips/languages/javascript/function/closures/
+browser/css/other:
+  - title: Placeholder
+    url: /code/tips/browser/css/placeholder/
+browser/pwa/other:
+  - title: Placeholder
+    url: /code/tips/browser/pwa/placeholder/

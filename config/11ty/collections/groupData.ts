@@ -6,7 +6,7 @@ import _ from 'lodash'
 import { tree } from '@utils/data'
 import { GroupedUrls } from '@mytypes/categories'
 import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
-import { breadcrumbs, flattenCategories, group, normalizedCategoryPath } from '@utils/categories'
+import { breadcrumbs, flattenCategories, group, normalizedCategoryPath, categoryPath } from '@utils/categories'
 
 /**
  * Process
@@ -31,6 +31,10 @@ export default (collectionApi: EleventyConfig): GroupedUrls =>
     title: snip.data.title,
     url: snip.page.url,
     group: group(snip),
+
     // @ts-ignore
     crumbs: breadcrumbs(flattenCategories(tree()), normalizedCategoryPath(snip), true).slice(1),
+
+    // @ts-ignore
+    crumbs2: categoryPath(flattenCategories(tree()), normalizedCategoryPath(snip), true),
   }))

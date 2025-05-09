@@ -87,7 +87,7 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
   const crumbs = [{ title: 'Snippets', url: vars.urls.category }]
   let acc = ''
 
-  // TODO: Convert to a different type of iterator (reducer)
+  // TODO: Convert to a different type of iterator (reducer?)
   for (let i = 0; i < split.length; i++) {
     const e = split[i]
     acc = `${acc}${e}/`
@@ -100,6 +100,34 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
 
   return crumbs
 }
+
+/**
+ * The last item in a cat aggregrate.
+ *
+ * NOTE: Only use with categoryPath()
+ *
+ * @param acc
+ * @returns
+ */
+export const basePath = (acc: string[]): string => _.last(acc) || ''
+
+/**
+ * Get a human readable category path
+ *
+ * It's a simple process
+ *  - Build an array of paths to query the category tree
+ *  - Pull out the pretty names
+ *  - Finally put them all together into a nice string
+ *
+ * @param categories
+ * @param path
+ * @param full
+ */
+export const categoryPath = (categories: Flattened, path: string, full = false): string =>
+  segmented(path, full)
+    .reduce((acc: string[], curr: string): string[] => ([...acc, `${basePath(acc)}${curr}/`]), [])
+    .map((e: string) => categories[e].name)
+    .join(' > ')
 
 /**
  * An empty snippet object.

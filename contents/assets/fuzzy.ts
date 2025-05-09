@@ -1,5 +1,9 @@
 // @ts-nocheck
 import Fuse from 'fuse.js'
+import fuzzysort from 'fuzzysort'
+import { debounce } from 'lodash'
+
+const DEBOUNCE = 500
 
 // TODO: Handle the case that if a value exists in input run the fuzzy search.
 // TODO: Please use templates
@@ -55,13 +59,27 @@ const filterEvent = (fuse) => (e) => {
   document.getElementById('results').innerHTML = output
 }
 
+const filterEvent2 = (fuse) => (e) => {
+  const hasText = e.target.value !== ''
+  const searchResults = fuse.search(e.target.value)//.slice(0, 50)
+  const results = filteredResults(searchResults)
+  const resCount = `<p>[Results: ${searchResults.length}]</p>`
+  const resNone = (hasText) ? '<p>[Results: 0] No results for search value</p>' : ''
+  const stuff = `<div class="snippet-group-container">${resTpl(results)}</div?`
+  const output = (searchResults.length > 0) ? `${resCount} ${stuff}` : resNone
+
+  document.getElementById('category-navigation').style.display = hasText ? 'none' : 'block'
+  document.getElementById('results').innerHTML = output
+}
+
 const searchEvent = (json) => {
   const fuseOptions = { keys: ['cat', 'title'] }
   const fuse = new Fuse(json, fuseOptions)
 
   document
     .getElementById('search')
-    .addEventListener('input', filterEvent(fuse))
+    .addEventListener('input', debounce(filterEvent2(fuse), DEBOUNCE))
+    // .addEventListener('input', filterEvent(fuse))
 }
 
 // TODO: Fix this so it gets the correct URL

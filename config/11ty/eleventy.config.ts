@@ -9,13 +9,11 @@ import transforms from '@transforms/index'
 import shortCodes from '@shortcodes/index'
 import utils from '@utils/index'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-
 import { serverConfig, basePath, port } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
 
-// https://www.11ty.dev/docs/ignores/
 // @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Status messages
