@@ -36,18 +36,11 @@ I want to be able to manually set teaser content for content. Preferably add the
 
 ## Branches
 ### Feature
-- `feature/fuzzy-search`
-  - [`leeoniya/uFuzzy`](https://github.com/leeoniya/uFuzzy)
-  - [`Nozbe/microfuzz`](https://github.com/Nozbe/microfuzz)
-  - [`Fuse.js`](https://www.fusejs.io/demo.html)
-  - [`QuickScore`](https://fwextensions.github.io/quick-score-demo/#demo)
-  - [`farzher/fuzzysort`](https://github.com/farzher/fuzzysort)
 - `feature/hotwire`
   - I may want to extend the `markdown-it` code blocks so they can handle this enhancement
 - `feature/theme` or `feature/vento`
 - `feature/mdit-plugins`
   - [`MarkdownIt`](https://mdit-plugins.github.io/)
-- `feature/code-refactor`
 - `feature/eleventy-img`
 - `feature/schema`
   - [`quasibit/eleventy-plugin-schema`](https://github.com/quasibit/eleventy-plugin-schema?tab=readme-ov-file)
@@ -74,8 +67,3 @@ I want to be able to manually set teaser content for content. Preferably add the
   - A better and nicer looking todo reporter. Example command: `todoctor -o .reports`
 - `feature/refactor-build`
   - In order to build and push to my website I need to change parameters in configs before I push to `main`
-
-### Bugs
-- `bug/module-fix`
-
-

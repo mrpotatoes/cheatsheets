@@ -2,17 +2,10 @@
 layout: base.njk
 ---
 
-{% set catPath = page | cat  %}
-
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
       <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-
-      {% for crumb in collections.crumbs[catPath] %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
-      {% endfor %}
-
       <span>{{ title }}</span>
     </div>
   </div>

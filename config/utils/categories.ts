@@ -1,9 +1,9 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
-import * as vars from '@utils/variables'
 import { groups } from '@utils/data'
 import { Breadcrumb, CategoryTree, Empty, Flattened, Group } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
+import { snippetBase } from '@utils/variables'
 
 // @ts-ignore
 export const hasCategory = (acc, curr) => acc[catGroupUrl(curr)] === undefined
@@ -37,7 +37,7 @@ export const isSameGroup = (updated: any): boolean => _.isEqual(updated, groups(
  * @param {*} id
  * @returns
  */
-export const catLink = (id: string): string => (`${vars.urls.category}${id}/`)
+export const catLink = (id: string): string => (`${snippetBase()}${id}/`)
 
 /**
  * Get a unique sub-category template
@@ -55,7 +55,7 @@ export const catTpl = (id: string): string => (`sub-category/${id}.njk`)
  */
 export const catPath = (url: string, slug: string): string => url
   .replace(`${slug}/`, '')
-  .replace(`${vars.urls.category}snippets/`, '')
+  .replace(`${snippetBase()}snippets/`, '')
 
 /**
  * Get a path segmented into parts
@@ -84,7 +84,7 @@ export const segmented = (str: string, full: boolean): string[] => {
  */
 export const breadcrumbs = (categories: Flattened, path: string, full = false): Breadcrumb[] => {
   const split = segmented(path, full)
-  const crumbs = [{ title: 'Snippets', url: vars.urls.category }]
+  const crumbs = [{ title: 'Snippets', url: snippetBase() }]
   let acc = ''
 
   // TODO: Convert to a different type of iterator (reducer?)
@@ -94,7 +94,7 @@ export const breadcrumbs = (categories: Flattened, path: string, full = false): 
 
     crumbs.push({
       title: categories[acc].name,
-      url: vars.urls.category + acc,
+      url: snippetBase() + acc,
     })
   }
 
@@ -148,7 +148,7 @@ export const emptySnippet = (): Empty => ({
 export const normalizedCategoryPath = (snip: CollectionItem | CollectionItemPicked): string => {
   const slug = snip.page.fileSlug
   const url = snip.page.url
-  const cat = url.replace(vars.urls.category, '').replace(slug + '/', '')
+  const cat = url.replace(snippetBase(), '').replace(slug + '/', '')
 
   return cat
 }

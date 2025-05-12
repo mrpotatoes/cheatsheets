@@ -2,6 +2,7 @@ import _ from 'lodash'
 import utils from '@utils'
 import { breadcrumbs } from '@utils/categories'
 import { EleventyConfig } from '@mytypes/11ty'
+import { snippetBase } from '@utils/variables'
 
 /**
  * TODO: Fix typings
@@ -18,7 +19,7 @@ export default (eleventyConfig: EleventyConfig) => {
     eleventyConfig.addTemplate(`${group}.njk`, '', {
       layout: 'category-grouping.njk',
       title: breadcrumbs(tree, category, true).map(e => e.title).slice(1).join(' » '),
-      permalink: `${utils.vars.urls.category}/${group}/`,
+      permalink: `${snippetBase()}/${group}/`,
       group: group,
       groupName: _.startCase(_.last(group.split('/'))),
       crumbs: breadcrumbs(tree, category, true),

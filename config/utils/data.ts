@@ -65,7 +65,7 @@ export const saveYaml = (data, dataFile) => {
  *
  * @returns
  */
-export const tree = (): YamlObject<CategoryTree> => yamlMem('snippets-categories.yml')
+export const tree = (): YamlObject<CategoryTree> => yamlMem('snippetsCategories.yml')
 
 /**
  * Grouping object
@@ -84,7 +84,7 @@ export const groups = (fresh = false): YamlObject<FuzzySearch> => {
     memoizeClear(yamlMem)
   }
 
-  return yamlMem('snippets-grouped.yml')
+  return yamlMem('snippetsGrouped.yml')
 }
 
 /**
@@ -97,7 +97,7 @@ export const saveGroups = (snippets: any): any => {
 
   if (isSame) {
     groups(true) // Get the updated file.
-    saveYaml(snippets, 'snippets-grouped.yml')
+    saveYaml(snippets, 'snippetsGrouped.yml')
   }
 
   return snippets

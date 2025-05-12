@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import utils from '@utils'
 import { CategoryTree } from '@mytypes/categories'
+import { snippetBase } from '@utils/variables'
 
 /**
  *
@@ -47,7 +48,7 @@ const categoryTreeLinks = (cats: CategoryTree, level = 0, prop = ''): string => 
     }
 
     const newPath = path(prop, key)
-    const a = href(cats[key].meta.name, path(utils.vars.urls.category + prop, key))
+    const a = href(cats[key].meta.name, path(snippetBase() + prop, key))
 
     str += li(a, cats[key], level + 1, newPath)
   }

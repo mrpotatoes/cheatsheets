@@ -1,6 +1,7 @@
 import _ from 'lodash'
 import utils from '@utils'
 import { EleventyConfig } from '@mytypes/11ty'
+import { snippetBase } from '@utils/variables'
 
 /**
  * https://www.11ty.dev/docs/permalinks/#use-template-syntax-in-permalink
@@ -12,7 +13,7 @@ export default (eleventyConfig: EleventyConfig): void => {
     layout: 'category.njk',
     title: 'Snippets',
     desc: '',
-    permalink: utils.vars.urls.category,
+    permalink: snippetBase(),
     catTree: cats,
     catTreeCount: true,
     crumbs: [],

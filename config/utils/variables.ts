@@ -1,13 +1,11 @@
 import path from 'path'
 
 /**
- * TODO: Convert this to a function instead and it should take an env object
- * TODO: Make this a function to pull from the .env file
+ * The snippet base path from an env file.
+ *
+ * @returns The snippet base path string
  */
-export const urls = {
-  category: '/code/tips/',
-  sansTrailing: '/code/tips',
-}
+export const snippetBase = (): string => process.env.SNIPPET_URL || ''
 
 /**
  * TODO: Convert to a function

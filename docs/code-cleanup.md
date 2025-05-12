@@ -11,16 +11,7 @@
 ## General Code
 - [ ] Combine `filters` and `shortcodes`
   - [ ] Rename the folder to `template-functions`
-- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
-  - [ ] Only use the base path from the `.env*` files no more hardcoding
-  - [ ] Any instance of `utils.vars.urls.category`
-  - [ ] Any instance of `utils.vars.urls.sansTrailing`
-  - [ ] Convert to a function
-  - [ ] `@utils/urls` functions
-    - [ ] `snippetSansTrailing()`
-    - [ ] `absolute()`
-    - [ ] `isSnippetBase()` => which will in-turn be used as a shortcode/filter
-  - [ ] Regenerate the `snippets-grouping.yml` with new `snippet` base urls
+- [x] Regenerate the `snippets-grouping.yml` with new `snippet` base urls
 - [ ] `config/utils/categories.ts`
   - [ ] Try to remove category from all function names
   - [ ] Change `flattenCategories` to `flattened`
@@ -31,11 +22,18 @@
   - [ ] i.e, `import X from './x`
 - [ ] Find any import using index and remove
   - [ ] i.e, `from './x/index` -> `from './x`
+- [ ] Move `config/assets` to `contents/assets`
+- [ ] `bundle-typescript.ts`
+  - [ ] Move to `transforms`
+  - [ ] Rename to `browser-typescript.ts`
 
 ### Utilities
 - [ ] `@utils/urls`
   - [ ] This should contain all URL processing
     - Because this would make more sense since most of this file is `dotenv()` or other configurations
+  - [x] `snippetSansTrailing()`
+  - [ ] `absolute()`
+  - [ ] `isSnippetBase()` => which will in-turn be used as a shortcode/filter
 - [ ] `config/utils/index.ts`
   - [ ] I want to use better `exports` here
 
@@ -84,21 +82,39 @@ src
   11ty
     collections
     events
-    transforms
+    templates
       filter.*.ts
-      plugin.*.ts
       shortcode.*.ts
+    transforms
+      minify.ts
+      yaml.ts
+      cache-busting.ts
     plugins
       virtual-templates
         category.root.ts
         category.children.ts
         groups.ts
-  data
-  layouts
-  styles
+      markdown
+      typescript
+
+  theme (i.e., layouts)
+    layouts
+    styles
+    images
+    partials
+    schemas
+    webc
+    head
+
   utils
-    types
+    types.{NAME}.ts
+    variables.ts
+    categories.ts
+    ...
+
   build
+
+  data
 
 tests?
   11ty

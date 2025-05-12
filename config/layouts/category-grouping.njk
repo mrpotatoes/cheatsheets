@@ -1,6 +1,6 @@
 ---
 layout: base.njk
-data: groups
+data: snippetsGrouped
 ---
 
 <div class="container">
@@ -21,7 +21,7 @@ data: groups
       <div class="post__content">
 
         <div class="snippet-group-container">
-        {% for snippet in groups[group] %}
+        {% for snippet in snippetsGrouped[group] %}
           <div class="snippet-group-left">
             <ul>
               <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>

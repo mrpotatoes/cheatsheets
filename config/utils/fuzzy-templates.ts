@@ -17,7 +17,7 @@ export const resTpl = (results: FuzzySearchRemapped): string => Object.keys(resu
  * @returns
  */
 export const groupUrl = (res: Remapped, text: string): string =>
-  `<p><b><a href="${path}code/tips/${res.catU}">${text}</b></p>`
+  `<p><b><a href="${path}${base}/${res.catU}">${text}</b></p>`
 
 /**
  *
