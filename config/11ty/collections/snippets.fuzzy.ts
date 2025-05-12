@@ -6,7 +6,7 @@ import _ from 'lodash'
 import { tree } from '@utils/data'
 import { GroupedUrls } from '@mytypes/categories'
 import { CollectionItem, EleventyConfig } from '@mytypes/11ty'
-import { flattenCategories, group, normalizedCategoryPath, categoryPath } from '@utils/categories'
+import { flattened, group, normalizedPath, categoryPath } from '@utils/categories'
 
 /**
  * Process
@@ -24,11 +24,11 @@ import { flattenCategories, group, normalizedCategoryPath, categoryPath } from '
  */
 export default (collectionApi: EleventyConfig): GroupedUrls =>
   collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
-    cat: normalizedCategoryPath(snip),
+    cat: normalizedPath(snip),
     title: snip.data.title,
     url: snip.page.url,
     group: group(snip),
 
     // @ts-ignore TODO: Fix typings here
-    crumbs: categoryPath(flattenCategories(tree()), normalizedCategoryPath(snip), true),
+    crumbs: categoryPath(flattened(tree()), normalizedPath(snip), true),
   }))

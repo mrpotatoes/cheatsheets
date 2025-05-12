@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
 import { groups } from '@utils/data'
-import { Breadcrumb, CategoryTree, Empty, Flattened, Group } from '@mytypes/categories'
+import { Breadcrumb, CategoryTree, Flattened, Group } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
 import { snippetBase } from '@utils/variables'
 
@@ -14,7 +14,7 @@ export const hasCategory = (acc, curr) => acc[catGroupUrl(curr)] === undefined
  * @returns
  */
 export const catGroupUrl = (curr: CollectionItem) =>
-  normalizedCategoryPath(curr) + group(curr)
+  normalizedPath(curr) + group(curr)
 
 /**
  *
@@ -46,16 +46,6 @@ export const catLink = (id: string): string => (`${snippetBase()}${id}/`)
  * @returns
  */
 export const catTpl = (id: string): string => (`sub-category/${id}.njk`)
-
-/**
- * Clean a category path of any extra 11ty url stuff.
- * @param {*} url
- * @param {*} slug
- * @returns
- */
-export const catPath = (url: string, slug: string): string => url
-  .replace(`${slug}/`, '')
-  .replace(`${snippetBase()}snippets/`, '')
 
 /**
  * Get a path segmented into parts
@@ -130,22 +120,12 @@ export const categoryPath = (categories: Flattened, path: string, full = false):
     .join(' > ')
 
 /**
- * An empty snippet object.
- *
- * @returns
- */
-export const emptySnippet = (): Empty => ({
-  groups: [],
-  snippets: {},
-})
-
-/**
  * Normalize a category path
  *
  * @param {*} snip
  * @returns
  */
-export const normalizedCategoryPath = (snip: CollectionItem | CollectionItemPicked): string => {
+export const normalizedPath = (snip: CollectionItem | CollectionItemPicked): string => {
   const slug = snip.page.fileSlug
   const url = snip.page.url
   const cat = url.replace(snippetBase(), '').replace(slug + '/', '')
@@ -167,7 +147,7 @@ export const normalizedCategoryPath = (snip: CollectionItem | CollectionItemPick
  */
 export const addGroup = (snippet: CollectionItem, categories: Group, group = 'Other'): Group => {
   const cats = _.cloneDeep(categories)
-  const normalized = normalizedCategoryPath(snippet)
+  const normalized = normalizedPath(snippet)
 
   // TODO: Make this part of the error messaging.
   if (!cats[normalized]) {
@@ -235,5 +215,5 @@ export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix =
  * @param {*} doc
  * @returns
  */
-export const flattenCategories = (doc: CategoryTree): Flattened =>
+export const flattened = (doc: CategoryTree): Flattened =>
   transformCategories(doc)

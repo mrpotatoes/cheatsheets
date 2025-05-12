@@ -3,7 +3,17 @@ import _ from 'lodash'
 import fs from 'fs'
 import memoize, { memoizeClear } from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { CategoryTree, FuzzySearch, YamlObject } from '@mytypes/categories'
+import { CategoryTree, Empty, FuzzySearch, YamlObject } from '@mytypes/categories'
+
+/**
+ * An empty snippet object.
+ *
+ * @returns
+ */
+export const emptySnippet = (): Empty => ({
+  groups: [],
+  snippets: {},
+})
 
 /**
  * Takes a key/value object and sets every key to the supplied function

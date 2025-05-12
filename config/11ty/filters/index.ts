@@ -1,9 +1,9 @@
-import urlize from './urlize'
-import titlecase from './titlecase'
-import head from './head'
-import catPath from './catPath'
-import markdown from './markdown'
-import toJSON from './toJSON'
+import urlize from '@filters/urlize'
+import titlecase from '@filters/titlecase'
+import head from '@filters/head'
+import catPath from '@filters/catPath'
+import markdown from '@filters/markdown'
+import toJSON from '@filters/toJSON'
 
 export default {
   urlize,

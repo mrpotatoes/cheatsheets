@@ -23,14 +23,13 @@ export default {
 
   // I think it might be best to memoize most of these functions
   categories: {
-    flattened: categories.flattenCategories,
-    normalPath: categories.normalizedCategoryPath, // Normalize fn above
+    flattened: categories.flattened,
+    normalPath: categories.normalizedPath, // Normalize fn above
     crumbs: categories.breadcrumbs, // Breadcrumbs
-    clear: data.emptyObject(categories.emptySnippet),
+    clear: data.emptyObject(data.emptySnippet),
     addGroup: categories.addGroup,
     tree: data.tree,
     segmented: categories.segmented,
-    catPath: categories.catPath,
     link: categories.catLink,
     tpl: categories.catTpl,
 

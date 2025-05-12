@@ -1,4 +1,4 @@
-import snippetCatTree from './snippet-cat-tree'
+import snippetCatTree from '@shortcodes/snippet-cat-tree'
 
 export default {
   snippetCatTree,
