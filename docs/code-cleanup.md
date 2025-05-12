@@ -13,31 +13,13 @@
     - [New folder structure](#new-folder-structure)
 
 ## General Code
+- [ ] Convert the virtual template code into plugins
 - [ ] `config/utils/categories.ts`
   - [ ] Try to remove category from all function names
   - [ ] Change `flattenCategories` to `flattened`
   - [ ] Rename `transformCategories`
   - [ ] Change `breadcrums` so it uses a `.reduce` instead
   - [ ] Move `emptySnippet` to `@utils/data`
-- [ ] `config/11ty/eleventy.config.ts`
-  - [ ] Add urls to the `.env` files
-  - [ ] Rename `.env-local` to `.env.development`
-  - [ ] Rename `.env` to `.env.production`
-  - [ ] Create a new utility file to get environment variables
-- [ ] Rename all snippet stuff
-- [ ] `config/11ty/collections/*`
-  - [ ] All snippet related collections should be renamed to `snippets.COLLECTION_NAME.ts`
-  - [ ] `groupData` -> ``
-  - [ ] `snippetsGrouped` -> ``
-  - [ ] `snippets` -> ``
-  - [ ] DELETE: `config/11ty/collections/related-snippets.ts`
-- [ ] `config/11ty/plugins/bundle-typescript.ts`
-  - [ ] Remove dead code
-  - [x] Narrow down the `ts` to be compiled
-- [ ] `config/layouts/*`
-  - [ ] These need better names because as-is they are confusing to follow
-- [ ] Convert the virtual template code into plugins
-  - [ ] Split up the template functions
 
 ### Filters, Shortcodes & Transforms
 - [ ] Combine `filters` and `shortcodes`
@@ -54,47 +36,40 @@
 ### Utilities
 - [ ] `@utils/urls`
   - [ ] This should contain all URL processing
-- [ ] `config/utils/variables.ts`
-  - [ ] Rename to `configs.ts`
     - Because this would make more sense since most of this file is `dotenv()` or other configurations
 - [ ] `config/utils/index.ts`
   - [ ] I want to use better `exports` here
 - [ ] Maybe I'd like to change everything in the `@utils/variables` file to be a function
-- [ ] `contents/assets/fuzzy.ts`
-  - [ ] There is repitition here I can change
-  - [ ] Move functions to their own import (in `@utils`)
-  - [ ] Refactor `filteredResults()`. Change the next code to a function
-  - [ ] Inline the config default value so I can do an implicit return
-  - [ ] Build elements using JSON and not strings
 
 ### Build
-- [ ] Clean up `tsconfig.json`
+- [ ] `tsconfig.json`
   - [ ] Delete most aliases as I'm not using most of them
-- [ ] `@config/scripts`
-  - [ ] Delete
-  - [ ] Remove references to it in `package.json`
+  - [ ] Attempt to change the path
 - [ ] Change the site build path
 - [ ] `package.json`
   - [ ] Maybe create some shell scripts to run some of the commands. They're getting a bit too long to maintain
   - [ ] Use the `UserConfig` type from `@11ty/eleventy`
 
 ### Configurations
-- [ ] Change the `@utils/variables/*` alias to `@utils/vars`
-- [ ] `@*/index`
-  - [ ] Remove the `/index` part
-- [ ] `config/11ty/eleventy.config.ts`
-  - [ ] Fix the docs here since most of them are example comments
-- [ ] `tsconfig.json`
-  - [ ] [Custom `tsconfig.json` path](https://tsx.is/typescript#custom-tsconfig-json-path)
-  - [ ] Move to `config/build`
-- [ ] Apply `eleventyExcludeFromCollections`
-  - [ ] assets?
+- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
 - [ ] Add proper debug handling
   - [ ] `DEBUG=?` -> `.env.*` files
-  - [ ] Properly convert to `boolean`
+  - [ ] ~~Properly convert to `boolean`~~
   - [ ] Throw error if data is incorrect
   - [ ] Add debug handling to correct code
-- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
+- [ ] Add cache busting to css & js
+  - [ ] [`Denperidge/eleventy-auto-cache-buster`](https://github.com/Denperidge/eleventy-auto-cache-buster)
+  - [ ] [CSS workflow and cache busters in `11ty`](https://www.pupismyname.com/articles/11ty-css-and-cache-busters/)
+  - [ ] [CSS Cache Busting in `Eleventy`](https://samdking.co.uk/blog/css-cache-busting-in-eleventy/)
+  - [ ] [Cache busting in `Eleventy`](https://bnijenhuis.nl/notes/cache-busting-in-eleventy/)
+- [x] Add watch targets for `contents/assets`
+  - [x] `eleventyConfig.addWatchTarget('contents/assets/')`
+- [x] `config/11ty/eleventy.config.ts`
+  - [x] Fix the docs here since most of them are example comments
+- [x] `@*/index`
+  - [x] Remove the `/index` part
+- [x] Apply `eleventyExcludeFromCollections`
+  - [x] assets?
 
 ## Content
 - [ ] `/assets`
@@ -122,9 +97,9 @@
 
 ### File Organizing
 #### Code
-- [ ] `config/data/*`
-  - [ ] `config/data/groups.yml` -> `config/data/snippets-grouped.yml`
-  - [ ] `config/data/categories.yml` -> `config/data/snippets-categories.yml`
+- [x] `config/data/*`
+  - [x] `config/data/groups.yml` -> `config/data/snippets-grouped.yml`
+  - [x] `config/data/categories.yml` -> `config/data/snippets-categories.yml`
 
 #### New folder structure
 ```

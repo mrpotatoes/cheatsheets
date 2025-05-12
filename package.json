@@ -14,11 +14,6 @@
     "start": "rm -rf .cache cheatsheets; npm run start:eleventy & npm run start:sass",
     "start:eleventy": "tsx watch --include \"./content/*\" --include \"./config/styles/*\" node_modules/@11ty/eleventy/cmd.cjs --config=config/11ty/eleventy.config.ts --quiet --serve",
     "start:sass": "sass ./config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
-    "new:blog": "node ./scripts/new.blog",
-    "new:guide": "node ./scripts/new.guide",
-    "new:snippet": "node ./scripts/new.snippet",
-    "new:project": "node ./scripts/new.project",
-    "new:recipe": "node ./scripts/new.recipe",
     "todo": "leasot -x --reporter markdown ./config/**/*.{ts,njk} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
   },
   "devDependencies": {

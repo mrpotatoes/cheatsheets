@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import utils from '@utils/index'
+import utils from '@utils'
 import { CategoryTree } from '@mytypes/categories'
 
 /**

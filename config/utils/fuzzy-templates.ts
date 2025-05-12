@@ -40,12 +40,12 @@ export const snippetsTpl = (r: FuzzySearch2[]): string => r.map(e => `<li><a hre
  * @returns
  */
 export const remapped = (results: Fuzzysort.KeyResults<FuzzySearch2>) => results.reduce((acc, curr) => {
-  const cat = curr.obj.crumbs2
+  const cat = curr.obj.crumbs
 
   const next = {
     title: curr[0].highlight('<b class="idx">', '</b>') || curr.obj.title,
     group: curr[1].highlight('<b class="idx">', '</b>') || curr.obj.group,
-    cat: curr[2].highlight('<b class="idx">', '</b>') || curr.obj.crumbs2,
+    cat: curr[2].highlight('<b class="idx">', '</b>') || curr.obj.crumbs,
     url: curr.obj.url,
     catU: curr.obj.cat,
   }

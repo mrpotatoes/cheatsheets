@@ -1,13 +1,13 @@
 import _ from 'lodash'
 import dotenv from 'dotenv'
-import collections from '@collections/index'
-import events from '@events/index'
-import filters from '@filters/index'
-import plugins from '@plugins/index'
-import tpls from '@templates/index'
-import transforms from '@transforms/index'
-import shortCodes from '@shortcodes/index'
-import utils from '@utils/index'
+import collections from '@collections'
+import events from '@events'
+import filters from '@filters'
+import plugins from '@plugins'
+import tpls from '@templates'
+import transforms from '@transforms'
+import shortCodes from '@shortcodes'
+import utils from '@utils'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
 import { serverConfig, basePath, port } from '@utils/variables'
 
@@ -19,20 +19,21 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Status messages
   console.log(`\nhttp://localhost:${port()}/\n`)
 
-  // TODO: Pull this out into it's own file
   // TODO: More options here: https://www.11ty.dev/docs/dev-server/
   // TODO: Fix these typings
   // @ts-ignore
   eleventyConfig.setServerOptions(serverConfig())
 
+  // Additional watch targets
+  eleventyConfig.addWatchTarget('contents/assets/')
+
   // Global Data
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
   eleventyConfig.addGlobalData('basePath', basePath())
 
-  // https://github.com/11ty/eleventy/issues/2387
-
-  // Virtual Templates
-  tpls.virtualTemplates(eleventyConfig)
+  // Virtual Templates - https://github.com/11ty/eleventy/issues/2387
+  tpls.categoryBase(eleventyConfig)
+  tpls.categoryChildren(eleventyConfig)
   tpls.groups(eleventyConfig)
 
   // Copy the `img` and `css` folders to the output
@@ -55,10 +56,9 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
-  eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
-  eleventyConfig.addCollection('groupedUrls', collections.groupData)
-  eleventyConfig.addCollection('fuzzy', collections.fuzzySearch)
-  eleventyConfig.addCollection('groupsYaml', collections.snippets)
+  eleventyConfig.addCollection('fuzzysearch', collections.fuzzy)
+  eleventyConfig.addCollection('groupsYaml', collections.groupsYaml)
+  // eleventyConfig.addCollection('crumbsasd', collections.breadcrumbs)
 
   // Shortcodes
   eleventyConfig.addShortcode('tree', shortCodes.htmlList)
@@ -73,18 +73,19 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.on('eleventy.after', events.after)
 
   return {
+    // Depends on local v build.
     pathPrefix: basePath(),
+
     // Control which files Eleventy will process
-    // e.g.: *.md, *.njk, *.html, *.liquid
     templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
 
-    // Pre-process *.md files with: (default: `liquid`)
+    // Pre-process *.md files with nunjucks
     markdownTemplateEngine: 'njk',
 
-    // Pre-process *.html files with: (default: `liquid`)
+    // Pre-process *.html files with nunjucks
     htmlTemplateEngine: 'njk',
 
-    // These are all optional (defaults are shown):
+    // The rest of the setup
     dir: {
       input: 'contents',
       data: '../config/data',
