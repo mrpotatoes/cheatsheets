@@ -2,9 +2,9 @@ import _ from 'lodash'
 import dotenv from 'dotenv'
 import collections from '@collections'
 import events from '@events'
+import tpls from '@templates'
 import filters from '@filters'
 import plugins from '@plugins'
-import tpls from '@templates'
 import transforms from '@transforms'
 import shortCodes from '@shortcodes'
 import utils from '@utils'
@@ -40,13 +40,13 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
 
-  // Filters
+  // Filters & Shortcodes
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)
-  eleventyConfig.addFilter('debug', filters.debugFilter)
   eleventyConfig.addFilter('cat', filters.catPath)
   eleventyConfig.addFilter('md', filters.markdown)
-  eleventyConfig.addFilter('json', (content): string => JSON.stringify(content))
+  eleventyConfig.addFilter('json', filters.toJSON)
+  eleventyConfig.addShortcode('categoryTree', shortCodes.snippetCatTree)
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
@@ -58,11 +58,6 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('fuzzysearch', collections.fuzzy)
   eleventyConfig.addCollection('groupsYaml', collections.groupsYaml)
-  // eleventyConfig.addCollection('crumbsasd', collections.breadcrumbs)
-
-  // Shortcodes
-  eleventyConfig.addShortcode('tree', shortCodes.htmlList)
-  // eleventyConfig.addShortcode('snippetLinks', shortCodes.snippetLinks)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)

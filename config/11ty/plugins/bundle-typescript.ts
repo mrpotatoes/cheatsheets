@@ -1,5 +1,5 @@
 import esbuild from 'esbuild'
-import { basePath } from '@utils/variables'
+import { basePath, isDev } from '@utils/variables'
 import { EleventyConfig } from '@mytypes/11ty'
 
 /**
@@ -29,9 +29,8 @@ export const jsConfig = (eleventyConfig: EleventyConfig) => {
           js: `var path = "${path}"`
         },
 
-        // TODO: Check if in debug mode or not
         // TODO: Add source maps
-        // minify: true,
+        minify: !isDev(),
         write: false,
       })
 

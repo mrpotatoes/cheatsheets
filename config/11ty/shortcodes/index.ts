@@ -1,7 +1,5 @@
-import htmlList from './htmlList'
-import snippetLinks from './snippetLinks'
+import snippetCatTree from './snippet-cat-tree'
 
 export default {
-  htmlList,
-  snippetLinks,
+  snippetCatTree,
 }
