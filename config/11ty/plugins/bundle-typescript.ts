@@ -11,7 +11,7 @@ import { EleventyConfig } from '@mytypes/11ty'
  *
  * @param eleventyConfig
  */
-export const jsConfig = (eleventyConfig: EleventyConfig) => {
+export default (eleventyConfig: EleventyConfig) => {
   eleventyConfig.addTemplateFormats('ts')
 
   eleventyConfig.addExtension('ts', {

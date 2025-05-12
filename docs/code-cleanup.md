@@ -9,15 +9,28 @@
   - [New folder structure](#new-folder-structure)
 
 ## General Code
-- [ ] Convert the virtual template code into plugins
+- [ ] Combine `filters` and `shortcodes`
+  - [ ] Rename the folder to `template-functions`
+- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
+  - [ ] Only use the base path from the `.env*` files no more hardcoding
+  - [ ] Any instance of `utils.vars.urls.category`
+  - [ ] Any instance of `utils.vars.urls.sansTrailing`
+  - [ ] Convert to a function
+  - [ ] `@utils/urls` functions
+    - [ ] `snippetSansTrailing()`
+    - [ ] `absolute()`
+    - [ ] `isSnippetBase()` => which will in-turn be used as a shortcode/filter
+  - [ ] Regenerate the `snippets-grouping.yml` with new `snippet` base urls
 - [ ] `config/utils/categories.ts`
   - [ ] Try to remove category from all function names
   - [ ] Change `flattenCategories` to `flattened`
   - [ ] Rename `transformCategories`
   - [ ] Change `breadcrums` so it uses a `.reduce` instead
   - [ ] Move `emptySnippet` to `@utils/data`
-- [ ] Combine `filters` and `shortcodes`
-  - [ ] Maybe even `transforms`
+- [ ] Find any import using relative imports and change to use aliases
+  - [ ] i.e, `import X from './x`
+- [ ] Find any import using index and remove
+  - [ ] i.e, `from './x/index` -> `from './x`
 
 ### Utilities
 - [ ] `@utils/urls`
@@ -25,7 +38,6 @@
     - Because this would make more sense since most of this file is `dotenv()` or other configurations
 - [ ] `config/utils/index.ts`
   - [ ] I want to use better `exports` here
-- [ ] Maybe I'd like to change everything in the `@utils/variables` file to be a function
 
 ### Configurations
 - [ ] `tsconfig.json`
@@ -34,13 +46,9 @@
 - [ ] Change the site build path
 - [ ] `package.json`
   - [ ] Maybe create some shell scripts to run some of the commands. They're getting a bit too long to maintain
-  - [ ] Use the `UserConfig` type from `@11ty/eleventy`
-- [ ] Find and replace all `code/tips` hardcoded stuff; put into env files pull from vars code
 - [ ] Add proper debug handling
   - [ ] `DEBUG=?` -> `.env.*` files
-  - [ ] ~~Properly convert to `boolean`~~
   - [ ] Throw error if data is incorrect
-  - [ ] Add debug handling to correct code
 - [ ] Add cache busting to css & js
   - [ ] [`Denperidge/eleventy-auto-cache-buster`](https://github.com/Denperidge/eleventy-auto-cache-buster)
   - [ ] [CSS workflow and cache busters in `11ty`](https://www.pupismyname.com/articles/11ty-css-and-cache-busters/)
@@ -58,10 +66,11 @@
 - [ ] Add proper headings to all snippets
 
 ## Code Quality
+- [ ] Use the `UserConfig` type from `@11ty/eleventy`
+  - [ ] Finish typing the Eleventy types
 - [ ] `config/types/categories.ts`
   - [ ] [MAYBE] rename to `snippets.ts`
 - [ ] Ask about how to type the category correctly
-- [ ] Finish typing the Eleventy types
 - [ ] Add linting back in
   - [ ] Put configurations into the `./config/build` directories
 

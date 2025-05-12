@@ -2,7 +2,6 @@ import _ from 'lodash'
 import dotenv from 'dotenv'
 import collections from '@collections'
 import events from '@events'
-import tpls from '@templates'
 import filters from '@filters'
 import plugins from '@plugins'
 import transforms from '@transforms'
@@ -31,10 +30,11 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
   eleventyConfig.addGlobalData('basePath', basePath())
 
-  // Virtual Templates - https://github.com/11ty/eleventy/issues/2387
-  tpls.categoryBase(eleventyConfig)
-  tpls.categoryChildren(eleventyConfig)
-  tpls.groups(eleventyConfig)
+  // Register Plugins
+  eleventyConfig.addPlugin(plugins.jsConfig)
+  eleventyConfig.addPlugin(plugins.categoryBase)
+  eleventyConfig.addPlugin(plugins.categoryChildren)
+  eleventyConfig.addPlugin(plugins.groups)
 
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
@@ -52,7 +52,6 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
-  eleventyConfig.addPlugin(plugins.jsConfig)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
