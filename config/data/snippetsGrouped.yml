@@ -756,12 +756,12 @@ subsystem/dotfiles/other:
     url: /code/tips/subsystem/dotfiles/unhide/
   - title: untar
     url: /code/tips/subsystem/dotfiles/untar/
-languages/javascript/function/functions:
-  - title: Closures
-    url: /code/tips/languages/javascript/function/closures/
 browser/css/other:
   - title: Placeholder
     url: /code/tips/browser/css/placeholder/
 browser/pwa/other:
   - title: Placeholder
     url: /code/tips/browser/pwa/placeholder/
+languages/javascript/function/functions:
+  - title: Closures
+    url: /code/tips/languages/javascript/function/closures/

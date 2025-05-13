@@ -15,6 +15,8 @@
       "@utils/*": [ "./config/utils/*" ],
       "@collections": [ "./config/11ty/collections/index.ts" ],
       "@collections/*": [ "./config/11ty/collections/*" ],
+      "@tplfns": [ "./config/11ty/template-funcs/index.ts" ],
+      "@tplfns/*": [ "./config/11ty/template-funcs/*" ],
       "@events": [ "./config/11ty/events/index.ts" ],
       "@events/*": [ "./config/11ty/events/*" ],
       "@filters": [ "./config/11ty/filters/index.ts" ],

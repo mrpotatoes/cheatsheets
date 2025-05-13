@@ -19,7 +19,7 @@ layout: base.njk
       <div class="post__content">
         <p>{{ desc | md | safe }}</p>
 
-        {% if page.url === '/code/tips/' %}
+        {% if page.url === snippetBase %}
           <div>
             <label for="search">Search</label><br>
             <input type="text" id="search" name="search" autofocus />
@@ -31,7 +31,7 @@ layout: base.njk
         {% if catTreeCount %}
           <div id="category-navigation">
             <h3>Category</h3>
-            {% tree catTree %}
+            {% categoryTree catTree %}
           </div>
         {% endif %}
 

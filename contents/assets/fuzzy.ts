@@ -1,13 +1,13 @@
 import fuzzysort from 'fuzzysort'
-import { resTpl, remapped } from '@utils/fuzzy-templates'
 import { debounce } from 'lodash'
+import { resTpl, remapped } from '@utils/fuzzy-templates'
 import { FuzzySearch2 } from '@mytypes/categories'
 
 /**
  *
  */
 const searchOptions = {
-  keys: ['title', 'group', 'crumbs2'],
+  keys: ['title', 'group', 'crumbs'],
   limit: 100,
   threshold: 0.5,
 }
@@ -27,10 +27,8 @@ const filterEvent = (json: FuzzySearch2[]) => (e: any) => {
   const stuff = `<div class="snippet-group-container">${resTpl(normalized)}</div>`
   const output = (search.length > 0) ? `${resCount} ${stuff}` : resNone
 
-  // @ts-ignore
-  document.getElementById('category-navigation').style.display = hasText ? 'none' : 'block'
-  // @ts-ignore
-  document.getElementById('results').innerHTML = output
+  document.getElementById('category-navigation')!.style!.display = hasText ? 'none' : 'block'
+  document.getElementById('results')!.innerHTML = output
 }
 
 /**
@@ -38,9 +36,8 @@ const filterEvent = (json: FuzzySearch2[]) => (e: any) => {
  * @param json
  */
 const searchEvent = (json: FuzzySearch2[]) => {
-  // @ts-ignore
   document
-    .getElementById('search')
+    .getElementById('search')!
     .addEventListener('input', debounce(filterEvent(json), 500))
 }
 

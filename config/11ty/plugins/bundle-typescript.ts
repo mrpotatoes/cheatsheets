@@ -1,77 +1,39 @@
-// @ts-nocheck
 import esbuild from 'esbuild'
-import path from 'node:path'
-import { basePath } from '@utils/variables'
+import { basePath, isDev } from '@utils/variables'
+import { EleventyConfig } from '@mytypes/11ty'
+import { snippetBasePath } from '@utils/urls'
 
-export const jsConfig = eleventyConfig => {
+/**
+ * TODO: Fix the minify code
+ * TODO: path variable, maybe use a function so I don't have to do what I'm doing?
+ * TODO: See if sourcemaps are possible
+ *
+ * @see eleventy-excellent: https://github.com/madrilene/eleventy-excellent/blob/main/src/_config/plugins/js-config.js
+ *
+ * @param eleventyConfig
+ */
+export default (eleventyConfig: EleventyConfig) => {
   eleventyConfig.addTemplateFormats('ts')
 
   eleventyConfig.addExtension('ts', {
     outputFileExtension: 'js',
 
-    compile: async (content, inputPath) => async () => {
-      const path = basePath()
-
+    compile: async (content: string, inputPath: string) => async () => {
       const output = await esbuild.build({
         target: 'es2020',
         entryPoints: [inputPath],
         bundle: true,
         platform: 'browser',
         banner: {
-          js: `var path = "${path}"`
+          js: `var path = "${basePath()}"; var base = "${snippetBasePath()}"`
         },
 
-        // TODO: Check if in debug mode or not
         // TODO: Add source maps
-        // minify: true,
+        minify: !isDev(),
         write: false,
       })
 
       return output.outputFiles[0].text
     }
   })
-
-  // From eleventy-excellent: https://github.com/madrilene/eleventy-excellent/blob/main/src/_config/plugins/js-config.js
-  // eleventyConfig.addExtension('js', {
-  //   outputFileExtension: 'js',
-
-  //   compile: async (content, inputPath) => {
-  //     console.log(inputPath)
-  //     // Skip processing if not in the designated scripts directories
-  //     // if (!inputPath.startsWith('./src/assets/scripts/')) {
-  //     //   return
-  //     // }
-
-  //     return content
-
-  //     // Inline scripts processing
-  //     if (inputPath.startsWith('./src/assets/scripts/bundle/')) {
-  //       const filename = path.basename(inputPath)
-  //       const outputFilename = filename
-  //       const outputPath = `./src/_includes/scripts/${outputFilename}`
-
-  //       await esbuild.build({
-  //         target: 'es2020',
-  //         entryPoints: [inputPath],
-  //         outfile: outputPath,
-  //         bundle: true,
-  //         minify: true
-  //       })
-  //       return
-  //     }
-
-  //     // Default handling for other scripts, excluding inline scripts
-  //     return async () => {
-  //       let output = await esbuild.build({
-  //         target: 'es2020',
-  //         entryPoints: [inputPath],
-  //         bundle: true,
-  //         minify: true,
-  //         write: false
-  //       })
-
-  //       return output.outputFiles[0].text
-  //     }
-  //   }
-  // })
 }

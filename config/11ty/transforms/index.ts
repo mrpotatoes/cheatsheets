@@ -1,5 +1,5 @@
-import minify from './minify'
-import yaml from './yaml'
+import minify from '@transforms/minify'
+import yaml from '@transforms/yaml'
 
 export default {
   minify,

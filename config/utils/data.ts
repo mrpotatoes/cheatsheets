@@ -3,7 +3,17 @@ import _ from 'lodash'
 import fs from 'fs'
 import memoize, { memoizeClear } from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { CategoryTree, FuzzySearch, YamlObject } from '@mytypes/categories'
+import { CategoryTree, Empty, FuzzySearch, YamlObject } from '@mytypes/categories'
+
+/**
+ * An empty snippet object.
+ *
+ * @returns
+ */
+export const emptySnippet = (): Empty => ({
+  groups: [],
+  snippets: {},
+})
 
 /**
  * Takes a key/value object and sets every key to the supplied function
@@ -65,7 +75,7 @@ export const saveYaml = (data, dataFile) => {
  *
  * @returns
  */
-export const tree = (): YamlObject<CategoryTree> => yamlMem('categories.yml')
+export const tree = (): YamlObject<CategoryTree> => yamlMem('snippetsCategories.yml')
 
 /**
  * Grouping object
@@ -84,7 +94,7 @@ export const groups = (fresh = false): YamlObject<FuzzySearch> => {
     memoizeClear(yamlMem)
   }
 
-  return yamlMem('groups.yml')
+  return yamlMem('snippetsGrouped.yml')
 }
 
 /**
@@ -97,7 +107,7 @@ export const saveGroups = (snippets: any): any => {
 
   if (isSame) {
     groups(true) // Get the updated file.
-    saveYaml(snippets, 'groups.yml')
+    saveYaml(snippets, 'snippetsGrouped.yml')
   }
 
   return snippets

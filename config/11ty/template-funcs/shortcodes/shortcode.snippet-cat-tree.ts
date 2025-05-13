@@ -1,6 +1,7 @@
 import _ from 'lodash'
-import utils from '@utils/index'
+import utils from '@utils'
 import { CategoryTree } from '@mytypes/categories'
+import { snippetBase } from '@utils/variables'
 
 /**
  *
@@ -8,7 +9,7 @@ import { CategoryTree } from '@mytypes/categories'
  * @param link
  * @returns
  */
-const href = (name: string, link: string): string => (`<a href="${link}">${name}</a>`)
+const href = (name: string, link: string): string => `<a href="${link}">${name}</a>`
 
 /**
  *
@@ -27,7 +28,7 @@ const path = (base: string, next: string): string => (!next) ? `${base}/` : `${b
  * @param newPath
  * @returns
  */
-const li = (a: string, children: CategoryTree, level: number, newPath: string): string => `<ul><li>${a}${htmlList(children, level + 1, newPath)}</li></ul>`
+const li = (a: string, children: CategoryTree, level: number, newPath: string): string => `<ul><li>${a}${categoryTreeLinks(children, level + 1, newPath)}</li></ul>`
 
 /**
  * TODO: Remove level when ready
@@ -38,7 +39,7 @@ const li = (a: string, children: CategoryTree, level: number, newPath: string): 
  * @param prop
  * @returns
  */
-const htmlList = (cats: CategoryTree, level = 0, prop = ''): string => {
+const categoryTreeLinks = (cats: CategoryTree, level = 0, prop = ''): string => {
   var str = ''
 
   for (let key in cats) {
@@ -47,7 +48,7 @@ const htmlList = (cats: CategoryTree, level = 0, prop = ''): string => {
     }
 
     const newPath = path(prop, key)
-    const a = href(cats[key].meta.name, path(utils.vars.urls.category + prop, key))
+    const a = href(cats[key].meta.name, path(snippetBase() + prop, key))
 
     str += li(a, cats[key], level + 1, newPath)
   }
@@ -55,4 +56,4 @@ const htmlList = (cats: CategoryTree, level = 0, prop = ''): string => {
   return str
 }
 
-export default (catTree: CategoryTree): string => htmlList(catTree)
+export default (catTree: CategoryTree): string => categoryTreeLinks(catTree)

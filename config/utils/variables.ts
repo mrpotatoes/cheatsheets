@@ -1,6 +1,22 @@
 import path from 'path'
 
 /**
+ * The snippet base path from an env file.
+ *
+ * @returns The snippet base path string
+ */
+export const snippetBase = (): string => process.env.SNIPPET_URL || ''
+
+/**
+ * TODO: Convert to a function
+ */
+export const passthroughs = {
+  // TODO: Use the path function to get these paths
+  assets: { './config/assets': 'assets' },
+  styles: { './config/styles': 'styles' },
+}
+
+/**
  *
  * @param config
  * @returns
@@ -18,15 +34,6 @@ export const basePath = (): any => process.env.BASE_PATH
  * @returns
  */
 export const isDev = (): boolean => process.env.DEVELOPMENT === 'true'
-
-/**
- * TODO: Convert to a function
- */
-export const passthroughs = {
-  // TODO: Use the path function to get these paths
-  assets: { './config/assets': 'assets' },
-  styles: { './config/styles': 'styles' },
-}
 
 /**
  *
@@ -54,15 +61,6 @@ export const snippetUrl = () => process.env.SNIPPET_URL
  * @returns
  */
 export const port = () => process.env.PORT
-
-/**
- * TODO: Convert this to a function instead and it should take an env object
- * TODO: Make this a function to pull from the .env file
- */
-export const urls = {
-  category: '/code/tips/',
-  sansTrailing: '/code/tips',
-}
 
 /**
  * TODO: Typings

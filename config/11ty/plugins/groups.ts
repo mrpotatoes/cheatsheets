@@ -2,11 +2,12 @@ import _ from 'lodash'
 import utils from '@utils'
 import { breadcrumbs } from '@utils/categories'
 import { EleventyConfig } from '@mytypes/11ty'
+import { snippetBase } from '@utils/variables'
 
 /**
  * TODO: Fix typings
  * TODO: See if I can get the Collection API somehow so I can use that to get
- *  all the items. Possible? Otherwise I need to keep the groups.yml
+ *  all the items. Possible? Otherwise I need to keep the snippets-grouped.yml
  */
 export default (eleventyConfig: EleventyConfig) => {
   // @ts-ignore
@@ -18,7 +19,7 @@ export default (eleventyConfig: EleventyConfig) => {
     eleventyConfig.addTemplate(`${group}.njk`, '', {
       layout: 'category-grouping.njk',
       title: breadcrumbs(tree, category, true).map(e => e.title).slice(1).join(' » '),
-      permalink: `${utils.vars.urls.category}/${group}/`,
+      permalink: `${snippetBase()}/${group}/`,
       group: group,
       groupName: _.startCase(_.last(group.split('/'))),
       crumbs: breadcrumbs(tree, category, true),

@@ -1,5 +1,5 @@
 import _ from 'lodash'
-import utils from '@utils/index'
+import utils from '@utils'
 import { EleventyConfig } from '@mytypes/11ty'
 
 /**
@@ -11,16 +11,6 @@ export default (eleventyConfig: EleventyConfig): void => {
   const cats = utils.data.tree()
   // @ts-ignore
   const flattened = utils.categories.flattened(cats)
-
-  eleventyConfig.addTemplate('index.njk', '', {
-    layout: 'category.njk',
-    title: 'Snippets',
-    desc: '',
-    permalink: utils.vars.urls.category,
-    catTree: cats,
-    catTreeCount: true,
-    crumbs: [],
-  })
 
   Object.keys(flattened).forEach((cat) => {
     const path = cat.replace(/^\/+|\/+$/g, '').replaceAll('/', '.')

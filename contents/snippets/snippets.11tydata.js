@@ -1,7 +1,7 @@
-import utils from '@utils'
+import { snippetPermalink } from '@utils/urls'
 
 export default {
   layout: 'snippet.njk',
   tags: 'snippets',
-  permalink: ({ title, ...rest }) => utils.urls.snippet(rest.page),
+  permalink: ({ title, ...rest }) => snippetPermalink(rest.page),
 }

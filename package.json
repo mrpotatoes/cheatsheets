@@ -14,11 +14,6 @@
     "start": "rm -rf .cache cheatsheets; npm run start:eleventy & npm run start:sass",
     "start:eleventy": "tsx watch --include \"./content/*\" --include \"./config/styles/*\" node_modules/@11ty/eleventy/cmd.cjs --config=config/11ty/eleventy.config.ts --quiet --serve",
     "start:sass": "sass ./config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
-    "new:blog": "node ./scripts/new.blog",
-    "new:guide": "node ./scripts/new.guide",
-    "new:snippet": "node ./scripts/new.snippet",
-    "new:project": "node ./scripts/new.project",
-    "new:recipe": "node ./scripts/new.recipe",
     "todo": "leasot -x --reporter markdown ./config/**/*.{ts,njk} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
   },
   "devDependencies": {
@@ -28,7 +23,6 @@
     "@types/lodash": "^4.17.16",
     "@types/markdown-it": "^14.1.2",
     "@types/node": "^22.14.1",
-    "html-minifier": "^4.0.0",
     "prettier": "^2.7.1",
     "sass": "^1.54.8"
   },
@@ -39,6 +33,7 @@
     "dotenv": "^16.5.0",
     "esbuild": "^0.25.3",
     "fuzzysort": "^3.1.0",
+    "html-minifier-terser": "^7.2.0",
     "leasot": "^14.4.0",
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
