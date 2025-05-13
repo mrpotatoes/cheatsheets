@@ -1,3 +1,6 @@
+browser/css/other:
+  - title: Placeholder
+    url: /code/tips/browser/css/placeholder/
 browser/dom/predicates:
   - title: Check if an element is a descendant of another
     url: /code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/
@@ -56,6 +59,9 @@ browser/html/other:
     url: /code/tips/browser/html/box-model/
   - title: Starter Template
     url: /code/tips/browser/html/starter-template/
+browser/pwa/other:
+  - title: Placeholder
+    url: /code/tips/browser/pwa/placeholder/
 languages/java/other:
   - title: Placeholder
     url: /code/tips/languages/java/placeholder/
@@ -250,6 +256,9 @@ languages/javascript/function/other:
     url: /code/tips/languages/javascript/function/partially-apply-a-function/
   - title: Uncurry a function
     url: /code/tips/languages/javascript/function/uncurry-a-function/
+languages/javascript/function/functions:
+  - title: Closures
+    url: /code/tips/languages/javascript/function/closures/
 languages/javascript/idiosyncrasies/other:
   - title: Immediately Invoked Functions
     url: /code/tips/languages/javascript/idiosyncrasies/immediately-invoked-functions/
@@ -438,6 +447,44 @@ languages/javascript/random/other:
     url: /code/tips/languages/javascript/random/pick-a-random-property-of-an-object/
   - title: Pick random lines from a text document
     url: /code/tips/languages/javascript/random/pick-random-lines-from-a-text-document/
+languages/javascript/strings/other:
+  - title: Capitalize a string
+    url: /code/tips/languages/javascript/strings/capitalize-a-string/
+  - title: Decapitalize a string
+    url: /code/tips/languages/javascript/strings/decapitalize-a-string/
+  - title: Decode HTML entities
+    url: /code/tips/languages/javascript/strings/decode-html-entities/
+  - title: Escape HTML special characters
+    url: /code/tips/languages/javascript/strings/escape-html-special-characters/
+  - title: Generate a hash of a string
+    url: /code/tips/languages/javascript/strings/generate-a-hash-of-a-string/
+  - title: Prepend a line number to each line of a text document
+    url: /code/tips/languages/javascript/strings/prepend-a-line-number-to-each-line-of-a-text-document/
+  - title: Repeat a string
+    url: /code/tips/languages/javascript/strings/repeat-a-string/
+  - title: Replace all line breaks with br elements
+    url: /code/tips/languages/javascript/strings/replace-all-line-breaks-with-br-elements/
+  - title: Replace all tab characters with spaces
+    url: /code/tips/languages/javascript/strings/replace-all-tab-characters-with-spaces/
+  - title: Replace multiple spaces with a single space
+    url: /code/tips/languages/javascript/strings/replace-multiple-spaces-with-a-single-space/
+  - title: Replace the first given number of characters of a string with another
+      character
+    url: /code/tips/languages/javascript/strings/replace-the-first-given-number-of-characters-of-a-string-with-another-character/
+  - title: Reverse a string
+    url: /code/tips/languages/javascript/strings/reverse-a-string/
+  - title: Reverse the order of lines of a text
+    url: /code/tips/languages/javascript/strings/reverse-the-order-of-lines-of-a-text/
+  - title: Strip ANSI codes from a string
+    url: /code/tips/languages/javascript/strings/strip-ansi-codes-from-a-string/
+  - title: Trim slashes at the beginning and the end of a string
+    url: /code/tips/languages/javascript/strings/trim-slashes-at-the-beginning-and-the-end-of-a-string/
+  - title: Trim some character
+    url: /code/tips/languages/javascript/strings/trim-some-character/
+  - title: Trim the file extension from a file name
+    url: /code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/
+  - title: Truncate a string at full words
+    url: /code/tips/languages/javascript/strings/truncate-a-string-at-full-words/
 languages/javascript/strings/predicates:
   - title: Check if a path is relative
     url: /code/tips/languages/javascript/strings/check-if-a-path-is-relative/
@@ -477,44 +524,6 @@ languages/javascript/strings/counting:
     url: /code/tips/languages/javascript/strings/count-the-number-of-words-in-a-string/
   - title: Count the occurrences of a character in a string
     url: /code/tips/languages/javascript/strings/count-the-occurrences-of-a-character-in-a-string/
-languages/javascript/strings/other:
-  - title: Decode HTML entities
-    url: /code/tips/languages/javascript/strings/decode-html-entities/
-  - title: Escape HTML special characters
-    url: /code/tips/languages/javascript/strings/escape-html-special-characters/
-  - title: Generate a hash of a string
-    url: /code/tips/languages/javascript/strings/generate-a-hash-of-a-string/
-  - title: Prepend a line number to each line of a text document
-    url: /code/tips/languages/javascript/strings/prepend-a-line-number-to-each-line-of-a-text-document/
-  - title: Repeat a string
-    url: /code/tips/languages/javascript/strings/repeat-a-string/
-  - title: Replace all line breaks with br elements
-    url: /code/tips/languages/javascript/strings/replace-all-line-breaks-with-br-elements/
-  - title: Replace all tab characters with spaces
-    url: /code/tips/languages/javascript/strings/replace-all-tab-characters-with-spaces/
-  - title: Replace multiple spaces with a single space
-    url: /code/tips/languages/javascript/strings/replace-multiple-spaces-with-a-single-space/
-  - title: Replace the first given number of characters of a string with another
-      character
-    url: /code/tips/languages/javascript/strings/replace-the-first-given-number-of-characters-of-a-string-with-another-character/
-  - title: Reverse a string
-    url: /code/tips/languages/javascript/strings/reverse-a-string/
-  - title: Reverse the order of lines of a text
-    url: /code/tips/languages/javascript/strings/reverse-the-order-of-lines-of-a-text/
-  - title: Strip ANSI codes from a string
-    url: /code/tips/languages/javascript/strings/strip-ansi-codes-from-a-string/
-  - title: Trim slashes at the beginning and the end of a string
-    url: /code/tips/languages/javascript/strings/trim-slashes-at-the-beginning-and-the-end-of-a-string/
-  - title: Trim some character
-    url: /code/tips/languages/javascript/strings/trim-some-character/
-  - title: Trim the file extension from a file name
-    url: /code/tips/languages/javascript/strings/trim-the-file-extension-from-a-file-name/
-  - title: Truncate a string at full words
-    url: /code/tips/languages/javascript/strings/truncate-a-string-at-full-words/
-  - title: Capitalize a string
-    url: /code/tips/languages/javascript/strings/capitalize-a-string/
-  - title: Decapitalize a string
-    url: /code/tips/languages/javascript/strings/decapitalize-a-string/
 languages/javascript/strings/retrivals:
   - title: Get the base URL without any parameters
     url: /code/tips/languages/javascript/strings/get-the-base-url-without-any-parameters/
@@ -756,12 +765,3 @@ subsystem/dotfiles/other:
     url: /code/tips/subsystem/dotfiles/unhide/
   - title: untar
     url: /code/tips/subsystem/dotfiles/untar/
-browser/css/other:
-  - title: Placeholder
-    url: /code/tips/browser/css/placeholder/
-browser/pwa/other:
-  - title: Placeholder
-    url: /code/tips/browser/pwa/placeholder/
-languages/javascript/function/functions:
-  - title: Closures
-    url: /code/tips/languages/javascript/function/closures/
