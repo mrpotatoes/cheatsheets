@@ -2,13 +2,13 @@ import _ from 'lodash'
 import dotenv from 'dotenv'
 import collections from '@collections'
 import events from '@events'
-import filters from '@filters'
 import plugins from '@plugins'
 import transforms from '@transforms'
-import shortCodes from '@shortcodes'
 import utils from '@utils'
+
+import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -27,7 +27,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addWatchTarget('contents/assets/')
 
   // Global Data
-  eleventyConfig.addGlobalData('snippetBase', utils.vars.urls.category)
+  eleventyConfig.addGlobalData('snippetBase', snippetBase())
   eleventyConfig.addGlobalData('basePath', basePath())
 
   // Register Plugins
@@ -46,7 +46,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addFilter('cat', filters.catPath)
   eleventyConfig.addFilter('md', filters.markdown)
   eleventyConfig.addFilter('json', filters.toJSON)
-  eleventyConfig.addShortcode('categoryTree', shortCodes.snippetCatTree)
+  eleventyConfig.addShortcode('categoryTree', shortcodes.snippetCatTree)
 
   // Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
