@@ -12,9 +12,18 @@
 [NEXT STEPS]
 - transforms, filters & short codes
 - folder redo
-- content refactor (add desc)
 - images, teasers, typings
 - theme + vento
+- content refactor (add desc)
+
+
+export const newPath = (page, filepath) =>
+  path.join(
+    process.env.PWD,
+    page.inputPath.replace(`/${page.fileSlug}.md`, ''),
+    filepath
+  )
+
 #}
 
 ## General Code

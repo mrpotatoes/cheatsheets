@@ -18,4 +18,5 @@ Links for plugins and tutorials
 - [`@mdit/plugin-katex`](https://mdit-plugins.github.io/katex.html)
 
 **Example output**
-![](/assets/example.jpg)
+{# ![](/assets/example.jpg) #}
+

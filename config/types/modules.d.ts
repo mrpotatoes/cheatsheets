@@ -1,6 +1,7 @@
+// This will be temporary until I get all my stuff properly typed.
 declare module '@11ty/eleventy'
 
-declare module '@11ty/eleventy-plugin-syntaxhighlight'
-
-// Just do disable an annoying warning when importing this package
+// Disable annoying warnings when importing these packages.
 declare module 'memoize'
+declare module 'markdown-it-eleventy-img'
+declare module '@11ty/eleventy-plugin-syntaxhighlight'
