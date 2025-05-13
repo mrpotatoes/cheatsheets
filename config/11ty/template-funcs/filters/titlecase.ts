@@ -1,3 +1,6 @@
+/**
+ *
+ */
 export default (str: string): string => {
   if ((str === null) || (str === ''))
     return ''

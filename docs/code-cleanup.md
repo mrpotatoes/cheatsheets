@@ -8,9 +8,16 @@
 - [Misc](#misc)
   - [New folder structure ideas](#new-folder-structure-ideas)
 
+{#
+[NEXT STEPS]
+- transforms, filters & short codes
+- folder redo
+- content refactor (add desc)
+- images, teasers, typings
+- theme + vento
+#}
+
 ## General Code
-- [ ] Combine `filters` and `shortcodes`
-  - [ ] Rename the folder to `template-functions`
 - [ ] Move `config/assets` to `contents/assets`
 - [ ] `bundle-typescript.ts`
   - [ ] Move to `transforms`
@@ -35,9 +42,6 @@
     - [ ] `/assets/img/`
     - [ ] `/assets/js/`
     - [ ] `/assets/css/`
-- [ ] Remove full stops from all single line comments
-- [ ] Reformat all snippets
-- [ ] Add proper headings to all snippets
 
 ## Code Quality
 ## Misc
@@ -59,9 +63,10 @@ src
       filter.*.ts
       shortcode.*.ts
     transforms
-      minify.ts
       yaml.ts
+      minify.ts
       cache-busting.ts
+      typescript-bundling.ts
     plugins
       virtual-templates
         category.root.ts
@@ -69,6 +74,8 @@ src
         groups.ts
       markdown
       typescript
+      cards
+      sidebar
 
   theme (i.e., layouts)
     layouts

@@ -61,6 +61,7 @@ I want to be able to manually set teaser content for content. Preferably add the
   - Much of the content is not using headings and such
   - Fix titles since they will be grouped many of the titles should change to accommodate that
   - I want all snippets to follow my preferred formatting rules
+  - Add descriptions to all categories
 - `feature/refactor-typings`
 - `feature/refactor-todos`
   - [`azat-io/todoctor`](https://github.com/azat-io/todoctor)
