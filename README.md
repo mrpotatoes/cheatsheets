@@ -26,3 +26,11 @@ I will be rebuilding my website using the [`madrilene/eleventy-excellent`](https
 - [Eleventy Themes & Templates - Built At Lightspeed](https://www.builtatlightspeed.com/category/eleventy)
 
 <!-- Figure out why 'Generate a random hex color' isn't showing up. Might be others. -->
+
+<!--
+https://pagescms.org/
+https://css-tricks.com/using-pages-cms-for-static-site-content-management/
+
+https://decapcms.org/docs/intro/
+https://github.com/MWDelaney/11ty-component-system
+-->

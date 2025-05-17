@@ -1,21 +1,38 @@
 # Code cleanup
 
+- [Next Steps](#next-steps)
 - [General Code](#general-code)
   - [Utilities](#utilities)
   - [Configurations](#configurations)
 - [Content](#content)
 - [Code Quality](#code-quality)
 - [Misc](#misc)
-  - [New folder structure ideas](#new-folder-structure-ideas)
 
 {#
 [NEXT STEPS]
-- transforms, filters & short codes
-- folder redo
-- content refactor (add desc)
 - images, teasers, typings
 - theme + vento
+- folder redo
+- content refactor (add desc)
 #}
+
+## Next Steps
+- [ ] Images, teasers, typings [`feature/images`]
+- [ ] Errors & debugging [`feature/debugging`]
+- [ ] Scripts [`feature/scripts`]
+- [ ] Theme + Vento [`feature/theme`]
+- [ ] Content refactor (add desc) [`refactor/content`]
+- [ ] Folder redo [`epic/project-reorganization`]
+  - `epic/refactor/src`
+  - `epic/refactor/collections`
+  - `epic/refactor/utils`
+  - `epic/refactor/plugins`
+  - `epic/refactor/theme`
+  - `epic/refactor/transforms`
+  - `epic/refactor/data`
+  - `epic/refactor/types`
+  - `epic/refactor/`
+  - `epic/refactor/`
 
 ## General Code
 - [ ] Move `config/assets` to `contents/assets`
@@ -53,65 +70,3 @@
 - [ ] Change repo name to `website`
 - [ ] Change directory where code is deployed
 
-### New folder structure ideas
-```
-src
-  11ty
-    collections
-    events
-    templates
-      filter.*.ts
-      shortcode.*.ts
-    transforms
-      yaml.ts
-      minify.ts
-      cache-busting.ts
-      typescript-bundling.ts
-    plugins
-      virtual-templates
-        category.root.ts
-        category.children.ts
-        groups.ts
-      markdown
-      typescript
-      cards
-      sidebar
-
-  theme (i.e., layouts)
-    layouts
-    styles
-    images
-    partials
-    schemas
-    webc
-    head
-
-  utils
-    types.{NAME}.ts
-    variables.ts
-    categories.ts
-    ...
-
-  build
-
-  data
-
-tests?
-  11ty
-  data
-  layouts
-  styles
-  types
-  utils
-
-contents
-  assets
-  philosophies
-    blog
-    explorations
-  pages
-  projects
-  snippets
-
-docs
-```
