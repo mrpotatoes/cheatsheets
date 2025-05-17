@@ -1,12 +1,17 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
 import { groups } from '@utils/data'
-import { Breadcrumb, CategoryTree, Flattened, Group } from '@mytypes/categories'
+import { Breadcrumb, CategoryTree, Flattened, Group, Snippets } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
 import { snippetBase } from '@utils/variables'
 
-// @ts-ignore
-export const hasCategory = (acc, curr) => acc[catGroupUrl(curr)] === undefined
+/**
+ *
+ * @param acc
+ * @param curr
+ * @returns
+ */
+export const hasCategory = (acc: Snippets, curr: CollectionItem) => acc[catGroupUrl(curr)] === undefined
 
 /**
  *

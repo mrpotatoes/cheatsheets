@@ -19,6 +19,7 @@
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
     "@types/html-minifier": "^4.0.5",
+    "@types/html-minifier-terser": "^7.0.2",
     "@types/js-yaml": "^4.0.9",
     "@types/lodash": "^4.17.16",
     "@types/markdown-it": "^14.1.2",

@@ -1,8 +1,8 @@
-// @ts-ignore TODO: Create module if types no exist
 import htmlmin from 'html-minifier-terser'
 import { isDev } from '@utils/variables'
+import { EleventyScope } from '@mytypes/11ty'
 
-export const minify = (content: string): string =>
+export const minify = (content: string): Promise<string> =>
   htmlmin.minify(content, {
     useShortDoctype: true,
     removeComments: true,
@@ -10,8 +10,8 @@ export const minify = (content: string): string =>
   })
 
   // https://www.11ty.dev/docs/transforms/
-export default function (content: string): string {
+export default async function (this: EleventyScope, content: string): Promise<string> {
   return (!isDev() && (this.page.outputPath || '').endsWith('.html'))
-    ? minify(content)
+    ? await minify(content)
     : content
 }
