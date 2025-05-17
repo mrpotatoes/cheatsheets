@@ -1,4 +1,5 @@
 import path from 'path'
+import { EleventyServer } from '@mytypes/11ty'
 
 /**
  * The snippet base path from an env file.
@@ -89,7 +90,7 @@ export const dotenvConfig = (options = {}) => ({
  *
  * @returns
  */
-export const serverConfig = () => ({
+export const serverConfig = (): EleventyServer => ({
   // TODO: Retrieve this from the env files instead.
   port: port(),
 })
