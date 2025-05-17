@@ -8,7 +8,7 @@ import utils from '@utils'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port, snippetBase } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase, outputDir } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -85,7 +85,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
       data: '../config/data',
       layouts: '../config/layouts',
       includes: '../config/layouts',
-      output: 'cheatsheets',
+      output: outputDir(),
     }
   }
 }

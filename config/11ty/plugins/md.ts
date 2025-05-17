@@ -1,6 +1,7 @@
 import markdownIt from 'markdown-it'
 import path from 'path'
 import markdownItEleventyImg from 'markdown-it-eleventy-img'
+import { outputDir, workingDir } from '@utils/variables'
 
 export default markdownIt({
   html: true,
@@ -10,15 +11,17 @@ export default markdownIt({
     imgOptions: {
       widths: [1000, 800, 600],
       urlPath: '/assets/imgs/',
-      outputDir: 'cheatsheets/assets/imgs',
+      outputDir: path.join(outputDir(), '/assets/imgs'),
       // formats: ['avif', 'webp', 'jpeg'],
     },
     globalAttributes: {
       class: 'markdown-image',
       decoding: 'async',
-      sizes: '100vw', // If you use multiple widths don't forget to add a `sizes` attribute
+      sizes: '100vw',
     },
 
-    // Literally from the example. I don't get it.
-    resolvePath: (filepath, env) => path.join(path.dirname(env.page.inputPath), filepath)
+    resolvePath: (filepath: string, env: any) =>
+      (filepath.charAt(0) === '/')
+        ? path.join(workingDir(), 'config/', filepath)
+        : path.join(path.dirname(env.page.inputPath), filepath)
   })
