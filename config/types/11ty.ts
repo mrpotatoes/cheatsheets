@@ -1,17 +1,60 @@
-// import MarkdownIt from 'markdown-it'
-import { Breadcrumb } from '@mytypes/categories'
+import type { Join, LiteralUnion } from 'type-fest'
 
 // TODO: Add missing types: https://github.com/panoply/e11ty/blob/master/packages/11ty.ts/index.ts
+type TemplateEngines = LiteralUnion<
+  | 'html'
+  | 'md'
+  | '11ty.js'
+  | 'liquid'
+  | 'njk'
+  | 'hbs'
+  | 'mustache'
+  | 'ejs'
+  | 'haml'
+  | 'pug'
+  | 'jstl'
+  , string>
 
-type EventNames = any
+type TemplateFormats = LiteralUnion<
+  | 'html'
+  | 'md'
+  | 'liquid'
+  | 'haml'
+  | 'hbs'
+  | 'pug'
+  | 'njk'
+  | 'json'
+  | 'css'
+  | 'ejs'
+  | 'haml'
+  | 'njk'
+  | 'hbs'
+  | 'mustache'
+  , string>
 
-type AsyncFilter = (error: unknown | null, result?: any) => void
+type EventNamesDeprecated = LiteralUnion<
+  | 'beforeBuild'
+  | 'beforeWatch'
+  | 'afterBuild'
+  , string>
 
-type EleventyPlugin = (eleventy: any, options?: any) => any
+type EventNames = LiteralUnion<
+  | 'eleventy.before'
+  | 'eleventy.after'
+  | 'eleventy.beforeConfig'
+  | 'eleventy.beforeWatch'
+  | 'eleventy.resourceModified'
+  | 'eleventy.resourceAdded'
+  | 'eleventy.resourceDeleted'
+  , string>
 
-type GetPluginOptions<T extends EleventyPlugin> = Parameters<T>[1]
+export type AsyncFilter = (error: unknown | null, result?: any) => void
 
-interface PluginExtend {
+export type EleventyPlugin = (eleventy: any, options?: any) => any
+
+export type GetPluginOptions<T extends EleventyPlugin> = Parameters<T>[1]
+
+export interface PluginExtend {
   addPlugin<Plugin extends EleventyPlugin, PluginOptions extends GetPluginOptions<Plugin>>(
     plugin: Plugin,
     options?: PluginOptions
@@ -47,7 +90,7 @@ export interface EleventyPage {
   url: string
 }
 
-interface EleventyData {
+export interface EleventyData {
   version: string
   generator: string
   env: {
@@ -109,7 +152,7 @@ export interface EleventyScope {
   eleventy: EleventyData
 }
 
-interface EleventyServer {
+export interface EleventyServer {
   liveReload?: boolean
   domDiff?: boolean
   port?: number
@@ -128,18 +171,18 @@ interface EleventyServer {
   domdiff?: boolean
 }
 
-interface EleventyBrowserSync extends EleventyServer {
+export interface EleventyBrowserSync extends EleventyServer {
   // module: LiteralUnion<'@11ty/eleventy-server-browsersync', string>
   snippet?: boolean
 }
 
-interface EleventDataExtension {
+export interface EleventDataExtension {
   parser: (contents: string, filePath: string) => Record<string, any>
   read?: boolean
   encoding?: string | null
 }
 
-interface Filters {
+export interface Filters {
   addLiquidFilter(
     filterName: string,
     filter: (this: EleventyScope, ...args: any[]) => string): void
@@ -169,7 +212,7 @@ interface Filters {
     filter: (this: EleventyScope, arg1: any, arg2: any, callback: AsyncFilter) => void): void
 }
 
-interface ShortCodes {
+export interface ShortCodes {
   addLiquidShortcode(
     shortcodeName: string,
     filter: (this: EleventyScope, ...args: any[]) => string | PromiseLike<string>): void
@@ -215,7 +258,7 @@ export interface EleventyConfig extends Filters, ShortCodes, PluginExtend {
 
   // setChokidarConfig(options: WatchOptions): void
 
-  // setTemplateFormats(formats: readonly TemplateEngines[] | Join<TemplateEngines[], ','>): void
+  setTemplateFormats(formats: readonly TemplateEngines[] | Join<TemplateEngines[], ','>): void
 
   setDataDeepMerge(deepMerge: boolean): void
 
@@ -224,6 +267,11 @@ export interface EleventyConfig extends Filters, ShortCodes, PluginExtend {
   setWatchJavaScriptDependencies(watch: boolean): void
 
   setDataFileBaseName(name: string): void
+
+  // addCollection(
+  //   name: string,
+  //   callback: (collectionApi: EleventyConfig)
+  // )
 
   addDataExtension(
     fileExtension: string,
@@ -270,6 +318,7 @@ export interface EleventyConfig extends Filters, ShortCodes, PluginExtend {
   setLibrary(name: string, instance: any): void
 
   on(event: EventNames, handler: () => void): void
+
   /**
    * Deprecated Event Name, Use the new Event names:
    *
@@ -308,12 +357,9 @@ export interface ReturnConfig {
     data?: string
   }
 
-  // dataTemplateEngine?: TemplateEngines | false
-  // markdownTemplateEngine?: TemplateEngines | false
-  // htmlTemplateEngine?: TemplateEngines | false
-
-  markdownTemplateEngine?: string | false
-  htmlTemplateEngine?: string | false
+  dataTemplateEngine?: TemplateEngines | false
+  markdownTemplateEngine?: TemplateEngines | false
+  htmlTemplateEngine?: TemplateEngines | false
 
   templateFormats?: string | string[]
 
