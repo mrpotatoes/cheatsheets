@@ -2,21 +2,18 @@
 title: Check if multiple objects are equal
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isEqual = (...objects) => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+const isEqual = (...objects) => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]))
 ```
 
-**TypeScript version**
-
-```js
-const isEqual = (...objects: object[]): boolean => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]));
+## TypeScript
+```ts
+const isEqual = (...objects: object[]): boolean => objects.every((obj) => JSON.stringify(obj) === JSON.stringify(objects[0]))
 ```
 
-**Examples**
-
+## Examples
 ```js
-isEqual({ foo: 'bar' }, { foo: 'bar' }); // true
-isEqual({ foo: 'bar' }, { bar: 'foo' }); // false
+isEqual({ foo: 'bar' }, { foo: 'bar' }) // true
+isEqual({ foo: 'bar' }, { bar: 'foo' }) // false
 ```

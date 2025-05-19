@@ -2,7 +2,7 @@
 title: Repeat an array
 ---
 
-## JavaScript version
+## JavaScript
 ```js
 // `arr` is an array
 const repeat = (arr, n) => [].concat(...Array(n).fill(arr))
@@ -20,7 +20,7 @@ const repeat = (arr, n) =>
 const repeat = (arr, n) => Array.from({ length: arr.length * n }, (_, i) => arr[i % arr.length])
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const repeat = <T,_>(arr: T[], n: number): T[] => [].concat(...Array(n).fill(arr))
 

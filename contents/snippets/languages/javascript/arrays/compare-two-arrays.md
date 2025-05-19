@@ -11,7 +11,7 @@ const isEqual = (a, b) => JSON.stringify(a) === JSON.stringify(b)
 const isEqual = (a, b) => a.length === b.length && a.every((v, i) => v === b[i])
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const isEqual = <T,_>(a: T[], b: T[]): boolean => JSON.stringify(a) === JSON.stringify(b)
 

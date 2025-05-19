@@ -2,24 +2,21 @@
 title: Reverse the order of lines of a text
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const reverseLines = (str) => str.split(/\r?\n/).reverse().join('\n');
+const reverseLines = (str) => str.split(/\r?\n/).reverse().join('\n')
 ```
 
-**TypeScript version**
-
-```js
-const reverseLines = (str: string): string => str.split(/\r?\n/).reverse().join('\n');
+## TypeScript
+```ts
+const reverseLines = (str: string): string => str.split(/\r?\n/).reverse().join('\n')
 ```
 
-**Examples**
-
+## Examples
 ```js
 reverseLines(`one
 two
-three`);
+three`)
 
 /* Output */
 /*

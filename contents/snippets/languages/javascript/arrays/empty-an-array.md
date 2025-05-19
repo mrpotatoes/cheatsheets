@@ -7,7 +7,7 @@ title: Empty an array
 const empty = (arr) => (arr.length = 0)
 
 // Or
-arr = [];
+arr = []
 ```
 
 ## TypeScript

@@ -2,32 +2,30 @@
 title: Box handler
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const boxHandler = (x) => ({ next: (f) => boxHandler(f(x)), done: (f) => f(x) });
+const boxHandler = (x) => ({ next: (f) => boxHandler(f(x)), done: (f) => f(x) })
 ```
 
-**Examples**
-
+## Examples
 ```js
 // First example
 const getPercentNumber = (str) =>
-    boxHandler(str)
-        .next((str) => str.replace(/\%/, ''))
-        .next((str) => parseFloat(str))
-        .done((res) => res * 0.01);
+  boxHandler(str)
+    .next((str) => str.replace(/\%/, ''))
+    .next((str) => parseFloat(str))
+    .done((res) => res * 0.01)
 
-getPercentNumber('50%'); // 0.5
+getPercentNumber('50%') // 0.5
 
 // Second example
-const getMoney = (price) => Number.parseFloat(price.replace(/\$/, ''));
-const getPercent = (percent) => Number.parseFloat(percent.replace(/\%/)) * 0.01;
+const getMoney = (price) => Number.parseFloat(price.replace(/\$/, ''))
+const getPercent = (percent) => Number.parseFloat(percent.replace(/\%/)) * 0.01
 
 const getDiscountPrice = (price, discount) =>
-    boxHandler(getMoney(price))
-        .done((cents) => boxHandler(getPercent(discount)).next((save) => cents - cents * save))
-        .done((res) => res);
+  boxHandler(getMoney(price))
+    .done((cents) => boxHandler(getPercent(discount)).next((save) => cents - cents * save))
+    .done((res) => res)
 
-getDiscountPrice('$6.00', '20%'); // 4.8
+getDiscountPrice('$6.00', '20%') // 4.8
 ```

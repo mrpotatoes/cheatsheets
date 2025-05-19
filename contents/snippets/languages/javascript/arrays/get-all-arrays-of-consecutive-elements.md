@@ -9,7 +9,7 @@ const getConsecutiveArrays = (arr, size) =>
   (size > arr.length ? [] : arr.slice(size - 1).map((_, i) => arr.slice(i, size + i)))
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const getConsecutiveArrays = <T,_>(arr: T[], size: number): T[][] =>
   (size > arr.length ? [] : arr.slice(size - 1).map((_, i) => arr.slice(i, size + i)))

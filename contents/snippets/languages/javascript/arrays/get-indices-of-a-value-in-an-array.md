@@ -11,7 +11,7 @@ const indices = (arr, value) => arr.reduce((acc, v, i) => (v === value ? [...acc
 const indices = (arr, value) => arr.map((v, i) => (v === value ? i : false)).filter(Boolean)
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const indices = <T,>(arr: T[], value: T): number[] =>
   arr.reduce((acc, v, i) => (v === value ? [...acc, i] : acc), [] as number[])

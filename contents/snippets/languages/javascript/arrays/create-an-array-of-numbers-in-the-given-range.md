@@ -2,7 +2,7 @@
 title: Create an array of numbers in the given range
 ---
 
-## JavaScript version
+## JavaScript
 ```js
 const range = (min, max) => [...Array(max - min + 1).keys()].map((i) => i + min)
 
@@ -16,7 +16,7 @@ const range = (min, max) =>
     .map((_, i) => min + i)
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const range = (min: number, max: number): number[] => [...Array(max - min + 1).keys()].map((i) => i + min)
 

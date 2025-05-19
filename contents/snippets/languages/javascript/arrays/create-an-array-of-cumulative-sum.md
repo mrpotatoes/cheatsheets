@@ -11,7 +11,7 @@ const accumulate = (arr) =>
 const accumulate = (arr) => arr.reduce((a, b, i) => (i === 0 ? [b] : [...a, b + a[i - 1]]), [0])
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const accumulate = (arr: number[]): number[] =>
   arr.map(((sum) => (value: number) => (sum += value))(0))

@@ -3,21 +3,18 @@ title: Normalize file path slashes
 group: Casing
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const normalizePath = (path) => path.replace(/[\\/]+/g, '/');
+const normalizePath = (path) => path.replace(/[\\/]+/g, '/')
 ```
 
-**TypeScript version**
-
-```js
-const normalizePath = (path: string): string => path.replace(/[\\/]+/g, '/');
+## TypeScript
+```ts
+const normalizePath = (path: string): string => path.replace(/[\\/]+/g, '/')
 ```
 
-**Examples**
-
+## Examples##
 ```js
-normalizePath('\\foo\\bar\\baz\\'); // /foo/bar/baz/
-normalizePath('.//foo//bar///////baz/'); // ./foo/bar/baz/
+normalizePath('\\foo\\bar\\baz\\') // /foo/bar/baz/
+normalizePath('.//foo//bar///////baz/') // ./foo/bar/baz/
 ```

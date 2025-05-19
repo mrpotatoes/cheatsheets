@@ -2,19 +2,19 @@
 title: Sort an array of dates
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 // `arr` is an array of `Date` items
-const sortDescending = (arr) => arr.sort((a, b) => a.getTime() > b.getTime());
+const sortDescending = (arr) => arr.sort((a, b) => a.getTime() > b.getTime())
 
-const sortAscending = (arr) => arr.sort((a, b) => a.getTime() < b.getTime());
+// Or
+const sortAscending = (arr) => arr.sort((a, b) => a.getTime() < b.getTime())
 ```
 
-**TypeScript version**
+## TypeScript
+```ts
+const sortDescending = (arr: Date[]): Date[] => arr.sort((a, b) => a.getTime() - b.getTime())
 
-```js
-const sortDescending = (arr: Date[]): Date[] => arr.sort((a, b) => a.getTime() - b.getTime());
-
-const sortAscending = (arr: Date[]): Date[] => arr.sort((a, b) => b.getTime() - a.getTime());
+// Or
+const sortAscending = (arr: Date[]): Date[] => arr.sort((a, b) => b.getTime() - a.getTime())
 ```

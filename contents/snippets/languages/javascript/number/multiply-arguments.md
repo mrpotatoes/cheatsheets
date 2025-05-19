@@ -2,20 +2,17 @@
 title: Multiply arguments
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const mul = (...args) => args.reduce((a, b) => a * b);
+const mul = (...args) => args.reduce((a, b) => a * b)
 ```
 
-**TypeScript version**
-
-```js
-const mul = (...args: number[]): number => args.reduce((a, b) => a * b);
+## TypeScript
+```ts
+const mul = (...args: number[]): number => args.reduce((a, b) => a * b)
 ```
 
-**Examples**
-
+## Examples
 ```js
-mul(1, 2, 3, 4); // 24
+mul(1, 2, 3, 4) // 24
 ```

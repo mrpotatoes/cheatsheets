@@ -27,11 +27,9 @@ const builder = (edges) => {
 
     graph = newGraph
   }
-  
+
   return graph
 }
 
 const graph = builder(edges)
-
-
 ```

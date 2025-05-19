@@ -3,35 +3,22 @@ title: Remove empty lines of a text document
 group: Casing
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const removeEmptyLines = (str) =>
-    str
-        .split(/\r?\n/)
-        .filter((line) => line.trim() !== '')
-        .join('\n');
+const removeEmptyLines = (str) => str
+  .split(/\r?\n/)
+  .filter((line) => line.trim() !== '')
+  .join('\n')
 ```
 
-**TypeScript version**
-
-```js
-const removeEmptyLines = (str: string): string =>
-    str
-        .split(/\r?\n/)
-        .filter((line) => line.trim() !== '')
-        .join('\n');
-```
-
-**Examples**
-
+## Examples
 ```js
 removeEmptyLines(`red
 
 green
 blue
 
-yellow`);
+yellow`)
 
 /* Output */
 /*

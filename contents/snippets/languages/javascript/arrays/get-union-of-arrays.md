@@ -8,7 +8,7 @@ group: Retrievals
 const union = (...arr) => [...new Set(arr.flat())]
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const union = <T,_>(...arr: T[][]): T[] => [...new Set(arr.flat())]
 ```

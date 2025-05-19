@@ -2,20 +2,17 @@
 title: Calculate the average of arguments
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const average = (...args) => args.reduce((a, b) => a + b) / args.length;
+const average = (...args) => args.reduce((a, b) => a + b) / args.length
 ```
 
-**TypeScript version**
-
-```js
-const average = (...args: number[]): number => args.reduce((a, b) => a + b) / args.length;
+## TypeScript
+```ts
+const average = (...args: number[]): number => args.reduce((a, b) => a + b) / args.length
 ```
 
-**Examples**
-
+## Examples
 ```js
-average(1, 2, 3, 4); // 2.5
+average(1, 2, 3, 4) // 2.5
 ```

@@ -2,26 +2,23 @@
 title: Trim slashes at the beginning and the end of a string
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '');
+const trimSlashes = (str) => str.replace(/^\/+|\/+$/g, '')
 
 // Or
-const trimSlashes = (str) => str.split('/').filter(Boolean).join('/');
+const trimSlashes = (str) => str.split('/').filter(Boolean).join('/')
 ```
 
-**TypeScript version**
-
-```js
-const trimSlashes = (str: string): string => str.replace(/^\/+|\/+$/g, '');
+## TypeScript
+```ts
+const trimSlashes = (str: string): string => str.replace(/^\/+|\/+$/g, '')
 
 // Or
-const trimSlashes = (str: string): string => str.split('/').filter(Boolean).join('/');
+const trimSlashes = (str: string): string => str.split('/').filter(Boolean).join('/')
 ```
 
-**Examples**
-
+## Examples
 ```js
-trimSlashes('//hello/world///'); // hello/world
+trimSlashes('//hello/world///') // hello/world
 ```

@@ -8,7 +8,7 @@ group: Retrievals
 const getNthItems = (arr, nth) => arr.filter((_, i) => i % nth === nth - 1)
 ```
 
-## TypeScript version
+## TypeScript
 ```ts
 const getNthItems = <T,_>(arr: T[], nth: number): T[] => arr.filter((_, i) => i % nth === nth - 1)
 ```

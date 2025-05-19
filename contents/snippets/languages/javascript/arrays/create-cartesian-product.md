@@ -2,7 +2,7 @@
 title: Create cartesian product
 ---
 
-## JavaScript version
+## JavaScript
 ```js
 const cartesian = (...sets) => sets.reduce((acc, set) => acc.flatMap((x) => set.map((y) => [...x, y])), [[]])
 ```

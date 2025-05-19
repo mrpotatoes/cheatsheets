@@ -2,17 +2,15 @@
 title: Generate an unique and increment id
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const uid = (() => ((id = 0), () => id++))();
+const uid = (() => ((id = 0), () => id++))()
 ```
 
-**Examples**
-
+## Examples
 ```js
-uid(); // 0
-uid(); // 1
-uid(); // 2
-uid(); // 3
+uid() // 0
+uid() // 1
+uid() // 2
+uid() // 3
 ```

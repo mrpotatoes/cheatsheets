@@ -3,28 +3,15 @@ title: Swap case of characters in a string
 group: Casing
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const swapCase = (str) =>
-    str
-        .split('')
-        .map((c) => (c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()))
-        .join('');
+const swapCase = (str) => str
+  .split('')
+  .map((c) => (c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()))
+  .join('')
 ```
 
-**TypeScript version**
-
+## Examples
 ```js
-const swapCase = (str: string): string =>
-    str
-        .split('')
-        .map((c) => (c === c.toLowerCase() ? c.toUpperCase() : c.toLowerCase()))
-        .join('');
-```
-
-**Examples**
-
-```js
-swapCase('Hello World'); // 'hELLO wORLD'
+swapCase('Hello World') // 'hELLO wORLD'
 ```

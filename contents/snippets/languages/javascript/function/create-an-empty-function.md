@@ -2,12 +2,11 @@
 title: Create an empty function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const noop = () => {};
+const noop = () => {}
 
 // Or
-const noop = Function();
+const noop = Function()
 // calling Function() might be detected as using eval by some security tools
 ```

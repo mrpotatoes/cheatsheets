@@ -2,20 +2,15 @@
 title: Clear all cookies
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const clearCookies = () => document.cookie.split(';').forEach((c) => (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`)));
+const clearCookies = () =>
+  document.cookie
+    .split(';')
+    .forEach((c) => (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`)))
 ```
 
-**TypeScript version**
-
+## Examples
 ```js
-const clearCookies = (): void => document.cookie.split(';').forEach((c) => (document.cookie = c.replace(/^ +/, '').replace(/=.*/, `=;expires=${new Date().toUTCString()};path=/`)));
-```
-
-**Examples**
-
-```js
-clearCookies();
+clearCookies()
 ```
