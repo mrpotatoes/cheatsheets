@@ -1,26 +1,3 @@
-browser/css/other:
-  - title: Placeholder
-    url: /code/tips/browser/css/placeholder/
-browser/dom/predicates:
-  - title: Check if an element is a descendant of another
-    url: /code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/
-  - title: Check if an element is focused
-    url: /code/tips/browser/dom/check-if-an-element-is-focused/
-  - title: Check if the touch events are supported
-    url: /code/tips/browser/dom/check-if-the-touch-events-are-supported/
-  - title: Check if user scrolls to the bottom of the page
-    url: /code/tips/browser/dom/check-if-user-scrolls-to-the-bottom-of-the-page/
-browser/dom/other:
-  - title: Detect Internet Explorer browser
-    url: /code/tips/browser/dom/detect-internet-explorer-browser/
-  - title: Detect macOS browser
-    url: /code/tips/browser/dom/detect-macos-browser/
-  - title: Serialize form data
-    url: /code/tips/browser/dom/serialize-form-data/
-  - title: Show an element
-    url: /code/tips/browser/dom/show-an-element/
-  - title: Strip HTML from a given text
-    url: /code/tips/browser/dom/strip-html-from-a-given-text/
 browser/dom/page interactions:
   - title: Click all checkboxes
     url: /code/tips/browser/dom/force-click-all-buttons/
@@ -38,22 +15,6 @@ browser/dom/page interactions:
     url: /code/tips/browser/dom/scroll-to-top-of-the-page/
   - title: Toggle an element
     url: /code/tips/browser/dom/toggle-an-element/
-browser/dom/retrievals:
-  - title: Get all siblings of an element
-    url: /code/tips/browser/dom/get-all-siblings-of-an-element/
-  - title: Get the position of an element relative to the document
-    url: /code/tips/browser/dom/get-the-position-of-an-element-relative-to-the-document/
-  - title: Get the selected text
-    url: /code/tips/browser/dom/get-the-selected-text/
-browser/dom/insert:
-  - title: Insert an element after other one
-    url: /code/tips/browser/dom/insert-an-element-after-other-one/
-  - title: Insert an element before other one
-    url: /code/tips/browser/dom/insert-an-element-before-other-one/
-  - title: Insert given HTML after an element
-    url: /code/tips/browser/dom/insert-given-html-after-an-element/
-  - title: Insert given HTML before an element
-    url: /code/tips/browser/dom/insert-given-html-before-an-element/
 browser/html/other:
   - title: Box Model
     url: /code/tips/browser/html/box-model/
@@ -704,8 +665,6 @@ sql/other:
 subsystem/bash/other:
   - title: Compress Images
     url: /code/tips/subsystem/bash/compress-images/
-  - title: Placeholder
-    url: /code/tips/subsystem/bash/placeholder/
 subsystem/dotfiles/other:
   - title: +x
     url: /code/tips/subsystem/dotfiles/+x/
@@ -765,3 +724,42 @@ subsystem/dotfiles/other:
     url: /code/tips/subsystem/dotfiles/unhide/
   - title: untar
     url: /code/tips/subsystem/dotfiles/untar/
+browser/css/other:
+  - title: Placeholder
+    url: /code/tips/browser/css/placeholder/
+browser/dom/predicates:
+  - title: Check if an element is a descendant of another
+    url: /code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/
+  - title: Check if an element is focused
+    url: /code/tips/browser/dom/check-if-an-element-is-focused/
+  - title: Check if the touch events are supported
+    url: /code/tips/browser/dom/check-if-the-touch-events-are-supported/
+  - title: Check if user scrolls to the bottom of the page
+    url: /code/tips/browser/dom/check-if-user-scrolls-to-the-bottom-of-the-page/
+browser/dom/other:
+  - title: Detect Internet Explorer browser
+    url: /code/tips/browser/dom/detect-internet-explorer-browser/
+  - title: Detect macOS browser
+    url: /code/tips/browser/dom/detect-macos-browser/
+  - title: Serialize form data
+    url: /code/tips/browser/dom/serialize-form-data/
+  - title: Show an element
+    url: /code/tips/browser/dom/show-an-element/
+  - title: Strip HTML from a given text
+    url: /code/tips/browser/dom/strip-html-from-a-given-text/
+browser/dom/retrievals:
+  - title: Get all siblings of an element
+    url: /code/tips/browser/dom/get-all-siblings-of-an-element/
+  - title: Get the position of an element relative to the document
+    url: /code/tips/browser/dom/get-the-position-of-an-element-relative-to-the-document/
+  - title: Get the selected text
+    url: /code/tips/browser/dom/get-the-selected-text/
+browser/dom/insert:
+  - title: Insert an element after other one
+    url: /code/tips/browser/dom/insert-an-element-after-other-one/
+  - title: Insert an element before other one
+    url: /code/tips/browser/dom/insert-an-element-before-other-one/
+  - title: Insert given HTML after an element
+    url: /code/tips/browser/dom/insert-given-html-after-an-element/
+  - title: Insert given HTML before an element
+    url: /code/tips/browser/dom/insert-given-html-before-an-element/
