@@ -88,6 +88,7 @@ I want to be able to manually set teaser content for content. Preferably add the
 - `slugify` keys as needed
 - Use only keys not pretty
 - Mappings not found should display or throw an error
+- Modify snippets
 
 ## Branches
 ### Feature
