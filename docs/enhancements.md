@@ -1,5 +1,14 @@
 # Enhancements
 
+- [Website](#website)
+- [Images](#images)
+- [Optional](#optional)
+- [Teaser Summaries](#teaser-summaries)
+- [Group Mappings](#group-mappings)
+- [Branches](#branches)
+  - [Feature](#feature)
+  - [Refactors](#refactors)
+
 ## Website
 - Fix favicon
 - Fix the header in `base.njk` since I don't have the `metadata` variable available
@@ -73,6 +82,12 @@ I want to be able to manually set teaser content for content. Preferably add the
 - [`node-summarizer`](https://www.npmjs.com/package/node-summarizer)
 - [`jbrooksuk/node-summary`](https://github.com/jbrooksuk/node-summary)
 - [`matt-schwartz/text-summarization`](https://github.com/matt-schwartz/text-summarization)
+
+## Group Mappings
+- Mapping for key -> human readable names
+- `slugify` keys as needed
+- Use only keys not pretty
+- Mappings not found should display or throw an error
 
 ## Branches
 ### Feature
