@@ -2,14 +2,12 @@
 title: Detect macOS browser
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isMacBrowser = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+const isMacBrowser = /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 ```
 
-**TypeScript version**
-
+## TypeScript
 ```js
-const isMacBrowser: boolean = /Mac|iPod|iPhone|iPad/.test(navigator.platform);
+const isMacBrowser: boolean = /Mac|iPod|iPhone|iPad/.test(navigator.platform)
 ```

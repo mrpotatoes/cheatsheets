@@ -2,14 +2,12 @@
 title: Show an element
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const show = (ele) => (ele.style.display = '');
+const show = (ele) => (ele.style.display = '')
 ```
 
-**TypeScript version**
-
+## TypeScript
 ```js
-const show = (ele: HTMLElement): string => (ele.style.display = '');
+const show = (ele: HTMLElement): string => (ele.style.display = ''
 ```

@@ -3,14 +3,12 @@ title: Redirect to another page
 group: Page Interactions
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const goTo = (url) => (location.href = url);
+const goTo = (url) => (location.href = url)
 ```
 
-**TypeScript version**
-
+## TypeScript
 ```js
-const goTo = (url: string): string => (location.href = url);
+const goTo = (url: string): string => (location.href = url)
 ```

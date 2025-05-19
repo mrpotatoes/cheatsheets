@@ -3,21 +3,18 @@ title: Check if a string is a palindrome
 group: Predicates
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isPalindrome = (str) => str === str.split('').reverse().join('');
+const isPalindrome = (str) => str === str.split('').reverse().join('')
 ```
 
-**TypeScript version**
-
-```js
-const isPalindrome = (str: string): boolean => str === str.split('').reverse().join('');
+## TypeScript
+```ts
+const isPalindrome = (str: string): boolean => str === str.split('').reverse().join('')
 ```
 
-**Examples**
-
+## Examples
 ```js
-isPalindrome('abc'); // false
-isPalindrom('abcba'); // true
+isPalindrome('abc') // false
+isPalindrom('abcba') // true
 ```

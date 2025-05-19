@@ -2,20 +2,17 @@
 title: Convert a string to number
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const toNumber = (str) => +str;
+const toNumber = (str) => +str
 ```
 
-**TypeScript version**
-
-```js
-const toNumber = (str: string): number => +str;
+## TypeScript
+```ts
+const toNumber = (str: string): number => +str
 ```
 
-**Examples**
-
+## Examples
 ```js
-toNumber('42'); // 42
+toNumber('42') // 42
 ```

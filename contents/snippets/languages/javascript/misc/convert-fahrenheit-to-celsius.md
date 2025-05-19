@@ -2,21 +2,18 @@
 title: Convert Fahrenheit to Celsius
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const fahrenheitToCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9;
+const fahrenheitToCelsius = (fahrenheit) => ((fahrenheit - 32) * 5) / 9
 ```
 
-**TypeScript version**
-
-```js
-const fahrenheitToCelsius = (fahrenheit: number): number => ((fahrenheit - 32) * 5) / 9;
+## TypeScript
+```ts
+const fahrenheitToCelsius = (fahrenheit: number): number => ((fahrenheit - 32) * 5) / 9
 ```
 
-**Examples**
-
+## Examples
 ```js
-fahrenheitToCelsius(59); // 15
-fahrenheitToCelsius(32); // 0
+fahrenheitToCelsius(59) // 15
+fahrenheitToCelsius(32) // 0
 ```

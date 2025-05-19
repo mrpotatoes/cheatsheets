@@ -2,14 +2,12 @@
 title: Get the current timestamp in seconds
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const ts = () => Math.floor(new Date().getTime() / 1000);
+const ts = () => Math.floor(new Date().getTime() / 1000)
 ```
 
-**TypeScript version**
-
-```js
-const ts = (): number => Math.floor(new Date().getTime() / 1000);
+## TypeScript
+```ts
+const ts = (): number => Math.floor(new Date().getTime() / 1000)
 ```

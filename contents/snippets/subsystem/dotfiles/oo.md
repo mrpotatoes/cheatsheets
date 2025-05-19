@@ -2,7 +2,7 @@
 title: oo
 ---
 
-## OO
+## `oo`
 
 ```
 NAME
@@ -14,7 +14,7 @@ EXAMPLES
     oo activity monitor
     oo textedit
     oo mail
-    
+
     Or just type the command to open the directory you are already in.
     oo
 SEE ALSO

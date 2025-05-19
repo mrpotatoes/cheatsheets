@@ -2,23 +2,20 @@
 title: Check if a string contains only letters
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isAlpha = (str) => /^[A-Z]+$/i.test(str);
+const isAlpha = (str) => /^[A-Z]+$/i.test(str)
 ```
 
-**TypeScript version**
-
-```js
-const isAlpha = (str: string): boolean => /^[A-Z]+$/i.test(str);
+## TypeScript
+```ts
+const isAlpha = (str: string): boolean => /^[A-Z]+$/i.test(str)
 ```
 
-**Examples**
-
+## Examples
 ```js
-isAlpha('helloworld'); // true
-isAlpha('HelloWorld'); // true
-isAlpha('hello world'); // false
-isAlpha('0123456789'); // false
+isAlpha('helloworld') // true
+isAlpha('HelloWorld') // true
+isAlpha('hello world') // false
+isAlpha('0123456789') // false
 ```

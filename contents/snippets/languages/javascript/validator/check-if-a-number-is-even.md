@@ -2,39 +2,36 @@
 title: Check if a number is even
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isEven = (n) => n % 2 === 0;
+const isEven = (n) => n % 2 === 0
 
 // Or
-const isEven = (n) => (n & 1) === 0;
+const isEven = (n) => (n & 1) === 0
 
 // Or
-const isEven = (n) => !(n & 1);
+const isEven = (n) => !(n & 1)
 
 // Or
-const isEven = (n) => Number.isInteger(n / 2);
+const isEven = (n) => Number.isInteger(n / 2)
 ```
 
-**TypeScript version**
-
-```js
-const isEven = (n: number): boolean => n % 2 === 0;
-
-// Or
-const isEven = (n: number): boolean => (n & 1) === 0;
+## TypeScript
+```ts
+const isEven = (n: number): boolean => n % 2 === 0
 
 // Or
-const isEven = (n: number): boolean => !(n & 1);
+const isEven = (n: number): boolean => (n & 1) === 0
 
 // Or
-const isEven = (n: number): boolean => Number.isInteger(n / 2);
+const isEven = (n: number): boolean => !(n & 1)
+
+// Or
+const isEven = (n: number): boolean => Number.isInteger(n / 2)
 ```
 
-**Examples**
-
+## Examples
 ```js
-isEven(1); // false
-isEven(2); // true
+isEven(1) // false
+isEven(2) // true
 ```

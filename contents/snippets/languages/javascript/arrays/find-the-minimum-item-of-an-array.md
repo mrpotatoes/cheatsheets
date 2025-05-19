@@ -3,14 +3,12 @@ title: Find the minimum item of an array
 group: Discovery
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const min = (arr) => Math.min(...arr);
+const min = (arr) => Math.min(...arr)
 ```
 
-**TypeScript version**
-
-```js
-const min = (arr: number[]): number => Math.min(...arr);
+## TypeScript
+```ts
+const min = (arr: number[]): number => Math.min(...arr)
 ```

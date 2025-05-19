@@ -2,14 +2,12 @@
 title: Strip HTML from a given text
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const stripHtml = (html) => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
+const stripHtml = (html) => new DOMParser().parseFromString(html, 'text/html').body.textContent || ''
 ```
 
-**TypeScript version**
-
+## TypeScript
 ```js
-const stripHtml = (html: string): string => new DOMParser().parseFromString(html, 'text/html').body.textContent || '';
+const stripHtml = (html: string): string => new DOMParser().parseFromString(html, 'text/html').body.textContent || ''
 ```

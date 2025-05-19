@@ -2,21 +2,18 @@
 title: Check if an array is not empty
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0;
+const isNotEmpty = (arr) => Array.isArray(arr) && Object.keys(arr).length > 0
 ```
 
-**TypeScript version**
-
-```js
-const isNotEmpty = (arr: any): boolean => Array.isArray(arr) && Object.keys(arr).length > 0;
+## TypeScript
+```ts
+const isNotEmpty = (arr: any): boolean => Array.isArray(arr) && Object.keys(arr).length > 0
 ```
 
-**Examples**
-
+## Examples
 ```js
-isNotEmpty([]); // false
-isNotEmpty([1, 2, 3]); // true
+isNotEmpty([]) // false
+isNotEmpty([1, 2, 3]) // true
 ```

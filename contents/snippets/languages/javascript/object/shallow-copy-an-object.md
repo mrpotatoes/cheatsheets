@@ -2,11 +2,10 @@
 title: Shallow copy an object
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const shallowCopy = obj => Object.assign({}, obj);
+const shallowCopy = obj => Object.assign({}, obj)
 
 // or
-const shallowCopy = obj => {...obj};
+const shallowCopy = obj => {...obj}
 ```

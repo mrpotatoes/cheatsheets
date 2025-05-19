@@ -2,21 +2,18 @@
 title: Remove falsy values from array
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const removeFalsy = (arr) => arr.filter(Boolean);
+const removeFalsy = (arr) => arr.filter(Boolean)
 ```
 
-**TypeScript version**
-
-```js
-const removeFalsy = <T,_>(arr: T[]): T[] => arr.filter(Boolean);
+## TypeScript
+```ts
+const removeFalsy = <T,_>(arr: T[]): T[] => arr.filter(Boolean)
 ```
 
-**Example**
-
+## Example
 ```js
-removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false]);
+removeFalsy([0, 'a string', '', NaN, true, 5, undefined, 'another string', false])
 // ['a string', true, 5, 'another string']
 ```

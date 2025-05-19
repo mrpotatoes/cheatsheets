@@ -2,14 +2,12 @@
 title: Get the value at given path of an object
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const getValue = (path, obj) => path.split('.').reduce((acc, c) => acc && acc[c], obj);
+const getValue = (path, obj) => path.split('.').reduce((acc, c) => acc && acc[c], obj)
 ```
 
-**Examples**
-
+## Examples
 ```js
-getValue('a.b', { a: { b: 'Hello World' } }); // 'Hello World';
+getValue('a.b', { a: { b: 'Hello World' } }) // 'Hello World'
 ```
