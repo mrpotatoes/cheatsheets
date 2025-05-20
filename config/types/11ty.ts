@@ -268,10 +268,10 @@ export interface EleventyConfig extends Filters, ShortCodes, PluginExtend {
 
   setDataFileBaseName(name: string): void
 
-  // addCollection(
-  //   name: string,
-  //   callback: (collectionApi: EleventyConfig)
-  // )
+  addCollection(
+    name: string,
+    callback: (collectionApi: EleventyConfig) => any
+  ): void
 
   addDataExtension(
     fileExtension: string,

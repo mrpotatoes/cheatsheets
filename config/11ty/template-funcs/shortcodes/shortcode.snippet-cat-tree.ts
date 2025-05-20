@@ -1,6 +1,6 @@
 import _ from 'lodash'
 import utils from '@utils'
-import { CategoryTree } from '@mytypes/categories'
+import { CatTree } from '@mytypes/categories'
 import { snippetBase } from '@utils/variables'
 
 /**
@@ -28,7 +28,7 @@ const path = (base: string, next: string): string => (!next) ? `${base}/` : `${b
  * @param newPath
  * @returns
  */
-const li = (a: string, children: CategoryTree, level: number, newPath: string): string => `<ul><li>${a}${categoryTreeLinks(children, level + 1, newPath)}</li></ul>`
+const li = (a: string, children: CatTree, level: number, newPath: string): string => `<ul><li>${a}${categoryTreeLinks(children, level + 1, newPath)}</li></ul>`
 
 /**
  * TODO: Remove level when ready
@@ -39,7 +39,7 @@ const li = (a: string, children: CategoryTree, level: number, newPath: string): 
  * @param prop
  * @returns
  */
-const categoryTreeLinks = (cats: CategoryTree, level = 0, prop = ''): string => {
+const categoryTreeLinks = (cats: CatTree, level = 0, prop = ''): string => {
   var str = ''
 
   for (let key in cats) {
@@ -56,4 +56,4 @@ const categoryTreeLinks = (cats: CategoryTree, level = 0, prop = ''): string => 
   return str
 }
 
-export default (catTree: CategoryTree): string => categoryTreeLinks(catTree)
+export default (catTree: CatTree): string => categoryTreeLinks(catTree)

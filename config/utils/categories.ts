@@ -1,7 +1,7 @@
 import _ from 'lodash'
 import * as errors from '@utils/errors'
 import { groups } from '@utils/data'
-import { Breadcrumb, CategoryTree, Flattened, Group } from '@mytypes/categories'
+import { Breadcrumb, CatTree, Flattened, Group } from '@mytypes/categories'
 import { CollectionItem, CollectionItemPicked } from '@mytypes/11ty'
 import { snippetBase } from '@utils/variables'
 
@@ -63,9 +63,6 @@ export const segmented = (str: string, full: boolean): string[] => {
 
 /**
  * Build an array of breadcrumbs for a given path
- *
- * TODO: Since the flattened array would be memoized I should remove the
- *  function parameter as it wouldn't be needed
  *
  * @param categories
  * @param path
@@ -190,11 +187,13 @@ export const addGroup = (snippet: CollectionItem, categories: Group, group = 'Ot
  * @param {*} prefix
  * @returns
  */
-export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix = ''): Flattened =>
+export const transformCategories = (obj: CatTree, delimiter = '/', prefix = ''): Flattened =>
   Object.keys(obj).reduce((acc: Flattened, key: string) => {
+    const spec = key as keyof typeof obj
     const pre = prefix.length ? `${prefix}${delimiter}` : ''
-    const isObject = typeof obj[key] === 'object'
-    const notEmpty = obj[key] !== null
+    const isObject = typeof obj[spec] === 'object'
+    const notEmpty = obj[spec] !== null
+
     const isLength = Object.keys(obj[key]).length > 0
     const isMeta = key === 'meta'
 
@@ -215,5 +214,4 @@ export const transformCategories = (obj: CategoryTree, delimiter = '/', prefix =
  * @param {*} doc
  * @returns
  */
-export const flattened = (doc: CategoryTree): Flattened =>
-  transformCategories(doc)
+export const flattened = (doc: CatTree): Flattened => transformCategories(doc)

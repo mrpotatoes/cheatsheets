@@ -1,12 +1,13 @@
-/**
- * Types to consider
- *  - 11ty
- *  - Categories
- *    - Default category tree
- *    - Flattened
- *    - Flattened & Empty
- *    - Grouped
- */
+export type CatTree = Partial<Record<CategoryKeys, Category>>
+
+export type CategoryKeys =
+  'browser' | 'languages' | 'sql' | 'subsystems' | 'libraries' | 'paradigms' | 'templates'
+
+export interface Category {
+  [key: string]: Category | Meta
+  meta: Meta
+}
+
 export interface Meta {
   name: string
   desc: string
@@ -16,13 +17,6 @@ export interface Meta {
 export interface Base {
   title: string
   url: string
-}
-
-/**
- * TODO: Validate if this typing is correct. I feel that it is recursive.
- */
-export interface CategoryTree {
-  [key: string]: Meta[]
 }
 
 export interface Flattened {
@@ -40,6 +34,10 @@ export interface Group {
       [key: string]: GroupSnippet[]
     }
   }
+}
+
+export interface SavedGroups {
+  [key: string]: Base[]
 }
 
 export interface GroupSnippet extends Base {

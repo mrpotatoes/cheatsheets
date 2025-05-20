@@ -19,8 +19,6 @@ import { flattened, group, normalizedPath, categoryPath } from '@utils/categorie
  *
  * Example URL
  *  - /{SNIPPET_URL}/languages/javascript/strings/retrivals/
- *
- * TODO: Fix typings
  */
 export default (collectionApi: EleventyConfig): GroupedUrls =>
   collectionApi.getFilteredByTag('snippets').map((snip: CollectionItem) => ({
@@ -29,6 +27,5 @@ export default (collectionApi: EleventyConfig): GroupedUrls =>
     url: snip.page.url,
     group: group(snip),
 
-    // @ts-ignore TODO: Fix typings here
     crumbs: categoryPath(flattened(tree()), normalizedPath(snip), true),
   }))

@@ -5,12 +5,10 @@ import { EleventyConfig } from '@mytypes/11ty'
 import { snippetBase } from '@utils/variables'
 
 /**
- * TODO: Fix typings
  * TODO: See if I can get the Collection API somehow so I can use that to get
  *  all the items. Possible? Otherwise I need to keep the snippets-grouped.yml
  */
 export default (eleventyConfig: EleventyConfig) => {
-  // @ts-ignore
   const tree = utils.categories.flattened(utils.data.tree())
 
   Object.keys(utils.data.groups()).forEach(group => {

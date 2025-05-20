@@ -9,7 +9,6 @@ import { EleventyConfig } from '@mytypes/11ty'
  */
 export default (eleventyConfig: EleventyConfig): void => {
   const cats = utils.data.tree()
-  // @ts-ignore
   const flattened = utils.categories.flattened(cats)
 
   Object.keys(flattened).forEach((cat) => {

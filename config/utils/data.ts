@@ -3,7 +3,7 @@ import _ from 'lodash'
 import fs from 'fs'
 import memoize, { memoizeClear } from 'memoize'
 import { fn, GenericObject } from '@mytypes/utils'
-import { CategoryTree, Empty, FuzzySearch, YamlObject } from '@mytypes/categories'
+import { CatTree, Empty, FuzzySearch, Snippets, YamlObject } from '@mytypes/categories'
 
 /**
  * An empty snippet object.
@@ -75,7 +75,7 @@ export const saveYaml = (data, dataFile) => {
  *
  * @returns
  */
-export const tree = (): YamlObject<CategoryTree> => yamlMem('snippetsCategories.yml')
+export const tree = (): YamlObject<CatTree> => yamlMem('snippetsCategories.yml')
 
 /**
  * Grouping object
@@ -102,7 +102,7 @@ export const groups = (fresh = false): YamlObject<FuzzySearch> => {
  * @param snippets
  * @returns
  */
-export const saveGroups = (snippets: any): any => {
+export const saveGroups = (snippets: Snippets): Snippets => {
   const isSame = !_.isEqual(groups(), snippets)
 
   if (isSame) {
