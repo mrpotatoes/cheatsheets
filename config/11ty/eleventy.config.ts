@@ -13,14 +13,11 @@ import { serverConfig, basePath, port, snippetBase, outputDir } from '@utils/var
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
 
-// @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Status messages
   console.log(`\nhttp://localhost:${port()}/\n`)
 
-  // TODO: More options here: https://www.11ty.dev/docs/dev-server/
-  // TODO: Fix these typings
-  // @ts-ignore
+  // Setup development server
   eleventyConfig.setServerOptions(serverConfig())
 
   // Additional watch targets

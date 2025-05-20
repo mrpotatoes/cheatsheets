@@ -1,6 +1,3 @@
-// import MarkdownIt from 'markdown-it'
-import { Breadcrumb } from '@mytypes/categories'
-
 // TODO: Add missing types: https://github.com/panoply/e11ty/blob/master/packages/11ty.ts/index.ts
 
 type EventNames = any
@@ -109,7 +106,7 @@ export interface EleventyScope {
   eleventy: EleventyData
 }
 
-interface EleventyServer {
+export interface EleventyServer {
   liveReload?: boolean
   domDiff?: boolean
   port?: number
@@ -128,18 +125,18 @@ interface EleventyServer {
   domdiff?: boolean
 }
 
-interface EleventyBrowserSync extends EleventyServer {
+export interface EleventyBrowserSync extends EleventyServer {
   // module: LiteralUnion<'@11ty/eleventy-server-browsersync', string>
   snippet?: boolean
 }
 
-interface EleventDataExtension {
+export interface EleventDataExtension {
   parser: (contents: string, filePath: string) => Record<string, any>
   read?: boolean
   encoding?: string | null
 }
 
-interface Filters {
+export interface Filters {
   addLiquidFilter(
     filterName: string,
     filter: (this: EleventyScope, ...args: any[]) => string): void
