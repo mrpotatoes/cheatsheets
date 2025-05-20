@@ -13,6 +13,15 @@ I do not want a traditional blog section like every other website. I want my wri
 I don't want to hand style each page as I want to focus mainly on the content and then pull in elements of a use case and put it into a markdown sheet.
 
 **[`Examples`] Use Cases**
+- [Jolly Creative Agency | Portfolio | Sequel Travel Website](https://jollycreativeagency.com/portfolio/sequel-travel/)
+- [Project : My Name is MT: Return | 2021 - 2024 | Card RPG Game | LongtuGame - by rogi.dsgn](https://www.rogidsgn.com/cms-archives/my-name-is-mt)
+- [rogi.dsgn](https://www.rogidsgn.com/cms-projects/tera-classic)
+  - Listing page: https://www.rogidsgn.com/work
+- [Nø Cosmetics - Cases - Format D](https://www.format-d.com/cases/no-cosmetics.html)
+- [Pop up Office 2025 - Insights - Format D](https://www.format-d.com/insights/pop-up-office-2025.html)
+- [How Denim Brand Triarchy Is Blazing a Path for Sustainable Luxury | Good is the new Cool](https://goodisthenewcool.com/articles/triarchy-for-sustainable-luxury)
+- [007xSPYSCAPE - by Jomor Design](https://jomor-design-2019.webflow.io/work/007xspyscape)
+
 - [Mentos Grote Prijs van NL - Bruut](https://bruut.media/case/mentos-grote-prijs-van-nederland/)
 - [DFY® | Galaxy Z Flip3 5G](https://www.dfy.co.kr/work/galaxy-z-flip3-5g/)
 - [UX Case Studies :: Behance](https://www.behance.net/gallery/138667665/UX-Case-Studies?tracking_source=search_projects|best+case+studies&l=0)
@@ -26,12 +35,12 @@ I don't want to hand style each page as I want to focus mainly on the content an
 - [Logitech | Dumemearts | Digital Designer & Webflow Developer](https://dumemearts.com/projects/logitech-g)
 - [Taco Bell - Check In & Earn — Kyle Conrad](https://kyleconrad.com/tacobell-checkin/)
 - [DIRTY LAUNDRY – Κ2](https://www.k2.gr/project/dirty-laundry/)
--
+- [Case Study: Dropbox Brand Guidelines](https://www.awwwards.com/case-study-dropbox-brand-guidelines.html)
+- [How Denim Brand Triarchy Is Blazing a Path for Sustainable Luxury | Good is the new Cool](https://goodisthenewcool.com/articles/triarchy-for-sustainable-luxury)
 
 ### Projects
 - [META QUEST PRO](https://themarcus.com/portfolio/meta-quest-pro)
   - Click `index` on the side to see an interesting navigation for their portfolio page
--
 
 ## Secondary Pages
 ### About Page
@@ -57,8 +66,5 @@ I like how  has a [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian
 - https://themarcus.com/portfolio/meta-quest-pro
 - https://themarcus.com/portfolio/leisure-center
 - https://sagmeister.com/work/ (galleries)
-
-----
 - https://pleasecallmechamp.com/
--
 
