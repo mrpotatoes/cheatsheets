@@ -84,7 +84,7 @@ config
   libs
     jest.yml
     prettier.yml
-    tsconfig.yml
+    tsconfig.json
     eslint.yml
     husky.yml
 

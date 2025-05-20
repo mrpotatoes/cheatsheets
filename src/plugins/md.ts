@@ -22,6 +22,6 @@ export default markdownIt({
 
     resolvePath: (filepath: string, env: any) =>
       (filepath.charAt(0) === '/')
-        ? path.join(workingDir(), 'src/', filepath)
+        ? path.join(workingDir(), 'config/', filepath)
         : path.join(path.dirname(env.page.inputPath), filepath)
   })

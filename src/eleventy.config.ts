@@ -8,7 +8,7 @@ import utils from '@utils'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port, snippetBase, outputDir } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -60,8 +60,8 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
 
   // Transforms
-  eleventyConfig.addTransform('minify-html', transforms.minify)
-  eleventyConfig.addDataExtension(transforms.yaml.exts, transforms.yaml.parse)
+  eleventyConfig.addTransform('minify-html', plugins.minify)
+  eleventyConfig.addDataExtension(plugins.yaml.exts, plugins.yaml.parse)
 
   // Events
   eleventyConfig.on('eleventy.before', events.before)
@@ -83,9 +83,9 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
     // The rest of the setup
     dir: {
       input: 'contents',
-      data: '../src/data',
-      layouts: '../src/layouts',
-      includes: '../src/layouts',
+      data: '../config/data',
+      layouts: layoutsDir(),
+      includes: layoutsDir(),
       output: outputDir(),
     }
   }
