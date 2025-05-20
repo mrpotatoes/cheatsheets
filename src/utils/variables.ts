@@ -8,6 +8,18 @@ import path from 'path'
 export const snippetBase = (): string => process.env.SNIPPET_URL || ''
 
 /**
+ *
+ * @returns
+ */
+export const snippetUrl = () => process.env.SNIPPET_URL || ''
+
+/**
+ *
+ * @returns
+ */
+export const port = () => process.env.PORT || ''
+
+/**
  * TODO: Convert to a function
  */
 export const passthroughs = {
@@ -27,7 +39,7 @@ export const targets = (config: string): string => `./src/11ty/${config}/**`
  *
  * @returns
  */
-export const basePath = (): any => process.env.BASE_PATH
+export const basePath = (): string => process.env.BASE_PATH || ''
 
 /**
  *
@@ -54,13 +66,13 @@ export const envPath = (type: string): string =>
  *
  * @returns
  */
-export const snippetUrl = () => process.env.SNIPPET_URL
+export const outputDir = (): string => process.env.OUTPUT || 'cheatsheets'
 
 /**
  *
  * @returns
  */
-export const port = () => process.env.PORT
+export const workingDir = (): string => process.env.PWD || '/'
 
 /**
  * TODO: Typings

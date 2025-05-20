@@ -8,7 +8,7 @@ import utils from '@utils'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port, snippetBase } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase, outputDir } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -57,6 +57,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
   eleventyConfig.addCollection('fuzzysearch', collections.fuzzy)
   eleventyConfig.addCollection('groupsYaml', collections.groupsYaml)
+  eleventyConfig.addCollection('crumbs', collections.breadcrumbs)
 
   // Transforms
   eleventyConfig.addTransform('minify-html', transforms.minify)
@@ -85,7 +86,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
       data: '../src/data',
       layouts: '../src/layouts',
       includes: '../src/layouts',
-      output: 'cheatsheets',
+      output: outputDir(),
     }
   }
 }
