@@ -2,14 +2,12 @@
 title: Wait for an amount of time
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+const wait = async (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds))
 ```
 
-**TypeScript version**
-
-```js
-const wait = async (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+## TypeScript
+```ts
+const wait = async (milliseconds: number) => new Promise((resolve) => setTimeout(resolve, milliseconds))
 ```

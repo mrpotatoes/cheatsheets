@@ -3,11 +3,10 @@ title: Go back to the previous page
 group: Page Interactions
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-history.back();
+history.back()
 
 // Or
-history.go(-1);
+history.go(-1)
 ```

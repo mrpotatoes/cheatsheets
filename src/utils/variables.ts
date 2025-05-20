@@ -12,8 +12,8 @@ export const snippetBase = (): string => process.env.SNIPPET_URL || ''
  */
 export const passthroughs = {
   // TODO: Use the path function to get these paths
-  assets: { './config/assets': 'assets' },
-  styles: { './config/styles': 'styles' },
+  assets: { './src/assets': 'assets' },
+  styles: { './src/styles': 'styles' },
 }
 
 /**
@@ -21,7 +21,7 @@ export const passthroughs = {
  * @param config
  * @returns
  */
-export const targets = (config: string): string => `./config/11ty/${config}/**`
+export const targets = (config: string): string => `./src/11ty/${config}/**`
 
 /**
  *
@@ -48,7 +48,7 @@ export const envFile = () =>
  * @returns
  */
 export const envPath = (type: string): string =>
-  path.join(process.cwd(), 'config/build', type)
+  path.join(process.cwd(), 'src/build', type)
 
 /**
  *

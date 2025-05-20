@@ -7,7 +7,7 @@ title: Debugging a template in 11ty
 
 Add the filter
 ```js
-eleventyConfig.addFilter("debugger", (...args) => {
+eleventyConfig.addFilter('debugger', (...args) => {
   console.log(...args)
   debugger;
 })

@@ -2,26 +2,23 @@
 title: Get the first defined and non null argument
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const coalesce = (...args) => args.find((item) => item !== undefined && item !== null);
+const coalesce = (...args) => args.find((item) => item !== undefined && item !== null)
 
 // Or
-const coalesce = (...args) => args.find((item) => ![undefined, null].includes(item));
+const coalesce = (...args) => args.find((item) => ![undefined, null].includes(item))
 ```
 
-**TypeScript version**
-
-```js
-const coalesce = (...args: any[]): any[] => args.find((item) => item !== undefined && item !== null);
+## TypeScript
+```ts
+const coalesce = (...args: any[]): any[] => args.find((item) => item !== undefined && item !== null)
 
 // Or
-const coalesce = (...args: any[]): any[] => args.find((item) => ![undefined, null].includes(item));
+const coalesce = (...args: any[]): any[] => args.find((item) => ![undefined, null].includes(item))
 ```
 
-**Examples**
-
+## Examples
 ```js
 coalesce(undefined, null, 'helloworld', NaN); // 'helloworld'
 ```

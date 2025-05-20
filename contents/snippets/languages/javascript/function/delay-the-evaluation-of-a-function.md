@@ -2,21 +2,19 @@
 title: Delay the evaluation of a function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 // returns a new version of `fn` that returns values as lazy evaluable
 const thunkfy =
-    (fn) =>
-    (...args) =>
-    () =>
-        fn(...args);
+  (fn) =>
+  (...args) =>
+  () =>
+    fn(...args)
 ```
 
-**Examples**
-
+## Examples
 ```js
-const heavyComputation = (x) => doStuff(x);
-const unnecessarySlow = manyThings.map(heavyComputation).find((result) => result.criteria);
-const probablyFaster = manyThings.map(thunkfy(heavyComputation)).find((thunk) => thunk().criteria);
+const heavyComputation = (x) => doStuff(x)
+const unnecessarySlow = manyThings.map(heavyComputation).find((result) => result.criteria)
+const probablyFaster = manyThings.map(thunkfy(heavyComputation)).find((thunk) => thunk().criteria)
 ```

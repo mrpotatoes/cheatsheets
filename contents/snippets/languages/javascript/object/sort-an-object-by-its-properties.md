@@ -2,26 +2,26 @@
 title: Sort an object by its properties
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 const sort = (obj) =>
-    Object.keys(obj)
-        .sort()
-        .reduce((p, c) => ((p[c] = obj[c]), p), {});
+  Object.keys(obj)
+    .sort()
+    .reduce((p, c) => ((p[c] = obj[c]), p), {})
 ```
 
-**Examples**
-
+## Examples
 ```js
 const colors = {
-    white: '#ffffff',
-    black: '#000000',
-    red: '#ff0000',
-    green: '#008000',
-    blue: '#0000ff',
-};
-sort(colors);
+  white: '#ffffff',
+  black: '#000000',
+  red: '#ff0000',
+  green: '#008000',
+  blue: '#0000ff',
+}
+
+sort(colors)
+
 /*
 {
     black: '#000000',

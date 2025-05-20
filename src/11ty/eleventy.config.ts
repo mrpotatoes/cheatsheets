@@ -82,9 +82,9 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
     // The rest of the setup
     dir: {
       input: 'contents',
-      data: '../config/data',
-      layouts: '../config/layouts',
-      includes: '../config/layouts',
+      data: '../src/data',
+      layouts: '../src/layouts',
+      includes: '../src/layouts',
       output: 'cheatsheets',
     }
   }

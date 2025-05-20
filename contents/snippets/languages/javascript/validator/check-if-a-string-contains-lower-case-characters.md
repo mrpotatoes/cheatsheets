@@ -2,21 +2,18 @@
 title: Check if a string contains lower case characters
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const containsLowerCase = (str) => str !== str.toUpperCase();
+const containsLowerCase = (str) => str !== str.toUpperCase()
 ```
 
-**TypeScript version**
-
-```js
-const containsLowerCase = (str: string): boolean => str !== str.toUpperCase();
+## TypeScript
+```ts
+const containsLowerCase = (str: string): boolean => str !== str.toUpperCase()
 ```
 
-**Examples**
-
+## Examples##
 ```js
-containsLowerCase('Hello World'); // true
-containsLowerCase('HELLO WORLD'); // false
+containsLowerCase('Hello World') // true
+containsLowerCase('HELLO WORLD') // false
 ```

@@ -2,14 +2,12 @@
 title: Detect Internet Explorer browser
 ---
 
-**JavaScript version**
-
+## JavaScript version
 ```js
-const isIE = !!document.documentMode;
+const isIE = !!document.documentMode
 ```
 
-**TypeScript version**
-
+## TypeScript version
 ```js
-const isIE = !!(document as any).documentMode;
+const isIE = !!(document as any).documentMode
 ```

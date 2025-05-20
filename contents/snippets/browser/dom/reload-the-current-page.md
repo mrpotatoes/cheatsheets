@@ -3,20 +3,20 @@ title: Reload the current page
 group: Page Interactions
 ---
 
-**JavaScript version**
+## JavaScript
 
 ```js
-const reload = () => location.reload();
+const reload = () => location.reload()
 
 // Or
-const reload = () => (location.href = location.href);
+const reload = () => (location.href = location.href)
 ```
 
-**TypeScript version**
+## TypeScript
 
 ```js
-const reload = (): void => location.reload();
+const reload = (): void => location.reload()
 
 // Or
-const reload = (): string => (location.href = location.href);
+const reload = (): string => (location.href = location.href)
 ```

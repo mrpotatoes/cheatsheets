@@ -2,28 +2,25 @@
 title: Generate a random IP address
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 const randomIp = () =>
-    Array(4)
-        .fill(0)
-        .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
-        .join('.');
+  Array(4)
+    .fill(0)
+    .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+    .join('.')
 ```
 
-**TypeScript version**
-
-```js
+## TypeScript
+```ts
 const randomIp = (): number =>
-    Array(4)
-        .fill(0)
-        .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
-        .join('.');
+  Array(4)
+    .fill(0)
+    .map((_, i) => Math.floor(Math.random() * 255) + (i === 0 ? 1 : 0))
+    .join('.')
 ```
 
-**Examples**
-
+## Examples
 ```js
-randomIp(); // 175.89.174.131
+randomIp() // 175.89.174.131
 ```

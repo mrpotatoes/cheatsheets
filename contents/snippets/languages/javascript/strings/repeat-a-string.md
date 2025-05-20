@@ -2,20 +2,18 @@
 title: Repeat a string
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes);
+const repeat = (str, numberOfTimes) => str.repeat(numberOfTimes)
 
 // Or
-const repeat = (str, numberOfTimes) => Array(numberOfTimes + 1).join(str);
+const repeat = (str, numberOfTimes) => Array(numberOfTimes + 1).join(str)
 ```
 
-**TypeScript version**
-
-```js
-const repeat = (str: string, numberOfTimes: number): string => str.repeat(numberOfTimes);
+## TypeScript
+```ts
+const repeat = (str: string, numberOfTimes: number): string => str.repeat(numberOfTimes)
 
 // Or
-const repeat = (str: string, numberOfTimes: number): string => Array(numberOfTimes + 1).join(str);
+const repeat = (str: string, numberOfTimes: number): string => Array(numberOfTimes + 1).join(str)
 ```

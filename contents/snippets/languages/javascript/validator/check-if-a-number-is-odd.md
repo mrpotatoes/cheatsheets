@@ -2,33 +2,30 @@
 title: Check if a number is odd
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isOdd = (n) => n % 2 !== 0;
+const isOdd = (n) => n % 2 !== 0
 
 // Or
-const isOdd = (n) => !!(n & 1);
+const isOdd = (n) => !!(n & 1)
 
 // Or
-const isOdd = (n) => !Number.isInteger(n / 2);
+const isOdd = (n) => !Number.isInteger(n / 2)
 ```
 
-**TypeScript version**
-
-```js
-const isOdd = (n: number): boolean => n % 2 !== 0;
-
-// Or
-const isOdd = (n: number): boolean => !!(n & 1);
+## TypeScript
+```ts
+const isOdd = (n: number): boolean => n % 2 !== 0
 
 // Or
-const isOdd = (n: number): boolean => !Number.isInteger(n / 2);
+const isOdd = (n: number): boolean => !!(n & 1)
+
+// Or
+const isOdd = (n: number): boolean => !Number.isInteger(n / 2)
 ```
 
-**Examples**
-
+## Examples
 ```js
-isOdd(1); // true
-isOdd(2); // false
+isOdd(1) // true
+isOdd(2) // false
 ```

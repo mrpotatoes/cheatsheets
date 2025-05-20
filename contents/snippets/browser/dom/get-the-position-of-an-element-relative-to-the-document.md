@@ -3,14 +3,10 @@ title: Get the position of an element relative to the document
 group: Retrievals
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const getPosition = (ele) => ((r = ele.getBoundingClientRect()), { left: r.left + window.scrollX, top: r.top + window.scrollY });
-```
+const getPosition = (ele) => ((r = ele.getBoundingClientRect()), { left: r.left + window.scrollX, top: r.top + window.scrollY })
 
-**Example**
-
-```js
-getPosition(document.body); // { left: 0, top: 0 }
+// In use
+getPosition(document.body) // { left: 0, top: 0 }
 ```

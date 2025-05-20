@@ -2,8 +2,7 @@
 title: Generate an array of arbitrary size
 ---
 
-## JavaScript version
-
+## JavaScript
 ```js
 Array.from(Array(10).keys())
 ```

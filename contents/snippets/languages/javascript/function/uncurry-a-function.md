@@ -2,8 +2,7 @@
 title: Uncurry a function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 // `fn` is a curried function
 // `n` is the depth of parameters
@@ -12,14 +11,13 @@ const uncurry =
   (...args) =>
     (
       (acc) => (args) => args.reduce((x, y) => x(y), acc)
-    )(fn)(args.slice(0, n));
+    )(fn)(args.slice(0, n))
 ```
 
-**Examples**
-
+## Examples
 ```js
-const sum = (a) => (b) => (c) => a + b + c;
-uncurry(sum, 1)(1)(2)(3); // 6
-uncurry(sum, 2)(1, 2)(3); // 6
-uncurry(sum, 3)(1, 2, 3); // 6
+const sum = (a) => (b) => (c) => a + b + c
+uncurry(sum, 1)(1)(2)(3) // 6
+uncurry(sum, 2)(1, 2)(3) // 6
+uncurry(sum, 3)(1, 2, 3) // 6
 ```

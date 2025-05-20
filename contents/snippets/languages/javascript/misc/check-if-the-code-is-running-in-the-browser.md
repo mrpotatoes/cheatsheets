@@ -2,14 +2,12 @@
 title: Check if the code is running in the browser
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isBrowser = typeof window === 'object' && typeof document === 'object';
+const isBrowser = typeof window === 'object' && typeof document === 'object'
 ```
 
-**TypeScript version**
-
-```js
-const isBrowser: boolean = typeof window === 'object' && typeof document === 'object';
+## TypeScript
+```ts
+const isBrowser: boolean = typeof window === 'object' && typeof document === 'object'
 ```

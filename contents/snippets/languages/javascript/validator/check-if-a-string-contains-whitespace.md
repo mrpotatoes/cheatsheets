@@ -2,23 +2,19 @@
 title: Check if a string contains whitespace
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const containsWhitespace = (str) => (str) => /\s/.test(str);
+const containsWhitespace = (str) => (str) => /\s/.test(str)
 ```
 
-**TypeScript version**
-
-```js
+## TypeScript
+```ts
 const containsWhitespace =
-    (str: string): boolean =>
-    (str) =>
-        /\s/.test(str);
+  (str: string): boolean =>
+  (str) => /\s/.test(str)
 ```
 
-**Examples**
-
+## Examples
 ```js
-containsWhitespace('hello world'); // true
+containsWhitespace('hello world') // true
 ```

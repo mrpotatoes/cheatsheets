@@ -2,20 +2,18 @@
 title: Curry a function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const curry = (fn, ...args) => (fn.length <= args.length ? fn(...args) : curry.bind(null, fn, ...args));
+const curry = (fn, ...args) => (fn.length <= args.length ? fn(...args) : curry.bind(null, fn, ...args))
 ```
 
-**Examples**
-
+## Examples
 ```js
-const sum = (a, b, c) => a + b + c;
-curry(sum)(1)(2)(3); // 6
-curry(sum)(1, 2, 3); // 6
-curry(sum, 1)(2, 3); // 6
-curry(sum, 1)(2)(3); // 6
-curry(sum, 1, 2)(3); // 6
-curry(sum, 1, 2, 3); // 6
+const sum = (a, b, c) => a + b + c
+curry(sum)(1)(2)(3) // 6
+curry(sum)(1, 2, 3) // 6
+curry(sum, 1)(2, 3) // 6
+curry(sum, 1)(2)(3) // 6
+curry(sum, 1, 2)(3) // 6
+curry(sum, 1, 2, 3) // 6
 ```

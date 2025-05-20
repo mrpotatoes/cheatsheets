@@ -47,7 +47,7 @@ export const directory = (path: string, file: string): string =>
  * @returns
  */
 export const yamlData = <T>(dataFile: string): YamlObject<T> => {
-  const file = directory('config/data', dataFile)
+  const file = directory('src/data', dataFile)
   const doc = yaml.parse(fs.readFileSync(file, 'utf8'))
 
   return doc
@@ -63,7 +63,7 @@ const yamlMem = memoize(yamlData)
  */
 // @ts-ignore
 export const saveYaml = (data, dataFile) => {
-  const file = directory('config/data', dataFile)
+  const file = directory('src/data', dataFile)
   const doc = yaml.stringify(data)
   fs.writeFileSync(file, doc)
 

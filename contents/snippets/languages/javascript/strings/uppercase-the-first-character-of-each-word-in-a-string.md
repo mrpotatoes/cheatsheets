@@ -3,34 +3,18 @@ title: Uppercase the first character of each word in a string
 group: Casing
 ---
 
-**JavaScript version**
-
+## JavaScript version
 ```js
-const uppercaseWords = (str) =>
-    str
-        .split(' ')
-        .map((w) => `${w.charAt(0).toUpperCase()}${w.slice(1)}`)
-        .join(' ');
+const uppercaseWords = (str) => str
+  .split(' ')
+  .map((w) => `${w.charAt(0).toUpperCase()}${w.slice(1)}`)
+  .join(' ')
 
 // Or
-const uppercaseWords = (str) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
+const uppercaseWords = (str) => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase())
 ```
 
-**TypeScript version**
-
+## Examples
 ```js
-const uppercaseWords = (str: string): string =>
-    str
-        .split(' ')
-        .map((w) => `${w.charAt(0).toUpperCase()}${w.slice(1)}`)
-        .join(' ');
-
-// Or
-const uppercaseWords = (str: string): string => str.replace(/^(.)|\s+(.)/g, (c) => c.toUpperCase());
-```
-
-**Examples**
-
-```js
-uppercaseWords('hello world'); // 'Hello World'
+uppercaseWords('hello world') // 'Hello World'
 ```

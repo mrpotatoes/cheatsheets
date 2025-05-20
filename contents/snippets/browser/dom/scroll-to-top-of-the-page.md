@@ -3,14 +3,12 @@ title: Scroll to top of the page
 group: Page Interactions
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const goToTop = () => window.scrollTo(0, 0);
+const goToTop = () => window.scrollTo(0, 0)
 ```
 
-**TypeScript version**
-
+## TypeScript
 ```js
-const goToTop = (): void => window.scrollTo(0, 0);
+const goToTop = (): void => window.scrollTo(0, 0)
 ```

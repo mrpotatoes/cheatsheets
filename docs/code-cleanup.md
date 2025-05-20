@@ -9,11 +9,12 @@
 - [Misc](#misc)
 
 {#
-[NEXT STEPS]
-- images, teasers, typings
-- theme + vento
-- folder redo
-- content refactor (add desc)
+export const newPath = (page, filepath) =>
+  path.join(
+    process.env.PWD,
+    page.inputPath.replace(`/${page.fileSlug}.md`, ''),
+    filepath
+  )
 #}
 
 ## Next Steps

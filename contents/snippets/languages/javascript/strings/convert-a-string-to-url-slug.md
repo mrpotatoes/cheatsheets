@@ -3,28 +3,15 @@ title: Convert a string to URL slug
 group: Conversions
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const slugify = (str) =>
-    str
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w-]+/g, '');
+const slugify = (str) => str
+  .toLowerCase()
+  .replace(/\s+/g, '-')
+  .replace(/[^\w-]+/g, '')
 ```
 
-**TypeScript version**
-
+## Examples
 ```js
-const slugify = (str: string): string =>
-    str
-        .toLowerCase()
-        .replace(/\s+/g, '-')
-        .replace(/[^\w-]+/g, '');
-```
-
-**Examples**
-
-```js
-slugify('Chapter One: Once upon a time...'); // 'chapter-one-once-upon-a-time'
+slugify('Chapter One: Once upon a time...') // 'chapter-one-once-upon-a-time'
 ```

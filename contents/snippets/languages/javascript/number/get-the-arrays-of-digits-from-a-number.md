@@ -2,26 +2,23 @@
 title: Get the arrays of digits from a number
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const digitize = (n) => `${n}`.split('').map((v) => parseInt(v, 10));
+const digitize = (n) => `${n}`.split('').map((v) => parseInt(v, 10))
 
 // Or
-const digitize = (n) => [...`${n}`].map((v) => parseInt(v, 10));
+const digitize = (n) => [...`${n}`].map((v) => parseInt(v, 10))
 ```
 
-**TypeScript version**
-
-```js
-const digitize = (n: number): number[] => `${n}`.split('').map((v) => parseInt(v, 10));
+## TypeScript
+```ts
+const digitize = (n: number): number[] => `${n}`.split('').map((v) => parseInt(v, 10))
 
 // Or
-const digitize = (n: number): number[] => [...`${n}`].map((v) => parseInt(v, 10));
+const digitize = (n: number): number[] => [...`${n}`].map((v) => parseInt(v, 10))
 ```
 
-**Examples**
-
+## Examples
 ```js
-digitize(123); // [1, 2, 3]
+digitize(123) // [1, 2, 3]
 ```
