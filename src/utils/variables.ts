@@ -48,7 +48,7 @@ export const envFile = () =>
  * @returns
  */
 export const envPath = (type: string): string =>
-  path.join(process.cwd(), 'src/build', type)
+  path.join(process.cwd(), 'config/build', type)
 
 /**
  *
