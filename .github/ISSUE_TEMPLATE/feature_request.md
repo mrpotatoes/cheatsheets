@@ -1,10 +1,9 @@
 ---
-name: Feature request
-about: Suggest an idea for this project
-title: ''
+name: Enhancement
+about: Suggest an enhancement for the website
+title: '[ENHANCEMENT]: '
 labels: enhancement
 assignees: mrpotatoes
-
 ---
 
 **Is your feature request related to a problem? Please describe.**
