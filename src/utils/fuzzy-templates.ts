@@ -17,14 +17,14 @@ export const resTpl = (results: FuzzySearchRemapped): string => Object.keys(resu
  * @returns
  */
 export const groupUrl = (res: Remapped, text: string): string =>
-  `<p><b><a href="${path}${base}/${res.catU}">${text}</b></p>`
+  `<p><b><a href="${window.path}${window.base}/${res.catU}">${text}</b></p>`
 
 /**
  *
  * @param url
  * @returns
  */
-export const fullUrl = (url: string): string => `${path}${url.substring(1)}`
+export const fullUrl = (url: string): string => `${window.path}${url.substring(1)}`
 
 /**
  *
