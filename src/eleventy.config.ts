@@ -3,7 +3,6 @@ import dotenv from 'dotenv'
 import collections from '@collections'
 import events from '@events'
 import plugins from '@plugins'
-import transforms from '@transforms'
 import utils from '@utils'
 
 import { filters, shortcodes } from '@tplfns'

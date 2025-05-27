@@ -23,8 +23,6 @@
       "@plugins/*": [ "./src/plugins/*" ],
       "@templates": [ "./src/templates/index.ts" ],
       "@templates/*": [ "./src/templates/*" ],
-      "@transforms": [ "./src/transforms/index.ts" ],
-      "@transforms/*": [ "./src/transforms/*" ],
       "@variables": [ "./src/variables/index.ts" ],
       "@variables/*": [ "./src/variables/*" ],
       "@mytypes": [ "./types/index.ts" ],

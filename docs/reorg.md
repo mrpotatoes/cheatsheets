@@ -46,8 +46,6 @@ I would like the `tsconfig.json` file to not be at the top-level of the project 
       "@plugins/*": [ "./11ty/plugins/*" ],
       "@templates": [ "./11ty/templates/index.ts" ],
       "@templates/*": [ "./11ty/templates/*" ],
-      "@transforms": [ "./11ty/transforms/index.ts" ],
-      "@transforms/*": [ "./11ty/transforms/*" ],
       "@variables": [ "./11ty/variables/index.ts" ],
       "@variables/*": [ "./11ty/variables/*" ],
       "@mytypes": [ "./types/index.ts" ],
