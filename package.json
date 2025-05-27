@@ -6,15 +6,15 @@
   "scripts": {
     "clean": "rm -rf .cache cheatsheets; ",
     "build": "rm -rf .cache cheatsheets; NODE_ENV=production npm run build:eleventy && npm run build:sass",
-    "build:sass": "sass config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed",
-    "build:eleventy": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=config/11ty/eleventy.config.ts",
+    "build:sass": "sass src/theme/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed",
+    "build:eleventy": "tsx node_modules/@11ty/eleventy/cmd.cjs --config=src/eleventy.config.ts",
     "serve": "rm -rf .cache cheatsheets; npm run build; LOCAL_STATIC=yes serve -p 8082",
     "deploy": "npm run build && netlify deploy --prod --dir=cheatsheets",
     "format": "prettier --write \"**/*.+(json|md|scss)\"",
     "start": "rm -rf .cache cheatsheets; npm run start:eleventy & npm run start:sass",
-    "start:eleventy": "tsx watch --include \"./content/*\" --include \"./config/styles/*\" node_modules/@11ty/eleventy/cmd.cjs --config=config/11ty/eleventy.config.ts --quiet --serve",
-    "start:sass": "sass ./config/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
-    "todo": "leasot -x --reporter markdown ./config/**/*.{ts,njk} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
+    "start:eleventy": "tsx watch --include \"./content/*\" --include \"./src/theme/styles/*\" node_modules/@11ty/eleventy/cmd.cjs --config=src/eleventy.config.ts --quiet --serve",
+    "start:sass": "sass ./src/theme/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
+    "todo": "leasot -x --reporter markdown ./src/**/*.{ts,njk} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",

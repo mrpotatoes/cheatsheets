@@ -5,41 +5,47 @@ import path from 'path'
  *
  * @returns The snippet base path string
  */
-export const snippetBase = (): string => process.env.SNIPPET_URL || ''
+export const snippetBase = (): string => process.env.SNIPPET_URL
 
 /**
  *
  * @returns
  */
-export const snippetUrl = () => process.env.SNIPPET_URL || ''
+export const snippetUrl = () => process.env.SNIPPET_URL
 
 /**
  *
  * @returns
  */
-export const port = () => process.env.PORT || ''
+export const port = () => process.env.PORT
 
 /**
  * TODO: Convert to a function
  */
 export const passthroughs = {
   // TODO: Use the path function to get these paths
-  assets: { './config/assets': 'assets' },
-  styles: { './config/styles': 'styles' },
+  assets: { './config/public': 'assets' },
+  styles: { './src/theme/styles': 'styles' },
 }
+
+/**
+ *
+ * @returns
+ */
+export const layoutsDir = (): string => '../src/theme/layouts'
 
 /**
  *
  * @param config
  * @returns
  */
-export const targets = (config: string): string => `./config/11ty/${config}/**`
+export const targets = (config: string): string => `./src/11ty/${config}/**`
 
 /**
  *
  * @returns
  */
-export const basePath = (): string => process.env.BASE_PATH || ''
+export const basePath = (): string => process.env.BASE_PATH
 
 /**
  *
