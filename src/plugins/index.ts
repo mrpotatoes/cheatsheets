@@ -6,6 +6,8 @@ import groups from '@plugins/groups'
 import categoryBase from '@plugins/category.base'
 import jsConfig from '@plugins/bundle-typescript'
 import categoryChildren from '@plugins/category.children'
+import yaml from '@plugins/yaml'
+import minify from '@plugins/minify'
 
 export default {
   syntaxHighlight,
@@ -16,4 +18,7 @@ export default {
   jsConfig,
   categoryBase,
   categoryChildren,
+
+  minify,
+  yaml,
 }
