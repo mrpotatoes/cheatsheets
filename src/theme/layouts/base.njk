@@ -31,45 +31,120 @@
 
   </head>
   <body>
-    {{ content | safe }}
+    <div class="flex min-h-screen flex-col">
+      <header class="bg-blue-500 p-4">
+        <div class="hero">
+          <h1 class="hero__heading">{{title}}</h1>
+        </div>
 
-    <div class="container">
-      <footer class="footer">
-        <div class="footer__col">
-          <div class="footer__heading">Repo</div>
-          <ul class="footer__list">
-            <p>Repo:
-              <a href="https://github.com/mrpotatoes/cheatsheets">github.com/mrpotatoes</a>
-            </p>
-            <p>Code & Repo orginally Phước Nguyễn's
-              <a href="https://github.com/phuocng/1loc">1loc's</a>
-              code/repo</p>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <div class="footer__heading">About</div>
-          <div class="footer__author">
-            ©2023 - Andric LibreSinn. All rights reserved.
+        <div class="navbar bg-base-100 shadow-sm">
+          <div class="flex-1">
+            <a class="btn btn-ghost text-xl" href="/">Home</a>
           </div>
-          <div>
-            <p><a href="https://tech.libresinn.com/">Home</a></p>
-          </div>
-        </div>
-        <div class="footer__col">
-          <div class="footer__heading">Eleventy</div>
-          <ul class="footer__list">
-            <ul class="footer__list">
-              <li>Website Generator:
-                <a href="https://www.11ty.dev/docs/">Eleventy</a>
+          <div class="flex-none">
+            <ul class="menu menu-horizontal px-1">
+              <li><a href="{{ snippetBase }}">Snippets</a></li>
+              <li><a href="/projects">Projects</a></li>
+              <li><a href="/blog">Essays</a></li>
+
+              <li>
+                <details>
+                  <summary>About</summary>
+                  <ul class="bg-base-100 rounded-t-none p-2">
+                    <li><a href="/about">Meee!</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                    <li><a href="/changelog">Changelog</a></li>
+                    <li><a href="/built-with">Built With</a></li>
+                  </ul>
+                </details>
+              </li>
+
+              <li>
+                <details>
+                  <summary>Misc</summary>
+                  <ul class="bg-base-100 rounded-t-none p-2">
+                    <li><a href="/assets/fuzzy.json" target="_blank">Fuzzy Search JSON</a></li>
+                  </ul>
+                </details>
               </li>
             </ul>
-          </ul>
+          </div>
         </div>
+
+      </header>
+
+      <div class="flex flex-grow flex-row">
+        {# <aside class="w-64 bg-gray-200 p-4 sm:block">
+          asdasd
+        </aside> #}
+
+        <main class="flex-grow p-4">
+          {{ content | safe }}
+        </main>
+      </div>
+
+      <footer class="footer sm:footer-horizontal bg-neutral text-neutral-content p-10 grid grid-cols-3 gap-3">
+        <nav>
+          <h6 class="footer-title">Services</h6>
+          <a class="link link-hover">Branding</a>
+          <a class="link link-hover">Design</a>
+          <a class="link link-hover">Marketing</a>
+          <a class="link link-hover">Advertisement</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Company</h6>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Contact</a>
+          <a class="link link-hover">Jobs</a>
+          <a class="link link-hover">Press kit</a>
+        </nav>
+        <nav>
+          <h6 class="footer-title">Legal</h6>
+          <a class="link link-hover">Terms of use</a>
+          <a class="link link-hover">Privacy policy</a>
+          <a class="link link-hover">Cookie policy</a>
+        </nav>
       </footer>
+
+      {# <footer class="bg-gray-300 p-3">
+        <div class="grid grid-cols-3 gap-3">
+          <div>
+            <div class="footer__heading">Repo</div>
+            <ul class="footer__list">
+              <p>Repo:
+                <a href="https://github.com/mrpotatoes/cheatsheets">github.com/mrpotatoes</a>
+              </p>
+              <p>Code & Repo orginally Phước Nguyễn's
+                <a href="https://github.com/phuocng/1loc">1loc's</a>
+                code/repo
+              </p>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer__heading">About</div>
+            <div class="footer__author">
+              ©2023 - Andric LibreSinn. All rights reserved.
+            </div>
+            <div>
+              <p><a href="https://tech.libresinn.com/">Home</a></p>
+            </div>
+          </div>
+
+          <div>
+            <div class="footer__heading">Eleventy</div>
+            <ul class="footer__list">
+              <ul class="footer__list">
+                <li>Website Generator:
+                  <a href="https://www.11ty.dev/docs/">Eleventy</a>
+                </li>
+              </ul>
+            </ul>
+        </div>
+      </footer> #}
     </div>
 
     {# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}
     <script src="/assets/code-copy.js"></script>
-    </main>
   </body>
 </html>

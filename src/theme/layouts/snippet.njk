@@ -2,24 +2,10 @@
 layout: base.njk
 ---
 
-{% set catPath = page | cat %}
+{% set bCrumbs = collections.crumbs[page | cat] %}
+{% include '../partials/crumbs.njk' %}
 
-<div class="container">
-  <div class="header">
-    <div class="header__breadcrumb">
-      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-
-      <!-- TODO: Convert this to a partial or a WebC component (partial makes more sense imo) -->
-      {% for crumb in collections.crumbs[catPath] %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
-      {% endfor %}
-
-      <span>{{ title }}</span>
-    </div>
-  </div>
-
-  <div class="post">
-    <h1 class="post__heading">{{ title }}</h1>
-    <div class="post__content">{{ content | safe }}</div>
-  </div>
+<div class="post">
+  <h1 class="post__heading">{{ title }}</h1>
+  <div class="post__content">{{ content | safe }}</div>
 </div>
