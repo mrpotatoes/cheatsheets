@@ -54,7 +54,10 @@ I don't want to hand style each page as I want to focus mainly on the content an
 ## Optional Ideas
 I like how  has a [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian-callouts-eleventy/) for individual posts. I think this is a feature that I'd like to introduce. How to do it tho? No idea. I also like it's footnotes
 
-## Links
+## UX & Data
+I'll be putting me into Notion
+
+## Inspo
 - https://emeht.com/theme-magazine/
 - https://www.awwwards.com/websites/portfolio/
 - https://www.dmcg.co/
@@ -67,4 +70,26 @@ I like how  has a [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian
 - https://themarcus.com/portfolio/leisure-center
 - https://sagmeister.com/work/ (galleries)
 - https://pleasecallmechamp.com/
-
+- https://www.therobincollective.co.uk/pepsi-max-cherry-rooms
+- https://www.blinkmybrain.wtf/
+- https://www.derekmckechnie.com/
+- https://www.mak-management.com/
+- https://www.inftech.ai/
+- https://buildthebandwagon.com/
+- https://beings.co/
+- https://www.eduardbodak.com/
+- https://zimadesarrollos.es/proyectos/skatepark-mazarron-mazarron/
+- https://weareomega.io/
+- https://www.amanation-official.com/creator/chikame/
+- https://publicdesign.ch/de/referenzen/schweizerische-bundesbahnen-ag
+- https://www.lecorre.design/project-apple-music
+- https://consideritflowers.com/products/sherb-cream-pie-premium-thca-flower?variant=44814976549047
+- https://www.medusmo.com/
+- https://www.duchateau.com/
+- https://www.oharchitecture.com.au/project/myrtle-pool-house
+- https://truekindskincare.com/
+- https://amelnik.com/
+- https://function10.ca/
+- https://www.ginivini.com/en
+- https://www.ginivini.com/en/creazioni
+- https://www.elizadoltuofficial.net/projects/meowseum
