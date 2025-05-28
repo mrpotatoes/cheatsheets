@@ -1,5 +1,7 @@
 import _ from 'lodash'
 import dotenv from 'dotenv'
+import { VentoPlugin } from 'eleventy-plugin-vento'
+
 import collections from '@collections'
 import events from '@events'
 import plugins from '@plugins'
@@ -51,6 +53,12 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
+
+  // https://vento.js.org/syntax/include/
+  // https://github.com/noelforte/eleventy-plugin-vento
+  eleventyConfig.addPlugin(VentoPlugin, {
+    // Some cool options here, yo.
+  })
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
