@@ -1,9 +1,10 @@
 import _ from 'lodash'
 import dotenv from 'dotenv'
-import collections from '@collections'
+
+import utils from '@utils'
 import events from '@events'
 import plugins from '@plugins'
-import utils from '@utils'
+import collections from '@collections'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
@@ -29,12 +30,6 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addGlobalData('snippetBase', snippetBase())
   eleventyConfig.addGlobalData('basePath', basePath())
 
-  // Register Plugins
-  eleventyConfig.addPlugin(plugins.jsConfig)
-  eleventyConfig.addPlugin(plugins.categoryBase)
-  eleventyConfig.addPlugin(plugins.categoryChildren)
-  eleventyConfig.addPlugin(plugins.groups)
-
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
@@ -47,10 +42,15 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addFilter('json', filters.toJSON)
   eleventyConfig.addShortcode('categoryTree', shortcodes.snippetCatTree)
 
-  // Libraries & Plugins
+  // Register Libraries & Plugins
   eleventyConfig.setLibrary('md', plugins.md)
+  eleventyConfig.addPlugin(plugins.jsConfig)
+  eleventyConfig.addPlugin(plugins.categoryBase)
+  eleventyConfig.addPlugin(plugins.categoryChildren)
+  eleventyConfig.addPlugin(plugins.groups)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
+  eleventyConfig.addPlugin(plugins.css)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)

@@ -2,16 +2,6 @@
 layout: base.njk
 ---
 <div class="container">
-  <div class="header">
-    <div class="header__breadcrumb">
-      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
-      {% for crumb in crumbs %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>&nbsp;>&nbsp;
-      {% endfor %}
-      <span>{{ title }}</span>
-    </div>
-  </div>
-
   <div class="tip">
     <h1 class="post__heading">{{ title }}</h1>
 
@@ -21,7 +11,7 @@ layout: base.njk
 
         {% if page.url === snippetBase %}
           <div>
-            <label for="search">Search</label><br>
+            <span for="search">Search</span><br>
             <input type="text" id="search" name="search" autofocus />
 
             <div id="results"> </div>

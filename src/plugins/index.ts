@@ -8,6 +8,7 @@ import jsConfig from '@plugins/bundle-typescript'
 import categoryChildren from '@plugins/category.children'
 import yaml from '@plugins/yaml'
 import minify from '@plugins/minify'
+import css from '@plugins/css'
 
 export default {
   syntaxHighlight,
@@ -21,4 +22,5 @@ export default {
 
   minify,
   yaml,
+  css,
 }
