@@ -4,7 +4,7 @@
   - [Snippets](#snippets)
   - [Essays](#essays)
   - [Projects](#projects)
-  - [About Page](#about-page)
+  - [About Pages](#about-pages)
 - [Inspo](#inspo)
   - [Themes](#themes)
   - [Design](#design)
@@ -19,7 +19,7 @@
 - Tags page
   - https://eleventy-excellent.netlify.app/tags/
   - https://mmistakes.github.io/minimal-mistakes/tags/
-- Edit with github
+- Edit with GitHub
 - Related content
 - XML-sitemap
 - dayjs handling dates & times
@@ -30,63 +30,46 @@
 - Header image overlays
 - Image alignments
   - https://mmistakes.github.io/minimal-mistakes/markup/markup-image-alignment/
+  - Full width images inside text & hero
 - Breadcrumb navigation
 - Table of Contents
 - Reading time
-- https://darn.es/you-should-add-a-generator-tag-to-your-eleventy-site/
 - I like how [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian-callouts-eleventy/) has a changelog for individual posts.
+- Multiple columns
+- Carousels
+- Decide on post theme colour
+- Decide on text that can be full width
+  - Or any width
 
 ## Sections
-There are 3 main sections to the website.
-
-1. `Snippets` for copyable code snippets for quick access
-1. `Projects` is a showcase. Think product pages + articles.
-1. `Essasys` is my blog but I want it to be more of an experiance.
-
 ### Snippets
-Most of this is done but there are a couple of features that I would like to add in the future.
+`Snippets` for copyable code snippets for quick access. Most of this is done but there are a couple of features that I would like to add in the future.
 
 1. Use Turbo to open just the snippet examples (code blocks) in a modal
 1. Open all snippets in a group?
 
 ### Essays
+`Essasys` is my blog but I want it to be more of an experiance.
+
 I do not want a traditional blog section like every other website. I want my written sections to have more "drama" and to do that I want to use complex and alluring layouts and features. Essentially I want to be able to write `use case` or `design study` style pages. It'll be more heavy on the typeography so I wanted to make sure to focus on that.
 
 I don't want to hand style each page as I want to focus mainly on the content and then pull in elements of a use case and put it into a markdown sheet.
 
-**[`Examples`] Use Cases**
-- [Jolly Creative Agency | Portfolio | Sequel Travel Website](https://jollycreativeagency.com/portfolio/sequel-travel/)
-- [Project : My Name is MT: Return | 2021 - 2024 | Card RPG Game | LongtuGame - by rogi.dsgn](https://www.rogidsgn.com/cms-archives/my-name-is-mt)
-- [rogi.dsgn](https://www.rogidsgn.com/cms-projects/tera-classic)
-  - Listing page: https://www.rogidsgn.com/work
-- [Nø Cosmetics - Cases - Format D](https://www.format-d.com/cases/no-cosmetics.html)
-- [Pop up Office 2025 - Insights - Format D](https://www.format-d.com/insights/pop-up-office-2025.html)
-- [How Denim Brand Triarchy Is Blazing a Path for Sustainable Luxury | Good is the new Cool](https://goodisthenewcool.com/articles/triarchy-for-sustainable-luxury)
-- [007xSPYSCAPE - by Jomor Design](https://jomor-design-2019.webflow.io/work/007xspyscape)
-
-- [Mentos Grote Prijs van NL - Bruut](https://bruut.media/case/mentos-grote-prijs-van-nederland/)
-- [DFY® | Galaxy Z Flip3 5G](https://www.dfy.co.kr/work/galaxy-z-flip3-5g/)
-- [UX Case Studies :: Behance](https://www.behance.net/gallery/138667665/UX-Case-Studies?tracking_source=search_projects|best+case+studies&l=0)
-- [UX/UI Case Studies :: Behance](https://www.behance.net/gallery/225774943/UXUI-Case-Studies?tracking_source=search_projects|best+case+studies&l=2)
-
-**[`Examples`] Portfolios**
-- [The Nue Co Website Designed by David McGillivray](https://www.dmcg.co/projects/nueco)
-- [Momentous Brand Designed by David McGillivray](https://www.dmcg.co/projects/momentous)
-- [META QUEST PRO — Marcus Eriksson](https://themarcus.com/portfolio/kenya-and-carmel)
-- [THEME Magazine – EMEHT](https://emeht.com/theme-magazine/)
-- [Logitech | Dumemearts | Digital Designer & Webflow Developer](https://dumemearts.com/projects/logitech-g)
-- [Taco Bell - Check In & Earn — Kyle Conrad](https://kyleconrad.com/tacobell-checkin/)
-- [DIRTY LAUNDRY – Κ2](https://www.k2.gr/project/dirty-laundry/)
-- [Case Study: Dropbox Brand Guidelines](https://www.awwwards.com/case-study-dropbox-brand-guidelines.html)
-- [How Denim Brand Triarchy Is Blazing a Path for Sustainable Luxury | Good is the new Cool](https://goodisthenewcool.com/articles/triarchy-for-sustainable-luxury)
+| URL                                                                                           | Features                                                                                                                                                              |
+| --------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| [Mentos Grote Prijs van NL](https://bruut.media/case/mentos-grote-prijs-van-nederland/)       | <ul><li>Hero image at top<li>Large title type<li>Use case metadata at top in columns<li>Full width images<li>Carousels</ul>                                           |
+| [Good is the new Cool](https://goodisthenewcool.com/articles/triarchy-for-sustainable-luxury) | <ul><li>Multiple columns<li>Clicking content does a "toast" thing where the modal takes up the entire page<ul><li>Must use <code>esc</code> to take it away</ul></ul> |
+| [Pop up Office 2025](https://www.format-d.com/insights/pop-up-office-2025.html)               | <ul><li>Full width sections of different colours</li></ul>                                                                                                            |
+| [Nø Cosmetics](https://www.format-d.com/cases/no-cosmetics.html)                              | <ul><li>Header</li></ul>                                                                                                                                              |
+| [Taco Bell](https://kyleconrad.com/tacobell-checkin/)                                         | <ul><li>2 columns<ul><li>Left side is section heading</li><li>Right side is content</li></ul></li><li>Metadata section is very nice</li></ul>                         |
+| [META QUEST PRO — Marcus Eriksson](https://themarcus.com/portfolio/kenya-and-carmel)          | <ul><li>Interesting layout</li><li>Each project can have a different colour theme</li></ul>                                                                           |
+| [Jolly Creative Agency](https://jollycreativeagency.com/portfolio/sequel-travel/)             | <ul><li>Fullpage galleries</li></ul>                                                                                                                                  |
 
 ### Projects
-- [META QUEST PRO](https://themarcus.com/portfolio/meta-quest-pro)
-  - Click `index` on the side to see an interesting navigation for their portfolio page
+`Projects` is a showcase. Think product pages + articles. [Click the "Index" link](https://themarcus.com/portfolio/meta-quest-pro)
 
-### About Page
-- [Daniel Sun](https://danielsun.space/#story)
-- [Seb® → Designer](https://www.sebastian-martinez.com/)
+### About Pages
+Eh, nothing yet. Don't worry about me haha
 
 ## Inspo
 ### Themes
