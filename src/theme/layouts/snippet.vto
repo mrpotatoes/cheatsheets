@@ -1,0 +1,27 @@
+---
+layout: base.vto
+---
+
+{{ set catPath = page |> cat }}
+
+<div class="container">
+  <div class="header">
+    <div class="header__breadcrumb">
+      <a class="header__link" href="/">[Home]</a>
+
+      <!-- TODO: Convert this to a partial or a WebC component (partial makes more sense imo) -->
+      {{ for crumb of collections.crumbs[catPath] }}
+        &nbsp;>&nbsp;<a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
+      {{ /for }}
+
+      &nbsp;>&nbsp;
+
+      <span>{{ title }}</span>
+    </div>
+  </div>
+
+  <div class="post">
+    <h1 class="post__heading">{{ title }}</h1>
+    <div class="post__content">{{ content |> safe }}</div>
+  </div>
+</div>
