@@ -1,11 +1,53 @@
 # Theme
+- [Features](#features)
+- [Sections](#sections)
+  - [Snippets](#snippets)
+  - [Essays](#essays)
+  - [Projects](#projects)
+  - [About Page](#about-page)
+- [Inspo](#inspo)
+  - [Themes](#themes)
+  - [Design](#design)
 
-## Main Sections
+## Features
+- Light & Dark mode
+- Cards
+- Excellent Eleventy typography
+- Pagination
+- Gallery posts
+  - I wanna put images elsewhere but still know where they are
+- Tags page
+  - https://eleventy-excellent.netlify.app/tags/
+  - https://mmistakes.github.io/minimal-mistakes/tags/
+- Edit with github
+- Related content
+- XML-sitemap
+- dayjs handling dates & times
+- Callouts
+  - https://eleventy-notes.sandroroth.com/n/writing/callouts/
+- Sidebars
+  - https://mmistakes.github.io/minimal-mistakes/docs/layouts/#sidebars
+- Header image overlays
+- Image alignments
+  - https://mmistakes.github.io/minimal-mistakes/markup/markup-image-alignment/
+- Breadcrumb navigation
+- Table of Contents
+- Reading time
+- https://darn.es/you-should-add-a-generator-tag-to-your-eleventy-site/
+- I like how [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian-callouts-eleventy/) has a changelog for individual posts.
+
+## Sections
 There are 3 main sections to the website.
 
 1. `Snippets` for copyable code snippets for quick access
 1. `Projects` is a showcase. Think product pages + articles.
 1. `Essasys` is my blog but I want it to be more of an experiance.
+
+### Snippets
+Most of this is done but there are a couple of features that I would like to add in the future.
+
+1. Use Turbo to open just the snippet examples (code blocks) in a modal
+1. Open all snippets in a group?
 
 ### Essays
 I do not want a traditional blog section like every other website. I want my written sections to have more "drama" and to do that I want to use complex and alluring layouts and features. Essentially I want to be able to write `use case` or `design study` style pages. It'll be more heavy on the typeography so I wanted to make sure to focus on that.
@@ -42,22 +84,17 @@ I don't want to hand style each page as I want to focus mainly on the content an
 - [META QUEST PRO](https://themarcus.com/portfolio/meta-quest-pro)
   - Click `index` on the side to see an interesting navigation for their portfolio page
 
-## Secondary Pages
 ### About Page
 - [Daniel Sun](https://danielsun.space/#story)
 - [Seb® → Designer](https://www.sebastian-martinez.com/)
 
-## Steps
-1. Better `SASS` implimentation (or tailwind or something)
-1. Work with collaborator
-
-## Optional Ideas
-I like how  has a [this site](https://blog.martin-haehnel.de/2025/05/11/obsidian-callouts-eleventy/) for individual posts. I think this is a feature that I'd like to introduce. How to do it tho? No idea. I also like it's footnotes
-
-## UX & Data
-I'll be putting me into Notion
-
 ## Inspo
+### Themes
+- https://github.com/madrilene/eleventy-excellent/
+- https://github.com/rothsandro/eleventy-notes
+- https://github.com/lsolesen/minimal-mistakes
+
+### Design
 - https://emeht.com/theme-magazine/
 - https://www.awwwards.com/websites/portfolio/
 - https://www.dmcg.co/
