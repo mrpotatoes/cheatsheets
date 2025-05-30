@@ -2,24 +2,21 @@
 title: Check if a string contains only letters and numbers
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isAlphanumeric = (str) => /^[0-9A-Z]+$/i.test(str);
+const isAlphanumeric = (str) => /^[0-9A-Z]+$/i.test(str)
 ```
 
-**TypeScript version**
-
-```js
-const isAlphanumeric = (str: string): boolean => /^[0-9A-Z]+$/i.test(str);
+## TypeScript
+```ts
+const isAlphanumeric = (str: string): boolean => /^[0-9A-Z]+$/i.test(str)
 ```
 
-**Examples**
-
+## Examples
 ```js
-isAlphanumeric('helloworld'); // true
-isAlphanumeric('HelloWorld'); // true
-isAlphanumeric('hello world'); // false
-isAlphanumeric('hello123'); // true
-isAlphanumeric('hello 123'); // false
+isAlphanumeric('helloworld') // true
+isAlphanumeric('HelloWorld') // true
+isAlphanumeric('hello world') // false
+isAlphanumeric('hello123') // true
+isAlphanumeric('hello 123') // false
 ```

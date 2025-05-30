@@ -2,20 +2,12 @@
 title: Calculate the sum of arguments
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const sum = (...args) => args.reduce((a, b) => a + b);
+const sum = (...args) => args.reduce((a, b) => a + b)
 ```
 
-**TypeScript version**
-
+## Examples
 ```js
-const sum = (...args: number[]): number => args.reduce((a, b) => a + b);
-```
-
-**Examples**
-
-```js
-sum(1, 2, 3, 4); // 10
+sum(1, 2, 3, 4) // 10
 ```

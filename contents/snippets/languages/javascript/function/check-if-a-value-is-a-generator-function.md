@@ -2,15 +2,13 @@
 title: Check if a value is a generator function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isGeneratorFunction = (v) => Object.prototype.toString.call(v) === '[object GeneratorFunction]';
+const isGeneratorFunction = (v) => Object.prototype.toString.call(v) === '[object GeneratorFunction]'
 ```
 
-**Examples**
-
+## Examples
 ```js
-isGeneratorFunction(function () {}); // false
-isGeneratorFunction(function* () {}); // true
+isGeneratorFunction(function () {}) // false
+isGeneratorFunction(function* () {}) // true
 ```

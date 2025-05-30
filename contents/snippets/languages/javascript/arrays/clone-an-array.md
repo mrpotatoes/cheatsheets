@@ -2,52 +2,50 @@
 title: Clone an array
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 // `arr` is an array
-const clone = (arr) => arr.slice(0);
+const clone = (arr) => arr.slice(0)
 
 // Or
-const clone = (arr) => [...arr];
+const clone = (arr) => [...arr]
 
 // Or
-const clone = (arr) => Array.from(arr);
+const clone = (arr) => Array.from(arr)
 
 // Or
-const clone = (arr) => arr.map((x) => x);
+const clone = (arr) => arr.map((x) => x)
 
 // Or
-const clone = (arr) => JSON.parse(JSON.stringify(arr));
+const clone = (arr) => JSON.parse(JSON.stringify(arr))
 
 // Or
-const clone = (arr) => arr.concat([]);
+const clone = (arr) => arr.concat([])
 
 // Or
-const clone = (arr) => structuredClone(arr);
+const clone = (arr) => structuredClone(arr)
 ```
 
-**TypeScript version**
-
-```js
+## TypeScript
+```ts
 // `arr` is an array
-const clone = <T,_>(arr: T[]): T[] => arr.slice(0);
+const clone = <T,_>(arr: T[]): T[] => arr.slice(0)
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => [...arr];
+const clone = <T,_>(arr: T[]): T[] => [...arr]
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => Array.from(arr);
+const clone = <T,_>(arr: T[]): T[] => Array.from(arr)
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => arr.map((x) => x);
+const clone = <T,_>(arr: T[]): T[] => arr.map((x) => x)
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => JSON.parse(JSON.stringify(arr));
+const clone = <T,_>(arr: T[]): T[] => JSON.parse(JSON.stringify(arr))
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => arr.concat([]);
+const clone = <T,_>(arr: T[]): T[] => arr.concat([])
 
 // Or
-const clone = <T,_>(arr: T[]): T[] => structuredClone(arr);
+const clone = <T,_>(arr: T[]): T[] => structuredClone(arr)
 ```

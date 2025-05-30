@@ -3,21 +3,18 @@ title: Convert a letter to associate emoji
 group: Conversions
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const letterToEmoji = (c) => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
+const letterToEmoji = (c) => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365)
 ```
 
-**TypeScript version**
-
-```js
-const letterToEmoji = (c: string): string => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365);
+## TypeScript
+```ts
+const letterToEmoji = (c: string): string => String.fromCodePoint(c.toLowerCase().charCodeAt(0) + 127365)
 ```
 
-**Examples**
-
+## Examples
 ```js
-letterToEmoji('a'); // 🇦
-letterToEmoji('b'); // 🇧
+letterToEmoji('a') // 🇦
+letterToEmoji('b') // 🇧
 ```

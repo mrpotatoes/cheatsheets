@@ -2,22 +2,19 @@
 title: Round a number to the nearest multiple of a given value
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const roundNearest = (value, nearest) => Math.round(value / nearest) * nearest;
+const roundNearest = (value, nearest) => Math.round(value / nearest) * nearest
 ```
 
-**TypeScript version**
-
-```js
-const roundNearest = (value: number, nearest: number): number => Math.round(value / nearest) * nearest;
+## TypeScript
+```ts
+const roundNearest = (value: number, nearest: number): number => Math.round(value / nearest) * nearest
 ```
 
-**Examples**
-
+## Examples
 ```js
-roundNearest(100, 30); // 90
-roundNearest(200, 30); // 210
-roundNearest(200, 40); // 200
+roundNearest(100, 30) // 90
+roundNearest(200, 30) // 210
+roundNearest(200, 40) // 200
 ```

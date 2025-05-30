@@ -2,8 +2,7 @@
 title: Identity function
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const identity = (x) => x;
+const identity = (x) => x
 ```

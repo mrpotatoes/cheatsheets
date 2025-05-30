@@ -3,20 +3,17 @@ title: Get union of arrays
 group: Retrievals
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const union = (...arr) => [...new Set(arr.flat())];
+const union = (...arr) => [...new Set(arr.flat())]
 ```
 
-**TypeScript version**
-
-```js
-const union = <T,_>(...arr: T[][]): T[] => [...new Set(arr.flat())];
+## TypeScript
+```ts
+const union = <T,_>(...arr: T[][]): T[] => [...new Set(arr.flat())]
 ```
 
-**Example**
-
+## Example
 ```js
-union([1, 2], [2, 3], [3]); // [1, 2, 3]
+union([1, 2], [2, 3], [3]) // [1, 2, 3]
 ```

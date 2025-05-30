@@ -704,8 +704,6 @@ sql/other:
 subsystem/bash/other:
   - title: Compress Images
     url: /code/tips/subsystem/bash/compress-images/
-  - title: Placeholder
-    url: /code/tips/subsystem/bash/placeholder/
 subsystem/dotfiles/other:
   - title: +x
     url: /code/tips/subsystem/dotfiles/+x/

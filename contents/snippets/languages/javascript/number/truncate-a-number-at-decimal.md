@@ -2,21 +2,18 @@
 title: Truncate a number at decimal
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const truncate = (n) => ~~n;
+const truncate = (n) => ~~n
 ```
 
-**TypeScript version**
-
-```js
-const truncate = (n: number): number => ~~n;
+## TypeScript
+```ts
+const truncate = (n: number): number => ~~n
 ```
 
-**Examples**
-
+## Examples
 ```js
-truncate(25.198726354); // 25
-truncate(-25.198726354); // -25
+truncate(25.198726354) // 25
+truncate(-25.198726354) // -25
 ```

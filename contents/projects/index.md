@@ -1,7 +1,7 @@
 ---
 title: Projects
 # permalink: projects/
-layout: post.njk
+layout: post.vto
 ---
 
 Projects landing page

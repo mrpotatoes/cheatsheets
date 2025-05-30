@@ -3,14 +3,12 @@ title: Get the file extension from a file name
 group: Retrivals
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const ext = (fileName) => fileName.split('.').pop();
+const ext = (fileName) => fileName.split('.').pop()
 ```
 
-**TypeScript version**
-
-```js
-const ext = (fileName: string): string => fileName.split('.').pop();
+## TypeScript
+```ts
+const ext = (fileName: string): string => fileName.split('.').pop()
 ```

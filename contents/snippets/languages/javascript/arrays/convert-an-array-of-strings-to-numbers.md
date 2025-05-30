@@ -2,26 +2,23 @@
 title: Convert an array of strings to numbers
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const toNumbers = (arr) => arr.map(Number);
+const toNumbers = (arr) => arr.map(Number)
 
 // Or
-const toNumbers = (arr) => arr.map((x) => +x);
+const toNumbers = (arr) => arr.map((x) => + x)
 ```
 
-**TypeScript version**
-
-```js
-const toNumbers = (arr: string[]): number[] => arr.map(Number);
+## TypeScript
+```ts
+const toNumbers = (arr: string[]): number[] => arr.map(Number)
 
 // Or
-const toNumbers = (arr: string[]): number[] => arr.map((x) => +x);
+const toNumbers = (arr: string[]): number[] => arr.map((x) => +x)
 ```
 
-**Example**
-
+## Example
 ```js
-toNumbers(['2', '3', '4']); // [2, 3, 4]
+toNumbers(['2', '3', '4']) // [2, 3, 4]
 ```

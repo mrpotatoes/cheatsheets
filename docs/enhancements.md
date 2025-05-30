@@ -2,7 +2,7 @@
 
 ## Website
 - Fix favicon
-- Fix the header in `base.njk` since I don't have the `metadata` variable available
+- Fix the header in `base.vto` since I don't have the `metadata` variable available
 - Both blog & examples need to have a related section at the bottom
   - [Tags page](https://eleventy-notes.sandroroth.com/tags/)
   - [Callouts](https://eleventy-notes.sandroroth.com/n/writing/callouts/)

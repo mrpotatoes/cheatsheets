@@ -2,25 +2,23 @@
 title: Compose functions from left to right
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
 // Compose functions from left to right
 const pipe =
-    (...fns) =>
-    (x) =>
-        fns.reduce((y, f) => f(y), x);
+  (...fns) =>
+  (x) =>
+    fns.reduce((y, f) => f(y), x)
 ```
 
-**Examples**
-
+## Examples
 ```js
-const lowercase = (str) => str.toLowerCase();
-const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`;
-const reverse = (str) => str.split('').reverse().join('');
+const lowercase = (str) => str.toLowerCase()
+const capitalize = (str) => `${str.charAt(0).toUpperCase()}${str.slice(1)}`
+const reverse = (str) => str.split('').reverse().join('')
 
-const fn = pipe(lowercase, capitalize, reverse);
+const fn = pipe(lowercase, capitalize, reverse)
 
 // We will execute `lowercase`, `capitalize` and `reverse` in order
-fn('Hello World') === 'dlrow olleH';
+fn('Hello World') === 'dlrow olleH'
 ```

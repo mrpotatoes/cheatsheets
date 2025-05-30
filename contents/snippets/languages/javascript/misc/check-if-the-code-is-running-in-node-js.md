@@ -2,14 +2,12 @@
 title: Check if the code is running in NodeJS
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const isNode = typeof process !== 'undefined' && process.versions != null && process.versions.node != null;
+const isNode = typeof process !== 'undefined' && process.versions != null && process.versions.node != null
 ```
 
-**TypeScript version**
-
-```js
-const isNode: boolean = typeof process !== 'undefined' && process.versions != null && process.versions.node != null;
+## TypeScript
+```ts
+const isNode: boolean = typeof process !== 'undefined' && process.versions != null && process.versions.node != null
 ```

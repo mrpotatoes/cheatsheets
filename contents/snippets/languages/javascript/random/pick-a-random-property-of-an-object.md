@@ -2,20 +2,17 @@
 title: Pick a random property of an object
 ---
 
-**JavaScript version**
-
+## JavaScript
 ```js
-const randomProp = (obj) => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
+const randomProp = (obj) => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0]
 ```
 
-**TypeScript version**
-
-```js
-const randomProp = (obj: object): any => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0];
+## TypeScript
+```ts
+const randomProp = (obj: object): any => Object.keys(obj)[(Math.random() * Object.keys(obj).length) | 0]
 ```
 
-**Examples**
-
+## Examples
 ```js
 const colors = {
     aqua: '#00ffff',
@@ -61,6 +58,7 @@ const colors = {
     silver: '#c0c0c0',
     white: '#ffffff',
     yellow: '#ffff00',
-};
-randomProp(colors); // 'red'
+}
+
+randomProp(colors) // 'red'
 ```

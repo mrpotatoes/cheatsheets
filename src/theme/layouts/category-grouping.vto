@@ -1,0 +1,34 @@
+---
+layout: base.vto
+data: snippetsGrouped
+---
+
+<div class="container">
+  <div class="header">
+    <div class="header__breadcrumb">
+      <a class="header__link" href="/">[Home]</a>
+
+      {{ for crumb of crumbs }}
+        &nbsp;>&nbsp;<a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
+      {{ /for }}
+    </div>
+  </div>
+
+  <div class="tip">
+    <h1 class="post__heading">{{ title }} ({{ groupName }})</h1>
+    <div class="post">
+      <div class="post__content">
+
+        <div class="snippet-group-container">
+        {{ for snippet of snippetsGrouped[group] }}
+          <div class="snippet-group-left">
+            <ul>
+              <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>
+            </ul>
+          </div>
+        {{ /for }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

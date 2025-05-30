@@ -3,8 +3,8 @@ title: Get the selected text
 group: Retrievals
 ---
 
-**JavaScript version**
+## JavaScript
 
 ```js
-const getSelectedText = () => window.getSelection().toString();
+const getSelectedText = () => window.getSelection().toString()
 ```
