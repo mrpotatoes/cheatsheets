@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import dotenv from 'dotenv'
 import collections from '@collections'
 import events from '@events'

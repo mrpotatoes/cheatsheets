@@ -14,6 +14,7 @@
 // Themes
 @use 'themes/dracula.scss';
 
+// --------------------------------------------------------------------------------------------------
 // These two classes are temporary
 .snippet-group-container {
   margin: 10px;
@@ -30,4 +31,75 @@
 .idx {
   color: #2427d4;
   text-decoration: underline;
+}
+
+// --------------------------------------------------------------------------------------------------
+// COLUMNS
+/* Use this for flexible columns */
+.columns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 2em;
+}
+
+.info {
+  background-color: lightblue;
+}
+
+.warning {
+  background-color: lightcoral;
+}
+
+// --------------------------------------------------------------------------------------------------
+.tabs-tabs-wrapper {
+  margin: 5px;
+  border: 1px double;
+  margin-bottom: 30px;
+}
+
+.tabs-tabs-container {
+  margin: 10px;
+}
+
+/* Style the tab */
+.tabs-tabs-header {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons that are used to open the tab content */
+.tabs-tabs-header button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+}
+
+/* Change background color of buttons on hover */
+.tabs-tabs-header button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tabs-tabs-header button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabs-tab-content {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+// tabs-tabs-container
+
+.tabs-tabs-container .active {
+  display: block;
 }
