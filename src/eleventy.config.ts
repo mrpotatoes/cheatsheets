@@ -1,7 +1,5 @@
 import _ from 'lodash'
 import dotenv from 'dotenv'
-import { VentoPlugin } from 'eleventy-plugin-vento'
-
 import collections from '@collections'
 import events from '@events'
 import plugins from '@plugins'
@@ -53,12 +51,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.setLibrary('md', plugins.md)
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
-
-  // https://vento.js.org/syntax/include/
-  // https://github.com/noelforte/eleventy-plugin-vento
-  eleventyConfig.addPlugin(VentoPlugin, {
-    // Some cool options here, yo.
-  })
+  eleventyConfig.addPlugin(plugins.vento)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
@@ -79,13 +72,13 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
     pathPrefix: basePath(),
 
     // Control which files Eleventy will process
-    templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
+    templateFormats: [ 'md', 'html', 'liquid', 'vto' ],
 
     // Pre-process *.md files with nunjucks
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'vto',
 
     // Pre-process *.html files with nunjucks
-    htmlTemplateEngine: 'njk',
+    htmlTemplateEngine: 'vto',
 
     // The rest of the setup
     dir: {

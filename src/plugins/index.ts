@@ -8,17 +8,18 @@ import jsConfig from '@plugins/bundle-typescript'
 import categoryChildren from '@plugins/category.children'
 import yaml from '@plugins/yaml'
 import minify from '@plugins/minify'
+import vento from '@plugins/vento'
 
 export default {
   syntaxHighlight,
   EleventyHtmlBasePlugin,
+  minify,
+  yaml,
+  vento,
 
   md,
   groups,
   jsConfig,
   categoryBase,
   categoryChildren,
-
-  minify,
-  yaml,
 }

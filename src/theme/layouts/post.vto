@@ -1,5 +1,5 @@
 ---
-layout: base.njk
+layout: base.vto
 ---
 
 <div class="container">
@@ -12,6 +12,6 @@ layout: base.njk
 
   <div class="post">
     <h1 class="post__heading">{{ title }}</h1>
-    <div class="post__content">{{ content | safe }}</div>
+    <div class="post__content">{{ content |> safe }}</div>
   </div>
 </div>

@@ -14,6 +14,6 @@ eleventyConfig.addFilter('debugger', (...args) => {
 ```
 
 In the template
-```njk
+```
 {\{ collections.catTree[0].data.breadcrumbs | debugger }}
 ```

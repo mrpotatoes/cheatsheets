@@ -14,7 +14,7 @@
     "start": "rm -rf .cache cheatsheets; npm run start:eleventy & npm run start:sass",
     "start:eleventy": "tsx watch --include \"./content/*\" --include \"./src/theme/styles/*\" node_modules/@11ty/eleventy/cmd.cjs --config=src/eleventy.config.ts --quiet --serve",
     "start:sass": "sass ./src/theme/styles/index.scss cheatsheets/styles/index.min.css --no-source-map --style compressed --watch",
-    "todo": "leasot -x --reporter markdown ./src/**/*.{ts,njk} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
+    "todo": "leasot -x --reporter markdown ./src/**/*.{ts} ./docs/*.md ./contents/**/*.{js,ts,md} -i '**/node_modules/**/*' > ./docs/TODO.md"
   },
   "devDependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^4.1.0",
@@ -40,7 +40,6 @@
     "lodash": "^4.17.21",
     "markdown-it": "^13.0.1",
     "memoize": "^10.1.0",
-    "nunjucks": "^3.2.4",
     "serve": "^14.2.1",
     "tsx": "^4.19.3",
     "yaml": "^2.7.1"

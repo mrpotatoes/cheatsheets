@@ -1,17 +1,16 @@
 ---
-layout: base.njk
+layout: base.vto
 data: snippetsGrouped
 ---
 
 <div class="container">
   <div class="header">
     <div class="header__breadcrumb">
-      <a class="header__link" href="/">[Home]</a>&nbsp;>&nbsp;
+      <a class="header__link" href="/">[Home]</a>
 
-      {% for crumb in crumbs %}
-        <a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
-        {% if loop.last %} {% else %} &nbsp;>&nbsp; {% endif %}
-      {% endfor %}
+      {{ for crumb of crumbs }}
+        &nbsp;>&nbsp;<a class="header__link" href="{{ crumb.url }}">{{ crumb.title }}</a>
+      {{ /for }}
     </div>
   </div>
 
@@ -21,13 +20,13 @@ data: snippetsGrouped
       <div class="post__content">
 
         <div class="snippet-group-container">
-        {% for snippet in snippetsGrouped[group] %}
+        {{ for snippet of snippetsGrouped[group] }}
           <div class="snippet-group-left">
             <ul>
               <li><a href="{{ snippet.url }}">{{ snippet.title }}</a></li>
             </ul>
           </div>
-        {% endfor %}
+        {{ /for }}
         </div>
       </div>
     </div>

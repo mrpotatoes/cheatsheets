@@ -16,8 +16,8 @@ export default (eleventyConfig: EleventyConfig) => {
   Object.keys(utils.data.groups()).forEach(group => {
     const category = group.split('/').slice(0, -1).join('/') + '/'
 
-    eleventyConfig.addTemplate(`${group}.njk`, '', {
-      layout: 'category-grouping.njk',
+    eleventyConfig.addTemplate(`${group}.vto`, '', {
+      layout: 'category-grouping.vto',
       title: breadcrumbs(tree, category, true).map(e => e.title).slice(1).join(' » '),
       permalink: `${snippetBase()}/${group}/`,
       group: group,

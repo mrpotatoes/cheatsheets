@@ -16,7 +16,7 @@ export default (eleventyConfig: EleventyConfig): void => {
     const path = cat.replace(/^\/+|\/+$/g, '').replaceAll('/', '.')
 
     eleventyConfig.addTemplate(utils.categories.tpl(cat), '', {
-      layout: 'category.njk',
+      layout: 'category.vto',
       title: flattened[cat].name,
       desc: flattened[cat].desc,
       permalink: utils.categories.link(utils.strings.trimSlashes(cat)),

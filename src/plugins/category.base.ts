@@ -9,8 +9,8 @@ import { snippetBase } from '@utils/variables'
 export default (eleventyConfig: EleventyConfig): void => {
   const cats = utils.data.tree()
 
-  eleventyConfig.addTemplate('index.njk', '', {
-    layout: 'category.njk',
+  eleventyConfig.addTemplate('index.vto', '', {
+    layout: 'category.vto',
     title: 'Snippets',
     desc: '',
     permalink: snippetBase(),

@@ -1,20 +1,20 @@
 <!doctype html>
-<html lang="{{ metadata.language }}">
+<html lang="en">
   <head>
-    <title>{{ title or metadata.title }} - 1 LOC</title>
+    <title>{{ title }}</title>
 
     <meta charset="utf-8">
-    <meta name="author" content="Andric Anahí LibreSinn"/>
-    <meta name="description" content="{{ title or metadata.title }}"/>
+    <meta name="author" content="Anahi LibreSinn"/>
+    <meta name="description" content="{{ title }}"/>
     <meta name="keywords" content="JavaScript helpers, JavaScript snippets, JavaScript utils"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:description" content="{{ title or metadata.title }}"/>
+    <meta name="twitter:description" content="{{ title }}"/>
     <meta name="twitter:site" content="@andriclibresinn"/>
-    <meta name="twitter:title" content="{{ title or metadata.title }} - 1 LOC"/>
-    <meta property="og:description" content="{{ title or metadata.title }}"/>
+    <meta name="twitter:title" content="{{ title }} - 1 LOC"/>
+    <meta property="og:description" content="{{ title }}"/>
     <meta property="og:site_name" content="Cheatsheet"/>
-    <meta property="og:title" content="{{ title or metadata.title }} - 1 LOC"/>
+    <meta property="og:title" content="{{ title }} - 1 LOC"/>
     <meta property="og:url" content="https://tech.libresinn.com/cheatsheet/"/>
 
     <link rel="icon" href="/assets/favicon.png" type="image/png"/>
@@ -25,13 +25,13 @@
     <link rel="stylesheet" href="/styles/index.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap">
 
-    {% if page.url === snippetBase %}
+    {{ if page.url === snippetBase }}
     <script src="/assets/fuzzy.js" defer></script>
-    {% endif %}
-
+    {{ /if }}
   </head>
+
   <body>
-    {{ content | safe }}
+    {{ content |> safe }}
 
     <div class="container">
       <footer class="footer">
@@ -68,7 +68,7 @@
       </footer>
     </div>
 
-    {# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}
+    {{# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}}
     <script src="/assets/code-copy.js"></script>
     </main>
   </body>
