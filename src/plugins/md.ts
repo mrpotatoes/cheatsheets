@@ -26,6 +26,21 @@ export default markdownIt({
   .use(align)
   .use(tab, { name: 'tabs' })
 
+  // Carosel -------------------------------------------------------------------
+  /**
+   * @see https://www.w3schools.com/howto/howto_js_slideshow.asp
+   */
+  .use(container, {
+    name: 'carousel',
+    openRender: (tokens, index, _options) => `<div class="slideshow-container">`,
+  })
+
+  .use(container, {
+    name: 'caro',
+    openRender: (tokens, index, _options) => `<div class="carosel-item">`,
+  })
+
+  // Columns -------------------------------------------------------------------
   .use(container, {
     name: 'cols',
     openRender: (tokens, index, _options) => `<div class="columns">`,
@@ -41,6 +56,7 @@ export default markdownIt({
     openRender: (tokens, index, _options) => `<div class="warning"><p class="warning-title">${containerTitle(tokens, index)}</p>`,
   })
 
+  // Images --------------------------------------------------------------------
   .use(markdownItEleventyImg, {
     imgOptions: {
       widths: [1000, 800, 600],
@@ -57,5 +73,5 @@ export default markdownIt({
     resolvePath: (filepath: string, env: any) =>
       (filepath.charAt(0) === '/')
         ? path.join(workingDir(), 'config/', filepath)
-        : path.join(path.dirname(env.page.inputPath), filepath)
+        : path.join(path.dirname(env.page.inputPath), filepath),
   })

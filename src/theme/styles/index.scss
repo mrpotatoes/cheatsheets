@@ -1,4 +1,6 @@
 @use 'common';
+@use 'reset';
+@use 'carousel';
 
 @use 'blocks/card';
 @use 'blocks/category';
@@ -43,6 +45,10 @@
   column-gap: 2em;
 }
 
+.carosel {
+  background-color: #ade6d8;
+}
+
 .info {
   background-color: lightblue;
 }
@@ -83,6 +89,7 @@
 /* Change background color of buttons on hover */
 .tabs-tabs-header button:hover {
   background-color: #ddd;
+  // asd asd
 }
 
 /* Create an active/current tablink class */
