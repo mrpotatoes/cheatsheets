@@ -97,6 +97,13 @@
       // Set it up for all my homies
       document.querySelectorAll('.tabs-tabs-header button').forEach(tabClick)
     </script>
+
+    <script>
+      document.querySelectorAll('.spoiler').forEach(
+        (s) => s.addEventListener('click',
+          (e) => e.target.classList.toggle('spoiler')
+        ))
+    </script>
     </main>
   </body>
 </html>
