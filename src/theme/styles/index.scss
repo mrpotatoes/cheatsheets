@@ -1,6 +1,7 @@
 @use 'common';
 @use 'reset';
 @use 'carousel';
+@use 'callouts';
 
 @use 'blocks/card';
 @use 'blocks/category';
@@ -15,6 +16,15 @@
 
 // Themes
 @use 'themes/dracula.scss';
+
+:root {
+  --color-note: #0969da;
+  --color-tip: #1a7f37;
+  --color-warning: #9a6700;
+  --color-severe: #bc4c00;
+  --color-caution: #d1242f;
+  --color-important: #8250df;
+}
 
 // --------------------------------------------------------------------------------------------------
 // These two classes are temporary

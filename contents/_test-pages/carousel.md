@@ -1,6 +1,6 @@
 ---
-title: Carousel
-permalink: carousel/
+title: Markdown Test - Carousel
+permalink: markdown-tests/carousel/
 layout: post.vto
 ---
 
@@ -31,13 +31,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia e
 :::::
 -->
 
-
 ::: carousel
 ![](./placeholder-1.png)
 ![](./placeholder-2.png)
 ![](./placeholder-3.png)
 :::
-
 
 ## Separate this yo
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam auctor tortor euismod turpis egestas pretium. Aliquam ullamcorper nulla diam.

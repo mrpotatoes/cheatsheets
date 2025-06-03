@@ -3,5 +3,6 @@ declare module '@11ty/eleventy'
 
 // Disable annoying warnings when importing these packages.
 declare module 'memoize'
+declare module 'markdown-it-obsidian-callouts'
 declare module 'markdown-it-eleventy-img'
 declare module '@11ty/eleventy-plugin-syntaxhighlight'
