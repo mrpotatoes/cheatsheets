@@ -1,4 +1,6 @@
 import path from 'path'
+import markdownIt from 'markdown-it'
+import markdownItEleventyImg from 'markdown-it-eleventy-img'
 import { outputDir, workingDir } from '@utils/variables'
 
 export const mdImages = {
@@ -18,4 +20,10 @@ export const mdImages = {
     (filepath.charAt(0) === '/')
       ? path.join(workingDir(), 'config/', filepath)
       : path.join(path.dirname(env.page.inputPath), filepath),
+}
+
+// @ts-ignorde
+export const plugin = (md: markdownIt): markdownIt => {
+  md.use(markdownItEleventyImg, mdImages)
+  return md
 }
