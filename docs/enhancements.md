@@ -74,6 +74,34 @@ I want to be able to manually set teaser content for content. Preferably add the
 - [`jbrooksuk/node-summary`](https://github.com/jbrooksuk/node-summary)
 - [`matt-schwartz/text-summarization`](https://github.com/matt-schwartz/text-summarization)
 
+## Enhanced Lists
+![](./enhanced-lists.png)
+
+**Example Output**
+```html
+<ol>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p></li>
+
+  <li>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p>
+    <pre>
+      <code class="lang-js">
+        // Some code goes in here
+      </code>
+    </pre>
+  </li>
+
+  <li>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p>
+    <pre>
+      <code class="lang-js">
+        // Some code goes in here
+      </code>
+    </pre>
+  </li>
+</ol>
+```
+
 ## Branches
 ### Feature
 - `feature/hotwire`

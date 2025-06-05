@@ -23,4 +23,22 @@ These look interesting. Perhaps I can use this for the carousel plugin (🤞🏽
 - https://github.com/arve0/markdown-it-attrs
 - https://mdit-plugins.github.io/attrs.html
 
-
+### `remark`
+Links to some interesting plugins if I wanna use a different `markdown` libary to transpile my `markdown` content.
+- [`trevorblades/remark-typescript`](https://github.com/trevorblades/remark-typescript)
+- [`elviswolcott/remark-admonitions`](https://github.com/elviswolcott/remark-admonitions)
+- [`zestedesavoir/*`](https://github.com/zestedesavoir/zmarkdown)
+  - [`zmarkdown/remark-align`](https://github.com/zestedesavoir/zmarkdown/tree/HEAD/packages/remark-align#readme)
+  - [`zmarkdown/remark-custom-blocks`](https://github.com/zestedesavoir/zmarkdown/tree/HEAD/packages/remark-custom-blocks#readme)
+  - [`zmarkdown/remark-grid-tables`](https://github.com/zestedesavoir/zmarkdown/tree/HEAD/packages/remark-grid-tables#readme)
+  - [`zmarkdown/remark-numbered-footnotes`](https://github.com/zestedesavoir/zmarkdown/tree/1eb975e4ddee35b9d45736f5c28489e207790e44/packages/remark-numbered-footnotes)
+- [`arobase-che/remark-attr`](https://github.com/arobase-che/remark-attr)
+- [`kevinzunigacuellar/remark-code-title`](https://github.com/kevinzunigacuellar/remark-code-title?tab=readme-ov-file)
+- [`Swizec/remark-code-screenshot`](https://github.com/Swizec/remark-code-screenshot)
+- [`Nevenall/remark-containers`](https://github.com/Nevenall/remark-containers)
+  - With nesting!
+- [`adobe/remark-gridtables`](https://github.com/adobe/remark-gridtables)
+  - Same as `zmarkdown/remark-grid-tables`
+- [`jake-low/remark-sectionize`](https://github.com/jake-low/remark-sectionize)
+- [`alvinometric/remark-remove-comments`](https://github.com/alvinometric/remark-remove-comments)
+- [`remarkjs/remark-reference-links`](https://github.com/remarkjs/remark-reference-links)
