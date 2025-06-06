@@ -1,5 +1,4 @@
-import markdownIt from 'markdown-it'
-// import markdownItEleventyImg from 'markdown-it-eleventy-img'
+
 import collapsible from 'markdown-it-collapsible'
 
 import { tab } from '@mdit/plugin-tab'
@@ -7,48 +6,28 @@ import { sup } from '@mdit/plugin-sup'
 import { sub } from '@mdit/plugin-sub'
 import { align } from '@mdit/plugin-align'
 import { alert } from '@mdit/plugin-alert'
-import { tasklist } from '@mdit/plugin-tasklist'
-import { container } from '@mdit/plugin-container'
-import { footnote } from '@mdit/plugin-footnote'
 import { spoiler } from '@mdit/plugin-spoiler'
+import { tasklist } from '@mdit/plugin-tasklist'
+import { footnote } from '@mdit/plugin-footnote'
 
-import myst from 'markdown-it-myst'
+import { imgs } from '@plugins/markdown/images'
+import { cols } from '@plugins/markdown/columns'
+import { LibManager } from '@plugins/markdown/LibManager'
 
-import { cols, info, warning } from '@plugins/markdown/columns'
-import { carousel, caro } from '@plugins/markdown/carousel'
-import { mdImages, plugin } from '@plugins/markdown/images'
+export default new LibManager({ html: true, linkify: true })
+  .plugin(tab, { name: 'tabs' })
+  .plugin(alert, { deep: true })
+  .plugin(sup)
+  .plugin(sub)
+  .plugin(align)
+  .plugin(collapsible)
+  .plugin(tasklist)
+  .plugin(footnote)
+  .plugin(spoiler) // TODO: This requires CSS & JS
 
-const mditOpts = {
-  html: true,
-  linkify: true
-}
+  .custom(cols)
+  .custom(imgs)
+  // .custom(carosel)
 
-const mdi = markdownIt(mditOpts)
-  .use(alert, { deep: true })
-  .use(sup)
-  .use(sub)
-  .use(align)
-  .use(tab, { name: 'tabs' })
-  .use(collapsible)
-  .use(tasklist)
-  .use(footnote)
-  .use(myst)
-
-  // TODO: This requires CSS & JS
-  .use(spoiler)
-
-  // Carosel -------------------------------------------------------------------
-  .use(container, carousel)
-  .use(container, caro)
-
-  // Columns -------------------------------------------------------------------
-  .use(container, cols)
-  .use(container, info)
-  .use(container, warning)
-
-  // Images --------------------------------------------------------------------
-  // .use(markdownItEleventyImg, mdImages)
-
-plugin(mdi)
-
-export default mdi
+  // Return markdown-it to be set as a plugin/library
+  .mdit

@@ -49,7 +49,6 @@
     "lodash": "^4.17.21",
     "markdown-it": "^14.1.0",
     "markdown-it-collapsible": "^2.0.2",
-    "markdown-it-myst": "^1.0.11",
     "memoize": "^10.1.0",
     "sass": "^1.89.1",
     "serve": "^14.2.1",

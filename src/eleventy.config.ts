@@ -6,10 +6,14 @@ import utils from '@utils'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir, drafts } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
+
+interface TestNode extends Node {
+
+}
 
 // @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
@@ -37,6 +41,9 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Copy the `img` and `css` folders to the output
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
+
+  // Preprocessors
+  eleventyConfig.addPreprocessor('drafts', drafts.exts, drafts.fn)
 
   // Filters & Shortcodes
   eleventyConfig.addFilter('urlize', filters.urlize)

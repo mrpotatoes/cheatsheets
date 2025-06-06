@@ -73,37 +73,9 @@
     {{# TODO: I'll be moving over to a different code & highlighter plugin #}}
     {{# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}}
     <script src="/assets/code-copy.js"></script>
+    <script src="/assets/tabs.js"></script>
+    <script src="/assets/spoiler.js"></script>
 
-    {{# Move me to my own script (contents/assets/tabs.js) #}}
-    <script>
-      const inactive = tab => tab.classList.remove('active')
-      const active = tab => tab.classList.add('active')
-      const tabClick = tab => tab.addEventListener('click', listener)
-
-      const listener = (event) => {
-        // Clicked tab
-        const tabId = event.target.getAttribute('data-id')
-        const containerId = event.target.parentElement.parentElement.getAttribute('data-id')
-        const parentQuery = `.tabs-tabs-wrapper[data-id=${containerId}]`
-
-        // Set everything in this thingy to inactive
-        document.querySelectorAll(`${parentQuery} .tabs-tab-content`).forEach(inactive)
-        document.querySelectorAll(`${parentQuery} .tabs-tabs-header button`).forEach(inactive)
-
-        // Set new items to active
-        document.querySelectorAll(`[data-id=${tabId}]`).forEach(active)
-      }
-
-      // Set it up for all my homies
-      document.querySelectorAll('.tabs-tabs-header button').forEach(tabClick)
-    </script>
-
-    <script>
-      document.querySelectorAll('.spoiler').forEach(
-        (s) => s.addEventListener('click',
-          (e) => e.target.classList.toggle('spoiler')
-        ))
-    </script>
     </main>
   </body>
 </html>

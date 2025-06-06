@@ -1,6 +1,9 @@
 # Enhancements
 
 ## Website
+- Make the copyright date in the footer use a variable
+  - Use global variable
+    - `const copyrightDate = /\d{4}/.exec(Date())[0]`
 - Fix favicon
 - Fix the header in `base.vto` since I don't have the `metadata` variable available
 - Both blog & examples need to have a related section at the bottom
@@ -66,6 +69,7 @@ export default markdownIt({
 - Create new directory called `website`/`site`/`public`
   - Images folder
   - `assets` & `styles` folders
+- Figure out a better way to add the `path` variable to my client side JS
 
 ## Teaser Summaries
 I want to be able to manually set teaser content for content. Preferably add them to front matter if the key doesn't exist & save the file.
