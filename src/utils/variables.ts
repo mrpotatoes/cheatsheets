@@ -115,7 +115,7 @@ export const serverConfig = () => ({
 export const drafts = {
   exts: 'md, vto',
   fn: (data: any, _content: string): boolean | undefined => (
-    (data.draft || process.env.ELEVENTY_RUN_MODE === 'build')
+    (data.draft && process.env.ELEVENTY_RUN_MODE === 'build')
       ? false : undefined
   ),
 }

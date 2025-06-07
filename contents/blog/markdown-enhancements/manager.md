@@ -1,3 +1,39 @@
+---
+title: Enhancement - Manager
+layout: post.vto
+---
+
+```ts
+import { PluginFn } from '@mytypes/plugins'
+import markdownIt from 'markdown-it'
+import type MarkdownIt from 'markdown-it'
+
+export class LibManager {
+  #mdit: MarkdownIt
+
+  constructor(mditOpts: {}) {
+    this.#mdit = markdownIt(mditOpts)
+  }
+
+  get mdit() {
+    return this.#mdit
+  }
+
+  // Add simple plugin
+  plugin(plg: MarkdownIt.PluginSimple, opts = {}) {
+    this.#mdit.use(plg, opts)
+    return this
+  }
+
+  // Add in a custom plugin
+  custom(fn: PluginFn) {
+    fn(this.#mdit)
+    return this
+  }
+}
+```
+
+```ts
 import { tab } from '@mdit/plugin-tab'
 import { sup } from '@mdit/plugin-sup'
 import { sub } from '@mdit/plugin-sub'
@@ -29,3 +65,5 @@ export default new LibManager({ html: true, linkify: true })
 
   // Return markdown-it to be set as a plugin/library
   .mdit
+
+```
