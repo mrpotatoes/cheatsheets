@@ -11,10 +11,6 @@ import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir, draft
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
 
-interface TestNode extends Node {
-
-}
-
 // @ts-ignore
 export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   // Status messages
