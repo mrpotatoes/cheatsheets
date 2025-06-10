@@ -26,6 +26,11 @@ export interface CollectionItem {
 
 export type CollectionItemPicked = Pick<CollectionItem, 'page'>
 
+export interface EleventyEnv {
+  page: EleventyPage
+  collections: CollectionItem[]
+}
+
 export interface CollectionApi {
   getFilteredByTag(tag: string): CollectionItem[]
   getAll(): CollectionItem[]

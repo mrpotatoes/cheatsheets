@@ -1,3 +1,4 @@
+import markdownIt from 'markdown-it'
 import { tab } from '@mdit/plugin-tab'
 import { sup } from '@mdit/plugin-sup'
 import { sub } from '@mdit/plugin-sub'
@@ -10,22 +11,16 @@ import collapsible from 'markdown-it-collapsible'
 
 import { imgs } from '@plugins/markdown/images'
 import { cols } from '@plugins/markdown/columns'
-import { LibManager } from '@plugins/markdown/LibManager'
 
-export default new LibManager({ html: true, linkify: true })
-  .plugin(tab, { name: 'tabs' })
-  .plugin(alert, { deep: true })
-  .plugin(sup)
-  .plugin(sub)
-  .plugin(align)
-  .plugin(collapsible)
-  .plugin(tasklist)
-  .plugin(footnote)
-  .plugin(spoiler) // TODO: This requires CSS & JS
-
-  .custom(cols)
-  .custom(imgs)
-  // .custom(carosel)
-
-  // Return markdown-it to be set as a plugin/library
-  .mdit
+export default markdownIt({ html: true, linkify: true })
+  .use(tab, { name: 'tabs' })
+  .use(alert, { deep: true })
+  .use(sup)
+  .use(sub)
+  .use(align)
+  .use(collapsible)
+  .use(tasklist)
+  .use(footnote)
+  .use(spoiler) // TODO: This requires CSS & JS
+  .use(cols)
+  .use(imgs)

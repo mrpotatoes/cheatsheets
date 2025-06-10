@@ -2,6 +2,7 @@ import path from 'path'
 import MarkdownIt from 'markdown-it'
 import markdownItEleventyImg from 'markdown-it-eleventy-img'
 import { outputDir, workingDir } from '@utils/variables'
+import { EleventyEnv } from '@mytypes/11ty'
 
 /**
  *
@@ -21,7 +22,7 @@ export const imgs = (md: MarkdownIt) => {
       sizes: '100vw',
     },
 
-    resolvePath: (filepath: string, env: any) =>
+    resolvePath: (filepath: string, env: EleventyEnv) =>
       (filepath.charAt(0) === '/')
         ? path.join(workingDir(), 'config/', filepath)
         : path.join(path.dirname(env.page.inputPath), filepath),

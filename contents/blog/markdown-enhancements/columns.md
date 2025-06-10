@@ -21,17 +21,4 @@ layout: post.vto
 ```
 
 ## Output
-::::: cols
-  :::: warning
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
-  ::::
-
-  :::: warning
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
-  ::::
-
-  :::: warning
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
-  ::::
-:::::
-
+![](./columns.png)
