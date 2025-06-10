@@ -45,7 +45,7 @@ export const catLink = (id: string): string => (`${snippetBase()}${id}/`)
  * @param {*} id
  * @returns
  */
-export const catTpl = (id: string): string => (`sub-category/${id}.njk`)
+export const catTpl = (id: string): string => (`sub-category/${id}.vto`)
 
 /**
  * Get a path segmented into parts

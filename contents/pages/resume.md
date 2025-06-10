@@ -1,7 +1,7 @@
 ---
 title: Resume
 permalink: resume/
-layout: post.njk
+layout: post.vto
 ---
 
 ## Thoughts

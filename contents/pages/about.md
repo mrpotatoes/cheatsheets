@@ -1,7 +1,7 @@
 ---
 title: About
 permalink: about/
-layout: post.njk
+layout: post.vto
 ---
 
 The about page.

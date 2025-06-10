@@ -1,8 +1,24 @@
 # Enhancements
 
+- [Website](#website)
+- [Collections](#collections)
+  - [Teasers / Summaries](#teasers--summaries)
+- [Markdown](#markdown)
+  - [Carousels](#carousels)
+    - [Example](#example)
+  - [Enhanced Lists](#enhanced-lists)
+    - [Example](#example-1)
+- [Optional](#optional)
+- [Branches](#branches)
+  - [Feature](#feature)
+  - [Refactors](#refactors)
+
 ## Website
+- Make the copyright date in the footer use a variable
+  - Use global variable
+    - `const copyrightDate = /\d{4}/.exec(Date())[0]`
 - Fix favicon
-- Fix the header in `base.njk` since I don't have the `metadata` variable available
+- Fix the header in `base.vto` since I don't have the `metadata` variable available
 - Both blog & examples need to have a related section at the bottom
   - [Tags page](https://eleventy-notes.sandroroth.com/tags/)
   - [Callouts](https://eleventy-notes.sandroroth.com/n/writing/callouts/)
@@ -14,50 +30,76 @@
     - Could go best under `/changelog`
   - Built With
 
-## Images
-I want to have the images co-located with their content files but when building all those images & assets should be moved to `/assets/{page}/directory/{image_guid}.{ext}`
-- [Colocate images with your post using Eleventy](https://scottwhittaker.net/colocate-images-with-post-using-eleventy)
-- [Using the Eleventy Image plugin without a central image folder / Graham F. Scott](https://gfscott.com/blog/eleventy-img-without-central-image-directory/)
-- [solution-loisir/markdown-it-eleventy-img: A markdown-it plugin that processes images through the eleventy-img plugin. Can be used in any projects that use markdown-it.](https://github.com/solution-loisir/markdown-it-eleventy-img)
+## Collections
+### Teasers / Summaries
+I want to be able to manually set teaser content for content. Preferably add them to front matter if the key doesn't exist & save the file.
+- [`text-summary`](https://www.npmjs.com/package/text-summary)
+- [`node-summarizer`](https://www.npmjs.com/package/node-summarizer)
+- [`jbrooksuk/node-summary`](https://github.com/jbrooksuk/node-summary)
+- [`matt-schwartz/text-summarization`](https://github.com/matt-schwartz/text-summarization)
 
-I want to take this plugin and pull it into my repo instead.
+## Markdown
+### Carousels
+I want to write a plugin for `markdown-it` that can create carousels.
 
+#### Example
+**`Markdown`**
 ```md
-{# This is a co-located image #}
-![something](./placeholder.png "asdasd")
+::::: cols
+  :::: warning
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
+  ::::
+
+  :::: warning
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
+  ::::
+
+  :::: warning
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas.
+  ::::
+:::::
 ```
 
-```json
-{
-  "markdown-it-eleventy-img": "^0.10.2",
-}
+**Output**
+![](./columns.png)
+
+### Enhanced Lists
+![](./enhanced-lists.png)
+
+#### Example
+**`Markdown`**
+```md
+- asdasd \
+  Lorem ipsum dolor sit amet, consectetur ... \
+  ![](./enhanced-lists.png)
+  <!-- Other markdown or html -->
+- asdasd
+- asdasd
 ```
 
-```ts
-import markdownIt from 'markdown-it'
-import path from 'path'
-import markdownItEleventyImg from 'markdown-it-eleventy-img'
+**HTML Output**
+```html
+<ol>
+  <li><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p></li>
 
-export default markdownIt({
-  html: true,
-  linkify: true
-})
-  .use(markdownItEleventyImg, {
-    imgOptions: {
-      widths: [1000, 800, 600],
-      urlPath: '/assets/imgs/',
-      outputDir: 'cheatsheets/assets/imgs',
-      // formats: ['avif', 'webp', 'jpeg'],
-    },
-    globalAttributes: {
-      class: 'markdown-image',
-      decoding: 'async',
-      sizes: '100vw', // If you use multiple widths don't forget to add a `sizes` attribute
-    },
+  <li>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p>
+    <pre>
+      <code class="lang-js">
+        // Some code goes in here
+      </code>
+    </pre>
+  </li>
 
-    // Literally from the example. I don't get it.
-    resolvePath: (filepath, env) => path.join(path.dirname(env.page.inputPath), filepath)
-  })
+  <li>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fermentum lacinia egestas. Nullam</p>
+    <pre>
+      <code class="lang-js">
+        // Some code goes in here
+      </code>
+    </pre>
+  </li>
+</ol>
 ```
 
 ## Optional
@@ -66,13 +108,9 @@ export default markdownIt({
 - Create new directory called `website`/`site`/`public`
   - Images folder
   - `assets` & `styles` folders
-
-## Teaser Summaries
-I want to be able to manually set teaser content for content. Preferably add them to front matter if the key doesn't exist & save the file.
-- [`text-summary`](https://www.npmjs.com/package/text-summary)
-- [`node-summarizer`](https://www.npmjs.com/package/node-summarizer)
-- [`jbrooksuk/node-summary`](https://github.com/jbrooksuk/node-summary)
-- [`matt-schwartz/text-summarization`](https://github.com/matt-schwartz/text-summarization)
+- Figure out a better way to add the `path` variable to my client side JS
+- Layout aliases
+  - [Layout Aliasing](https://www.11ty.dev/docs/layouts/#layout-aliasing)
 
 ## Branches
 ### Feature

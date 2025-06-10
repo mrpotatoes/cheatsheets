@@ -1,0 +1,96 @@
+---
+layout: base.vto
+title: Anahi's Tech Thoughts
+permalink: /
+---
+
+<style>
+/*
+TODO: This is temporary until I finish up both feature/css-framework && feature/theme
+
+Some overrides because the main page looks too bad with a reset.
+*/
+
+body {
+  font-family: Space Grotesk, -apple-system, Arial, ui-sans-serif, system-ui;
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  margin: 0;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  padding-inline-start: 40px;
+  unicode-bidi: isolate;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+</style>
+
+<div class="">
+  <div class="hero">
+    <h1 class="hero__heading">{{title}}</h1>
+    <div id="search" class="search"></div>
+  </div>
+
+  {{# Temporary until I get this figured out #}}
+  <div class="snippet-group-container post">
+    <div class="snippet-group-left">
+      <h2>Main Sections</h2>
+      <ul>
+        <li><a href="{{ snippetBase }}">Snippets</a></li>
+        <li><a href="/guides">Guides</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/projects">Projects</a></li>
+      </ul>
+    </div>
+
+    <div class="snippet-group-left">
+      <h2>Supplemental Pages</h2>
+      <ul>
+        <li><a href="/about">About</a></li>
+        <li><a href="/resume">Resume</a></li>
+        <li><a href="/projects">Projects</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/changelog">Changelog</a></li>
+        <li><a href="/built-with">Built With</a></li>
+      </ul>
+    </div>
+
+    <div class="snippet-group-left">
+      <ul>
+        <h2>Markdown Tests & Misc</h2>
+        <li><a href="markdown-tests/columns/">Columns</a></li>
+        <li><a href="markdown-tests/carousel/">Carousel</a></li>
+        <li><a href="markdown-tests/callouts/">Callouts</a></li>
+        <li><a href="markdown-tests/tabs/">Tabs</a></li>
+        <li><a href="markdown-tests/collapsible/">Collapsible</a></li>
+        <li><a href="markdown-tests/image-alignments/">Image Alignments</a></li>
+        <li><a href="/assets/fuzzy.json" target="_blank">Fuzzy Search JSON</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="post">
+    <p>Excuse the currest situation. I am in the middle of re-authoring my website so it'll look pretty busted for awhile.</p>
+  </div>
+</div>

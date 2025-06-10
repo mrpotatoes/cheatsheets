@@ -99,3 +99,24 @@ export const serverConfig = () => ({
   // TODO: Retrieve this from the env files instead.
   port: port(),
 })
+
+/**
+ * Disable page generate if the frontmatter 'drafts' is set to true.
+ *
+ * TODO: Create the Data type interface
+ * TODO: Create the Content type interface
+ *
+ * @see docs/preprocessor.md
+ *
+ * @param data
+ * @param content
+ * @returns
+ */
+export const drafts = {
+  exts: 'md, vto',
+  fn: (data: any, _content: string): boolean | undefined => (
+    (data.draft && process.env.ELEVENTY_RUN_MODE === 'build')
+      ? false : undefined
+  ),
+}
+

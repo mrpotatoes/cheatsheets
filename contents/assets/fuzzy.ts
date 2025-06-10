@@ -12,14 +12,17 @@ const searchOptions = {
   threshold: 0.5,
 }
 
+const eventVal = (e: Event) => (e.target as HTMLInputElement).value
+
 /**
  *
  * @param json
  * @returns
  */
-const filterEvent = (json: FuzzySearch2[]) => (e: any) => {
-  const hasText = e.target.value !== ''
-  const search = fuzzysort.go(e.target.value, json, searchOptions)
+const filterEvent = (json: FuzzySearch2[]) => (e: Event) => {
+  const hasText = eventVal(e) !== ''
+  const search = fuzzysort.go(eventVal(e), json, searchOptions)
+
   // @ts-ignore
   const normalized = remapped(search)
   const resCount = `<p>[Results: ${search.length}]</p>`

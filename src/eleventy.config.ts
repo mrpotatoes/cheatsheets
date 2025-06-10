@@ -1,4 +1,3 @@
-import _ from 'lodash'
 import dotenv from 'dotenv'
 
 import utils from '@utils'
@@ -8,7 +7,7 @@ import collections from '@collections'
 
 import { filters, shortcodes } from '@tplfns'
 import { EleventyConfig, ReturnConfig } from '@mytypes/11ty'
-import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir } from '@utils/variables'
+import { serverConfig, basePath, port, snippetBase, outputDir, layoutsDir, drafts } from '@utils/variables'
 
 // Setup environment variables
 dotenv.config(utils.vars.dotenv())
@@ -34,6 +33,9 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.assets)
   // eleventyConfig.addPassthroughCopy(utils.vars.passthroughs.styles)
 
+  // Preprocessors
+  eleventyConfig.addPreprocessor('drafts', drafts.exts, drafts.fn)
+
   // Filters & Shortcodes
   eleventyConfig.addFilter('urlize', filters.urlize)
   eleventyConfig.addFilter('titlecase', filters.titlecase)
@@ -51,6 +53,7 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
   eleventyConfig.addPlugin(plugins.syntaxHighlight)
   eleventyConfig.addPlugin(plugins.EleventyHtmlBasePlugin)
   eleventyConfig.addPlugin(plugins.css)
+  eleventyConfig.addPlugin(plugins.vento)
 
   // Collections
   eleventyConfig.addCollection('groupedSnippets', collections.snippetsGrouped)
@@ -71,13 +74,13 @@ export default (eleventyConfig: EleventyConfig): ReturnConfig => {
     pathPrefix: basePath(),
 
     // Control which files Eleventy will process
-    templateFormats: [ 'md', 'njk', 'html', 'liquid' ],
+    templateFormats: [ 'md', 'html', 'liquid', 'vto' ],
 
     // Pre-process *.md files with nunjucks
-    markdownTemplateEngine: 'njk',
+    markdownTemplateEngine: 'vto',
 
     // Pre-process *.html files with nunjucks
-    htmlTemplateEngine: 'njk',
+    htmlTemplateEngine: 'vto',
 
     // The rest of the setup
     dir: {

@@ -1,7 +1,7 @@
 ---
 title: Guide
 permalink: guides/
-layout: post.njk
+layout: post.vto
 ---
 
 Long form content usually about how to work with stuff.

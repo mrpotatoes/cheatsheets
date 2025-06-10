@@ -655,9 +655,6 @@ languages/javascript/validator/other:
 languages/typescript/other:
   - title: Placeholder
     url: /code/tips/languages/typescript/placeholder/
-libraries/11ty/other:
-  - title: Debugging a template in 11ty
-    url: /code/tips/libraries/11ty/debugging-template/
 libraries/angular/other:
   - title: Placeholder
     url: /code/tips/libraries/angular/placeholder/
@@ -763,3 +760,9 @@ subsystem/dotfiles/other:
     url: /code/tips/subsystem/dotfiles/unhide/
   - title: untar
     url: /code/tips/subsystem/dotfiles/untar/
+libraries/11ty/other:
+  - title: Debugging a template in 11ty
+    url: /code/tips/libraries/11ty/debugging-template/
+libraries/markdown-it/other:
+  - title: Local Images
+    url: /code/tips/libraries/markdown-it/local-images/
