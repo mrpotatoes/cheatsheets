@@ -757,9 +757,12 @@ languages/javascript/validator/other:
     url: /code/tips/languages/javascript/validator/validate-a-gregorian-date/
   - title: Check if a string is a MongoDB ObjectId
     url: /code/tips/languages/javascript/validator/check-if-a-string-is-a-mongo-db-object-id/
-libraries/11ty/other:
-  - title: Debugging a template in 11ty
-    url: /code/tips/libraries/11ty/debugging-template/
 paradigms/functional-programming/other:
   - title: Placeholder
     url: /code/tips/paradigms/functional-programming/placeholder/
+libraries/11ty/other:
+  - title: Debugging a template in 11ty
+    url: /code/tips/libraries/11ty/debugging-template/
+libraries/markdown-it/other:
+  - title: Local Images
+    url: /code/tips/libraries/markdown-it/local-images/
