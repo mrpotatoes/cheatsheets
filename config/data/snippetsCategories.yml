@@ -8,7 +8,7 @@ browser:
     meta:
       name: CSS
       desc: CSS Stuff
-  
+
   dom:
     meta:
       name: DOM
@@ -18,7 +18,7 @@ browser:
     meta:
       name: HTML
       desc: Yeah, HTML stuff
-  
+
   pwa:
     meta:
       name: PWAs
@@ -35,7 +35,7 @@ languages:
     meta:
       name: Java
       desc: One of my least favorite languages, sorry.
-  
+
   typescript:
     meta:
       name: TypeScript
@@ -60,127 +60,132 @@ languages:
       meta:
         name: Math
         desc: Math functions
-    
+
     date-time:
       meta:
         name: Date Time
         desc: Date time functions
 
-    function: 
+    function:
       meta:
         name: Fn
         desc: Learn some function stuff
 
-    idiosyncrasies: 
+    idiosyncrasies:
       meta:
         name: Idiosyncrasies (wierd stuff)
         desc: JavaScript can be idiosyncratic. Here are some fun things that can be done with it
 
-    misc: 
+    misc:
       meta:
         name: Misc
         desc: Misc stuff that I don't know where to categorize
-        
-      reduce: 
+
+      reduce:
           meta:
             name: Reduce
             desc: One of my favorite functions. Here are some snippets so I don't forget
 
-    number: 
+    number:
       meta:
         name: Numbers
         desc: I dunno, stuff to do with functions?
-        
-    object: 
+
+    object:
       meta:
         name: Objects
         desc: JS object stuff
-        
-    random: 
+
+    random:
       meta:
         name: Random
         desc: Randomize stuff
-        
-    validator: 
+
+    validator:
       meta:
         name: Validation
         desc: Functions to validate, coolio
 
 
 # ------------------------------------------------------------------------------
-sql: 
+sql:
   meta:
     name: SQL
     desc: SQL functionality yo!
 
 # ------------------------------------------------------------------------------
-subsystem: 
+subsystem:
   meta:
     name: Subsystems
     desc: I dunno, whatever 🤷🏽‍♀️
 
-  bash: 
+  bash:
     meta:
       name: Bash
       desc: Bash is a subsystem on *nix systems
 
-  dotfiles: 
+  dotfiles:
     meta:
       name: Dotfiles
       desc: My personal .dotfiles
 
-libraries: 
+libraries:
   meta:
     name: Libraries
     desc: Misc libraries i've picked up over time
 
-  11ty: 
+  11ty:
     meta:
       name: 11ty
       desc: The online documentation is more than enough but here we are 🤷🏽‍♀️
-    
-  angular: 
+
+  angular:
     meta:
       name: Angular
       desc: I've used it and don't recommend it but it's likely I'll have to use it again.
 
-  effect: 
+  effect:
     meta:
       name: Effect
       desc: Snippets based on the Effect ecosystem
 
-  express: 
+  express:
     meta:
       name: Express
       desc: I refuse to learn it's API so here are my snippets
 
-  jest: 
+  jest:
     meta:
       name: Jest
       desc: Jest is a testing runner written by Facebook and used everywhere
 
-  react: 
+  react:
     meta:
       name: React
       desc: Another Facebook library used to build websites
 
-  redux: 
+  redux:
     meta:
       name: Redux
       desc: A state management system
 
-  xstate: 
+  xstate:
     meta:
       name: xState
       desc: Stuff
 
+  markdown-it:
+    meta:
+      name: markdown-it
+      desc: nothing here
+
 # ------------------------------------------------------------------------------
-paradigms: 
+paradigms:
   meta:
     name: Paradigms
     desc: Different programming paradigms
 
-  functional-programming: 
+  functional-programming:
     meta:
       name: Functional programming
       desc: "I really don't think this one should be here but instead under guides and any other snippets would probably go under the `Effect`"

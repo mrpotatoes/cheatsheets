@@ -1,6 +1,197 @@
 browser/css/other:
   - title: Placeholder
     url: /code/tips/browser/css/placeholder/
+browser/dom/page interactions:
+  - title: Click all checkboxes
+    url: /code/tips/browser/dom/force-click-all-buttons/
+  - title: Go back to the previous page
+    url: /code/tips/browser/dom/go-back-to-the-previous-page/
+  - title: Hide an element
+    url: /code/tips/browser/dom/hide-an-element/
+  - title: Redirect to another page
+    url: /code/tips/browser/dom/redirect-to-another-page/
+  - title: Reload the current page
+    url: /code/tips/browser/dom/reload-the-current-page/
+  - title: Replace an element
+    url: /code/tips/browser/dom/replace-an-element/
+  - title: Scroll to top of the page
+    url: /code/tips/browser/dom/scroll-to-top-of-the-page/
+  - title: Toggle an element
+    url: /code/tips/browser/dom/toggle-an-element/
+browser/html/other:
+  - title: Box Model
+    url: /code/tips/browser/html/box-model/
+  - title: Starter Template
+    url: /code/tips/browser/html/starter-template/
+browser/pwa/other:
+  - title: Placeholder
+    url: /code/tips/browser/pwa/placeholder/
+languages/java/other:
+  - title: Placeholder
+    url: /code/tips/languages/java/placeholder/
+languages/javascript/idiosyncrasies/other:
+  - title: Immediately Invoked Functions
+    url: /code/tips/languages/javascript/idiosyncrasies/immediately-invoked-functions/
+  - title: Nested Ternaries
+    url: /code/tips/languages/javascript/idiosyncrasies/nested-ternaries/
+languages/javascript/misc/other:
+  - title: Recursion
+    url: /code/tips/languages/javascript/misc/recursion/
+  - title: Check if the code is running in Jest
+    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-jest/
+  - title: Check if the code is running in NodeJS
+    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-node-js/
+  - title: Check if the code is running in the browser
+    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-the-browser/
+  - title: Clear all cookies
+    url: /code/tips/languages/javascript/misc/clear-all-cookies/
+  - title: Convert 3 digits color to 6 digits color
+    url: /code/tips/languages/javascript/misc/convert-3-digits-color-to-6-digits-color/
+  - title: Convert Celsius to Fahrenheit
+    url: /code/tips/languages/javascript/misc/convert-celsius-to-fahrenheit/
+  - title: Convert cookie to object
+    url: /code/tips/languages/javascript/misc/convert-cookie-to-object/
+  - title: Convert Fahrenheit to Celsius
+    url: /code/tips/languages/javascript/misc/convert-fahrenheit-to-celsius/
+  - title: Convert hex to rgb
+    url: /code/tips/languages/javascript/misc/convert-hex-to-rgb/
+  - title: Convert rgb color to hex
+    url: /code/tips/languages/javascript/misc/convert-rgb-color-to-hex/
+  - title: Convert URL parameters to object
+    url: /code/tips/languages/javascript/misc/convert-url-parameters-to-object/
+  - title: Decode a JWT token
+    url: /code/tips/languages/javascript/misc/decode-a-jwt-token/
+  - title: Detect dark mode
+    url: /code/tips/languages/javascript/misc/detect-dark-mode/
+  - title: Easing functions
+    url: /code/tips/languages/javascript/misc/easing-functions/
+  - title: Emulate a dice throw
+    url: /code/tips/languages/javascript/misc/emulate-a-dice-throw/
+  - title: Encode a URL
+    url: /code/tips/languages/javascript/misc/encode-a-url/
+  - title: Generate an unique and increment id
+    url: /code/tips/languages/javascript/misc/generate-an-unique-and-increment-id/
+  - title: Get the first defined and non null argument
+    url: /code/tips/languages/javascript/misc/get-the-first-defined-and-non-null-argument/
+  - title: Get the value of a cookie
+    url: /code/tips/languages/javascript/misc/get-the-value-of-a-cookie/
+  - title: Get the value of a param from a URL
+    url: /code/tips/languages/javascript/misc/get-the-value-of-a-param-from-a-url/
+  - title: Get type of a variable in string
+    url: /code/tips/languages/javascript/misc/get-type-of-a-variable-in-string/
+  - title: Redirect the page to HTTPS if it is in HTTP
+    url: /code/tips/languages/javascript/misc/redirect-the-page-to-https-if-it-is-in-http/
+  - title: Run Promises in sequence
+    url: /code/tips/languages/javascript/misc/run-promises-in-sequence/
+  - title: Swap two variables
+    url: /code/tips/languages/javascript/misc/swap-two-variables/
+  - title: Wait for an amount of time
+    url: /code/tips/languages/javascript/misc/wait-for-an-amount-of-time/
+languages/typescript/other:
+  - title: Placeholder
+    url: /code/tips/languages/typescript/placeholder/
+libraries/angular/other:
+  - title: Placeholder
+    url: /code/tips/libraries/angular/placeholder/
+libraries/effect/other:
+  - title: Placeholder
+    url: /code/tips/libraries/effect/placeholder/
+libraries/express/other:
+  - title: Placeholder
+    url: /code/tips/libraries/express/placeholder/
+libraries/jest/other:
+  - title: Jest snippets (break up please)
+    url: /code/tips/libraries/jest/jest/
+  - title: Options for handling exceptions
+    url: /code/tips/libraries/jest/this-is-my-booty/
+libraries/react/other:
+  - title: Placeholder
+    url: /code/tips/libraries/react/placeholder/
+libraries/redux/other:
+  - title: Placeholder
+    url: /code/tips/libraries/redux/placeholder/
+libraries/xstate/other:
+  - title: Placeholder
+    url: /code/tips/libraries/xstate/placeholder/
+sql/other:
+  - title: Backing up
+    url: /code/tips/sql/backing-up/
+  - title: CLI
+    url: /code/tips/sql/cli/
+  - title: Counts
+    url: /code/tips/sql/counting/
+  - title: Formatting
+    url: /code/tips/sql/formatting/
+  - title: Placeholder
+    url: /code/tips/sql/placeholder/
+  - title: Restoring DB
+    url: /code/tips/sql/restoring/
+  - title: Sub Selects
+    url: /code/tips/sql/subselects/
+  - title: SQL UP
+    url: /code/tips/sql/up/
+subsystem/bash/other:
+  - title: Compress Images
+    url: /code/tips/subsystem/bash/compress-images/
+subsystem/dotfiles/other:
+  - title: +x
+    url: /code/tips/subsystem/dotfiles/+x/
+  - title: argv
+    url: /code/tips/subsystem/dotfiles/argv/
+  - title: colordump
+    url: /code/tips/subsystem/dotfiles/colordump/
+  - title: copypath
+    url: /code/tips/subsystem/dotfiles/copypath/
+  - title: delete-files
+    url: /code/tips/subsystem/dotfiles/delete-files/
+  - title: explode-path
+    url: /code/tips/subsystem/dotfiles/explode-path/
+  - title: find-ext
+    url: /code/tips/subsystem/dotfiles/file-ext/
+  - title: findf
+    url: /code/tips/subsystem/dotfiles/findf/
+  - title: git-rebuild-source
+    url: /code/tips/subsystem/dotfiles/git-rebuild-source/
+  - title: git-rename
+    url: /code/tips/subsystem/dotfiles/git-rename/
+  - title: git-revert
+    url: /code/tips/subsystem/dotfiles/git-revert/
+  - title: hide
+    url: /code/tips/subsystem/dotfiles/hide/
+  - title: manuals
+    url: /code/tips/subsystem/dotfiles/manuals/
+  - title: mfile
+    url: /code/tips/subsystem/dotfiles/mfile/
+  - title: noargs
+    url: /code/tips/subsystem/dotfiles/noargs/
+  - title: peak
+    url: /code/tips/subsystem/dotfiles/peak/
+  - title: prune-dirs
+    url: /code/tips/subsystem/dotfiles/prune-dirs/
+  - title: search
+    url: /code/tips/subsystem/dotfiles/search/
+  - title: setup
+    url: /code/tips/subsystem/dotfiles/setup/
+  - title: show-hidden
+    url: /code/tips/subsystem/dotfiles/show-hidden/
+  - title: sql
+    url: /code/tips/subsystem/dotfiles/sql/
+  - title: sqldown
+    url: /code/tips/subsystem/dotfiles/sqldown/
+  - title: sqlup
+    url: /code/tips/subsystem/dotfiles/sqlup/
+  - title: star-wars
+    url: /code/tips/subsystem/dotfiles/star-wars/
+  - title: testsql
+    url: /code/tips/subsystem/dotfiles/testsql/
+  - title: ttar
+    url: /code/tips/subsystem/dotfiles/ttar/
+  - title: unhide
+    url: /code/tips/subsystem/dotfiles/unhide/
+  - title: untar
+    url: /code/tips/subsystem/dotfiles/untar/
+  - title: oo
+    url: /code/tips/subsystem/dotfiles/oo/
 browser/dom/predicates:
   - title: Check if an element is a descendant of another
     url: /code/tips/browser/dom/check-if-an-element-is-a-descendant-of-another/
@@ -21,23 +212,6 @@ browser/dom/other:
     url: /code/tips/browser/dom/show-an-element/
   - title: Strip HTML from a given text
     url: /code/tips/browser/dom/strip-html-from-a-given-text/
-browser/dom/page interactions:
-  - title: Click all checkboxes
-    url: /code/tips/browser/dom/force-click-all-buttons/
-  - title: Go back to the previous page
-    url: /code/tips/browser/dom/go-back-to-the-previous-page/
-  - title: Hide an element
-    url: /code/tips/browser/dom/hide-an-element/
-  - title: Redirect to another page
-    url: /code/tips/browser/dom/redirect-to-another-page/
-  - title: Reload the current page
-    url: /code/tips/browser/dom/reload-the-current-page/
-  - title: Replace an element
-    url: /code/tips/browser/dom/replace-an-element/
-  - title: Scroll to top of the page
-    url: /code/tips/browser/dom/scroll-to-top-of-the-page/
-  - title: Toggle an element
-    url: /code/tips/browser/dom/toggle-an-element/
 browser/dom/retrievals:
   - title: Get all siblings of an element
     url: /code/tips/browser/dom/get-all-siblings-of-an-element/
@@ -54,17 +228,6 @@ browser/dom/insert:
     url: /code/tips/browser/dom/insert-given-html-after-an-element/
   - title: Insert given HTML before an element
     url: /code/tips/browser/dom/insert-given-html-before-an-element/
-browser/html/other:
-  - title: Box Model
-    url: /code/tips/browser/html/box-model/
-  - title: Starter Template
-    url: /code/tips/browser/html/starter-template/
-browser/pwa/other:
-  - title: Placeholder
-    url: /code/tips/browser/pwa/placeholder/
-languages/java/other:
-  - title: Placeholder
-    url: /code/tips/languages/java/placeholder/
 languages/javascript/arrays/test:
   - title: Cast a value as an array
     url: /code/tips/languages/javascript/arrays/cast-a-value-as-an-array/
@@ -259,11 +422,6 @@ languages/javascript/function/other:
 languages/javascript/function/functions:
   - title: Closures
     url: /code/tips/languages/javascript/function/closures/
-languages/javascript/idiosyncrasies/other:
-  - title: Immediately Invoked Functions
-    url: /code/tips/languages/javascript/idiosyncrasies/immediately-invoked-functions/
-  - title: Nested Ternaries
-    url: /code/tips/languages/javascript/idiosyncrasies/nested-ternaries/
 languages/javascript/math/calculate:
   - title: Calculate the angle of a line defined by two points
     url: /code/tips/languages/javascript/math/calculate-the-angle-of-a-line-defined-by-two-points/
@@ -288,59 +446,6 @@ languages/javascript/math/other:
     url: /code/tips/languages/javascript/math/normalize-the-ratio-of-a-number-in-a-range/
   - title: Round a number to the nearest multiple of a given value
     url: /code/tips/languages/javascript/math/round-a-number-to-the-nearest-multiple-of-a-given-value/
-languages/javascript/misc/other:
-  - title: Check if the code is running in Jest
-    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-jest/
-  - title: Check if the code is running in NodeJS
-    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-node-js/
-  - title: Check if the code is running in the browser
-    url: /code/tips/languages/javascript/misc/check-if-the-code-is-running-in-the-browser/
-  - title: Clear all cookies
-    url: /code/tips/languages/javascript/misc/clear-all-cookies/
-  - title: Convert 3 digits color to 6 digits color
-    url: /code/tips/languages/javascript/misc/convert-3-digits-color-to-6-digits-color/
-  - title: Convert Celsius to Fahrenheit
-    url: /code/tips/languages/javascript/misc/convert-celsius-to-fahrenheit/
-  - title: Convert cookie to object
-    url: /code/tips/languages/javascript/misc/convert-cookie-to-object/
-  - title: Convert Fahrenheit to Celsius
-    url: /code/tips/languages/javascript/misc/convert-fahrenheit-to-celsius/
-  - title: Convert hex to rgb
-    url: /code/tips/languages/javascript/misc/convert-hex-to-rgb/
-  - title: Convert rgb color to hex
-    url: /code/tips/languages/javascript/misc/convert-rgb-color-to-hex/
-  - title: Convert URL parameters to object
-    url: /code/tips/languages/javascript/misc/convert-url-parameters-to-object/
-  - title: Decode a JWT token
-    url: /code/tips/languages/javascript/misc/decode-a-jwt-token/
-  - title: Detect dark mode
-    url: /code/tips/languages/javascript/misc/detect-dark-mode/
-  - title: Easing functions
-    url: /code/tips/languages/javascript/misc/easing-functions/
-  - title: Emulate a dice throw
-    url: /code/tips/languages/javascript/misc/emulate-a-dice-throw/
-  - title: Encode a URL
-    url: /code/tips/languages/javascript/misc/encode-a-url/
-  - title: Generate an unique and increment id
-    url: /code/tips/languages/javascript/misc/generate-an-unique-and-increment-id/
-  - title: Get the first defined and non null argument
-    url: /code/tips/languages/javascript/misc/get-the-first-defined-and-non-null-argument/
-  - title: Get the value of a cookie
-    url: /code/tips/languages/javascript/misc/get-the-value-of-a-cookie/
-  - title: Get the value of a param from a URL
-    url: /code/tips/languages/javascript/misc/get-the-value-of-a-param-from-a-url/
-  - title: Get type of a variable in string
-    url: /code/tips/languages/javascript/misc/get-type-of-a-variable-in-string/
-  - title: Recursion
-    url: /code/tips/languages/javascript/misc/recursion/
-  - title: Redirect the page to HTTPS if it is in HTTP
-    url: /code/tips/languages/javascript/misc/redirect-the-page-to-https-if-it-is-in-http/
-  - title: Run Promises in sequence
-    url: /code/tips/languages/javascript/misc/run-promises-in-sequence/
-  - title: Swap two variables
-    url: /code/tips/languages/javascript/misc/swap-two-variables/
-  - title: Wait for an amount of time
-    url: /code/tips/languages/javascript/misc/wait-for-an-amount-of-time/
 languages/javascript/misc/reduce/other:
   - title: Reduce + Set
     url: /code/tips/languages/javascript/misc/reduce/reduce-set/
@@ -604,8 +709,6 @@ languages/javascript/validator/other:
     url: /code/tips/languages/javascript/validator/check-if-a-string-is-a-hexadecimal-color/
   - title: Check if a string is a hexadecimal number
     url: /code/tips/languages/javascript/validator/check-if-a-string-is-a-hexadecimal-number/
-  - title: Check if a string is a MongoDB ObjectId
-    url: /code/tips/languages/javascript/validator/check-if-a-string-is-a-mongo-db-object-id/
   - title: Check if a string is an octal number
     url: /code/tips/languages/javascript/validator/check-if-a-string-is-an-octal-number/
   - title: Check if a string is lower case
@@ -652,114 +755,14 @@ languages/javascript/validator/other:
     url: /code/tips/languages/javascript/validator/check-if-an-object-is-empty/
   - title: Validate a Gregorian date
     url: /code/tips/languages/javascript/validator/validate-a-gregorian-date/
-languages/typescript/other:
-  - title: Placeholder
-    url: /code/tips/languages/typescript/placeholder/
-libraries/11ty/other:
-  - title: Debugging a template in 11ty
-    url: /code/tips/libraries/11ty/debugging-template/
-libraries/angular/other:
-  - title: Placeholder
-    url: /code/tips/libraries/angular/placeholder/
-libraries/effect/other:
-  - title: Placeholder
-    url: /code/tips/libraries/effect/placeholder/
-libraries/express/other:
-  - title: Placeholder
-    url: /code/tips/libraries/express/placeholder/
-libraries/jest/other:
-  - title: Jest snippets (break up please)
-    url: /code/tips/libraries/jest/jest/
-  - title: Options for handling exceptions
-    url: /code/tips/libraries/jest/this-is-my-booty/
-libraries/react/other:
-  - title: Placeholder
-    url: /code/tips/libraries/react/placeholder/
-libraries/redux/other:
-  - title: Placeholder
-    url: /code/tips/libraries/redux/placeholder/
-libraries/xstate/other:
-  - title: Placeholder
-    url: /code/tips/libraries/xstate/placeholder/
+  - title: Check if a string is a MongoDB ObjectId
+    url: /code/tips/languages/javascript/validator/check-if-a-string-is-a-mongo-db-object-id/
 paradigms/functional-programming/other:
   - title: Placeholder
     url: /code/tips/paradigms/functional-programming/placeholder/
-sql/other:
-  - title: Backing up
-    url: /code/tips/sql/backing-up/
-  - title: CLI
-    url: /code/tips/sql/cli/
-  - title: Counts
-    url: /code/tips/sql/counting/
-  - title: Formatting
-    url: /code/tips/sql/formatting/
-  - title: Placeholder
-    url: /code/tips/sql/placeholder/
-  - title: Restoring DB
-    url: /code/tips/sql/restoring/
-  - title: Sub Selects
-    url: /code/tips/sql/subselects/
-  - title: SQL UP
-    url: /code/tips/sql/up/
-subsystem/bash/other:
-  - title: Compress Images
-    url: /code/tips/subsystem/bash/compress-images/
-subsystem/dotfiles/other:
-  - title: +x
-    url: /code/tips/subsystem/dotfiles/+x/
-  - title: argv
-    url: /code/tips/subsystem/dotfiles/argv/
-  - title: colordump
-    url: /code/tips/subsystem/dotfiles/colordump/
-  - title: copypath
-    url: /code/tips/subsystem/dotfiles/copypath/
-  - title: delete-files
-    url: /code/tips/subsystem/dotfiles/delete-files/
-  - title: explode-path
-    url: /code/tips/subsystem/dotfiles/explode-path/
-  - title: find-ext
-    url: /code/tips/subsystem/dotfiles/file-ext/
-  - title: findf
-    url: /code/tips/subsystem/dotfiles/findf/
-  - title: git-rebuild-source
-    url: /code/tips/subsystem/dotfiles/git-rebuild-source/
-  - title: git-rename
-    url: /code/tips/subsystem/dotfiles/git-rename/
-  - title: git-revert
-    url: /code/tips/subsystem/dotfiles/git-revert/
-  - title: hide
-    url: /code/tips/subsystem/dotfiles/hide/
-  - title: manuals
-    url: /code/tips/subsystem/dotfiles/manuals/
-  - title: mfile
-    url: /code/tips/subsystem/dotfiles/mfile/
-  - title: noargs
-    url: /code/tips/subsystem/dotfiles/noargs/
-  - title: oo
-    url: /code/tips/subsystem/dotfiles/oo/
-  - title: peak
-    url: /code/tips/subsystem/dotfiles/peak/
-  - title: prune-dirs
-    url: /code/tips/subsystem/dotfiles/prune-dirs/
-  - title: search
-    url: /code/tips/subsystem/dotfiles/search/
-  - title: setup
-    url: /code/tips/subsystem/dotfiles/setup/
-  - title: show-hidden
-    url: /code/tips/subsystem/dotfiles/show-hidden/
-  - title: sql
-    url: /code/tips/subsystem/dotfiles/sql/
-  - title: sqldown
-    url: /code/tips/subsystem/dotfiles/sqldown/
-  - title: sqlup
-    url: /code/tips/subsystem/dotfiles/sqlup/
-  - title: star-wars
-    url: /code/tips/subsystem/dotfiles/star-wars/
-  - title: testsql
-    url: /code/tips/subsystem/dotfiles/testsql/
-  - title: ttar
-    url: /code/tips/subsystem/dotfiles/ttar/
-  - title: unhide
-    url: /code/tips/subsystem/dotfiles/unhide/
-  - title: untar
-    url: /code/tips/subsystem/dotfiles/untar/
+libraries/11ty/other:
+  - title: Debugging a template in 11ty
+    url: /code/tips/libraries/11ty/debugging-template/
+libraries/markdown-it/other:
+  - title: Local Images
+    url: /code/tips/libraries/markdown-it/local-images/

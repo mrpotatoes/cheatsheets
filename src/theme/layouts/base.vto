@@ -31,7 +31,9 @@
   </head>
 
   <body>
-    {{ content |> safe }}
+    <div class="container">
+      {{ content |> safe }}
+    </div>
 
     <div class="container">
       <footer class="footer">
@@ -49,7 +51,7 @@
         <div class="footer__col">
           <div class="footer__heading">About</div>
           <div class="footer__author">
-            ©2023 - Andric LibreSinn. All rights reserved.
+            &copy;<script>document.write(/\d{4}/.exec(Date())[0])</script> - Anahi LibreSinn. All rights reserved.
           </div>
           <div>
             <p><a href="https://tech.libresinn.com/">Home</a></p>
@@ -68,8 +70,12 @@
       </footer>
     </div>
 
+    {{# TODO: I'll be moving over to a different code & highlighter plugin #}}
     {{# Copied from https://www.roboleary.net/2022/01/13/copy-code-to-clipboard-blog.html #}}
     <script src="/assets/code-copy.js"></script>
+    <script src="/assets/tabs.js"></script>
+    <script src="/assets/spoiler.js"></script>
+
     </main>
   </body>
 </html>
