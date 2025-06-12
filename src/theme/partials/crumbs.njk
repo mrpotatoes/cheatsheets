@@ -1,0 +1,9 @@
+<div class="breadcrumbs text-sm">
+  <ul>
+    {% for crumb in bCrumbs %}
+    <li><a href="{{ crumb.url }}">{{ crumb.title }}</a></li>
+    {% endfor %}
+
+    <li>{{ title }}</li>
+  </ul>
+</div>

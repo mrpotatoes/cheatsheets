@@ -8,6 +8,7 @@ import jsConfig from '@plugins/bundle-typescript'
 import categoryChildren from '@plugins/category.children'
 import yaml from '@plugins/yaml'
 import minify from '@plugins/minify'
+import css from '@plugins/css'
 import vento from '@plugins/vento'
 
 export default {
@@ -22,4 +23,5 @@ export default {
   jsConfig,
   categoryBase,
   categoryChildren,
+  css,
 }

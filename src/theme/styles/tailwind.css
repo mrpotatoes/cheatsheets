@@ -1,0 +1,53 @@
+/* TODO: Fix these issues */
+@tailwind base;
+/* @tailwind components; */
+@tailwind utilities;
+@plugin "daisyui" {
+  exclude: rootcolor;
+};
+
+/* // These two classes are temporary */
+.snippet-group-container {
+  margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.snippet-group-left {
+  /* // border: 1px solid red; */
+  flex: 30%;
+  max-width: 30%;
+}
+
+.idx {
+  color: #2427d4;
+  text-decoration: underline;
+}
+
+body {
+  background: #e2e8f0;
+  /* margin: 0px; */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  /* 2 columns */
+  column-gap: 50px;
+  row-gap: 30px;
+}
+
+header {
+  /* background-color: ; */
+  grid-column: 1 / -1;
+  /* span all columns */
+}
+
+article {
+  background-color: pink;
+}
+
+aside {
+  background-color: #cedbe2;
+}
+
